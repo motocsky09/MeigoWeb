@@ -1,0 +1,26 @@
+<form [formGroup]="service.formModel" class="register-form" autocomplete="off" (submit)="onSubmit()">
+    <div class="form-group required">
+      <label style="margin-top: 5%;">Nume utilizator</label>
+      <input class="form-control" formControlName="UserName">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input class="form-control" formControlName="Email">
+    </div>
+    <div formGroupName="Passwords">
+      <div class="form-group required">
+        <label>Parola</label>
+        <input type="password" class="form-control" formControlName="Password">
+      </div>
+      <div class="form-group required">
+        <label>Confirmare parola</label>
+        <input type="password" class="form-control" formControlName="ConfirmPassword">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-8 offset-md-2">
+        <button type="submit" class="btn btn-lg hero-btn" [disabled]="!service.formModel.valid">Inregistrare</button>
+      </div>
+    </div>
+  </form>
+  

@@ -1,0 +1,44 @@
+<div class="product">
+    <div class="filter">
+        <button class="buton_filter" (click)="getProductsList()"><b>Toate</b><i class="fa fa-filter" aria-hidden="true"></i></button>
+        <button class="buton_filter" (click)="getProductsListByCategoryId(5)"><b>Office</b></button>
+        <button class="buton_filter" (click)="getProductsListByCategoryId(6)"><b>Toys</b></button>
+        <button class="buton_filter" (click)="getProductsListByCategoryId(7)"><b>Diverse</b></button>
+    </div> 
+</div>
+
+<ul *ngFor="let item of productsList">
+    <li class="product-item">
+    <div class="product-item">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                        <img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200">
+                </div>
+                    <div class="flip-card-back">
+                        <div class="description-container">
+                          <!--  
+                            <p class="desc_product2">{{ item.shortDescription }}</p>
+                            -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        <div class="details">
+            <div class="Short_description">
+            <p><b>{{item.shortDescription}}</b></p>
+            </div>
+            <h3 class="pret_produs"><b>Preț:</b> {{item.price}} (€)</h3>
+            <div class="quantity-container">
+                <input type="number" class="quantity-input" value="1" min="1">
+            </div>
+        </div>
+        <button class="button_product" onclick="addToCart(event)">Adaugă în coș</button>
+    </li>
+
+<div class="cart-button" id="cartButton">
+    <a href="cos-cumparaturi">
+        <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
+   <span id="cartItemCount">0</span>
+</div>

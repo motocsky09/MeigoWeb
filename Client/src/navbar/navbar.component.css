@@ -1,0 +1,127 @@
+.navbar {
+    background-color: #0D1321;
+    box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);
+    border-bottom: 0.5px solid rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /* Centrare pe verticală */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Centrare pe verticală */
+    margin-left: 10px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center; /* Centrare pe verticală */
+}
+
+
+.navbar ul {
+    display: flex;
+    align-items: center; /* Centrare pe verticală */
+    margin: 0; /* Asigură-te că nu există niciun margin aplicat pe <ul> */
+    padding: 0; /* Asigură-te că nu există niciun padding aplicat pe <ul> */
+}
+
+.navbar a {
+    display: flex; /* Asigură-te că link-urile sunt elemente flexibile */
+    align-items: center; /* Centrare pe verticală */
+}
+.logout-link{
+    padding: 4px 6px;
+    margin-left: 10px; /* Adaugă spațiu între link-uri */
+    color: #fff; /* Culoarea textului */
+    text-decoration: none; /* Elimină sublinierea implicită */
+    border: 1px solid transparent;
+}
+.logout-link:hover{
+    border-color: rgb(221, 220, 212); /* Schimbă culoarea border-ului la hover */
+}
+.navbar img {
+    display: block; /* Asigură-te că imaginea este un element de tip block */
+    margin: 0; /* Elimină orice margin aplicat implicit */
+    padding: 0; /* Elimină orice padding aplicat implicit */
+}
+
+.buton {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    color: #EEEEEE;
+    border: 3px solid #3855E8;
+}
+
+.buton a:hover {
+    background-color: transparent;
+}
+.sidebar {
+    position: absolute;
+    right: 10px; /* Ajustează după preferințe */
+    top: 110px; /* Ajustează în funcție de înălțimea navbar-ului */
+    background-color: #0D1321;
+    border: 3px solid #3855E8;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 0; /* Asigură-te că padding-ul este zero */
+    z-index: 1000;
+    width: 150px; /* Ajustează lățimea după preferințe */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 20px; /* Ajustează padding-ul intern */
+    border-bottom: 1px solid #3855E8;
+    text-align: center;
+  }
+  
+  .sidebar ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .sidebar ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Asigură-te că link-urile ocupă toată lățimea */
+    margin: 0;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #3855E8;
+    color: #FFFFFF;
+  }  
+  
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between; /* Așezarea elementelor pe întreaga lățime a ecranului */
+        align-items: center; /* Alinierea verticală a elementelor */
+    }
+
+    .logo {
+        margin: 0 auto; /* Centrarea logo-ului pe orizontală */
+        display: flex; /* Asigură că logo-ul este tratat ca un element flexibil */
+        justify-content: center; /* Centrarea conținutului în logo */
+        align-items: center; /* Alinierea conținutului în logo */
+    }
+
+    .nav-right {
+        margin-left: auto; /* Așezarea elementului nav-right în partea dreaptă */
+    }
+}

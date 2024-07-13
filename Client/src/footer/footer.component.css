@@ -1,0 +1,46 @@
+.footer {
+    background-color: #0D1321;
+    color: #EEEEEE;
+    padding: 10px; /* spatierea interioara a footer-ului */
+    border-top: 0.5px solid rgb(124, 157, 178);
+}
+
+.footer-content {
+    display: flex; /* flexbox pentru a alinia orizontal sectiunile din footer */
+    justify-content: space-between; /* spatiere egala intre sectiunile din footer */
+}
+
+.footer-section {
+    width: 50%; /* fiecare sectiune de footer ocupa jumatate din latimea containerului footer */
+}
+
+.footer-links, .footer-info {
+    list-style: none; /* eliminare stilizare default pentru listele din footer */
+    padding: 0; /* eliminare spatiere interioara a listelor */
+}
+
+.footer-links img {
+    display: block; /* asigură alinierea corectă a imaginilor */
+    margin: 0 auto; /* centrează imaginile */
+    padding: 7px;
+}
+
+.footer-info li {
+    margin-bottom: 10px; /* spatiere intre elementele din lista de informatii */
+    font-size: 15px; /* dimensiunea textului mai mic */
+    margin-top: 15px;
+}
+/* Stilizare pentru modul mobil */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Așezare verticală în modul mobil */
+        align-items: center;
+        
+    }
+
+    .footer-section {
+        width: 100%; /* Lățimea maximă în modul mobil */
+        margin-bottom: 20px; /* Spațiere între secțiuni în modul mobil */
+        text-align: center;
+    }
+}
