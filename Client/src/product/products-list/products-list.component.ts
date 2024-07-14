@@ -11,32 +11,40 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 export class ProductsListComponent implements OnInit {
 
   faCartShopping = faCartShopping;
-
   productsList: any;
- 
+
   constructor(
-    private service:ProductService,
-    private router:Router
+    private service: ProductService,
+    private router: Router
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.service.getProductsList().subscribe(
-      (res:any)=>{
-        this.productsList=res;
-      console.log(this.productsList);
+      (res: any) => {
+        this.productsList = res;
+        console.log(this.productsList);
       }
     )
   }
 
-  getProductsList(){
+  getProductsList() {
     this.service.getProductsList().subscribe(
-      (res:any)=>{
-        this.productsList=res;})
+      (res: any) => {
+        this.productsList = res;
+      })
   }
 
-  getProductsListByCategoryId(categoryId:any){
+  getProductsListByCategoryId(categoryId: any) {
     this.service.getProductsListByCategoryId(categoryId).subscribe(
-      (res:any)=>{
-        this.productsList=res;})
+      (res: any) => {
+        this.productsList = res;
+      })
+  }
+
+  toggleDescription(event: Event) {
+    const descriptionContainer = (event.target as HTMLElement).closest('.product-item')?.querySelector('.description-container');
+    if (descriptionContainer) {
+      descriptionContainer.classList.toggle('open');
+    }
   }
 }

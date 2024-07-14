@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZeSntELFv2u6kBF4uJfhiIWkyrS/rDK4+K2J3b8QFxL6nY6VrV6gkOpuAeUWJLzYHBwHHmZK559x9ll9wnrhSw==",
+  "dgSpecHash": "N/jsFaU8nPrX+Fu0K0NZScRiajUOYTcSlxeNqXhtmhlbS38gCOeM96luAaB6uuNJKUTVnhfWdH/3ceAIODuwPg==",
   "success": true,
-  "projectFilePath": "/Users/andreimotoc/Documents/Licenta 3/Server/Server/Server.csproj",
+  "projectFilePath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server/Server.csproj",
   "expectedPackageFiles": [
     "/Users/andreimotoc/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
