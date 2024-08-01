@@ -35,8 +35,8 @@
     color: #F5F5F5;
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
-    cursor: pointer;
+	border: none;
+	cursor: pointer;
     font-size: 15px;
     text-decoration: none;
     margin: 20px;
@@ -65,5 +65,5 @@
 }
 .order-final2:hover{
 	background-color: #555;
-    color: #F5F5F5;
+    color: white;
 }

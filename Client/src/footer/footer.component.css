@@ -20,6 +20,7 @@
 }
 
 .footer-links img {
+    margin-right: 10px; /* spatiere intre imaginile din lista de link-uri */
     display: block; /* asigură alinierea corectă a imaginilor */
     margin: 0 auto; /* centrează imaginile */
     padding: 7px;
@@ -37,7 +38,6 @@
         align-items: center;
         
     }
-
     .footer-section {
         width: 100%; /* Lățimea maximă în modul mobil */
         margin-bottom: 20px; /* Spațiere între secțiuni în modul mobil */

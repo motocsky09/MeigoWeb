@@ -1,154 +1,156 @@
 /*introduction*/
 .introduction {
-  text-align: center;
-  padding: 50px;
-  color: #252525;
-}
-.introduction-content{
-  padding: 10px;
-}
-.introduction h2 {
-  font-size: 24px;
-}
-
-.introduction h3 {
-  font-size: 20px;
-
-}
-h1{
-  color: #7D7D7D;
-}
-.buton{
-  padding: 30px;
-}
-
-.buton .buton1 {
-  background-color: #3855E8;
-  border-radius: 30px;
-  color: #EEEEEE;
-  padding: 15px 32px;
-  text-decoration: none;
-  margin: 20px auto;
-  cursor: pointer;
-}
-.buton a:hover{
-background-color: #555;
-  color: white;
-}
-
-.show {
-  opacity: 1 !important; 
-}
-
-/*accordion*/
-
-.accordion {
-  max-width: 530px;
-  width: 100%;
-  background: transparent;
-  margin: 0 auto; /* pentru a centra pe orizontală */
-  padding: 15px;
-  border-radius: 8px;
-  display: flex; /* pentru a centra pe verticală */
-  align-items: center; /* pentru a centra pe verticală */
-  flex-direction: column; /* aliniere verticală a elementelor */
-}
-.title{
-color: #252525;
-font-size: 30px;
-
-}
-.accordion-item {
-  width: 100%;
-  border-bottom: 3px solid #3855E8;
-  border-top: 3px solid #3855E8;
-  margin-bottom: 10px;
-}
-.accordion-header {
-  cursor: pointer;
-  display: flex;
-  align-items: center; /* Aliniere pe verticală */
-  padding: 10px;
-  background-color: none;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center; /* pentru a centra pe orizontală */
-  margin: 0; /* eliminăm marginile */
-  justify-content: space-between; /* Așezarea elementelor la distanță maximă între ele */
-}
-
-.accordion-header .title {
-  flex: 1; /* Titlul va ocupa spațiul disponibil */
-  text-align: center; /* Aliniere centrată a textului */
-}
-
-.accordion-header i {
-  color: #252525; /* Schimbă culoarea plusului și minusului */
-  margin-left: 10px; /* Adăugăm un spațiu între simbol și text */
-}
-.description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  width: 100%;
-  font-size: 17px;
-  text-align: center; /* pentru a centra pe orizontală */
-  margin: 0; /* eliminăm marginile */
-  color: #EEEEEE;
-  background-color: #393E46;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.description p {
-  margin: 10px 0; /* Adaugă spațiu între paragrafe */
-}
-.description a{
-color: red;
-}
-.paragraf_desc p{
-  border-bottom: 0.5px solid #393E46;
-  padding: 10px;
-}
-
-
-@media screen and (max-width: 768px) {
-  .introduction h1,.introduction h2, .introduction h3{
-      text-align: center;
-      font-size: 20px;
+    text-align: center;
+    padding: 50px;
+    color: #252525;
   }
-  .buton {
-      text-align: center; /* Alinează butoanele pe centrul ecranului */
-      padding: 0; /* Elimină spațiul de la marginea exterioară a butoanelor */
+  .introduction-content{
+    padding: 10px;
   }
-
+  .introduction h2 {
+    font-size: 24px;
+  }
+  
+  .introduction h3 {
+    font-size: 20px;
+  
+  }
+  h1{
+    color: #7D7D7D;
+  }
+  .buton{
+    padding: 30px;
+  }
+  
   .buton .buton1 {
-      width: 80%; /* Lățimea butoanelor în modul mobil */
-      display: inline-block; /* Facem butoanele să ocupe spațiu doar cât este necesar */
-      margin: 10px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
+    background-color: #3855E8;
+    border-radius: 30px;
+    color: #EEEEEE;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin: 20px auto;
+    cursor: pointer;
   }
-
+  .buton a:hover{
+  background-color: #555;
+    color: white;
+  }
+  
+  .show {
+    opacity: 1 !important; 
+  }
+  
+  /*accordion*/
+  
   .accordion {
-      max-width: 90%;
-      margin: 0 auto;
+    max-width: 530px;
+    width: 100%;
+    background: transparent;
+    margin: 0 auto; /* pentru a centra pe orizontală */
+    padding: 15px;
+    border-radius: 8px;
+    display: flex; /* pentru a centra pe verticală */
+    align-items: center; /* pentru a centra pe verticală */
+    flex-direction: column; /* aliniere verticală a elementelor */
   }
-.title{
-  font-size: 22px;
-}
+  .title{
+  color: #252525;
+  font-size: 30px;
+  
+  }
+  .accordion-item {
+    width: 100%;
+    border-bottom: 3px solid #3855E8;
+    border-top: 3px solid #3855E8;
+    margin-bottom: 10px;
+  }
   .accordion-header {
-      justify-content: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Aliniere pe verticală */
+    padding: 10px;
+    background-color: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* pentru a centra pe orizontală */
+    margin: 0; /* eliminăm marginile */
+    justify-content: space-between; /* Așezarea elementelor la distanță maximă între ele */
+  }
+  
+  .accordion-header .title {
+    flex: 1; /* Titlul va ocupa spațiul disponibil */
+    text-align: center; /* Aliniere centrată a textului */
+  }
+  
+  .accordion-header i {
+    color: #252525; /* Schimbă culoarea plusului și minusului */
+    margin-left: 10px; /* Adăugăm un spațiu între simbol și text */
   }
   .description {
-      text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    width: 100%;
+    font-size: 17px;
+    text-align: center; /* pentru a centra pe orizontală */
+    margin: 0; /* eliminăm marginile */
+    color: #EEEEEE;
+    background-color: #393E46;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
   }
-.description a {
-  font-size: 17px; /* Redu dimensiunea fontului pentru adresa de e-mail */
-}	
-.description p {
-  margin: 5px 0; /* Redu spațiul între paragrafe */
-  font-size: 17px;
-}
-.paragraf_desc p{
-  border-bottom: 1px solid #ccc;
-}
-
-}
+  .description p {
+    margin-top: 15px;
+    padding-top: 10px;
+    margin: 10px 0; /* Adaugă spațiu între paragrafe */
+  }
+  .description a{
+  color: red;
+  }
+  .paragraf_desc p{
+    border-bottom: 0.5px solid #393E46;
+    
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .introduction h1,.introduction h2, .introduction h3{
+        text-align: center;
+        font-size: 20px;
+    }
+    .buton {
+        text-align: center; /* Alinează butoanele pe centrul ecranului */
+        padding: 0; /* Elimină spațiul de la marginea exterioară a butoanelor */
+    }
+  
+    .buton .buton1 {
+        width: 80%; /* Lățimea butoanelor în modul mobil */
+        display: inline-block; /* Facem butoanele să ocupe spațiu doar cât este necesar */
+        margin: 10px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
+    }
+  
+    .accordion {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+  .title{
+    font-size: 22px;
+  }
+    .accordion-header {
+        justify-content: center;
+    }
+    .description {
+        text-align: center;
+    }
+  .description a {
+    font-size: 17px; /* Redu dimensiunea fontului pentru adresa de e-mail */
+  }	
+  .description p {
+    margin: 5px 0; /* Redu spațiul între paragrafe */
+    font-size: 17px;
+  }
+  .paragraf_desc p{
+    border-bottom: 1px solid #ccc;
+  }
+  
+  }

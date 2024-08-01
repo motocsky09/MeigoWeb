@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 
 
@@ -18,12 +19,14 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private service:UserService,
-    private router:Router
+    private router:Router,
+    private shoppingCartService: ShoppingCartService
   ) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('token') != null )
+    if(localStorage.getItem('token') != null ){
       this.router.navigateByUrl('/home');
+    }    
   }
 
   onSubmit(form:NgForm){

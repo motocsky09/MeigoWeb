@@ -73,14 +73,18 @@ export class UserService {
     localStorage.removeItem('token');
   }
 
-  getUserName()
-  {
-    var tokenHeader = new HttpHeaders({'Authorization':'Bearer '+localStorage.getItem('token')})
-    return this.http.get(this.BaseURI+'/UserProfile',{headers : tokenHeader});
+  getUserName() {
+    var tokenHeader = new HttpHeaders({'Authorization':'Bearer ' + localStorage.getItem('token')});
+    return this.http.get(this.BaseURI + '/Authenticate/GetUserName', { headers: tokenHeader, responseType: 'text' });
   }
 
   isLogged(): boolean
   {
     return this.isLoggedIn$.value;
+  }
+
+  getShoppingCartIdByUserName(userName:string)
+  {
+    return this.http.get(this.BaseURI+'/Authenticate/GetShoppingCartIdByUserName?userName=' + userName , {responseType: 'text'});
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserService } from 'src/services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(public service: UserService , private router:Router) { }
+  constructor(public service: UserService, private router:Router) { }
 
   ngOnInit(): void {
     this.service.formModel.reset();

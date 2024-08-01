@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,7 +17,6 @@ import { ProductsListComponent } from '../product/products-list/products-list.co
 import { ProductModule } from 'src/product/product.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
-import { OrderComponent } from 'src/order/order.component';
 import { OrderModule } from 'src/order/order.module';
 
 @NgModule({

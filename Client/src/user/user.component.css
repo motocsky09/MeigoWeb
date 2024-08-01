@@ -9,7 +9,7 @@
 .auth-header {
     display: flex;
     justify-content: center;
-    /*width: 100%; /* Lățimea să fie aceeași ca la auth-form */
+    /*width: 100%; / Lățimea să fie aceeași ca la auth-form */
     margin-bottom: 0; /* Elimină marginea de jos pentru a fi lipită de login-form */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

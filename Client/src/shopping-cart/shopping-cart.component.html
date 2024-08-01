@@ -7,26 +7,26 @@
             <thead class="tabel_menu">
                 <tr>
                     <th class="articol">Articol</th>
-                    <th>Preț</th>
+                    <th>Pret</th>
                     <th>Produse</th>
                     <th>Subtotal</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngFor="let item of productsList">
                 <tr>
-                    <td class="imagine_tabel"><img src="./assets/images/stand_phone.png" alt=""><span class="descr_prod"></span></td>
-                    <td class="cost_tabel"><b>10 euro</b></td>
-                    <td class="cantitate_tabel"><input type="number" class="quantity-input" value="1" min="1"></td>
-                    <td class="total_tabel"><b>10 euro</b></td>
+                    <td class="imagine_tabel"><img src="./assets/images/{{item.imagePath}}" alt=""></td>
+                    <td class="cost_tabel"><b>{{item.price}} euro</b></td>
+                    <td class="cantitate_tabel"><input readonly type="number" class="quantity-input" value={{item.selectedQuantity}} min="1"></td>
+                    <td class="total_tabel"><b>{{item.sumSelectedQuantity}} euro</b></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="total_amount">
-        <h3 class="amount">Total de plată</h3>
-        <h4 class="amount">Cost produse: 10 euro</h4>
-        <h4 class="amount_bottom">Cost Transport: 5 euro</h4>
-        <h3 class="amount"><b>Total:</b> 15 euro</h3>
-        <button class="buton_final"><a href="order" class="buton_final">Finalizare comandă</a></button>
+        <h3 class="amount">Total de plata</h3>
+        <h4 class="amount">Cost produse: {{totalSumWithoutDelivery}} euro</h4>
+        <h4 class="amount_bottom">Cost Transport: {{sumDelivery}} euro</h4>
+        <h3 class="amount"><b>Total:</b> {{totalSumWithDelivery}} euro</h3>
+        <button class="buton_final"><a href="order" class="buton_final">Finalizare comanda</a></button>
     </div>
 </div>
