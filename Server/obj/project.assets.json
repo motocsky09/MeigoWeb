@@ -8187,11 +8187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andreimotoc/Downloads/Proiect-de-Licenta-main-3/Server/Server.csproj",
+      "projectUniqueName": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
       "projectName": "Server",
-      "projectPath": "/Users/andreimotoc/Downloads/Proiect-de-Licenta-main-3/Server/Server.csproj",
+      "projectPath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
       "packagesPath": "/Users/andreimotoc/.nuget/packages/",
-      "outputPath": "/Users/andreimotoc/Downloads/Proiect-de-Licenta-main-3/Server/obj/",
+      "outputPath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/andreimotoc/.nuget/NuGet/NuGet.Config"
