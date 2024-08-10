@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Server.Entities;
 
 namespace Server.Repositories
@@ -58,6 +59,11 @@ namespace Server.Repositories
                 _serverDbContext.Profile.Remove(profileToDelete);
                 _serverDbContext.SaveChanges();
             }
+        }
+        
+        public async Task<Profile> GetUserProfileAsync(string userId)
+        {
+            return await _serverDbContext.Profile.FirstOrDefaultAsync(p => p.UserId == userId);
         }
     }
 }

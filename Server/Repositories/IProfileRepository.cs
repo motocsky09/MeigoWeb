@@ -12,5 +12,7 @@ namespace Server.Repositories
         public void UpdateProfile(Profile model);
 
         public void DeleteProfile(int profileid);
+        
+        Task<Profile> GetUserProfileAsync(string userId);
     }
 }
