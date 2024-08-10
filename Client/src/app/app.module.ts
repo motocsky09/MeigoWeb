@@ -18,6 +18,8 @@ import { ProductModule } from 'src/product/product.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
 import { OrderModule } from 'src/order/order.module';
+import { ProfileModule } from 'src/profile/profile.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { OrderModule } from 'src/order/order.module';
     ProductModule,
     FontAwesomeModule,
     ShoppingCartModule,
-    OrderModule
+    OrderModule,
+    ProfileModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

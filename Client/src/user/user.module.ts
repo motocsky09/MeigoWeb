@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileComponent } from './profile/profile.component';
 import { UserService } from 'src/services/user.service';
 
 
@@ -14,8 +13,7 @@ import { UserService } from 'src/services/user.service';
   declarations: [
     UserComponent,
     LoginComponent,
-    RegisterComponent,
-    ProfileComponent
+    RegisterComponent
   ],
   imports: [
     CommonModule,

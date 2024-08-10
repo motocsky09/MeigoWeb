@@ -2,11 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
+
+  private apiUrl = 'http://localhost:5098/api/Profile'; // URL-ul corect
 
   constructor(
     private fb:FormBuilder,
@@ -16,8 +19,15 @@ export class ProfileService {
   }
   readonly BaseURI = 'http://localhost:5098/api';
 
-     getProfilesList()
-     {
-       return this.http.get(this.BaseURI+'/Profile/GetProfiles');
-     }
+  getUserProfile(): Observable<any> {
+    return this.http.get(this.BaseURI + '/Profile/GetUserProfile');
+  }  
+
+    updateProfile(profile: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/UpdateProfile`, profile);
+  }
+
+  deleteProfile(profileId: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/DeleteProfile/${profileId}`);
+  }
 }
