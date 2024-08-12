@@ -28,7 +28,8 @@ namespace Server.Repositories
                 Address = model.Address,
                 Email = model.Email,
                 ImagePath = model.ImagePath,
-                PhoneNumber = model.PhoneNumber
+                PhoneNumber = model.PhoneNumber,
+                UserId = model.UserId
             };
             _serverDbContext.Profile.Add(profile);
             _serverDbContext.SaveChanges();
@@ -46,6 +47,7 @@ namespace Server.Repositories
                 existingProfile.Email = model.Email;
                 existingProfile.ImagePath = model.ImagePath;
                 existingProfile.PhoneNumber = model.PhoneNumber;
+                existingProfile.UserId = model.UserId;
 
                 _serverDbContext.SaveChanges();
             }

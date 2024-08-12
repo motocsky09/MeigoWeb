@@ -17,8 +17,11 @@ export class ProfileComponent implements OnInit {
   ) {}
  
 
-  ngOnInit() {
-    this.getUserProfile();
+  ngOnInit(): void {
+    if(localStorage.getItem('token') != null ){
+      this.router.navigateByUrl('/user/profile');
+      this.getUserProfile;
+    }    
   }
   
   getUserProfile() {
