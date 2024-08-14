@@ -13,6 +13,6 @@ namespace Server.Entities
         public string PhoneNumber { get; set; }
         
         // Proprietatea UserId trebuie să fie de tip nullable
-       // public string? UserId { get; set; }  // Adaugă semnul ? pentru a permite valori NULL
+        public string? UserId { get; set; }  // Adaugă semnul ? pentru a permite valori NULL
     }
 }

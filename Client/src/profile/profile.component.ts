@@ -9,8 +9,10 @@ import { ProfileService } from 'src/services/profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profile: any = null;
+  
   newProfileForm: FormGroup;
+  profilesList: any[] = [];
+  profile: any = {};
 
   constructor(
     private service: ProfileService,
@@ -28,41 +30,38 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUserProfile();
+    if (localStorage.getItem('token') != null) {
+      this.router.navigateByUrl('/user/profile');
+      this.getUserProfile();
+    }
   }
 
   getUserProfile() {
     this.service.getUserProfile().subscribe(
       (res: any) => {
-        this.profile = res;
+        this.profilesList = res;
+        console.log(this.profilesList);
       },
       (err: any) => {
-        if (err.status === 404) {
-          this.profile = null;
-        } else {
-          console.error('Eroare la obținerea profilului:', err);
-        }
+        console.error('Eroare la obținerea profilului:', err);
       }
     );
   }
 
   addNewProfile() {
-    if (this.newProfileForm.valid) {
-      const newProfile = this.newProfileForm.value;
-      this.service.createProfile(newProfile).subscribe(
-        (res: any) => {
-          console.log('Profil creat:', res);
-          this.profile = res;
-          this.newProfileForm.reset();
-        },
-        (err: any) => {
-          console.error('Eroare creare profil:', err);
-        }
-      );
-    } else {
-      console.warn('Formularul nu este valid');
-    }
+    const newProfile = this.newProfileForm.value;
+    this.service.createProfile(newProfile).subscribe(
+      (res: any) => {
+        console.log('Profil creat:', res);
+        this.getUserProfile(); // Reîncarcă lista pentru a include noul profil
+        this.newProfileForm.reset(); // Resetează formularul după creare
+      },
+      (err: any) => {
+        console.error('Eroare creare profil:', err);
+      }
+    );
   }
+
 
   editItem(item: any) {
     item.editing = true;
@@ -85,15 +84,6 @@ export class ProfileComponent implements OnInit {
     this.getUserProfile(); // Reîncarcă lista pentru a reveni la starea anterioară
   }
 
-  deleteProfile(profileId: number) {
-    this.service.deleteProfile(profileId).subscribe(
-      () => {
-        console.log('Profil șters');
-        this.getUserProfile(); // Reîncarcă lista pentru a reflecta ștergerea
-      },
-      (err: any) => {
-        console.error('Eroare ștergere profil:', err);
-      }
-    );
+
   }
-}
+

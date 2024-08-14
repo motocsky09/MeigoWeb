@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,6 +20,7 @@ import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
 import { OrderModule } from 'src/order/order.module';
 import { ProfileModule } from 'src/profile/profile.module';
 import { CommonModule } from '@angular/common';
+import { JwtInterceptor } from 'src/interceptor/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { CommonModule } from '@angular/common';
     OrderModule,
     ProfileModule
   ],
-  providers: [UserService],
+  providers: [UserService , { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

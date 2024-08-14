@@ -11,6 +11,6 @@ namespace Server.Repositories
         void CreateProfile(Profile model);
         void UpdateProfile(Profile model);
         void DeleteProfile(int profileid);
-        //Task<Profile> GetUserProfileAsync(string userId);
+        Task<Profile> GetUserProfileAsync(string userId);
     }
 }

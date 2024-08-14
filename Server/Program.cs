@@ -19,26 +19,32 @@ builder.Services.AddDbContext<ServerDbContext>(options =>
 builder.Services.AddDbContext<IdentityContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeAppCon")));
 
+// For Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
     options.SaveToken = true;
-    options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters = new TokenValidationParameters()
+    options.RequireHttpsMetadata = false; // Poate fi true în producție
+    options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidAudience = configuration["JWT:ValidAudience"],
         ValidIssuer = configuration["JWT:ValidIssuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"])),
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero // Setează toleranța pentru diferențele de timp
     };
 });
+
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IOrderHistoryByUserRepository, OrderHistoryByUserRepository>();
@@ -48,9 +54,15 @@ builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 
-
 // Add CORS
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins(configuration["ApplicationSettings:Client_URL"])
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          .AllowCredentials());
+});
 
 var app = builder.Build();
 
@@ -66,15 +78,18 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Apply CORS before authentication and authorization
+app.UseCors(options =>
+        options.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials() // Dacă folosești cookies
+);
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors(options =>
-    options.WithOrigins(builder.Configuration["ApplicationSettings:Client_URL"])
-           .AllowAnyMethod()
-           .AllowAnyHeader()
-);
 
 app.MapControllers();
 
 app.Run();
-
