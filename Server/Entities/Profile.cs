@@ -10,12 +10,9 @@ namespace Server.Entities
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public string ImagePath { get; set; }
         public string PhoneNumber { get; set; }
         
         // Proprietatea UserId trebuie să fie de tip nullable
-        public string? UserId { get; set; }  // Adaugă semnul ? pentru a permite valori NULL
-    
-        public IdentityUser User { get; set; }
+       // public string? UserId { get; set; }  // Adaugă semnul ? pentru a permite valori NULL
     }
 }

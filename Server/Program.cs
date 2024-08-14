@@ -19,9 +19,6 @@ builder.Services.AddDbContext<ServerDbContext>(options =>
 builder.Services.AddDbContext<IdentityContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeAppCon")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<IdentityContext>()
-    .AddDefaultTokenProviders();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>

@@ -1,18 +1,16 @@
 using Server.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Server.Repositories
 {
     public interface IProfileRepository
     {
-        public Profile GetProfileById (int profileid);
-        public List<Profile> GetProfiles();
-        
-        public void CreateProfile(Profile model);
-
-        public void UpdateProfile(Profile model);
-
-        public void DeleteProfile(int profileid);
-        
-        Task<Profile> GetUserProfileAsync(string userId);
+        Profile GetProfileById(int profileid);
+        List<Profile> GetProfiles();
+        void CreateProfile(Profile model);
+        void UpdateProfile(Profile model);
+        void DeleteProfile(int profileid);
+        //Task<Profile> GetUserProfileAsync(string userId);
     }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/services/profile.service';
 
@@ -8,32 +9,59 @@ import { ProfileService } from 'src/services/profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profilesList: any[] = [];
-  profile: any = {};
+  profile: any = null;
+  newProfileForm: FormGroup;
 
   constructor(
     private service: ProfileService,
-    private router: Router
-  ) {}
- 
+    private router: Router,
+    private fb: FormBuilder
+  ) {
+    this.newProfileForm = this.fb.group({
+      userName: [''],
+      firstName: [''],
+      lastName: [''],
+      address: [''],
+      email: [''],
+      phoneNumber: ['']
+    });
+  }
 
   ngOnInit(): void {
-    if(localStorage.getItem('token') != null ){
-      this.router.navigateByUrl('/user/profile');
-      this.getUserProfile;
-    }    
+    this.getUserProfile();
   }
-  
+
   getUserProfile() {
     this.service.getUserProfile().subscribe(
       (res: any) => {
         this.profile = res;
-        console.log(this.profile);
       },
       (err: any) => {
-        console.error('Eroare la obținerea profilului:', err);
+        if (err.status === 404) {
+          this.profile = null;
+        } else {
+          console.error('Eroare la obținerea profilului:', err);
+        }
       }
     );
+  }
+
+  addNewProfile() {
+    if (this.newProfileForm.valid) {
+      const newProfile = this.newProfileForm.value;
+      this.service.createProfile(newProfile).subscribe(
+        (res: any) => {
+          console.log('Profil creat:', res);
+          this.profile = res;
+          this.newProfileForm.reset();
+        },
+        (err: any) => {
+          console.error('Eroare creare profil:', err);
+        }
+      );
+    } else {
+      console.warn('Formularul nu este valid');
+    }
   }
 
   editItem(item: any) {

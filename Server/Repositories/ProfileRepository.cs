@@ -10,14 +10,17 @@ namespace Server.Repositories
         {
             _serverDbContext = serverDbContext;
         }
+
         public Profile GetProfileById(int profileid)
         {
             return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileid);
         }
+
         public List<Profile> GetProfiles() 
         {
             return _serverDbContext.Profile.ToList();
         }
+
         public void CreateProfile(Profile model)
         {
             var profile = new Profile
@@ -27,9 +30,7 @@ namespace Server.Repositories
                 LastName = model.LastName,
                 Address = model.Address,
                 Email = model.Email,
-                ImagePath = model.ImagePath,
-                PhoneNumber = model.PhoneNumber,
-                UserId = model.UserId
+                PhoneNumber = model.PhoneNumber
             };
             _serverDbContext.Profile.Add(profile);
             _serverDbContext.SaveChanges();
@@ -45,9 +46,8 @@ namespace Server.Repositories
                 existingProfile.LastName = model.LastName;
                 existingProfile.Address = model.Address;
                 existingProfile.Email = model.Email;
-                existingProfile.ImagePath = model.ImagePath;
                 existingProfile.PhoneNumber = model.PhoneNumber;
-                existingProfile.UserId = model.UserId;
+                
 
                 _serverDbContext.SaveChanges();
             }
@@ -63,9 +63,9 @@ namespace Server.Repositories
             }
         }
         
-        public async Task<Profile> GetUserProfileAsync(string userId)
-        {
-            return await _serverDbContext.Profile.FirstOrDefaultAsync(p => p.UserId == userId);
-        }
+        //public async Task<Profile> GetUserProfileAsync(string userId)
+        //{
+         //   return await _serverDbContext.Profile.FirstOrDefaultAsync(p => p.UserId == userId);
+        //}
     }
 }

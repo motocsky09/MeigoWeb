@@ -1,57 +1,57 @@
 <li class="image">
     <img src="./assets/images/auth.png" alt="product_image" width="35" height="35">
 </li>
-<div *ngFor="let item of profilesList" class="auth-form">
-    <div class="auth-header">
-        <ul>
-            
-            <li>
-                <div class="username-header">
-                    <p><b>{{item.userName}}</b></p>
-                </div>
-            </li>
-            <li class="details-header">
-                <p class="details"><i>Detaliile contului:</i></p>
-            </li>
-            <li><p>Nume: {{item.firstName}}</p></li>
-            <li><p>Prenume: {{item.lastName}}</p></li>
-            <li>
-                <p>Adresă: 
-                    <ng-container *ngIf="!item.editing">
-                        {{item.address}}
-                    </ng-container>
-                    <ng-container *ngIf="item.editing">
-                        <input [(ngModel)]="item.address" />
-                    </ng-container>
-                </p>
-            </li>
-            <li>
-                <p>Email: 
-                    <ng-container *ngIf="!item.editing">
-                        {{item.email}}
-                    </ng-container>
-                    <ng-container *ngIf="item.editing">
-                        <input [(ngModel)]="item.email" />
-                    </ng-container>
-                </p>
-            </li>
-            <li>
-                <p>Telefon: 
-                    <ng-container *ngIf="!item.editing">
-                        {{item.phoneNumber}}
-                    </ng-container>
-                    <ng-container *ngIf="item.editing">
-                        <input [(ngModel)]="item.phoneNumber" />
-                    </ng-container>
-                </p>
-            </li>
-        </ul>
-        <div *ngIf="!item.editing">
-            <button (click)="editItem(item)" class="buton-profile">Editează</button>
-        </div>
-        <div *ngIf="item.editing">
-            <button (click)="saveProfile(item)" class="buton-profile">Salvează</button>
-            <button (click)="cancelEdit(item)" class="buton-profile">Anulează</button>
-        </div>
+
+<div *ngIf="profile; else createProfileForm">
+    <!-- Afișează profilul existent -->
+    <div class="auth-form">
+      <h3 class="username-header">Profilul Tău</h3>
+      <ul>
+        <li><p>Nume utilizator: {{profile.userName}}</p></li>
+        <li><p>Nume: {{profile.firstName}}</p></li>
+        <li><p>Prenume: {{profile.lastName}}</p></li>
+        <li><p>Adresă: {{profile.address}}</p></li>
+        <li><p>Email: {{profile.email}}</p></li>
+        <li><p>Telefon: {{profile.phoneNumber}}</p></li>
+      </ul>
+      <button (click)="editItem(profile)" class="buton-profile">Editează</button>
     </div>
-</div>
+  </div>
+  
+  <ng-template #createProfileForm>
+    <div class="auth-form">
+      <h3>Creare Profil Nou</h3>
+      <form [formGroup]="newProfileForm" (ngSubmit)="addNewProfile()">
+        <ul>
+          <li>
+            <div class="username-header">
+              <label for="userName">Nume utilizator:</label>
+              <input id="userName" formControlName="userName" required />
+            </div>
+          </li>
+          <li>
+            <label for="firstName">Nume:</label>
+            <input id="firstName" formControlName="firstName" required />
+          </li>
+          <li>
+            <label for="lastName">Prenume:</label>
+            <input id="lastName" formControlName="lastName" required />
+          </li>
+          <li>
+            <label for="address">Adresă:</label>
+            <input id="address" formControlName="address" required />
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" type="email" required />
+          </li>
+          <li>
+            <label for="phoneNumber">Telefon:</label>
+            <input id="phoneNumber" formControlName="phoneNumber" required />
+          </li>
+        </ul>
+        <button type="submit" class="buton-profile">Crează Profil</button>
+      </form>
+    </div>
+  </ng-template>
+  

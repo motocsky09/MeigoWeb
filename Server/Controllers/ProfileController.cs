@@ -30,13 +30,35 @@ namespace Server.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Route("CreateProfile")]
-        public ActionResult CreateProfile(Profile profile)
+        [HttpPost("CreateProfile")]
+        [Authorize]
+        public IActionResult CreateProfile([FromBody] Profile profile)
         {
+            if (profile == null)
+            {
+                return BadRequest("Profile data is null.");
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized(); // Dacă utilizatorul nu este autentificat
+            }
+
+            // Verifică dacă profilul există deja
+            //var existingProfile = _profileRepository.GetUserProfileAsync(userId).Result;
+            //if (existingProfile != null)
+            //{
+            //    return BadRequest("Un profil deja există pentru acest utilizator.");
+            //}
+
+            // Creează un profil nou
+            // profile.UserId = userId;
             _profileRepository.CreateProfile(profile);
+
             return Ok(profile);
         }
+
 
         [HttpPut]
         [Route("UpdateProfile")]
@@ -54,32 +76,27 @@ namespace Server.Controllers
             return Ok();
         }
 
-        [HttpGet]
-        [Route("GetUserProfile")]
-        public async Task<IActionResult> GetUserProfile()
-        {
-            // Logare pentru depanare
-            _logger.LogInformation("GetUserProfile method called.");
+        // [HttpGet("GetUserProfile")]
+        //public async Task<IActionResult> GetUserProfile()
+        //{
+          //  _logger.LogInformation("GetUserProfile method called.");
 
-            // Obține ID-ul utilizatorului din token-ul JWT
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userId == null)
-            {
-                _logger.LogWarning("User ID not found in token.");
-                return Unauthorized(); // Returnează 401 Unauthorized dacă ID-ul utilizatorului nu este găsit
-            }
+            //var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //if (userId == null)
+            //{
+            //    _logger.LogWarning("User ID not found in token.");
+            //    return Unauthorized(); // Returnează 401 Unauthorized dacă ID-ul utilizatorului nu este găsit
+            //}
 
-            // Obține profilul utilizatorului folosind ID-ul
-            var profile = await _profileRepository.GetUserProfileAsync(userId);
-            if (profile == null)
-            {
-                _logger.LogWarning($"Profile not found for user ID {userId}.");
-                return NotFound(); // Returnează 404 Not Found dacă profilul nu este găsit
-            }
+            //var profile = await _profileRepository.GetUserProfileAsync(userId);
+            //if (profile == null)
+            //{
+            //   _logger.LogWarning($"Profile not found for user ID {userId}.");
+            //  return NotFound("Profilul nu a fost găsit."); // Returnează 404 Not Found dacă profilul nu este găsit
+            //}
 
-            // Returnează profilul utilizatorului
-            _logger.LogInformation("Profile successfully retrieved.");
-            return Ok(profile); // Returnează 200 OK cu profilul utilizatorului
-        }
+            // _logger.LogInformation("Profile successfully retrieved.");
+            //return Ok(profile); // Returnează 200 OK cu profilul utilizatorului
+            //}
     }
 }
