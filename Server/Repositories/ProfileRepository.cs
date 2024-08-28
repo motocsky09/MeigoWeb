@@ -63,9 +63,6 @@ namespace Server.Repositories
             }
         }
         
-        public async Task<Profile> GetUserProfileAsync(string userId)
-        {
-            return await _serverDbContext.Profile.FirstOrDefaultAsync(p => p.UserId == userId);
-        }
+        
     }
 }

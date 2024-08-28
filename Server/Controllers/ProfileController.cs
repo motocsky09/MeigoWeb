@@ -4,7 +4,6 @@ using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using Server.Entities;
 using Server.Repositories;
 
@@ -33,35 +32,7 @@ namespace Server.Controllers
             return Ok(result);
         }
 
-        [HttpPost("CreateProfile")]
-        [Authorize]
-        public IActionResult CreateProfile([FromBody] Profile profile)
-        {
-            if (profile == null)
-            {
-                return BadRequest("Profile data is null.");
-            }
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null)
-            {
-                return Unauthorized(); // Dacă utilizatorul nu este autentificat
-            }
-
-             //Verifică dacă profilul există deja
-            var existingProfile = _profileRepository.GetUserProfileAsync(userId).Result;
-            if (existingProfile != null)
-            {
-                return BadRequest("Un profil deja există pentru acest utilizator.");
-            }
-
-            // Creează un profil nou
-             profile.UserId = userId;
-            _profileRepository.CreateProfile(profile);
-
-            return Ok(profile);
-        }
-
+        
 
         [HttpPut]
         [Authorize]
@@ -81,7 +52,7 @@ namespace Server.Controllers
             return Ok();
         }
 
-         [HttpGet("GetUserProfile")]
+        [HttpGet("GetUserProfile")]
         public async Task<IActionResult> GetUserProfile()
         {
             _logger.LogInformation("GetUserProfile method called.");
@@ -99,30 +70,10 @@ namespace Server.Controllers
                 return Unauthorized(); // Returnează 401 Unauthorized dacă ID-ul utilizatorului nu este găsit
             }
 
-            var profile = await _profileRepository.GetUserProfileAsync(userId);
-            if (profile == null)
-            {
-               _logger.LogWarning($"Profile not found for user ID {userId}.");
-              return NotFound("Profilul nu a fost găsit."); // Returnează 404 Not Found dacă profilul nu este găsit
-            }
+            
 
             _logger.LogInformation("Profile successfully retrieved.");
-            return Ok(profile); // Returnează 200 OK cu profilul utilizatorului
-            }
-            
-            private JwtSecurityToken GetToken(List<Claim> authClaims)
-            {
-                var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
-
-                var token = new JwtSecurityToken(
-                    issuer: _configuration["JWT:ValidIssuer"],
-                    audience: _configuration["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddMinutes(30),
-                    claims: authClaims,
-                    signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-                );
-
-                return token;
-            }
+            return Ok(); // Returnează 200 OK cu profilul utilizatorului
+        }
     }
 }

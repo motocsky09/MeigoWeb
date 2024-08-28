@@ -9,24 +9,24 @@ import { Observable } from 'rxjs';
 })
 export class ProfileService {
 
-  private apiUrl = 'http://localhost:5098/api/Profile'; // URL-ul corect
+  private apiUrl = 'http://localhost:5098/api'; // URL-ul corect
 
   constructor(
     private fb:FormBuilder,
     private http:HttpClient,
     private router:Router
-  ) { 
+  ) {
   }
   readonly BaseURI = 'http://localhost:5098/api';
 
+  getProfiles(): Observable<any>{
+    return this.http.get(this.BaseURI+'/Profile/GetProfiles');
+  }
   getUserProfile(): Observable<any> {
     return this.http.get(this.BaseURI + '/Profile/GetUserProfile');
-  }  
-  createProfile(profile: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/CreateProfile`, profile);
-}
+  }
 
     updateProfile(profile: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/'UpdateProfile`, profile);
+    return this.http.put<any>(`${this.apiUrl}'/Profile/UpdateProfile`, profile);
   }
 }

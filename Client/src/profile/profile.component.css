@@ -1,58 +1,89 @@
-.auth-form{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 30px;
-	padding: 30px;
+.center-align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
-.username-header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 30px;
+  border: 2px solid #393e46;
+  border-radius: 8px;
+  width: 600px; /* Fixează lățimea formularului */
 }
-.info-header{
-	padding: 15px;
-	margin: 15px;
+.details-account-title {
+  display: flex;
+  justify-content: space-between; /* Spațiu între titlu și restul conținutului */
+  align-items: center; /* Aliniere verticală cu celelalte elemente */
+  margin-bottom: 15px;
+  font-weight: bold;
+  border-bottom: 3px solid #393e46;
+  padding-bottom: 10px;
 }
-ul {
-    list-style-type: none;
-    padding-left: 0; /* Optional: pentru a elimina indentarea implicită */
-    margin: 0; /* Optional: pentru a elimina marginile implicite */
-	border: 2px solid black;
+.last-details{
+  border-bottom: 3px solid #393e46;
+  padding-bottom: 10px;
 }
-li {
-	padding: 5px;
-	margin: 10px;
+.auth-header ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
 }
-input {
-	background-color: yellow;
-	margin: 5px;
-	padding: 5px;
+
+.auth-header li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
-.image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 15px;
+
+.auth-header p {
+  margin: 0;
+  width: 100px; /* Lățime fixă pentru aliniere */
+  font-weight: bold;
 }
-.details-header{
-	display: block;
+
+.auth-header input {
+  background-color: #f0f0f0;
+  border: 1px solid #393e46;
+  padding: 5px;
+  border-radius: 4px;
+  flex: 1; /* Inputurile să ocupe restul spațiului */
+  box-sizing: border-box;
 }
-.details{
-	border-bottom: 2px solid black;
+
+.buton-profile {
+  background: transparent;
+  color: black;
+  border-radius: 10px;
+  border: 4px solid #393e46;
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
-.buton-profile{
-	background: #393e46;
-    color: #F5F5F5;
-    border-radius: 10px;
-    border: 4px solid #3855E8;
-    padding: 5px 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
+.buton-profile:hover {
+  background-color: #393e46; /* Schimbă culoarea la hover pentru feedback vizual */
+  color: white;
 }
+.button-align{
+  padding-top: 5px;
+}
+.details-account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

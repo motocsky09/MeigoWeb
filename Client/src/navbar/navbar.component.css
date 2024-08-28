@@ -74,25 +74,25 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     padding: 0; /* Asigură-te că padding-ul este zero */
     z-index: 1000;
-    width: 150px; /* Ajustează lățimea după preferințe */
+    width: 170px; /* Ajustează lățimea după preferințe */
   }
-  
+
   .sidebar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .sidebar ul li {
     padding: 10px 20px; /* Ajustează padding-ul intern */
     border-bottom: 1px solid #3855E8;
     text-align: center;
   }
-  
+
   .sidebar ul li:last-child {
     border-bottom: none;
   }
-  
+
   .sidebar ul li a {
     color: #EEEEEE;
     text-decoration: none;
@@ -100,12 +100,12 @@
     width: 100%; /* Asigură-te că link-urile ocupă toată lățimea */
     margin: 0;
   }
-  
+
   .sidebar ul li a:hover {
     background-color: #3855E8;
     color: #FFFFFF;
-  }  
-  
+  }
+
 @media screen and (max-width: 768px) {
 
     .navbar {

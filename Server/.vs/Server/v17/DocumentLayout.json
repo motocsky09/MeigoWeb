@@ -1,45 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\",
+  "WorkspaceRootPath": "Z:\\Documents\\Proiect_de_Licenta\\Server\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\ServerDb\\20240826202750_migrare1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\ServerDb\\20240826202750_migrare1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|z:\\documents\\proiect_de_licenta\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731224336_migrareprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\migrations\\identitycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\migrations\\serverdb\\20240701145047_update servedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\serverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{832D882E-37F4-4A4F-9DE4-23AFED24957A}|Server.csproj|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731220140_Migrare2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\migrations\\identitycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\serverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\migrations\\serverdb\\20240701145047_update servedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\mac\\home\\downloads\\proiect-de-licenta-main-3\\server\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +62,35 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20240826202750_migrare1.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\ServerDb\\20240826202750_migrare1.cs",
+              "RelativeDocumentMoniker": "Migrations\\ServerDb\\20240826202750_migrare1.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\ServerDb\\20240826202750_migrare1.cs",
+              "RelativeToolTip": "Migrations\\ServerDb\\20240826202750_migrare1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T20:27:51.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-26T20:23:33.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20240731224336_migrareprofile.cs",
               "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731224336_migrareprofile.cs",
-              "RelativeDocumentMoniker": "Migrations\\ServerDb\\20240731224336_migrareprofile.cs",
               "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731224336_migrareprofile.cs",
-              "RelativeToolTip": "Migrations\\ServerDb\\20240731224336_migrareprofile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T22:43:37.087Z",
@@ -66,159 +98,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IdentityContextModelSnapshot.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\IdentityContextModelSnapshot.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\IdentityContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\IdentityContextModelSnapshot.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\IdentityContextModelSnapshot.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\IdentityContextModelSnapshot.cs",
               "RelativeToolTip": "Migrations\\IdentityContextModelSnapshot.cs",
               "ViewState": "AQIAADQAAABAzszMzMwmwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:43:02.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "Entities\\Product.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Entities\\Product.cs",
-              "RelativeToolTip": "Entities\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:39:45.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T22:43:02.274Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Profile.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Entities\\Profile.cs",
-              "RelativeDocumentMoniker": "Entities\\Profile.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Entities\\Profile.cs",
-              "RelativeToolTip": "Entities\\Profile.cs",
+              "Title": "Product.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "Entities\\Product.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Entities\\Product.cs",
+              "RelativeToolTip": "Entities\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:14:43.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T22:39:45.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Entities\\Profile.cs",
+              "RelativeDocumentMoniker": "Entities\\Profile.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Entities\\Profile.cs",
+              "RelativeToolTip": "Entities\\Profile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T22:14:43.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ServerDbContext.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\ServerDbContext.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\ServerDbContext.cs",
               "RelativeDocumentMoniker": "ServerDbContext.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\ServerDbContext.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\ServerDbContext.cs",
               "RelativeToolTip": "ServerDbContext.cs",
               "ViewState": "AQIAAAoAAADA0czMzIwrwBEAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:11:17.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T22:11:17.822Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "ProductRepository.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\ProductRepository.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ProductRepository.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\ProductRepository.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\ProductRepository.cs",
               "RelativeToolTip": "Repositories\\ProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:37:35.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IProductRepository.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\IProductRepository.cs",
-              "RelativeToolTip": "Repositories\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:39:13.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IProfileRepository.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\IProfileRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IProfileRepository.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\IProfileRepository.cs",
-              "RelativeToolTip": "Repositories\\IProfileRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T21:55:16.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20240701145047_Update serveDbContext.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
-              "RelativeDocumentMoniker": "Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
-              "RelativeToolTip": "Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:11:32.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAwAAAAAJzMzM7MSwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:14:29.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Controllers\\ProfileController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T21:55:41.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T22:37:35.663Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ProfileRepository.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\ProfileRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProfileRepository.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Repositories\\ProfileRepository.cs",
-              "RelativeToolTip": "Repositories\\ProfileRepository.cs",
-              "ViewState": "AQIAAC4AAAAAlGZmZmYJwAAAAAAAAAAA",
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IProductRepository.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "Repositories\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T21:55:08.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T22:39:13.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IProfileRepository.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\IProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IProfileRepository.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\IProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\IProfileRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T21:55:16.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240701145047_Update serveDbContext.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
+              "RelativeDocumentMoniker": "Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
+              "RelativeToolTip": "Migrations\\ServerDb\\20240701145047_Update serveDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T22:11:32.932Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "20240731220140_Migrare2.cs",
-              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731220140_Migrare2.cs",
-              "RelativeDocumentMoniker": "Migrations\\ServerDb\\20240731220140_Migrare2.cs",
-              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731220140_Migrare2.cs",
-              "RelativeToolTip": "Migrations\\ServerDb\\20240731220140_Migrare2.cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAwAAAAAJzMzM7MSwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T22:14:29.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Controllers\\ProfileController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T22:01:40.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T21:55:41.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProfileRepository.cs",
+              "ToolTip": "Z:\\Documents\\Proiect_de_Licenta\\Server\\Repositories\\ProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\ProfileRepository.cs",
+              "ViewState": "AQIAAC4AAAAAlGZmZmYJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T21:55:08.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240731220140_Migrare2.cs",
+              "DocumentMoniker": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731220140_Migrare2.cs",
+              "ToolTip": "\\\\Mac\\Home\\Downloads\\Proiect-de-Licenta-main-3\\Server\\Migrations\\ServerDb\\20240731220140_Migrare2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T22:01:40.732Z"
             }
           ]
         }
