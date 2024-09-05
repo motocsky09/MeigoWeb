@@ -97,7 +97,7 @@ tbody td {
     margin-bottom: 20px;
     margin-top: 0;
     font-size: 25px;
-    
+
 }
 
 .final_shop {
@@ -106,8 +106,9 @@ tbody td {
     margin-top: 20px;
 }
 
-.final_shop a {
-    text-decoration: none;
+a{
+  text-decoration: none;
+  color: #F5F5F5;
 }
 
 .buton_final {
@@ -123,9 +124,10 @@ tbody td {
 }
 
 .buton_final:hover {
-    background-color: #555;
-    color: white;
+  background-color: #555;
+  color: white;
 }
+/*
 .buton_final a:hover{
     background-color: #555;
     color: #F5F5F5;
@@ -141,7 +143,7 @@ tbody td {
     text-decoration: none;
     margin: 20px;
 }
-
+*/
 /* Media Query pentru dispozitive mobile */
 @media (max-width: 768px) {
     .container {
@@ -165,7 +167,7 @@ tbody td {
         width: 80%;
         align-items: center;
         justify-content: space-between;
-    
+
     }
     .imagine_tabel{
         justify-content: right;

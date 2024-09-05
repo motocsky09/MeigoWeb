@@ -28,44 +28,68 @@
     color: #fff;
 }
 
+.filter {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.filter.show {
+  max-height: 600px; /* Setează o înălțime maximă suficient de mare */
+  transition: max-height 0.3s ease-in;
+}
+
 img {
-    width: 400px; 
+    width: 400px;
     height: 400px;
     border-radius: 20px;
     object-fit: cover; /* asigură imaginea acoperă containerul */
 }
 
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.minus, .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px; /* ajustați pentru a obține spațierea dorită */
+  color: #000; /* culoarea butoanelor */
+}
+
 .quantity-container {
-    background: #393e46;
-    border: 4px solid #3855E8;
-    padding: 5px;
-    width: 40px;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
+  background: #393e46;
+  border: 4px solid #3855E8;
+  width: 40px;
+  text-align: center;
 }
 
 .quantity-input {
-    color: #F5F5F5;
-    background: transparent;
-    border: none;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 15px;
+  color: #F5F5F5;
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 15px;
 }
 
 /* Ascunde săgețile pentru Webkit (Chrome, Safari, Opera) */
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-/* Ascunde săgețile pentru Firefox 
+
+/* Ascunde săgețile pentru Firefox
 .quantity-input[type=number] {
     -moz-appearance: textfield;
 }
@@ -139,8 +163,7 @@ img {
 .Short_description {
     width: 70%;
     padding: 10px 15px;
-    border-bottom: 2px solid #3855E8;
-    border-top: 2px solid #3855E8;
+
     color: #0D1321;
     display: inline-block;
     font-size: 18px;
@@ -177,85 +200,134 @@ img {
     backface-visibility: hidden;
 }
 
+#filtersContainer {
+  display: none; /* Inițial, containerul de filtre este ascuns */
+  text-align: left;
+  margin-top: 10px;
+}
+
+#toggleFiltersBtn {
+  background-color: #0D1321;
+  color: #EEEEEE;
+  border: 3px solid #3855E8;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleFiltersBtn:hover {
+  background-color: #555;
+  color: #fff;
+}
 
 
 @media only screen and (max-width: 768px) {
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        padding: 10px;
-    }
-    .filter {
-        width: 100%;
-        height: auto;
-        margin-left: 0 auto;
-        margin-right: 0 auto;
-        padding-bottom: 10px;
-    }
-    .buton_filter {
-        font-size: 15px;
-    }
-    .product ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-    .product li {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-    }
-    #cartButton {
-        width: 50px;
-        height: 50px;
-        padding-top: 3px;
-        padding-bottom: 1px;
-        transition: all 0.3s ease;
-    }
-    #cartItemCount {
-        top: -3px;
-        right: -3px;
-        font-size: 12px;
-        padding: 3px 6px;
-    }
-    #cartButton a {
-        padding: 7px;
-        margin: 0;
-    }
-    .pret_produs {
-        font-size: 20px;
-    }
-    .product-item {
-        padding: 0;
-    }
-    .details {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    .button_product {
-        margin-top: 5px;
-        margin-bottom: 10px;
-    }
-    .flip-card {
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-    }
-    .flip-card-front {
-        backface-visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .description-container {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-    .description-container.open {
-        max-height: 2000px; /* Ajustați înălțimea maximă după cum este necesar */
-    }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .filter {
+    width: 100%;
+    max-height: 0px; /* Setare inițială pentru a ascunde complet */
+    overflow: hidden; /* Asigurăm că nimic nu iese din container */
+    padding: 0; /* Eliminăm padding care poate cauza spațiu */
+    margin: 0; /* Eliminăm marginile */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Tranziție fluidă */
+  }
+
+  .filter.show {
+    max-height: 1000px; /* Ajustează acest număr dacă este necesar */
+    padding: 10px 0; /* Adăugăm padding doar atunci când este vizibil */
+    overflow-y: auto; /* Permite scroll dacă lista este prea lungă */
+  }
+
+
+  .buton_filter {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px; /* Ajustăm dimensiunea butoanelor pentru a ocupa întreaga lățime */
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .product ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .product li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  #cartButton {
+    width: 50px;
+    height: 50px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+  }
+
+  #cartItemCount {
+    top: -3px;
+    right: -3px;
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  #cartButton a {
+    padding: 7px;
+    margin: 0;
+  }
+
+  .pret_produs {
+    font-size: 20px;
+  }
+
+  .product-item {
+    padding: 0;
+  }
+
+  .details {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .button_product {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .flip-card {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .flip-card-front {
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .description-container.open {
+    max-height: 2000px; /* Ajustați înălțimea maximă după cum este necesar */
+  }
 }

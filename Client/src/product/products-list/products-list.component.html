@@ -1,11 +1,28 @@
 <div class="product">
-    <div class="filter">
-        <button class="buton_filter" (click)="getProductsList()"><b>Toate</b><i class="fa fa-filter" aria-hidden="true" style="color:#3855E8;"></i></button>
-        <button class="buton_filter" (click)="getProductsListByCategoryId(1)"><b>Office</b></button>
-        <button class="buton_filter" (click)="getProductsListByCategoryId(2)"><b>Toys</b></button>
-        <button class="buton_filter" (click)="getProductsListByCategoryId(3)"><b>Diverse</b></button>
-    </div> 
+  <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
+    <b>Filtrează</b>
+    <i class="fa fa-filter" aria-hidden="true" style="color:#3855E8;"></i>
+  </button>
+
+  <!-- Adăugăm clasa 'show' în funcție de valoarea variabilei 'areFiltersVisible' -->
+  <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
+    <button class="buton_filter" (click)="getProductsList()"><b>Toate</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1003)"><b>Bathroom</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1004)"><b>Cards Game</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1005)"><b>Clean</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1006)"><b>Clothes</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1007)"><b>Figurine</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1008)"><b>Glasses</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1009)"><b>Home</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1010)"><b>Kitchen</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1011)"><b>Money Box</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1012)"><b>Office</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1013)"><b>Tools</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1014)"><b>Vice</b></button>
+  </div>
 </div>
+
+
 
 <ul *ngFor="let item of productsList">
     <li class="product-item">
@@ -13,20 +30,25 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                        <img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200">
+                  <a href="/product-page"><img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200"></a>
                 </div>
             </div>
         </div>
     </div>
         <div class="details">
-            <div class="Short_description">
-            <p><b>{{item.shortDescription}}</b></p>
+            <h3 class="pret_produs"><b>Preț:</b> {{item.price}} lei</h3>
+          <div class="quantity-wrapper">
+            <div class="minus">
+              <i class="fas fa-minus"></i>
             </div>
-        
-            <h3 class="pret_produs"><b>Preț:</b> {{item.price}} (€)</h3>
             <div class="quantity-container">
-                <input #selectedQuantity type="number" class="quantity-input" value="1" min="1">
+              <input #selectedQuantity type="number" class="quantity-input" value="1" min="1">
             </div>
+            <div class="plus">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+
         </div>
         <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, item.id, selectedQuantity.valueAsNumber)">Adaugă în coș</button>
     </li>
@@ -35,4 +57,5 @@
         <a href="cos-cumparaturi">
             <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
         <span id="cartItemCount">{{ cartCounter }}</span>
-    </div>    
+    </div>
+</ul>

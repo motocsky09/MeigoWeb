@@ -86,4 +86,15 @@
   justify-content: center;
   align-items: center;
 }
+a{
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid #393e46;
+  padding: 10px 20px;
+  color: black;
+}
+a:hover{
+  background-color: #393e46;
+  color: white;
+}
 

@@ -6,12 +6,14 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductComponent } from './product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 @NgModule({
   declarations: [
     ProductsListComponent,
-    ProductComponent
+    ProductComponent,
+    ProductPageComponent
   ],
   imports: [
     CommonModule,

@@ -30,20 +30,11 @@
     margin-bottom: 10px; /* spatiere intre elementele din lista de informatii */
     font-size: 15px; /* dimensiunea textului mai mic */
     margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* Stilizare pentru modul mobil */
-@media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Așezare verticală în modul mobil */
-        align-items: center;
 
-    }
-    .footer-section {
-        width: 100%; /* Lățimea maximă în modul mobil */
-        margin-bottom: 20px; /* Spațiere între secțiuni în modul mobil */
-        text-align: center;
-    }
-}
 .footer-right {
   display: flex;
   align-items: end;
@@ -78,4 +69,19 @@
 
 .stripe3 {
   background-color: #CE1126; /* roșu */
+}
+/* Stilizare pentru modul mobil */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: row; /* Așezare verticală în modul mobil */
+    align-items: center;
+  }
+  .footer-section {
+    width: 50%; /* Lățimea maximă în modul mobil */
+    margin-bottom: 30px; /* Spațiere între secțiuni în modul mobil */
+    text-align: center;
+  }
+  .footer-info{
+    font-size: 10px;
+  }
 }
