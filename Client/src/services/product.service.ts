@@ -29,4 +29,12 @@ export class ProductService {
         .set('categoryId', categoryId)
        return this.http.get(this.BaseURI+'/Product/GetProductsByCategoryId',{params});
      }
+
+  getProductById(productId: number) {
+    return this.http.get<any>(`${this.BaseURI}/Product/GetProductById`, {
+      params: new HttpParams().set('productId', productId.toString())
+    });
+  }
+
+
 }

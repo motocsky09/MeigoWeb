@@ -1,1 +1,35 @@
-<p>product-page works!</p>
+<div class="product-page">
+  <div class="product-container" *ngIf="product">
+
+    <!-- Partea stângă: Imagini produs -->
+    <div class="product-images">
+      <img src="./assets/images/{{product.imagePath}}" alt="product_image" class="main-product-image">
+    </div>
+
+    <!-- Partea dreaptă: Detalii produs -->
+    <div class="details-product">
+      <h2 class="titlu-produs">{{product.name}}</h2>
+
+      <h3 class="pret_produs"><b>Preț:</b> {{product.price}} lei</h3>
+
+      <!-- Container pentru input de cantitate și butoanele minus și plus -->
+      <div class="quantity-wrapper">
+        <div class="minus">
+          <i class="fas fa-minus"></i>
+        </div>
+        <div class="quantity-container">
+          <input #selectedQuantity type="number" class="quantity-input" value="1" min="1">
+        </div>
+        <div class="plus">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+
+      <p class="description-product">{{product.shortDescription}}</p>
+
+      <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, product.id, selectedQuantity.valueAsNumber)">Adaugă în coș</button>
+      <h3 class="recenzie"><b>Recenzie <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></b></h3>
+    </div>
+
+  </div>
+</div>

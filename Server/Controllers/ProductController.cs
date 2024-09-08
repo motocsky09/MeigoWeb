@@ -20,9 +20,9 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("GetProductById")]
-        public ActionResult GetProductById(int productid)
+        public ActionResult GetProductById(int productId)
         {
-            var result = _productRepository.GetProductById(productid);
+            var result = _productRepository.GetProductById(productId);
             return Ok(result);
         }
 

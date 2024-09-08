@@ -30,7 +30,9 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <a href="/product-page"><img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200"></a>
+                  <a [routerLink]="['/product-page', item.id]">
+                    <img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200">
+                  </a>
                 </div>
             </div>
         </div>
