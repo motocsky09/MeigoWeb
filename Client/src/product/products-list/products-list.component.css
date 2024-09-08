@@ -12,9 +12,9 @@
 }
 
 .buton_filter {
-    background-color: #0D1321;
-    color: #EEEEEE;
-    border: 3px solid #3855E8;
+    background-color: #393e46;
+    color: white;
+    border: 1.5px solid #3855E8;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
@@ -24,8 +24,8 @@
 }
 
 .buton_filter:hover {
-    background-color: #555;
-    color: #fff;
+  background-color: rgb(230, 229, 222);
+  color: rgb(8, 24, 69);
 }
 
 .filter {

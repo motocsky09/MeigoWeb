@@ -101,7 +101,12 @@
 .titlu-produs{
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #393e46;
+  color: white;
+  padding: 5px;
+  border: 1px solid #3855E8;
 }
+
 .description-product{
   border-top: 1px solid #0D1321;
   margin-top: 30px;
