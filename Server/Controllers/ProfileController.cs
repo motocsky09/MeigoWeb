@@ -1,8 +1,3 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Server.Entities;
 using Server.Repositories;
@@ -62,30 +57,6 @@ namespace Server.Controllers
         {
             _profileRepository.DeleteProfile(profileId);
             return Ok();
-        }
-
-        [HttpGet("GetUserProfile")]
-        public async Task<IActionResult> GetUserProfile()
-        {
-            _logger.LogInformation("GetUserProfile method called.");
-            _logger.LogInformation("Claims in token:");
-            foreach (var claim in User.Claims)
-            {
-                _logger.LogInformation($"{claim.Type}: {claim.Value}");
-            }
-
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null)
-            {
-                _logger.LogWarning("User ID not found in token.");
-                return Unauthorized(); // Returnează 401 Unauthorized dacă ID-ul utilizatorului nu este găsit
-            }
-
-            
-
-            _logger.LogInformation("Profile successfully retrieved.");
-            return Ok(); // Returnează 200 OK cu profilul utilizatorului
         }
     }
 }

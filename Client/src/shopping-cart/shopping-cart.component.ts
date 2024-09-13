@@ -15,7 +15,7 @@ export class ShoppingCartComponent implements OnInit {
   shoppingCartId: string = "";
   totalSumWithoutDelivery: number = 0;
   totalSumWithDelivery: number = 0;
-  sumDelivery: number = 5;
+  sumDelivery: number = 25;
 
   constructor(
     private service:ProductService,

@@ -1,23 +1,23 @@
 <div class="product">
   <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
-    <b>Filter</b>
-    <i class="fa fa-filter" aria-hidden="true" style="color:#3855E8;"></i>
+    <b>Filtrează</b>
+    <i class="fa fa-filter" aria-hidden="true"></i>
   </button>
 
   <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
-    <button class="buton_filter" (click)="getProductsList()"><b>All</b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1003)"><b>Bathroom <i class="fa-solid fa-bath"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1004)"><b>Cards Game </b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1005)"><b>Clean <i class="fa-solid fa-spray-can-sparkles"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1006)"><b>Clothes <i class="fa-solid fa-shirt"></i></b></button>
+    <button class="buton_filter" (click)="getProductsList()"><b>Toate</b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1003)"><b>Baie <i class="fa-solid fa-bath"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1004)"><b>Joc de cărți <i class="fa-solid fa-gamepad"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1005)"><b>Curățenie <i class="fa-solid fa-spray-can-sparkles"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1006)"><b>Haine <i class="fa-solid fa-shirt"></i></b></button>
     <button class="buton_filter" (click)="getProductsListByCategoryId(1007)"><b>Figurine <i class="fa-solid fa-person-skating"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1008)"><b>Glasses <i class="fa-solid fa-glasses"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1009)"><b>Home <i class="fa-solid fa-house"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1010)"><b>Kitchen <i class="fa-solid fa-kitchen-set"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1011)"><b>Money Box <i class="fa-solid fa-money-check-dollar"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1012)"><b>Office <i class="fa-solid fa-briefcase"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1013)"><b>Tools <i class="fa-solid fa-toolbox"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1014)"><b>Vice <i class="fa-solid fa-smoking"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1008)"><b>Ochelari <i class="fa-solid fa-glasses"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1009)"><b>Casă <i class="fa-solid fa-house"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1010)"><b>Bucătărie <i class="fa-solid fa-burger"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1011)"><b>Pușculiță <i class="fa-solid fa-money-check-dollar"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1012)"><b>Birou <i class="fa-solid fa-briefcase"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1013)"><b>Unelte <i class="fa-solid fa-toolbox"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1014)"><b>Vicii <i class="fa-solid fa-smoking"></i></b></button>
   </div>
 </div>
 
@@ -39,13 +39,13 @@
         <div class="details">
             <h3 class="pret_produs"><b>Preț:</b> {{item.price}} lei</h3>
           <div class="quantity-wrapper">
-            <div class="minus">
+            <div class="minus" (click)="decreaseQuantity(selectedQuantity)">
               <i class="fas fa-minus"></i>
             </div>
             <div class="quantity-container">
-              <input #selectedQuantity type="number" class="quantity-input" value="1" min="1">
+              <input #selectedQuantity type="number" class="quantity-input" [value]="1" min="1">
             </div>
-            <div class="plus">
+            <div class="plus" (click)="increaseQuantity(selectedQuantity)">
               <i class="fas fa-plus"></i>
             </div>
           </div>

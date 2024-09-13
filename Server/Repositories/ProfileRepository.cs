@@ -9,17 +9,17 @@ namespace Server.Repositories
         {
             _serverDbContext = serverDbContext;
         }
-
-        public Profile GetProfileById(int profileId)
-        {
-            return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileId);
-        }
-
+        
         public List<Profile> GetProfiles() 
         {
             return _serverDbContext.Profile.ToList();
         }
-
+        
+        public Profile GetProfileById(int profileId)
+        {
+            return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileId);
+        }
+        
         public void CreateProfile(Profile model)
         {
             var profile = new Profile
@@ -47,7 +47,6 @@ namespace Server.Repositories
                 existingProfile.Email = model.Email;
                 existingProfile.PhoneNumber = model.PhoneNumber;
                 
-
                 _serverDbContext.SaveChanges();
             }
         }
@@ -61,7 +60,5 @@ namespace Server.Repositories
                 _serverDbContext.SaveChanges();
             }
         }
-        
-        
     }
 }

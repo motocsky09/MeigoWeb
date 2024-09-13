@@ -14,13 +14,13 @@
 
       <!-- Container pentru input de cantitate și butoanele minus și plus -->
       <div class="quantity-wrapper">
-        <div class="minus">
+        <div class="minus" (click)="decreaseQuantity(selectedQuantity)">
           <i class="fas fa-minus"></i>
         </div>
         <div class="quantity-container">
-          <input #selectedQuantity type="number" class="quantity-input" value="1" min="1">
+          <input #selectedQuantity type="number" class="quantity-input" [value]="1" min="1">
         </div>
-        <div class="plus">
+        <div class="plus" (click)="increaseQuantity(selectedQuantity)">
           <i class="fas fa-plus"></i>
         </div>
       </div>

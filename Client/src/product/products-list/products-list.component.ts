@@ -100,4 +100,16 @@ export class ProductsListComponent implements OnInit {
   toggleFilters() {
     this.areFiltersVisible = !this.areFiltersVisible;
   }
+
+  increaseQuantity(quantityInput: HTMLInputElement) {
+    const currentValue = quantityInput.valueAsNumber || 1;
+    quantityInput.value = (currentValue + 1).toString();
+  }
+
+  decreaseQuantity(quantityInput: HTMLInputElement) {
+    const currentValue = quantityInput.valueAsNumber || 1;
+    if (currentValue > 1) {
+      quantityInput.value = (currentValue - 1).toString();
+    }
+  }
 }

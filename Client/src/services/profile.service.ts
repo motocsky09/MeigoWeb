@@ -26,7 +26,7 @@ export class ProfileService {
     return this.http.get(this.BaseURI + '/Profile/GetUserProfile');
   }
 
-    updateProfile(profile: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}'/Profile/UpdateProfile`, profile);
+  updateProfile(profile: any): Observable<any> {
+    return this.http.put(this.BaseURI + '/Profile/UpdateProfile', profile);
   }
 }

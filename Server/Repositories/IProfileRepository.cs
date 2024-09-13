@@ -1,16 +1,13 @@
 using Server.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Server.Repositories
 {
     public interface IProfileRepository
     {
-        Profile GetProfileById(int profileId);
         List<Profile> GetProfiles();
+        Profile GetProfileById(int profileId);
         void CreateProfile(Profile model);
         void UpdateProfile(Profile model);
         void DeleteProfile(int profileid);
-        
     }
 }
