@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Server.Entities;
 
 namespace Server.Repositories
@@ -11,9 +10,9 @@ namespace Server.Repositories
             _serverDbContext = serverDbContext;
         }
 
-        public Profile GetProfileById(int profileid)
+        public Profile GetProfileById(int profileId)
         {
-            return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileid);
+            return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileId);
         }
 
         public List<Profile> GetProfiles() 

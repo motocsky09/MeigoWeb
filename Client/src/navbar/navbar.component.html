@@ -18,7 +18,8 @@
 		<li *ngIf="!isLog()"><a href="/user/register">Înregistrare</a></li>
 		<li *ngIf="!isLog()"><a href="/user/login">Autentificare</a></li>
 		<li *ngIf="isLog()"><a href="/user/profile">Profil</a></li>
-        <li *ngIf="isLog()"><a href="/user/profile">Favorite <i class="fa-regular fa-heart" style="color: #ff0000;"></i></a></li>
+        <!--<li *ngIf="isLog()"><a href="/user/profile">Favorite <i class="fa-regular fa-heart" style="color: #ff0000;"></i></a></li>
+        -->
         <li *ngIf="isLog()"><a href="/user/profile">Istoric Comenzi</a></li>
 		<li *ngIf="isLog()"><a (click)="onLogout()">Deconectare</a></li>
 	  </ul>

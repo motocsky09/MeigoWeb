@@ -32,10 +32,23 @@ namespace Server.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        [Route("GetProfilesById")]
+        public ActionResult GetProfileById(int profileId)
+        {
+            var result = _profileRepository.GetProfileById(profileId);
+            return Ok(result);
+        }
         
+        [HttpPost]
+        [Route("CreateProfile")]
+        public ActionResult CreateProfile(Profile profile)
+        {
+            _profileRepository.CreateProfile(profile);
+            return Ok(profile);
+        }
 
         [HttpPut]
-        [Authorize]
         [Route("UpdateProfile")]
         public ActionResult UpdateProfile(Profile profile)
         {
@@ -44,11 +57,10 @@ namespace Server.Controllers
         }
 
         [HttpDelete]
-        [Authorize]
         [Route("DeleteProfile")]
-        public ActionResult DeleteProfile(int profileid)
+        public ActionResult DeleteProfile(int profileId)
         {
-            _profileRepository.DeleteProfile(profileid);
+            _profileRepository.DeleteProfile(profileId);
             return Ok();
         }
 

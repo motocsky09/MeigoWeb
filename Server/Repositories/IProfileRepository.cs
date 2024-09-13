@@ -6,7 +6,7 @@ namespace Server.Repositories
 {
     public interface IProfileRepository
     {
-        Profile GetProfileById(int profileid);
+        Profile GetProfileById(int profileId);
         List<Profile> GetProfiles();
         void CreateProfile(Profile model);
         void UpdateProfile(Profile model);

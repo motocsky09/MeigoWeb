@@ -1,12 +1,11 @@
 <div class="product">
   <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
-    <b>Filtrează</b>
+    <b>Filter</b>
     <i class="fa fa-filter" aria-hidden="true" style="color:#3855E8;"></i>
   </button>
 
-  <!-- Adăugăm clasa 'show' în funcție de valoarea variabilei 'areFiltersVisible' -->
   <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
-    <button class="buton_filter" (click)="getProductsList()"><b>Toate</b></button>
+    <button class="buton_filter" (click)="getProductsList()"><b>All</b></button>
     <button class="buton_filter" (click)="getProductsListByCategoryId(1003)"><b>Bathroom <i class="fa-solid fa-bath"></i></b></button>
     <button class="buton_filter" (click)="getProductsListByCategoryId(1004)"><b>Cards Game </b></button>
     <button class="buton_filter" (click)="getProductsListByCategoryId(1005)"><b>Clean <i class="fa-solid fa-spray-can-sparkles"></i></b></button>

@@ -97,4 +97,11 @@ a:hover{
   background-color: #393e46;
   color: white;
 }
+.istoric{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
 
