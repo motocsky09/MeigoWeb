@@ -9,8 +9,9 @@ import { UserService } from 'src/services/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor(public service: UserService, private router:Router) { }
+  passwordFieldType: string = 'password'; // Inițial setat pe "password"
+  constructor(public service: UserService, private router:Router
+  ) { }
 
   ngOnInit(): void {
     this.service.formModel.reset();
@@ -29,5 +30,8 @@ export class RegisterComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 }

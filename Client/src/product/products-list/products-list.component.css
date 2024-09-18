@@ -39,9 +39,9 @@
   border: 1.5px solid #3855E8;
   padding: 10px 20px;
   margin: 5px;
-  cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

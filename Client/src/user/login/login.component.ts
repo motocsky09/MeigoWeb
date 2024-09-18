@@ -11,6 +11,7 @@ import { UserService } from 'src/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  passwordFieldType: string = 'password'; // Inițial setat pe "password"
 
   formModel={
     UserName : '',
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if(localStorage.getItem('token') != null ){
       this.router.navigateByUrl('/home');
-    }    
+    }
   }
 
   onSubmit(form:NgForm){
@@ -47,5 +48,9 @@ export class LoginComponent implements OnInit {
           console.log(err);
       }
     )
+  }
+
+  togglePasswordVisibility(): void {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 }

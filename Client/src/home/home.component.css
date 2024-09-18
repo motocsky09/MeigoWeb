@@ -10,10 +10,10 @@
   .introduction h2 {
     font-size: 24px;
   }
-  
+
   .introduction h3 {
     font-size: 20px;
-  
+
   }
   h1{
     color: #7D7D7D;
@@ -21,27 +21,29 @@
   .buton{
     padding: 30px;
   }
-  
+
   .buton .buton1 {
     background-color: #3855E8;
     border-radius: 30px;
+    border: 1px solid black;
     color: #EEEEEE;
     padding: 15px 32px;
     text-decoration: none;
     margin: 20px auto;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .buton a:hover{
-  background-color: #555;
-    color: white;
+  background-color: white;
+    color: #3855E8;
   }
-  
+
   .show {
-    opacity: 1 !important; 
+    opacity: 1 !important;
   }
-  
+
   /*accordion*/
-  
+
   .accordion {
     max-width: 530px;
     width: 100%;
@@ -56,7 +58,7 @@
   .title{
   color: #252525;
   font-size: 30px;
-  
+
   }
   .accordion-item {
     width: 100%;
@@ -69,19 +71,19 @@
     display: flex;
     align-items: center; /* Aliniere pe verticală */
     padding: 10px;
-    background-color: none;
+    background-color: transparent;
     width: 100%;
     box-sizing: border-box;
     text-align: center; /* pentru a centra pe orizontală */
     margin: 0; /* eliminăm marginile */
     justify-content: space-between; /* Așezarea elementelor la distanță maximă între ele */
   }
-  
+
   .accordion-header .title {
     flex: 1; /* Titlul va ocupa spațiul disponibil */
     text-align: center; /* Aliniere centrată a textului */
   }
-  
+
   .accordion-header i {
     color: #252525; /* Schimbă culoarea plusului și minusului */
     margin-left: 10px; /* Adăugăm un spațiu între simbol și text */
@@ -109,10 +111,10 @@
   }
   .paragraf_desc p{
     border-bottom: 0.5px solid #393E46;
-    
+
   }
-  
-  
+
+
   @media screen and (max-width: 768px) {
     .introduction h1,.introduction h2, .introduction h3{
         text-align: center;
@@ -122,13 +124,13 @@
         text-align: center; /* Alinează butoanele pe centrul ecranului */
         padding: 0; /* Elimină spațiul de la marginea exterioară a butoanelor */
     }
-  
+
     .buton .buton1 {
         width: 80%; /* Lățimea butoanelor în modul mobil */
         display: inline-block; /* Facem butoanele să ocupe spațiu doar cât este necesar */
         margin: 10px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
     }
-  
+
     .accordion {
         max-width: 90%;
         margin: 0 auto;
@@ -144,7 +146,7 @@
     }
   .description a {
     font-size: 17px; /* Redu dimensiunea fontului pentru adresa de e-mail */
-  }	
+  }
   .description p {
     margin: 5px 0; /* Redu spațiul între paragrafe */
     font-size: 17px;
@@ -152,5 +154,5 @@
   .paragraf_desc p{
     border-bottom: 1px solid #ccc;
   }
-  
+
   }

@@ -1,17 +1,50 @@
-<div class="login-loc">
+<div class="login">
+  <div class="login-loc">
     <form #form='ngForm' class="login-form" autocomplete="off" (submit)="onSubmit(form)">
-        <div class="form-group">
-            <label style="margin-top: 5%;">Nume utilizator</label>
-            <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required>
+      <img src="assets/images/logo5.png" width="70px" height="70px">
+      <div class="form-group">
+        <label style="font-size: 20px;" class="title">Bine ați revenit</label>
+        <p style="font-size: 15px; color: #888;">Introduceți detaliile pentru a vă conecta.</p>
+      </div>
+      <div class="form-group">
+        <label style="margin-top: 5%; margin-bottom: 3%;">Nume utilizator</label>
+        <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" placeholder="user123" required>
+      </div>
+
+        <div class="form-group password-field">
+
+          <label style="margin-bottom: 3%;">Parola</label>
+          <div class="password-input">
+            <input [type]="passwordFieldType" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" placeholder="************" required>
+            <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+              <!-- SVG pentru ochi deschis -->
+              <svg *ngIf="passwordFieldType === 'password'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="eye-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.296.861-.773 1.658-1.383 2.342M15 12a3 3 0 00-6 0m9.542 5.342A9.956 9.956 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.956 9.956 0 011.658-3.342" />
+              </svg>
+
+              <!-- SVG pentru ochi închis -->
+              <svg *ngIf="passwordFieldType === 'text'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="eye-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A4.992 4.992 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.956 9.956 0 011.658-3.342m1.5 6.42A9.956 9.956 0 0012 19c4.477 0 8.268-2.943 9.542-7a9.956 9.956 0 00-1.658-3.342m-4.81 4.81A3.993 3.993 0 0012 15c-1.657 0-3.071-.947-3.787-2.353M15 12a3 3 0 00-6 0" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18" />
+              </svg>
+            </button>
+          </div>
+          <a href="#" class="forgot-password">Parola uitată?</a>
         </div>
-        <div class="form-group">
-            <label>Parola</label>
-            <input type="password" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required>
+
+      <div class="form-group remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Ține-mă minte</label>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8 offset-md-2">
+          <button type="submit" class="btn btn-lg hero-btn" [disabled]="form.invalid">Conectare</button>
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-8 offset-md-2">
-                <button type="submit" class="btn btn-lg hero-btn" [disabled]="form.invalid">Conectare</button>
-            </div>
-        </div>
+      </div>
+      <div class="register-link">
+        <p>Nu aveți încă un cont? <a href="/user/register"> Înregistrați-vă</a></p>
+      </div>
     </form>
+  </div>
 </div>
