@@ -40,8 +40,8 @@
 
 .button_product {
   padding: 10px 20px;
-  background-color: #393e46;
-  border: 1px solid #3855E8;
+  background-color: #2D3250;
+  border: 1px solid #F9B17A;
   color: white;
   cursor: pointer;
   font-size: 16px;
@@ -66,15 +66,15 @@
   align-items: center;
   cursor: pointer;
   padding: 10px;
-  background-color: #393e46;
+  background-color: #2D3250;
   color: white;
   border-radius: 5px;
   font-size: 16px;
 }
 
 .quantity-container {
-  background-color: #393e46;
-  border: 4px solid #3855E8;
+  background-color: #2D3250;
+  border: 4px solid #F9B17A;
   width: 50px;
   text-align: center;
 }
@@ -101,10 +101,10 @@
 .titlu-produs{
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #393e46;
+  background-color: #2D3250;
   color: white;
   padding: 5px;
-  border: 1px solid #3855E8;
+  border: 1px solid #F9B17A;
 }
 
 .description-product{
@@ -123,7 +123,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #393e46;
+  background-color: #2D3250;
   color: #EEEEEE;
   padding: 15px 15px;
   border: none;
@@ -145,7 +145,7 @@
   position: absolute;
   top: -4px;
   right: -4.5px;
-  background-color: #3855E8;
+  background-color: #F9B17A;
   color: white;
   font-size: 12px;
   padding: 3px 6px;

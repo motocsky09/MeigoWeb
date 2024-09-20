@@ -5,13 +5,11 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
-	background-color: #F5F5F5 !important;
+  background-color: #FFFFFF !important;
 
-    /*background: radial-gradient(circle at 10% 20%, rgba(238, 245, 255, 0.5), transparent 50%), 
-              radial-gradient(circle at 90% 80%, rgba(180, 212, 255, 0.5), transparent 50%),
-              radial-gradient(circle at 50% 50%, rgba(134, 182, 246, 0.5), transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(23, 107, 135, 0.5), transparent 50%),
-              radial-gradient(circle at 20% 80%, rgba(134, 182, 246, 0.5), transparent 50%);
-  background-blend-mode: screen;
-  */
+
+  /*
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(201,226,255,1) 100%);
+    */
 }

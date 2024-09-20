@@ -14,8 +14,8 @@
 }
 
 .cos_cumparaturi, .total_amount {
-    border: 2px solid #3855E8;
-    background: #393E46;
+    border: 2px solid #4AC7EE;
+    background: #081845;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -26,7 +26,7 @@
 .amount_bottom{
     padding-top: 5px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #3855E8;
+    border-bottom: 2px solid #4AC7EE;
 }
 .cos_cumparaturi {
     width: 70%;
@@ -67,7 +67,7 @@ tbody td {
     width: 150px;
     height: auto;
     border-radius: 10px;
-    border: 4px solid #3855E8;
+    border: 4px solid #4AC7EE;
 }
 
 .descr_prod {
@@ -89,7 +89,7 @@ tbody td {
 
 .cos_cumparaturi_menu {
     background: transparent;
-   border-bottom: 2px solid #3855E8;
+   border-bottom: 2px solid #4AC7EE;
 }
 
 .list {
@@ -112,7 +112,7 @@ a{
 }
 
 .buton_final {
-    background-color: #3855E8;
+    background-color: #4AC7EE;
     color: #F5F5F5;
     padding: 10px 20px;
     border-radius: 10px;

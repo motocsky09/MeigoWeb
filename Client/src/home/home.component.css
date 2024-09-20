@@ -2,7 +2,7 @@
 .introduction {
     text-align: center;
     padding: 50px;
-    color: #252525;
+    color: black;
   }
   .introduction-content{
     padding: 10px;
@@ -23,10 +23,10 @@
   }
 
   .buton .buton1 {
-    background-color: #3855E8;
+    background-color: #424769;
     border-radius: 30px;
-    border: 1px solid black;
-    color: #EEEEEE;
+    border: 1px solid #F9B17A;
+    color: #FFFFFF;
     padding: 15px 32px;
     text-decoration: none;
     margin: 20px auto;
@@ -34,8 +34,8 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .buton a:hover{
-  background-color: white;
-    color: #3855E8;
+  background-color: #676F9D;
+    color: #FFFFFF;
   }
 
   .show {
@@ -62,8 +62,8 @@
   }
   .accordion-item {
     width: 100%;
-    border-bottom: 3px solid #3855E8;
-    border-top: 3px solid #3855E8;
+    border-bottom: 3px solid #F9B17A;
+    border-top: 3px solid #F9B17A;
     margin-bottom: 10px;
   }
   .accordion-header {
@@ -85,7 +85,7 @@
   }
 
   .accordion-header i {
-    color: #252525; /* Schimbă culoarea plusului și minusului */
+    color: #081845; /* Schimbă culoarea plusului și minusului */
     margin-left: 10px; /* Adăugăm un spațiu între simbol și text */
   }
   .description {
@@ -97,7 +97,7 @@
     text-align: center; /* pentru a centra pe orizontală */
     margin: 0; /* eliminăm marginile */
     color: #EEEEEE;
-    background-color: #393E46;
+    background-color: #424679;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }

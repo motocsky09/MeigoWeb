@@ -12,9 +12,9 @@
 }
 
 .buton_filter {
-    background-color: #393e46;
+    background-color: #2D3250;
     color: white;
-    border: 1.5px solid #3855E8;
+    border: 1.5px solid #F9B17A;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
@@ -34,9 +34,9 @@
 }
 
 #toggleFiltersBtn {
-  background-color: #393e46;
+  background-color: #2D3250;
   color: white;
-  border: 1.5px solid #3855E8;
+  border: 1.5px solid #F9B17A;
   padding: 10px 20px;
   margin: 5px;
   font-size: 16px;
@@ -91,8 +91,8 @@ img:hover {
 }
 
 .quantity-container {
-  background: #393e46;
-  border: 4px solid #3855E8;
+  background: #081845;
+  border: 4px solid #F9B17A;
   width: 40px;
   text-align: center;
 }
@@ -122,10 +122,10 @@ img:hover {
 }
 */
 .button_product {
-  background-color: #393e46;
+  background-color: #424769;
   color: white;
     border-radius: 10px;
-     border: 1.5px solid #3855E8;
+     border: 1.5px solid #F9B17A;
     padding: 5px 15px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -154,7 +154,7 @@ img:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #393e46;
+    background-color: #2D3250;
     color: #EEEEEE;
     padding: 15px 15px;
     border: none;
@@ -176,7 +176,7 @@ img:hover {
     position: absolute;
     top: -4px;
     right: -4.5px;
-    background-color: #3855E8;
+    background-color: #F9B17A;
     color: white;
     font-size: 12px;
     padding: 3px 6px;

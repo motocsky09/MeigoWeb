@@ -4,17 +4,17 @@
 	justify-content: center;
 	padding: 20px;
 	margin: 30px;
-	border: 3px solid #3855E8;
+	border: 3px solid #4AC7EE;
 	color: #0D1321;
 }
 .elements{
-	border: 0.5px solid #3855E8;
+	border: 0.5px solid #4AC7EE;
 	margin: 20px;
 }
 .title{
 	text-align: center;
 	margin: 10px;
-	background-color: #3855E8;
+	background-color: #081845;
 	color: #F5F5F5;
 }
 .order_adress{
@@ -31,7 +31,7 @@
 	border: none;
 }
 .payment legend{
-	background-color: #222831;
+	background-color: #081845;
     color: #F5F5F5;
     padding: 10px 20px;
     border-radius: 10px;
@@ -53,7 +53,7 @@
 	margin: 20px;
 }
 .order-final2{
-    background-color: #3855E8;
+    background-color: #4AC7EE;
     color: #F5F5F5;
     padding: 10px 20px;
     border-radius: 10px;

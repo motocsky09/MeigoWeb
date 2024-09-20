@@ -33,15 +33,14 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 350px;
   text-align: center;
+  border: 1px solid #F9B17A;
 }
 .title{
   text-align: center;
   padding-bottom: 10px;
 }
 .register-form img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
+  width: 150px;
 }
 
 .register-form h2 {
@@ -88,7 +87,7 @@ body {
 .hero-btn {
   width: 100%;
   padding: 10px;
-  background-color: #333;
+  background-color: #2D3250;
   color: white;
   border: none;
   border-radius: 5px;
@@ -145,7 +144,7 @@ body {
 }
 
 .login-link a {
-  color: #007bff; /* Albastru pentru link */
+  color: #F9B17A; /* Albastru pentru link */
   text-decoration: none;
   font-weight: bold;
 }
