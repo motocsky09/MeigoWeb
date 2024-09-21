@@ -1,39 +1,41 @@
 <div class="container">
-	<div class="elements">
-		<div class="adress">
-				<h2 class="title">Date de livrare</h2>
-				<h3 class="order_adress">Adresa(Strada,bloc,etaj)</h3>
-				<input type="text">
-				<h3 class="order_adress">Numarul</h3>
-				<input type="number">
-				<h3 class="order_adress">Oras/Localitate</h3>
-				<input type="text">
-				<h3 class="order_adress">Cod postal</h3>
-				<input type="number">
-				<h3 class="order_adress">Nr. de telefon</h3>
-				<input type="number">
-				<h3 class="order_adress">Email</h3>
-				<input type="email">
-				<h3 class="order_adress">Mentiuni</h3>
-				<input type="text">
-		</div>
-		<div class="payment">
-			<fieldset>
-				<legend><h2>Alege metoda de plata:</h2></legend>
-			  
-				<div class="option">
-					<label for="numerar"><h3>Numerar</h3></label>
-				  <input type="radio" id="numerar" name="monster-feature" value="numerar" checked />
-				</div>
-			  
-				<div class="option">
-				  <label for="card"><h3>Card</h3></label>
-				  <input type="radio" id="card" name="monster-feature" value="card" />
-				</div>
-			  </fieldset>
-		</div>
-		<div class="order-final">
-			<button class="order-final2" (click)="createOrder()"><a style="text-decoration: none; color: white;" href="confirm-order"><h2>Trimite comanda</h2></a></button>
-		</div>
-	</div>
+  <div class="elements">
+    <div class="adress">
+      <h2 class="title">Date de livrare</h2>
+      <div class="form-group">
+        <h3 class="order_adress">Adresa (Strada,număr)</h3>
+        <input type="text" placeholder="Introduceți adresa dvs." required>
+      </div>
+      <div class="form-group">
+        <h3 class="order_adress">Oraș</h3>
+        <input type="text" placeholder="Introduceți orașul/localitatea" required>
+      </div>
+      <div class="form-group">
+        <h3 class="order_adress">Cod poștal</h3>
+        <input type="text" placeholder="Introduceți codul poștal" required>
+      </div>
+      <div class="form-group">
+        <h3 class="order_adress">Mențiuni</h3>
+        <input type="text" placeholder="Orice mențiuni adiționale">
+      </div>
+    </div>
+    <div class="payment">
+      <fieldset>
+        <legend><h2>Alege metoda de plata:</h2></legend>
+        <div class="payment-options">
+          <div class="option">
+            <label for="numerar">Numerar</label>
+            <input type="radio" id="numerar" name="payment-method" value="numerar" checked />
+          </div>
+          <div class="option">
+            <label for="card">Card</label>
+            <input type="radio" id="card" name="payment-method" value="card" />
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="order-final">
+      <button class="order-final2"><a style="text-decoration: none; color: white;" href="confirm-order"><h2>Trimite comanda</h2></a></button>
+    </div>
+  </div>
 </div>

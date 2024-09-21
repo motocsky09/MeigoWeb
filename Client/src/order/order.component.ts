@@ -22,7 +22,7 @@ export class OrderComponent implements OnInit {
     private service:ProductService,
     private router:Router,
     private userService:UserService,
-    private shoopingCartService:ShoppingCartService
+    private shopingCartService:ShoppingCartService
   ) { }
 
 
@@ -34,7 +34,7 @@ export class OrderComponent implements OnInit {
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (res:string) =>{
                 this.shoppingCartId = res;
-                this.shoopingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
+                this.shopingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
                   (res: any) => {
                     this.productsList = res;
                     console.log(this.productsList)
@@ -55,6 +55,6 @@ export class OrderComponent implements OnInit {
   }
 
   createOrder() {
-    this.shoopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe();
+    this.shopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe();
   }
 }

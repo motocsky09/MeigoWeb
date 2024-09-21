@@ -12,11 +12,11 @@
   align-items: center;
   margin: 30px;
   padding: 30px;
-  border: 2px solid #393e46;
+  border: 2px solid #2D3250;
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  width: 600px; /* Fixează lățimea formularului */
+  width: 700px; /* Fixează lățimea formularului */
 }
 .details-account-title {
   display: flex;
@@ -24,11 +24,11 @@
   align-items: center; /* Aliniere verticală cu celelalte elemente */
   margin-bottom: 15px;
   font-weight: bold;
-  border-bottom: 3px solid #393e46;
+  border-bottom: 3px solid #2D3250;
   padding-bottom: 10px;
 }
 .last-details{
-  border-bottom: 3px solid #393e46;
+  border-bottom: 3px solid #2D3250;
   padding-bottom: 10px;
 }
 .auth-header ul {
@@ -52,8 +52,8 @@
 }
 
 .auth-header input {
-  background-color: #f0f0f0;
-  border: 1px solid #393e46;
+  background-color: white;
+  border: 1px solid #2D3250;
   padding: 5px;
   border-radius: 4px;
   flex: 1; /* Inputurile să ocupe restul spațiului */
