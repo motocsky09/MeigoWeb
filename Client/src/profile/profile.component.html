@@ -1,5 +1,5 @@
 <div class="center-align">
-<div *ngFor="let item of profilesList" class="auth-form">
+<div class="auth-form">
   <div class="auth-header">
     <ul>
       <li class="details-account-title">
@@ -7,54 +7,54 @@
       </li>
       <li>
         <p>User <i class="fa-solid fa-user"></i></p>
-        <span>{{item.userName}}</span>
+        <span>{{profile.userName}}</span>
       </li>
       <li>
         <p>Nume |</p>
-        <ng-container *ngIf="!item.editing">
-          <span>{{item.firstName}}</span>
+        <ng-container *ngIf="!profile.editing">
+          <span>{{profile.firstName}}</span>
         </ng-container>
-        <ng-container *ngIf="item.editing">
-          <input [(ngModel)]="item.firstName" />
+        <ng-container *ngIf="profile.editing">
+          <input [(ngModel)]="profile.firstName" />
         </ng-container>
       </li>
       <li>
         <p>Prenume |</p>
-        <ng-container *ngIf="!item.editing">
-          <span>{{item.lastName}}</span>
+        <ng-container *ngIf="!profile.editing">
+          <span>{{profile.lastName}}</span>
         </ng-container>
-        <ng-container *ngIf="item.editing">
-          <input [(ngModel)]="item.lastName" />
+        <ng-container *ngIf="profile.editing">
+          <input [(ngModel)]="profile.lastName" />
         </ng-container>
       </li>
       <li>
         <p>Adresă <i class="fa-solid fa-location-dot"></i></p>
-        <ng-container *ngIf="!item.editing">
-          <span>{{item.address}}</span>
+        <ng-container *ngIf="!profile.editing">
+          <span>{{profile.address}}</span>
         </ng-container>
-        <ng-container *ngIf="item.editing">
-          <input [(ngModel)]="item.address" />
+        <ng-container *ngIf="profile.editing">
+          <input [(ngModel)]="profile.address" />
         </ng-container>
       </li>
       <li>
         <p>Email <i class="fa-regular fa-envelope"></i></p>
-        <span>{{item.email}}</span>
+        <span>{{profile.email}}</span>
       </li>
       <li class="last-details">
         <p>Telefon <i class="fa-duotone fa-solid fa-phone"></i></p>
-        <ng-container *ngIf="!item.editing">
-          <span>{{item.phoneNumber}}</span>
+        <ng-container *ngIf="!profile.editing">
+          <span>{{profile.phoneNumber}}</span>
         </ng-container>
-        <ng-container *ngIf="item.editing">
-          <input [(ngModel)]="item.phoneNumber" />
+        <ng-container *ngIf="profile.editing">
+          <input [(ngModel)]="profile.phoneNumber" />
         </ng-container>
       </li>
-      <div *ngIf="!item.editing" class="button-align">
-        <button (click)="editItem(item)" class="buton-profile">Editează <i class="fa-solid fa-pen"></i></button>
+      <div *ngIf="!profile.editing" class="button-align">
+        <button (click)="editItem(profile)" class="buton-profile">Editează <i class="fa-solid fa-pen"></i></button>
       </div>
-      <div *ngIf="item.editing" class="button-align">
-        <button (click)="saveItem(item)" class="buton-profile">Salvează <i class="fa-solid fa-check"></i></button>
-        <button (click)="cancelEdit(item)" class="buton-profile">Anulează <i class="fa-regular fa-xmark"></i></button>
+      <div *ngIf="profile.editing" class="button-align">
+        <button (click)="saveItem(profile)" class="buton-profile">Salvează <i class="fa-solid fa-check"></i></button>
+        <button (click)="cancelEdit(profile)" class="buton-profile">Anulează <i class="fa-regular fa-xmark"></i></button>
       </div>
     </ul>
   </div>

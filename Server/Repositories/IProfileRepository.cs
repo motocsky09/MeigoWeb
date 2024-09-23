@@ -5,9 +5,10 @@ namespace Server.Repositories
     public interface IProfileRepository
     {
         List<Profile> GetProfiles();
-        Profile GetProfileById(int profileId);
+        Profile GetProfileByUserName(string userName);
         void CreateProfile(Profile model);
         void UpdateProfile(Profile model);
         void DeleteProfile(int profileid);
+        Profile CreateDefaultProfile(string userName, string email);
     }
 }

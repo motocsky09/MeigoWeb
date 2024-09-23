@@ -15,9 +15,9 @@ namespace Server.Repositories
             return _serverDbContext.Profile.ToList();
         }
         
-        public Profile GetProfileById(int profileId)
+        public Profile GetProfileByUserName(string userName)
         {
-            return _serverDbContext.Profile.FirstOrDefault(x => x.Id == profileId);
+            return _serverDbContext.Profile.FirstOrDefault(x => x.UserName == userName);
         }
         
         public void CreateProfile(Profile model)
@@ -59,6 +59,27 @@ namespace Server.Repositories
                 _serverDbContext.Profile.Remove(profileToDelete);
                 _serverDbContext.SaveChanges();
             }
+        }
+
+        public Profile CreateDefaultProfile(string userName , string email)
+        {
+            if (userName != null && email != null)
+            {
+                var profile = new Profile
+                {
+                    UserName = userName,
+                    FirstName = "",
+                    LastName = "",
+                    Address = "",
+                    Email = email,
+                    PhoneNumber = ""
+                };
+                _serverDbContext.Profile.Add(profile);
+                _serverDbContext.SaveChanges();
+                return profile;
+            }
+
+            return null;
         }
     }
 }

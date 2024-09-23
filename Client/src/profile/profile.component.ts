@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/services/profile.service';
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-profile',
@@ -8,24 +9,30 @@ import { ProfileService } from 'src/services/profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profilesList: any[] = [];
+  profile: any;
+  userName: any;
 
   constructor(
     private service: ProfileService,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) {}
 
   ngOnInit() {
-    this.getProfiles();
-  }
-
-  getProfiles() {
-    this.service.getProfiles().subscribe(
-      (res: any) => {
-        this.profilesList = res;
-        console.log(this.profilesList);
-      }
-    );
+    if (localStorage.getItem('token') != null) {
+      this.userService.getUserName().subscribe(
+        (res: string) => {
+          this.userName = res; // Setează userName cu răspunsul primit
+          this.service.getProfileByUserName(this.userName).subscribe(
+            (res: any) => {
+              this.profile = res;
+            },
+            error => {
+              console.error('Error fetching username:', error);
+            }
+          )
+        })
+    }
   }
 
   editItem(item: any) {
@@ -37,7 +44,7 @@ export class ProfileComponent implements OnInit {
       (res: any) => {
         item.editing = false;
         console.log('Profil salvat:', res);
-        this.getProfiles();
+        this.service.getProfileByUserName(this.userName).subscribe();
       },
       (err: any) => {
         console.error('Eroare salvare profil:', err);
@@ -47,6 +54,6 @@ export class ProfileComponent implements OnInit {
 
   cancelEdit(item: any) {
     item.editing = false;
-    this.getProfiles(); // Reîncarcă datele pentru a anula modificările
+    this.service.getProfileByUserName(this.userName); // Reîncarcă datele pentru a anula modificările
   }
 }

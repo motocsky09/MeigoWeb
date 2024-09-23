@@ -28,10 +28,10 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        [Route("GetProfilesById")]
-        public ActionResult GetProfileById(int profileId)
+        [Route("GetProfileByUserName")]
+        public ActionResult GetProfileByUserName([FromQuery] string userName)
         {
-            var result = _profileRepository.GetProfileById(profileId);
+            var result = _profileRepository.GetProfileByUserName(userName);
             return Ok(result);
         }
         
@@ -57,6 +57,14 @@ namespace Server.Controllers
         {
             _profileRepository.DeleteProfile(profileId);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("CreateDefaultProfile")]
+        public ActionResult CreateDefaultProfile([FromQuery] string userName,[FromQuery] string email)
+        {
+            var result = _profileRepository.CreateDefaultProfile(userName, email);
+            return Ok(result);
         }
     }
 }
