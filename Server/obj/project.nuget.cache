@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RfOfbTm8izRJPslLJWnsNwingu0/loxqr0rshWdDjObQevmvMsZEEQxDIneKm4claslHTVQmmrVaWrh1jzhneA==",
+  "dgSpecHash": "1Tb3ijVlE9s=",
   "success": true,
   "projectFilePath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
   "expectedPackageFiles": [
@@ -121,6 +121,8 @@
     "/Users/andreimotoc/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/mono.texttemplating/2.3.1/mono.texttemplating.2.3.1.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/andreimotoc/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
+    "/Users/andreimotoc/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.4/npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/nuget.common/6.9.1/nuget.common.6.9.1.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/nuget.configuration/6.9.1/nuget.configuration.6.9.1.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/nuget.dependencyresolver.core/6.9.1/nuget.dependencyresolver.core.6.9.1.nupkg.sha512",
