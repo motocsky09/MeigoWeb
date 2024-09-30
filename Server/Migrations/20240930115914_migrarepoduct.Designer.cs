@@ -9,11 +9,11 @@ using Server;
 
 #nullable disable
 
-namespace Server.Migrations.ServerDb
+namespace Server.Migrations
 {
     [DbContext(typeof(ServerDbContext))]
-    [Migration("20240826213359_migraredocker")]
-    partial class migraredocker
+    [Migration("20240930115914_migrarepoduct")]
+    partial class migrarepoduct
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -132,7 +132,15 @@ namespace Server.Migrations.ServerDb
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImagePath")
+                    b.Property<string>("ImagePath1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath3")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -212,9 +220,6 @@ namespace Server.Migrations.ServerDb
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserProfileId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

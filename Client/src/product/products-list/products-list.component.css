@@ -155,9 +155,9 @@ img:hover {
     bottom: 20px;
     right: 20px;
     background-color: #2D3250;
+    border: 1px solid #FFFFFF;
     color: #EEEEEE;
     padding: 15px 15px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;

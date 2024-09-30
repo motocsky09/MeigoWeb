@@ -6,18 +6,18 @@
 
   <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
     <button class="buton_filter" (click)="getProductsList()"><b>Toate</b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1003)"><b>Baie <i class="fa-solid fa-bath"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1004)"><b>Joc de cărți <i class="fa-solid fa-gamepad"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1005)"><b>Curățenie <i class="fa-solid fa-spray-can-sparkles"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1006)"><b>Haine <i class="fa-solid fa-shirt"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1007)"><b>Figurine <i class="fa-solid fa-person-skating"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1008)"><b>Ochelari <i class="fa-solid fa-glasses"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1009)"><b>Casă <i class="fa-solid fa-house"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1010)"><b>Bucătărie <i class="fa-solid fa-burger"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1011)"><b>Pușculiță <i class="fa-solid fa-money-check-dollar"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1012)"><b>Birou <i class="fa-solid fa-briefcase"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1013)"><b>Unelte <i class="fa-solid fa-toolbox"></i></b></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1014)"><b>Vicii <i class="fa-solid fa-smoking"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Baie <i class="fa-solid fa-bath"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Joc de cărți <i class="fa-solid fa-gamepad"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Curățenie <i class="fa-solid fa-spray-can-sparkles"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Haine <i class="fa-solid fa-shirt"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Figurine <i class="fa-solid fa-person-skating"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Ochelari <i class="fa-solid fa-glasses"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Casă <i class="fa-solid fa-house"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Bucătărie <i class="fa-solid fa-burger"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Pușculiță <i class="fa-solid fa-money-check-dollar"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1)"><b>Birou <i class="fa-solid fa-briefcase"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Unelte <i class="fa-solid fa-toolbox"></i></b></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(null)"><b>Vicii <i class="fa-solid fa-smoking"></i></b></button>
   </div>
 </div>
 
@@ -30,7 +30,7 @@
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <a [routerLink]="['/product-page', item.id]">
-                    <img src="./assets/images/{{item.imagePath}}" alt="product_image" height="400" width="200">
+                    <img src="./assets/images/{{item.imagePath1}}" alt="product_image" height="400" width="200">
                   </a>
                 </div>
             </div>

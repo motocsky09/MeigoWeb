@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Server.Migrations.ServerDb
+namespace Server.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateserveDbContext : Migration
+    public partial class migrarepoduct : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,8 +30,8 @@ namespace Server.Migrations.ServerDb
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    ShoppingCartId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShoppingCartId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     OrderStatus = table.Column<int>(type: "int", nullable: false),
                     DeliveryPrice = table.Column<int>(type: "int", nullable: false),
@@ -74,7 +74,9 @@ namespace Server.Migrations.ServerDb
                     ShortDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TotalQuantity = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImagePath1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagePath2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagePath3 = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,6 +97,24 @@ namespace Server.Migrations.ServerDb
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductAddedShCart", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Profile",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Profile", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -129,6 +149,9 @@ namespace Server.Migrations.ServerDb
 
             migrationBuilder.DropTable(
                 name: "ProductAddedShCart");
+
+            migrationBuilder.DropTable(
+                name: "Profile");
 
             migrationBuilder.DropTable(
                 name: "ShoppingCart");

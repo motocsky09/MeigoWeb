@@ -181,7 +181,7 @@ namespace Server.Repositories
                             ShortDescription = productTmp.ShortDescription,
                             TotalQuantity = productTmp.TotalQuantity,
                             CategoryId = productTmp.CategoryId,
-                            ImagePath = productTmp.ImagePath
+                            ImagePath = productTmp.ImagePath1
                         };
                         var selectedQuantityTmp = 0;
                         var sumSelectedQuantityTmp = 0;

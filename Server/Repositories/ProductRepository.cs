@@ -30,7 +30,9 @@ namespace Server.Repositories
                 ShortDescription = model.ShortDescription,
                 TotalQuantity = model.TotalQuantity,
                 CategoryId = model.CategoryId,
-                ImagePath = model.ImagePath
+                ImagePath1 = model.ImagePath1,
+                ImagePath2 = model.ImagePath2,
+                ImagePath3 = model.ImagePath3
             };
             _serverDbContext.Product.Add(product);
             _serverDbContext.SaveChanges();
@@ -46,7 +48,9 @@ namespace Server.Repositories
                 existingProduct.ShortDescription = model.ShortDescription;
                 existingProduct.TotalQuantity = model.TotalQuantity;
                 existingProduct.CategoryId = model.CategoryId;
-                existingProduct.ImagePath = model.ImagePath;
+                existingProduct.ImagePath1 = model.ImagePath1;
+                existingProduct.ImagePath2 = model.ImagePath2;
+                existingProduct.ImagePath3 = model.ImagePath3;
 
                 _serverDbContext.SaveChanges();
             }
