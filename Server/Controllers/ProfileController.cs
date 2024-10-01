@@ -61,9 +61,9 @@ namespace Server.Controllers
 
         [HttpPost]
         [Route("CreateDefaultProfile")]
-        public ActionResult CreateDefaultProfile([FromQuery] string userName,[FromQuery] string email)
+        public ActionResult CreateDefaultProfile([FromBody] Profile model)
         {
-            var result = _profileRepository.CreateDefaultProfile(userName, email);
+            var result = _profileRepository.CreateDefaultProfile(model);
             return Ok(result);
         }
     }

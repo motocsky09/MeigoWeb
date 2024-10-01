@@ -61,17 +61,17 @@ namespace Server.Repositories
             }
         }
 
-        public Profile CreateDefaultProfile(string userName , string email)
+        public Profile CreateDefaultProfile(Profile model)
         {
-            if (userName != null && email != null)
+            if (model.UserName != null && model.Email != null)
             {
                 var profile = new Profile
                 {
-                    UserName = userName,
+                    UserName = model.UserName,
                     FirstName = "",
                     LastName = "",
                     Address = "",
-                    Email = email,
+                    Email = model.Email,
                     PhoneNumber = ""
                 };
                 _serverDbContext.Profile.Add(profile);

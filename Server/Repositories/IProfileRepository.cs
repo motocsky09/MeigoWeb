@@ -9,6 +9,6 @@ namespace Server.Repositories
         void CreateProfile(Profile model);
         void UpdateProfile(Profile model);
         void DeleteProfile(int profileid);
-        Profile CreateDefaultProfile(string userName, string email);
+        Profile CreateDefaultProfile(Profile model);
     }
 }

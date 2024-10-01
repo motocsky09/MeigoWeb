@@ -26,9 +26,10 @@ export class RegisterComponent implements OnInit {
     this.service.register().subscribe(
       (res:any) => {
         {
-          this.profileService.createDefaultProfile("test" ,"test@gmail.com")
+          console.log(res);
+          console.log("test");
+          this.profileService.createDefaultProfile(res.profile).subscribe();
           this.service.formModel.reset();
-
 
           this.router.navigateByUrl('/user/login');
         }

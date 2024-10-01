@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
-        (res: string) => {
+        (res: any) => {
           this.userName = res; // Setează userName cu răspunsul primit
           this.service.getProfileByUserName(this.userName).subscribe(
             (res: any) => {

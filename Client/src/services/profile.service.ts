@@ -31,13 +31,15 @@ export class ProfileService {
     return this.http.put(this.BaseURI + '/Profile/UpdateProfile', profile);
   }
 
-  createDefaultProfile(userName: string , email: string): Observable<any> {
-    let body = new HttpParams({
-      fromObject : {
-        'userName' : userName,
-        'email' : email
-      }
-    })
-    return this.http.post(this.BaseURI + '/Profile/CreateDefaultProfile?userName=' + userName + '&email=' + email,body);
+  createDefaultProfile(profile : any): Observable<any> {
+    var body = {
+      userName: profile.userName,
+      firstName: profile.firstName,
+      lastName: profile.lastName,
+      address: profile.address,
+      email: profile.email,
+      phoneNumber: profile.phoneNumber
+    };
+    return this.http.post(this.BaseURI + '/Profile/CreateDefaultProfile',body);
   }
 }
