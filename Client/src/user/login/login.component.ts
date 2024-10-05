@@ -12,6 +12,8 @@ import { UserService } from 'src/services/user.service';
 })
 export class LoginComponent implements OnInit {
   passwordFieldType: string = 'password'; // Inițial setat pe "password"
+  successMessage: string = '';
+  errorMessage: string = '';
 
   formModel={
     UserName : '',
@@ -30,25 +32,32 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onSubmit(form:NgForm){
+  onSubmit(form: NgForm) {
     this.service.login(form.value).subscribe(
-      (res:any)=>{
-        localStorage.setItem('token',res.token);
-        this.router.navigateByUrl('/home');
+      (res: any) => {
+        localStorage.setItem('token', res.token);
         localStorage.setItem('loggedIn', 'true');
         this.service.isLoggedIn$.next(true);
+  
+        this.successMessage = 'Conectare cu succes!';
+        this.errorMessage = '';
+        
+        setTimeout(() => {
+          this.router.navigateByUrl('/home');
+        }, 2000);
       },
-      err=>{
-        if(err.status == 400)
-        {
-          localStorage.setItem('loggedIn','false');
-          this.service.isLoggedIn$.next(false);
+      err => {
+        if (err.status === 400) {
+          this.errorMessage = 'Nume sau parolă incorectă';
+        } else if (err.status === 401) {
+          this.errorMessage = 'Nume sau parolă incorectă';
+        } else {
+          this.errorMessage = 'A apărut o eroare. Încercați din nou.';
         }
-        else
-          console.log(err);
+        this.successMessage = '';
       }
-    )
-  }
+    );
+  }  
 
   togglePasswordVisibility(): void {
     this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';

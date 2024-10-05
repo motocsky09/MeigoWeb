@@ -51,7 +51,4 @@ export class ShoppingCartComponent implements OnInit {
       );
     }
   }
-  createOrder() {
-    this.shopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe();
-  }
 }

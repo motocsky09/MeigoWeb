@@ -67,7 +67,7 @@ namespace Server.Controllers
         {
             var userExists = await _userManager.FindByNameAsync(model.Username);
             if (userExists != null)
-                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "User already exists!", Profile = new Entities.Profile() });
+                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "Utilizator deja existent!", Profile = new Entities.Profile() });
 
             IdentityUser user = new()
             {
@@ -77,7 +77,7 @@ namespace Server.Controllers
             };
             var result = await _userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
-                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "User creation failed! Please check user details and try again.", Profile = new Entities.Profile() });
+                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "Parola nu îndeplinește condițiile.", Profile = new Entities.Profile() });
 
             return Ok(new ResponseModel { Status = "Success", Message = "User created successfully!", Profile = new Entities.Profile { 
                 UserName = model.Username,

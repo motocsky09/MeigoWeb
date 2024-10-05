@@ -14,7 +14,6 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private service: ProfileService,
-    private router: Router,
     private userService: UserService
   ) {}
 

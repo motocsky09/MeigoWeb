@@ -16,6 +16,12 @@ namespace Server.Repositories
             return _serverDbContext.OrderHistoryByUser.FirstOrDefault(x => x.Id == orderhistorybyid);
         }
 
+        public OrderHistoryByUser GetOrderHistoryByUserId(string UserId)
+        {
+            return _serverDbContext.OrderHistoryByUser.FirstOrDefault(x => x.UserId == UserId);
+        }
+
+        
         public List<OrderHistoryByUser> GetOrderHistoryByUser()
         {
             return _serverDbContext.OrderHistoryByUser.ToList();
@@ -37,7 +43,7 @@ namespace Server.Repositories
             if (existingOrderHistoryByUser != null)
             {
                 existingOrderHistoryByUser.Id = model.Id;
-                existingOrderHistoryByUser.UserId = model.Id;
+                existingOrderHistoryByUser.UserId = model.UserId;
                 existingOrderHistoryByUser.OrderId = model.OrderId;
 
                 _serverDbContext.SaveChanges();

@@ -24,11 +24,11 @@
   align-items: center; /* Aliniere verticală cu celelalte elemente */
   margin-bottom: 15px;
   font-weight: bold;
-  border-bottom: 3px solid #2D3250;
+  border-bottom: 2px solid #2D3250;
   padding-bottom: 10px;
 }
 .last-details{
-  border-bottom: 3px solid #2D3250;
+  border-bottom: 2px solid #2D3250;
   padding-bottom: 10px;
 }
 .auth-header ul {
@@ -64,7 +64,7 @@
   background: transparent;
   color: black;
   border-radius: 10px;
-  border: 4px solid #393e46;
+  border: 2px solid #393e46;
   padding: 10px 20px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -103,7 +103,65 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+
   margin-bottom: 30px;
+  padding: 10px 20px;
 }
 
+@media screen and (max-width: 768px) {
+  /* Form Centering */
+  .center-align {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* Form width adjustment for mobile */
+  .auth-form {
+    width: 90%; /* Lățimea formularului să fie 90% din ecran */
+    padding: 20px; /* Reducem padding-ul pentru a economisi spațiu */
+    margin: 10px;
+  }
+
+  /* Title section */
+  .details-account-title {
+    flex-direction: column; /* Așezare verticală pentru titlu și conținut */
+    text-align: center; /* Centrare text */
+    font-size: 18px; /* Dimensiune text mai mică pentru titlu */
+  }
+
+  /* Input adjustment */
+  .auth-header li {
+    flex-direction: column; /* Așezare verticală pentru input-uri */
+    align-items: flex-start; /* Aliniere la stânga a elementelor */
+  }
+
+  .auth-header p {
+    width: auto; /* Eliminăm lățimea fixă pentru a se adapta mai bine */
+    margin-bottom: 5px; /* Spațiu între label și input */
+  }
+
+  .auth-header input {
+    width: 100%; /* Input-urile să ocupe întreaga lățime disponibilă */
+    margin-bottom: 10px; /* Spațiu între input-uri */
+  }
+
+  /* Button size and alignment */
+  .buton-profile {
+    width: 100%; /* Lățimea butonului să fie întreaga lățime a containerului */
+    font-size: 14px; /* Diminuăm dimensiunea fontului */
+  }
+
+  /* Links */
+  a {
+    width: 100%; /* Lățimea link-urilor să ocupe întreaga lățime */
+    text-align: center; /* Centrarea textului */
+    padding: 10px 0; /* Ajustăm padding-ul pentru a arăta bine pe mobile */
+  }
+
+  /* Istoric alignment */
+  .istoric {
+    flex-direction: column; /* Elemente afișate vertical */
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

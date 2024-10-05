@@ -71,17 +71,26 @@
   background-color: #CE1126; /* roșu */
 }
 /* Stilizare pentru modul mobil */
+/* Stilizare pentru modul mobil */
 @media screen and (max-width: 768px) {
   .footer-content {
-    flex-direction: row; /* Așezare verticală în modul mobil */
+    flex-direction: column; /* Așezare verticală în modul mobil */
     align-items: center;
   }
+
   .footer-section {
-    width: 50%; /* Lățimea maximă în modul mobil */
-    margin-bottom: 30px; /* Spațiere între secțiuni în modul mobil */
+    width: 100%; /* Lățimea maximă în modul mobil */
+    margin-bottom: 10px; /* Spațiere între secțiuni în modul mobil */
     text-align: center;
   }
-  .footer-info{
-    font-size: 10px;
+
+  .footer-right {
+    width: 100%; /* Asigură-te că ocupă întreaga lățime */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrează textul și conținutul */
+    margin-top: 10px; /* Spațiu suplimentar între secțiuni */
   }
 }
+

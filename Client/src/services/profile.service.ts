@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileService {
-
+use
   private apiUrl = 'http://localhost:5098/api'; // URL-ul corect
 
   constructor(
@@ -19,9 +19,6 @@ export class ProfileService {
   }
   readonly BaseURI = 'http://localhost:5098/api';
 
-  getProfiles(): Observable<any>{
-    return this.http.get(this.BaseURI+'/Profile/GetProfiles');
-  }
   getProfileByUserName(userName: any): Observable<any> {
 
     return this.http.get(this.BaseURI + '/Profile/GetProfileByUserName?userName=' + userName);

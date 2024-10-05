@@ -20,7 +20,6 @@ import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
 import { OrderModule } from 'src/order/order.module';
 import { ProfileModule } from 'src/profile/profile.module';
 import { CommonModule } from '@angular/common';
-import { JwtInterceptor } from 'src/interceptor/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,7 @@ import { JwtInterceptor } from 'src/interceptor/jwt.interceptor';
     OrderModule,
     ProfileModule
   ],
-  providers: [UserService , { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

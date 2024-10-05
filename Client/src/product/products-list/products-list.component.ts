@@ -27,7 +27,7 @@ export class ProductsListComponent implements OnInit {
     private service: ProductService,
     private router: Router,
     private userService: UserService,
-    private shoopingCartService: ShoppingCartService
+    private shopingCartService: ShoppingCartService
   ) { }
 
   ngOnInit(){
@@ -45,7 +45,7 @@ export class ProductsListComponent implements OnInit {
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (res:string) => {
               this.shoppingCartId = res;
-              this.shoopingCartService.getShoppingCartListById(this.shoppingCartId).subscribe(
+              this.shopingCartService.getShoppingCartListById(this.shoppingCartId).subscribe(
                 (res: any) => {
                   this.cartCounter = res.length;
                   localStorage.setItem('cartCounter', this.cartCounter.toString());
@@ -86,7 +86,7 @@ export class ProductsListComponent implements OnInit {
 
   // Metodă pentru a adăuga produse în coșul de cumpărături
   addProductInShoppingCart(shoppingCartId: string, productId: number, selectedQuantity: number) {
-    this.shoopingCartService.addProductInShoppingCart(shoppingCartId, productId, selectedQuantity).subscribe(
+    this.shopingCartService.addProductInShoppingCart(shoppingCartId, productId, selectedQuantity).subscribe(
       () => {
         this.cartCounter += selectedQuantity;
       },

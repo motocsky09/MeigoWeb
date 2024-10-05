@@ -11,6 +11,9 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
 
   public isLoggedIn$!: BehaviorSubject<boolean>;
+
+  successMessage: string = '';
+  errorMessage: string = '';
   
   constructor(
     private fb:FormBuilder,

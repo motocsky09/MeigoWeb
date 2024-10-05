@@ -12,6 +12,13 @@ body {
   align-items: center;
   height: 100vh;
 }
+.alert-success {
+  color: green;
+}
+
+.alert-danger {
+  color: red;
+}
 
 .login {
   display: flex;

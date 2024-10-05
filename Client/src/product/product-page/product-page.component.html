@@ -3,12 +3,14 @@
 
     <!-- Partea stângă: Imagini produs -->
     <div class="product-images">
-      <img src="./assets/images/{{product.imagePath1}}" alt="product_image" class="main-product-image">
+      <!-- Imaginea principală -->
+      <img [src]="'./assets/images/' + mainImage" alt="product_image" class="main-product-image">
 
+      <!-- Galeria de imagini secundare -->
       <div class="image-gallery">
-        <img src="./assets/images/{{product.imagePath2}}" alt="product_image_small">
-        <img src="./assets/images/{{product.imagePath3}}" alt="product_image_small">
-        <!-- Poți adăuga mai multe imagini aici -->
+        <img [src]="'./assets/images/' + product.imagePath1" alt="product_image_small" (click)="changeMainImage(product.imagePath1)">
+        <img [src]="'./assets/images/' + product.imagePath2" alt="product_image_small" (click)="changeMainImage(product.imagePath2)">
+        <img [src]="'./assets/images/' + product.imagePath3" alt="product_image_small" (click)="changeMainImage(product.imagePath3)">
       </div>
     </div>
 

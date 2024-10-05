@@ -10,7 +10,13 @@ import {ProfileService} from "../../services/profile.service";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  passwordFieldType: string = 'password'; // Inițial setat pe "password"
+  
+  isPasswordVisible: boolean = false;
+  isConfirmPasswordVisible: boolean = false;
+
+  successMessage: string = '';
+  errorMessage: string = '';
+
   constructor(
     public service: UserService,
     private router:Router,
@@ -21,25 +27,40 @@ export class RegisterComponent implements OnInit {
     this.service.formModel.reset();
   }
 
-  onSubmit()
-  {
+  onSubmit() {
     this.service.register().subscribe(
-      (res:any) => {
-        {
-          console.log(res);
-          console.log("test");
-          this.profileService.createDefaultProfile(res.profile).subscribe();
-          this.service.formModel.reset();
-
+      (res: any) => {
+        // Înregistrare cu succes
+        this.successMessage = 'Înregistrare cu succes!';
+        this.errorMessage = ''; // Curăță mesajul de eroare dacă există
+        
+        // Creează profilul implicit și redirecționează către login
+        this.profileService.createDefaultProfile(res.profile).subscribe();
+        this.service.formModel.reset(); // Resetează formularul
+  
+        // Redirecționează după 2 secunde
+        setTimeout(() => {
           this.router.navigateByUrl('/user/login');
-        }
+        }, 2000); // 2 secunde pentru a afișa mesajul
       },
       err => {
-        console.log(err);
+        // Afișează un mesaj de eroare corespunzător
+        if (err.status === 400) {
+          this.errorMessage = 'Nume de utilizator sau email deja existent!';
+        } else {
+          this.errorMessage = 'Parola nu îndeplinește condițiile!';
+        }
+        this.successMessage = ''; // Curăță mesajul de succes dacă există
+        console.log(err); // Debugging suplimentar
       }
     );
   }
+  
   togglePasswordVisibility() {
-    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
+  toggleConfirmPasswordVisibility() {
+    this.isConfirmPasswordVisible = !this.isConfirmPasswordVisible;
   }
 }

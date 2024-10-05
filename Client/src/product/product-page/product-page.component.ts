@@ -17,6 +17,7 @@ export class ProductPageComponent implements OnInit {
   shoppingCartId: string = "";
   cartCounter: number = 0;
   selectedQuantity: any;
+  mainImage: string = ''; 
 
   constructor(
     private service: ProductService,
@@ -27,10 +28,7 @@ export class ProductPageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // Preia productId din URL
     const productId = this.route.snapshot.paramMap.get('productId');
-
-    // Fă cerere la API pentru a obține detaliile produsului
     if (productId) {
       this.getProductById(productId);
     }
@@ -56,7 +54,6 @@ export class ProductPageComponent implements OnInit {
         }
       );
     }
-
     const savedCartCounter = localStorage.getItem('cartCounter');
     if (savedCartCounter) {
       this.cartCounter = parseInt(savedCartCounter, 10);
@@ -68,11 +65,17 @@ export class ProductPageComponent implements OnInit {
     this.service.getProductById(productId).subscribe(
       (res: any) => {
         this.product = res; // Stochează doar produsul
+        this.mainImage = this.product.imagePath1;
       },
       (error) => {
         console.error('Error fetching product by ID:', error);
       }
     );
+  }
+
+  // Metodă pentru a schimba imaginea principală
+  changeMainImage(newImagePath: string) {
+    this.mainImage = newImagePath; // Actualizează imaginea principală
   }
 
   // Metodă pentru a adăuga produse în coșul de cumpărături

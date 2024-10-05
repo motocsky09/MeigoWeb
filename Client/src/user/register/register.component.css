@@ -4,6 +4,13 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
+.alert-success {
+  color: green;
+}
+
+.alert-danger {
+  color: red;
+}
 
 body {
   background-color: #f5f5f5;

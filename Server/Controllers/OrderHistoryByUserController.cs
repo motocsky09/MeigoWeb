@@ -27,6 +27,15 @@ namespace Server.Controllers
         }
 
         [HttpGet]
+        [Route("GetOrderHistoryByUserId")]
+        public ActionResult GetOrderHistoryByUserId(string UserId)
+        {
+            var result = _orderhistorybyuserRepository.GetOrderHistoryByUserId(UserId);
+            return Ok(result);
+        }
+
+
+        [HttpGet]
         [Route("GetOrderHistorys")]
         public ActionResult GetOrderHistorys()
         {

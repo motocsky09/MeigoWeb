@@ -25,15 +25,19 @@
 }
 .image-gallery {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   margin-top: 10px;
+}
+.image-gallery img:hover{
+  opacity: 50%;
 }
 
 .image-gallery img {
   width: 60px;
   height: 60px;
   object-fit: cover;
+  border-radius: 5px;
 }
 .details-product {
   flex: 1;
@@ -184,6 +188,9 @@
     max-width: 300px; /* Redimensionează imaginea pentru mobile */
   }
 
+  .product-images img:hover{
+    opacity: 50%;
+  }
   .details-product {
     width: 100%;
     padding: 10px;

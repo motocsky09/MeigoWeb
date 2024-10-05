@@ -15,7 +15,7 @@ export class OrderComponent implements OnInit {
   shoppingCartId: string = "";
   totalSumWithoutDelivery: number = 0;
   totalSumWithDelivery: number = 0;
-  sumDelivery: number = 5;
+  sumDelivery: number = 25;
 
 
   constructor(
@@ -25,7 +25,6 @@ export class OrderComponent implements OnInit {
     private shopingCartService:ShoppingCartService
   ) { }
 
-
   ngOnInit() {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
@@ -33,17 +32,17 @@ export class OrderComponent implements OnInit {
           this.userName = res; // Setează userName cu răspunsul primit
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (res:string) =>{
-                this.shoppingCartId = res;
-                this.shopingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
-                  (res: any) => {
-                    this.productsList = res;
-                    console.log(this.productsList)
-                    this.productsList.forEach(element => {
-                      this.totalSumWithoutDelivery += element.sumSelectedQuantity;
-                    });
-                    this.totalSumWithDelivery = this.totalSumWithoutDelivery + this.sumDelivery;
-                  }
-                )
+              this.shoppingCartId = res;
+              this.shopingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
+                (res: any) => {
+                  this.productsList = res;
+                  console.log(this.productsList)
+                  this.productsList.forEach(element => {
+                    this.totalSumWithoutDelivery += element.sumSelectedQuantity;
+                  });
+                  this.totalSumWithDelivery = this.totalSumWithoutDelivery + this.sumDelivery;
+                }
+              )
             }
           );
         },
@@ -53,8 +52,34 @@ export class OrderComponent implements OnInit {
       );
     }
   }
-
   createOrder() {
-    this.shopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe();
+    this.shopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
+      () => {
+        // Resetare variabile și formular
+        this.resetOrderForm();
+
+        // Curățare completă a datelor din localStorage
+        this.clearLocalStorageData();
+
+        // Notificare și redirecționare utilizator
+        alert('Comanda a fost plasată cu succes!');
+        this.router.navigate(['/confirm-order']); //
+      },
+      error => {
+        console.error('Eroare la plasarea comenzii:', error);
+      }
+    );
+  }
+  resetOrderForm() {
+    this.productsList = [];
+    this.shoppingCartId = "";
+    this.totalSumWithoutDelivery = 0;
+    this.totalSumWithDelivery = 0;
+  }
+  clearLocalStorageData() {
+    // Șterge datele stocate în localStorage legate de coșul de cumpărături și sesiune
+    localStorage.removeItem('shoppingCart'); // Coșul de cumpărături
+    localStorage.removeItem('selectedProducts'); // Produsele selectate
+    localStorage.removeItem('productCount'); // Cantitatea produselor (presupunem că aici e problema)
   }
 }
