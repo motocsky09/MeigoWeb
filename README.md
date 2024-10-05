@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Proiect-de-Licenta
+
+# Meigo Shop
 =======
 project-implement
 >>>>>>> 172f8fee790c37c5cf6fa225ebbf8e74269b038a
