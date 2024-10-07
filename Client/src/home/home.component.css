@@ -25,7 +25,7 @@
   .buton .buton1 {
     background-color: #424769;
     border-radius: 30px;
-    border: 1px solid #F9B17A;
+    border: 3px solid #F9B17A;
     color: #FFFFFF;
     padding: 15px 32px;
     text-decoration: none;
@@ -107,7 +107,8 @@
     margin: 10px 0; /* Adaugă spațiu între paragrafe */
   }
   .description a{
-  color: red;
+  color: #F9B17A;
+    text-decoration: none;
   }
   .paragraf_desc p{
     border-bottom: 0.5px solid #393E46;
@@ -126,9 +127,9 @@
     }
 
     .buton .buton1 {
-        width: 80%; /* Lățimea butoanelor în modul mobil */
+        width: 50%; /* Lățimea butoanelor în modul mobil */
         display: inline-block; /* Facem butoanele să ocupe spațiu doar cât este necesar */
-        margin: 10px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
+        margin: 5px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
     }
 
     .accordion {
