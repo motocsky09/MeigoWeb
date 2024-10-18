@@ -8,6 +8,6 @@ namespace Server.Repositories
         public List<ProductAddedShCart> GetProductAddedShCart();
         public void CreateProductAddedShCart(ProductAddedShCart model);
         public void UpdateProductAddedShCart(ProductAddedShCart model);
-        public void DeleteProductAddedShCart(int productaddedshcartId);
+        void DeleteAllProductsFromCart();
     }
 }

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileService {
-use
+
   private apiUrl = 'http://localhost:5098/api'; // URL-ul corect
 
   constructor(

@@ -2,13 +2,15 @@
     width: 70%;
     margin: 50px auto;
     border-radius: 5px;
-    margin-bottom: 200px;
+  margin-top:100px;
+    margin-bottom: 300px;
     padding: 20px;
 }
 
 h1 {
     padding: 10px;
     text-align: center;
+  font-size: 36px;
 }
 
 h3 {

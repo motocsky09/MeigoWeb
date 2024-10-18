@@ -16,7 +16,7 @@ body{
 h1, h2, h3 {
   font-family: 'Lekton', monospace;
 }
-p , button , span {
+p , button , span,input {
   font-family: 'Lekton', monospace;
 }
 

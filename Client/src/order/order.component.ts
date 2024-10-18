@@ -61,8 +61,6 @@ export class OrderComponent implements OnInit {
         // Curățare completă a datelor din localStorage
         this.clearLocalStorageData();
 
-        // Notificare și redirecționare utilizator
-        alert('Comanda a fost plasată cu succes!');
         this.router.navigate(['/confirm-order']); //
       },
       error => {

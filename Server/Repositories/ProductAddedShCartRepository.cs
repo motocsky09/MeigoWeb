@@ -44,14 +44,17 @@ namespace Server.Repositories
                 _serverDbContext.SaveChanges();
             }
         }
-        public void DeleteProductAddedShCart (int productaddedshcartid) 
+
+        
+        public void DeleteAllProductsFromCart()
         {
-            var productaddedshcartidToDelete = _serverDbContext.ProductAddedShCart.FirstOrDefault(p => p.Id == productaddedshcartid);
-            if (productaddedshcartidToDelete != null)
+            var products = _serverDbContext.ProductAddedShCart.ToList();
+            if (products != null && products.Count > 0)
             {
-                _serverDbContext.ProductAddedShCart.Remove(productaddedshcartidToDelete);
+                _serverDbContext.ProductAddedShCart.RemoveRange(products);
                 _serverDbContext.SaveChanges();
             }
         }
+
     }
 }

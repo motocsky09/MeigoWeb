@@ -50,12 +50,16 @@ namespace Server.Controllers
             return Ok(productAddedShCart);
         }
 
+
+        
         [HttpDelete]
         [Route("DeleteProductAddedShCart")]
-        public ActionResult DeleteProductAddedShCart(int productAddedShCart)
+        public ActionResult DeleteAllProductsFromCart()
         {
-            _productaddedshcartRepository.DeleteProductAddedShCart(productAddedShCart);
+            // Apelează metoda din repository pentru a șterge toate produsele din coș
+            _productaddedshcartRepository.DeleteAllProductsFromCart();
             return Ok();
         }
+
     }
 }

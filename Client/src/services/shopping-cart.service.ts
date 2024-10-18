@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class ShoppingCartService {
    }
 
    readonly BaseURI = 'http://localhost:5098/api';
-  
+
    createFirstShoppingCartByUsername(userName:string)
    {
     let body = new HttpParams({
@@ -29,7 +30,7 @@ export class ShoppingCartService {
    }
 
     addProductInShoppingCart(shoppingCartId: string, productId: number, selectedQuantity: number)
-    {  
+    {
        let body = new HttpParams({
          fromObject : {
           'shoppingCartId' : shoppingCartId,
@@ -37,7 +38,7 @@ export class ShoppingCartService {
           'selectedQuantity' : selectedQuantity
          }
        })
-       return this.http.post(this.BaseURI+'/ShoppingCart/AddProductInShoppingCart?shoppingCartId=' 
+       return this.http.post(this.BaseURI+'/ShoppingCart/AddProductInShoppingCart?shoppingCartId='
         + shoppingCartId + "&productId=" + productId + "&selectedQuantity=" + selectedQuantity, body);
     }
 
@@ -68,4 +69,10 @@ export class ShoppingCartService {
      return this.http.post(this.BaseURI+'/Order/CreateOrder?shoppingCartId=' + shoppingCartId
       + "&sumDelivery=" + sumDelivery + "&totalSumWithDelivery=" + totalSumWithDelivery, body);
    }
+
+
+  // Metoda pentru a șterge toate produsele din coș
+  clearCart(): Observable<any> {
+    return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
+  }
 }
