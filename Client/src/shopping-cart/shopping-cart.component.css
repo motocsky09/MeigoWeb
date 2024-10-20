@@ -24,9 +24,11 @@
     padding: 5px;
 }
 .amount_bottom{
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 7px;
+  margin-top: 5px;
+    padding-bottom: 7px;
     border-bottom: 2px solid #F9B17A;
+    border-top: 2px solid #F9B17A;
 }
 .cos_cumparaturi {
     width: 70%;

@@ -1,5 +1,11 @@
+<div class="delete_account">
+  <button>Șterge contul</button>
+  <!-- <button (click)="DeleteAccount(profile)"" -->
+</div>
+
 <div class="center-align" *ngIf="profile">
   <div class="auth-form">
+    
     <div class="auth-header">
       <ul>
         <li class="details-account-title">
@@ -54,7 +60,7 @@
         </div>
         <div *ngIf="profile.editing" class="button-align">
           <button (click)="saveItem(profile)" class="buton-profile">Salvează <i class="fa-solid fa-check"></i></button>
-          <button (click)="cancelEdit(profile)" class="buton-profile">Anulează <i class="fa-regular fa-xmark"></i></button>
+          <button (click)="cancelEdit(profile)" class="buton-profile">Anulează <i class="fa-solid fa-x"></i></button>
         </div>
       </ul>
     </div>
