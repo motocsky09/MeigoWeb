@@ -1,38 +1,15 @@
-.delete_account{
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  margin-top: 10px;
-  margin-right: 5px;
-}
-.delete_account button{
-  padding: 7px;
-  margin: 10px;
-  background: transparent;
-  color: black;
-  border-radius: 5px;
-  border: 2px solid #393e46;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-.delete_account button:hover{
-  background-color: #393e46; /* Schimbă culoarea la hover pentru feedback vizual */
-  color: white;
-}
-
 .center-align{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  padding-top: 20px;
 }
 .auth-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
   padding: 30px;
   border: 2px solid #2D3250;
   background-color: white;
@@ -132,7 +109,27 @@ a:hover{
   margin-bottom: 30px;
   padding: 10px 20px;
 }
-
+.delete_account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.delete_account button{
+  padding: 7px;
+  margin: 10px;
+  background: transparent;
+  color: darkred;
+  border-radius: 5px;
+  border: 2px solid darkred;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.delete_account button:hover{
+  background-color: darkred; /* Schimbă culoarea la hover pentru feedback vizual */
+  color: white;
+}
 @media screen and (max-width: 768px) {
   /* Form Centering */
   .center-align {

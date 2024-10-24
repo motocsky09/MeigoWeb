@@ -66,10 +66,9 @@ tbody td {
 }
 
 .imagine_tabel img {
-    width: 150px;
-    height: auto;
+    width: 100px;
     border-radius: 10px;
-    border: 4px solid #F9B17A;
+    border: 2px solid #F9B17A;
 }
 
 .descr_prod {
