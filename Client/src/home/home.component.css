@@ -63,8 +63,8 @@ h1{
 }
 .accordion-item {
   width: 100%;
-  border-bottom: 3px solid #F9B17A;
-  border-top: 3px solid #F9B17A;
+  border-bottom: 4px solid #F9B17A;
+  border-top: 4px solid #F9B17A;
   margin-bottom: 10px;
 }
 .accordion-header {
