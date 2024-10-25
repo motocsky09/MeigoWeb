@@ -166,28 +166,41 @@ img:hover {
     transition: background-color 0.3s ease;
     z-index: 1000;
 }
+#cartButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2D3250;
+  color: #EEEEEE;
+  padding: 15px 15px;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
 
 #cartButton a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #EEEEEE;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #EEEEEE;
+  text-decoration: none;
 }
 
 #cartItemCount {
-    position: absolute;
-    top: -4px;
-    right: -4.5px;
-    background-color: #F9B17A;
-    color: white;
-    font-size: 12px;
-    padding: 3px 6px;
-    border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  right: -4.5px;
+  background-color: #F9B17A;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
 }
 
 #cartButton:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .Short_description {
@@ -279,25 +292,7 @@ img:hover {
     display: inline-block;
   }
 
-  #cartButton {
-    width: 50px;
-    height: 50px;
-    padding-top: 3px;
-    padding-bottom: 1px;
-    transition: all 0.3s ease;
-  }
-
-  #cartItemCount {
-    top: -3px;
-    right: -3px;
-    font-size: 12px;
-    padding: 3px 6px;
-  }
-
-  #cartButton a {
-    padding: 7px;
-    margin: 0;
-  }
+  
 
   .pret_produs {
     font-size: 20px;

@@ -4,13 +4,6 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
-.alert-success {
-  color: green;
-}
-
-.alert-danger {
-  color: red;
-}
 
 body {
   background-color: #f5f5f5;
@@ -18,6 +11,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 30vh;
+}
+.alert-success {
+  color: green;
+}
+
+.alert-danger {
+  color: red;
 }
 
 .register {
@@ -160,13 +160,46 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+  /* Ajustări speciale pentru ecrane de mobil mai mici */
+  
+  .register-loc {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .register-form {
-    width: 100%; /* Asigurăm că se ajustează la ecranul mai mic */
+    padding: 15px;
+    width: 100%;
   }
 
   .form-group label {
+    font-size: 14px;
+  }
+
+  .hero-btn {
     font-size: 15px;
+  }
+
+  .register-form img {
+    width: 80px;
+  }
+  
+  .login-link {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+
+  .toggle-password {
+    right: 5px; /* Aproape de marginea inputului */
+  }
+
+  /* Specific pentru a îmbunătăți aspectul alertelor */
+  .alert-success,
+  .alert-danger {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
   }
 }
 

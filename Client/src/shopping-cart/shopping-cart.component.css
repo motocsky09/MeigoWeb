@@ -7,10 +7,9 @@
     justify-content: space-between;
     width: 100%;
     padding: 30px;
-    box-sizing: border-box;
     align-items: stretch;
     color: #FFFFFF;
-  margin-bottom: 200px;
+    margin-bottom: 200px;
 }
 
 .cos_cumparaturi, .total_amount {
@@ -20,16 +19,19 @@
     flex-direction: column;
     padding: 20px;
 }
-.amount{
+
+.amount {
     padding: 5px;
 }
-.amount_bottom{
+
+.amount_bottom {
     padding-top: 7px;
-  margin-top: 5px;
+    margin-top: 5px;
     padding-bottom: 7px;
     border-bottom: 2px solid #F9B17A;
     border-top: 2px solid #F9B17A;
 }
+
 .cos_cumparaturi {
     width: 70%;
 }
@@ -48,9 +50,8 @@ table {
 
 thead th,
 tbody td {
-    padding-bottom: 20px;
+    padding: 20px;
     text-align: center;
-    padding-top: 20px;
 }
 
 .articol {
@@ -71,26 +72,16 @@ tbody td {
     border: 2px solid #F9B17A;
 }
 
-.descr_prod {
-    position: center;
-    bottom: 0;
-    left: 100%;
-    padding: 15px;
-    border-radius: 5px;
-}
-
 .cantitate_tabel input {
     width: 50px;
     height: 30px;
     font-size: 14px;
     text-align: center;
-    margin: 0 auto;
-    display: block;
 }
 
 .cos_cumparaturi_menu {
     background: transparent;
-   border-bottom: 2px solid #F9B17A;
+    border-bottom: 2px solid #F9B17A;
 }
 
 .list {
@@ -98,18 +89,6 @@ tbody td {
     margin-bottom: 20px;
     margin-top: 0;
     font-size: 25px;
-
-}
-
-.final_shop {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-a{
-  text-decoration: none;
-  color: #FFFFFF;
 }
 
 .buton_final {
@@ -120,30 +99,18 @@ a{
     border: none;
     cursor: pointer;
     font-size: 25px;
-    text-decoration: none;
     margin: 20px;
 }
 
 .buton_final:hover {
-  background-color: #555;
-  color: white;
-}
-/*
-.buton_final a:hover{
     background-color: #555;
-    color: #F5F5F5;
+    color: white;
 }
-.buton_final a{
+
+a {
     text-decoration: none;
-        background-color: #3855E8;
-    color: #F5F5F5;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 25px;
-    text-decoration: none;
-    margin: 20px;
-}*/
+    color: #FFFFFF;
+}
 
 /* Media Query pentru dispozitive mobile */
 @media (max-width: 768px) {
@@ -157,47 +124,36 @@ a{
         margin-bottom: 20px;
     }
 
-    .total_amount {
-        align-items: center;
-        justify-content: center;
-        padding: 20px 10px;
+    table {
+        width: 100%;
+        border-spacing: 0;
     }
 
-    table, thead, tbody, th, td, tr {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        justify-content: space-between;
-
-    }
-    .imagine_tabel{
-        justify-content: right;
+    thead {
+        display: none; /* Ascundem header-ul tabelului pe mobil */
     }
 
-    thead tr {
-        display: none;  /*Ascundem header-ul tabelului pe mobil */
-    }
-    .total_tabel,.cantitate_tabel,.descr_prod{
-        display: none;
-    }
     tr {
-        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #F9B17A;
+        margin-bottom: 10px;
     }
 
     td {
-        text-align: right;
-        padding-left: 40%;
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 16px;
     }
 
-/*    td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-        }
-*/
-        }
+    .imagine_tabel img {
+        width: 80px; /* Ajustăm dimensiunea imaginii */
+    }
+
+    /* Ascundem câmpurile care nu sunt necesare pe mobil */
+    .cantitate_tabel,
+    .total_tabel {
+        display: none;
+    }
+}
