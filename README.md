@@ -1,8 +1,36 @@
 
-# Meigo Shop
-=======
-project-implement
->>>>>>> 172f8fee790c37c5cf6fa225ebbf8e74269b038a
-=======
-# project-implement
->>>>>>> 851144cba377b2dbf6cd8bf066fd22976fad7633
+# MeigoWEB (.NET Core & Angular)[Completely receptive]
+Technology and libraries used:
+```
+   1. Server: .NET Core, IdentityServer 4 JWT Token, EntityFramework, C#, SqlServer
+```
+```
+   2. Client: Angular, TypeScript, HTML & CSS, Flexbox
+```
+Design patterns and principles used:
+```
+  Clean architecture .Net Core web api
+```
+```
+  CQRS (Command and Query Responsibility Segregation)
+```
+```
+  OOP and S.O.L.I.D Principles
+```
+### MeigoWEB is a web platform dedicated to the field of sales, specifically 3D print object.
+The application is divided into x parts:
+```
+1.
+```
+```
+2.
+```
+```
+3.
+```
+```
+4.
+```
+```
+5.
+```
