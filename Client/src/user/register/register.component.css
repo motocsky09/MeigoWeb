@@ -17,20 +17,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 30vh;
 }
 
 .register {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 30vh;
 }
 .register-loc {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .register-form {
