@@ -34,3 +34,10 @@ The application is divided into x parts:
 ```
 5.
 ```
+## Home page
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page.png)
+## Home page mobile resolution
+```
+```
+## Login page
+![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login%20page.png)
