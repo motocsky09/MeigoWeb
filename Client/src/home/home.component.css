@@ -25,7 +25,7 @@ h1{
 .buton .buton1 {
   background-color: #424769;
   border-radius: 30px;
-  border: 1px solid #F9B17A;
+  border: 2px solid #F9B17A;
   color: #FFFFFF;
   padding: 15px 32px;
   text-decoration: none;
@@ -110,10 +110,7 @@ h1{
 .description a{
   color: red;
 }
-.paragraf_desc p{
-  border-bottom: 0.5px solid #393E46;
 
-}
 
 
 @media screen and (max-width: 768px) {
