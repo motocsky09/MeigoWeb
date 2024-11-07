@@ -1,22 +1,22 @@
-<div class="container">
+<div class="container" *ngIf="profile">
   <div class="elements">
     <div class="adress">
       <h2 class="title">Date de livrare</h2>
       <div class="form-group">
         <h3 class="order_adress">Adresa (Strada,număr)</h3>
-        <input type="text" placeholder="Introduceți adresa dvs." required>
+        <input type="text" placeholder="Introduceți adresa dvs." [(ngModel)]="profile.address" required />
       </div>
       <div class="form-group">
         <h3 class="order_adress">Oraș</h3>
-        <input type="text" placeholder="Introduceți orașul/localitatea" required>
+        <input type="text" placeholder="Introduceți orașul dvs." [(ngModel)]="profile.city" required />
       </div>
       <div class="form-group">
         <h3 class="order_adress">Cod poștal</h3>
-        <input type="text" placeholder="Introduceți codul poștal" required>
+        <input type="text" placeholder="Introduceți codul poștal" [(ngModel)]="profile.postal" required />
       </div>
       <div class="form-group">
         <h3 class="order_adress">Mențiuni</h3>
-        <input type="text" placeholder="Orice mențiuni adiționale">
+        <input type="text" placeholder="Orice mențiuni adiționale" />
       </div>
     </div>
     <div class="payment">
@@ -35,7 +35,11 @@
       </fieldset>
     </div>
     <div class="order-final">
-      <button class="order-final2" (click)="createOrder()"><a style="text-decoration: none; color: white;" href="confirm-order"><h2>Trimite comanda</h2></a></button>
+      <button class="order-final2" (click)="createOrder()">
+        <a style="text-decoration: none; color: white;" href="confirm-order">
+          <h2>Trimite comanda</h2>
+        </a>
+      </button>
     </div>
   </div>
 </div>

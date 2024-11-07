@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
+import { ProfileService } from 'src/services/profile.service';
 
 @Component({
   selector: 'app-order',
@@ -16,33 +17,45 @@ export class OrderComponent implements OnInit {
   totalSumWithoutDelivery: number = 0;
   totalSumWithDelivery: number = 0;
   sumDelivery: number = 25;
-
+  profile: any; // Adăugăm un obiect de profil pentru a accesa adresa
 
   constructor(
-    private service:ProductService,
-    private router:Router,
-    private userService:UserService,
-    private shopingCartService:ShoppingCartService
-  ) { }
+    private service: ProductService,
+    private router: Router,
+    private userService: UserService,
+    private shoppingCartService: ShoppingCartService,
+    private profileService: ProfileService, // Injectăm ProfileService
+  ) {}
 
   ngOnInit() {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
         (res: string) => {
-          this.userName = res; // Setează userName cu răspunsul primit
+          this.userName = res;
+
+          // Obținem datele profilului utilizatorului, inclusiv adresa
+          this.profileService.getProfileByUserName(this.userName).subscribe(
+            (profileRes: any) => {
+              this.profile = profileRes; // Acum putem accesa profile.address
+            },
+            error => {
+              console.error('Error fetching profile:', error);
+            }
+          );
+
+          // Obținem datele coșului de cumpărături și calculăm sumele
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
-            (res:string) =>{
-              this.shoppingCartId = res;
-              this.shopingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
-                (res: any) => {
-                  this.productsList = res;
-                  console.log(this.productsList)
+            (cartId: string) => {
+              this.shoppingCartId = cartId;
+              this.shoppingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
+                (cartProducts: any) => {
+                  this.productsList = cartProducts;
                   this.productsList.forEach(element => {
                     this.totalSumWithoutDelivery += element.sumSelectedQuantity;
                   });
                   this.totalSumWithDelivery = this.totalSumWithoutDelivery + this.sumDelivery;
                 }
-              )
+              );
             }
           );
         },
@@ -51,33 +64,33 @@ export class OrderComponent implements OnInit {
         }
       );
     }
+
   }
   createOrder() {
-    this.shopingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
+    this.shoppingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
       () => {
-        // Resetare variabile și formular
         this.resetOrderForm();
-
-        // Curățare completă a datelor din localStorage
         this.clearLocalStorageData();
-
-        this.router.navigate(['/confirm-order']); //
+        this.router.navigate(['/confirm-order']);
       },
       error => {
         console.error('Eroare la plasarea comenzii:', error);
       }
     );
   }
+
   resetOrderForm() {
     this.productsList = [];
     this.shoppingCartId = "";
     this.totalSumWithoutDelivery = 0;
     this.totalSumWithDelivery = 0;
   }
+
   clearLocalStorageData() {
-    // Șterge datele stocate în localStorage legate de coșul de cumpărături și sesiune
-    localStorage.removeItem('shoppingCart'); // Coșul de cumpărături
-    localStorage.removeItem('selectedProducts'); // Produsele selectate
-    localStorage.removeItem('productCount'); // Cantitatea produselor (presupunem că aici e problema)
+    localStorage.removeItem('shoppingCart');
+    localStorage.removeItem('selectedProducts');
+    localStorage.removeItem('productCount');
   }
+
+
 }

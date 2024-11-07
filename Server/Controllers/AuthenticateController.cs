@@ -85,7 +85,9 @@ namespace Server.Controllers
                 LastName = "",
                 Address = "",
                 Email = model.Email,
-                PhoneNumber = ""
+                PhoneNumber = "",
+                City = "",
+                Postal = ""
             }
             });
 

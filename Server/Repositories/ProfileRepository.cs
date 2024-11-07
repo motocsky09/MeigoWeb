@@ -1,3 +1,4 @@
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Server.Entities;
 
 namespace Server.Repositories
@@ -29,7 +30,9 @@ namespace Server.Repositories
                 LastName = model.LastName,
                 Address = model.Address,
                 Email = model.Email,
-                PhoneNumber = model.PhoneNumber
+                PhoneNumber = model.PhoneNumber,
+                City = model.City,
+                Postal = model.Postal
             };
             _serverDbContext.Profile.Add(profile);
             _serverDbContext.SaveChanges();
@@ -46,6 +49,8 @@ namespace Server.Repositories
                 existingProfile.Address = model.Address;
                 existingProfile.Email = model.Email;
                 existingProfile.PhoneNumber = model.PhoneNumber;
+                existingProfile.City = model.City;
+                existingProfile.Postal = model.Postal;
                 
                 _serverDbContext.SaveChanges();
             }
@@ -72,7 +77,9 @@ namespace Server.Repositories
                     LastName = "",
                     Address = "",
                     Email = model.Email,
-                    PhoneNumber = ""
+                    PhoneNumber = "",
+                    City = "",
+                    Postal = ""
                 };
                 _serverDbContext.Profile.Add(profile);
                 _serverDbContext.SaveChanges();

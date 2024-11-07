@@ -17,7 +17,9 @@
   border-radius: 8px;
   width: 700px; /* Fixează lățimea formularului */
 }
-
+.i{
+  margin-left:5px;
+}
 .details-account-title {
   display: flex;
   justify-content: space-between; /* Spațiu între titlu și restul conținutului */
@@ -101,34 +103,28 @@ a:hover{
   background-color: #393e46;
   color: white;
 }
-.istoric{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  margin-bottom: 30px;
-  padding: 10px 20px;
-}
 .delete_account{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 80px;
+  padding: 40px;
 }
 .delete_account button{
   padding: 7px;
   margin: 10px;
   background: transparent;
-  color: darkred;
+  color: black;
   border-radius: 5px;
-  border: 2px solid darkred;
+  border: 2px solid black;
   font-size: 15px;
   transition: background-color 0.3s ease;
   text-align: center;
 }
 .delete_account button:hover{
-  background-color: darkred; /* Schimbă culoarea la hover pentru feedback vizual */
-  color: white;
+  background-color: transparent; /* Schimbă culoarea la hover pentru feedback vizual */
+  color: darkred;
+  border: 2px solid darkred;
 }
 @media screen and (max-width: 768px) {
   /* Form Centering */

@@ -29,13 +29,15 @@ export class ProfileService {
   }
 
   createDefaultProfile(profile : any): Observable<any> {
-    var body = {
+    const body = {
       userName: profile.userName,
       firstName: profile.firstName,
       lastName: profile.lastName,
       address: profile.address,
       email: profile.email,
-      phoneNumber: profile.phoneNumber
+      phoneNumber: profile.phoneNumber,
+      city: profile.city,
+      postal: profile.postal
     };
     return this.http.post(this.BaseURI + '/Profile/CreateDefaultProfile',body);
   }
