@@ -15,7 +15,7 @@ Design patterns and principles used:
   OOP and S.O.L.I.D Principles
 ```
 ### MeigoWEB is a web platform dedicated to the field of sales, specifically 3D print object.
-The application is divided into x parts:
+The application is divided into 5 parts:
 ```
 1. Identity management part: it is responsible for the user authentication and registration 
                              part as well as the role management part. For the server side 
@@ -31,7 +31,7 @@ The application is divided into x parts:
 4. Shopping Cart Section part: This section manages the user's shopping cart, allowing users to view the contents and modify it, such as adjusting the quantity of a product or removing it from the cart.
 ```
 ```
-5. Checkout Section : The final step in the checkout process enables users to verify or manually enter their delivery address, which may have been automatically populated from the profile section.
+5. Checkout Section part: The final step in the checkout process enables users to verify or manually enter their delivery address, which may have been automatically populated from the profile section.
 
 ```
 ## Home page
