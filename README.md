@@ -12,9 +12,6 @@ Design patterns and principles used:
   Clean architecture .Net Core web api
 ```
 ```
-  CQRS (Command and Query Responsibility Segregation)
-```
-```
   OOP and S.O.L.I.D Principles
 ```
 ### MeigoWEB is a web platform dedicated to the field of sales, specifically 3D print object.
@@ -25,16 +22,17 @@ The application is divided into x parts:
                              I used IdentityServer 8 with JWT Token and RefreshToken.  
 ```
 ```
-2.  ...
+2.  Profile Management part: This section enables users to access and modify their account information, including personal details such as first name, last name, address, and phone number.
 ```
 ```
-3. ...
+3. Products Page part: The products page provides the functionality to categorize products and display each product on a separate page. Detailed information about the product, including images, is available. Users can also add products to their shopping cart.
 ```
 ```
-4. ...
+4. Shopping Cart Section part: This section manages the user's shopping cart, allowing users to view the contents and modify it, such as adjusting the quantity of a product or removing it from the cart.
 ```
 ```
-5. ...
+5. Checkout Section : The final step in the checkout process enables users to verify or manually enter their delivery address, which may have been automatically populated from the profile section.
+
 ```
 ## Home page
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page.png)
@@ -60,7 +58,7 @@ Accordion 2 in home page
 ![Product Filter Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20filter.png)
 
 ## Product page
-![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20.png)
+![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page.png)
 
 ## Shopping Cart page
 ![Shopping Cart Page](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page.png)
