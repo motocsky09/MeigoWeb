@@ -22,16 +22,23 @@ The application is divided into 5 parts:
                              I used IdentityServer 8 with JWT Token and RefreshToken.  
 ```
 ```
-2.  Profile Management part: This section enables users to access and modify their account information, including personal details such as first name, last name, address, and phone number.
+2. Profile Management part: It is responsible for enabling users to access and modify their account information, 
+                             including personal details such as first name, last name, address, and phone number. 
+                             This section ensures secure data handling and provides a user-friendly interface for profile updates.
 ```
 ```
-3. Products Page part: The products page provides the functionality to categorize products and display each product on a separate page. Detailed information about the product, including images, is available. Users can also add products to their shopping cart.
+3. Products Page part: It provides functionality to categorize products and display each product on a separate page. 
+                             Detailed product information, including images, is shown, and users can add items to their shopping cart. 
+                             The backend ensures efficient data retrieval and smooth navigation between products.
 ```
 ```
-4. Shopping Cart Section part: This section manages the user's shopping cart, allowing users to view the contents and modify it, such as adjusting the quantity of a product or removing it from the cart.
+4. Shopping Cart Section part: It manages the user's shopping cart, allowing users to view and modify its contents. 
+                             Features include adjusting the quantity of a product or removing items. 
+                             The system ensures consistency between the frontend and backend to maintain accurate cart data.
 ```
 ```
-5. Checkout Section part: The final step in the checkout process enables users to verify or manually enter their delivery address, which may have been automatically populated from the profile section.
+5. Checkout Section part: It handles the final step of the purchase process, enabling users to verify or manually enter their delivery address. 
+                             The system automatically populates the address from the profile section, ensuring seamless integration and a smooth user experience.
 
 ```
 ## Home page
