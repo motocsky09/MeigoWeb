@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  padding-bottom: 40px;
 }
 .auth-form {
   display: flex;
