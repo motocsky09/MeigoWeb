@@ -1,0 +1,30 @@
+:host {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Afișează deasupra altor elemente */
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  background-color: #424769;
+  border-radius: 50%;
+  animation: pulse-animation 0.5s infinite ease-in-out;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

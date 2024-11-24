@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
+import {LoadingService} from "../services/loading.service";
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ export class HomeComponent implements OnInit {
     private userService: UserService,
     private router: Router,
     private shoppingCartService: ShoppingCartService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private loadingService: LoadingService,
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,7 @@ export class HomeComponent implements OnInit {
       this.renderer.listen(header, 'click', () => {
         const accordionItem = header.parentElement as HTMLElement;
         if (!accordionItem) return;
-        
+
         const description = accordionItem.querySelector(".description") as HTMLElement;
         const icon = accordionItem.querySelector("i") as HTMLElement;
 
@@ -75,5 +77,16 @@ export class HomeComponent implements OnInit {
         icon.classList.replace("fa-minus", "fa-plus");
       }
     });
+  }
+  onLinkClick(event: Event) {
+    event.preventDefault(); // Previne comportamentul implicit al link-ului
+
+    this.loadingService.show(); // Afișează indicatorul de loading
+
+    // Simulează o încărcare, apoi navighează către link-ul dorit
+    setTimeout(() => {
+      this.loadingService.hide(); // Ascunde indicatorul de loading
+      this.router.navigate(['/products-list']); // Navighează manual către ruta dorită
+    }, 1000); // Schimbă 2000 cu timpul dorit pentru încărcare
   }
 }

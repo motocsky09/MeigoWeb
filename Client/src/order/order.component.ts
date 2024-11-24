@@ -4,6 +4,7 @@ import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 import { ProfileService } from 'src/services/profile.service';
+import {LoadingService} from "../services/loading.service";
 
 @Component({
   selector: 'app-order',
@@ -25,6 +26,7 @@ export class OrderComponent implements OnInit {
     private userService: UserService,
     private shoppingCartService: ShoppingCartService,
     private profileService: ProfileService, // Injectăm ProfileService
+    private loadingService: LoadingService
   ) {}
 
   ngOnInit() {
@@ -64,33 +66,22 @@ export class OrderComponent implements OnInit {
         }
       );
     }
-
   }
   createOrder() {
+    this.loadingService.show(); // Afișează indicatorul de încărcare pentru 2 secunde
+
     this.shoppingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
       () => {
-        this.resetOrderForm();
-        this.clearLocalStorageData();
-        this.router.navigate(['/confirm-order']);
+
+        setTimeout(() => {
+          this.loadingService.hide(); // Ascunde indicatorul de încărcare
+          this.router.navigate(['/confirm-order']); // Redirecționează la confirmare
+        }, 2000);
       },
       error => {
         console.error('Eroare la plasarea comenzii:', error);
+        this.loadingService.hide(); // Ascunde indicatorul dacă apare o eroare
       }
     );
   }
-
-  resetOrderForm() {
-    this.productsList = [];
-    this.shoppingCartId = "";
-    this.totalSumWithoutDelivery = 0;
-    this.totalSumWithDelivery = 0;
-  }
-
-  clearLocalStorageData() {
-    localStorage.removeItem('shoppingCart');
-    localStorage.removeItem('selectedProducts');
-    localStorage.removeItem('productCount');
-  }
-
-
 }
