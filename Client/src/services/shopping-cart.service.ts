@@ -70,7 +70,6 @@ export class ShoppingCartService {
       + "&sumDelivery=" + sumDelivery + "&totalSumWithDelivery=" + totalSumWithDelivery, body);
    }
 
-
   // Metoda pentru a șterge toate produsele din coș
   clearCart(): Observable<any> {
     return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');

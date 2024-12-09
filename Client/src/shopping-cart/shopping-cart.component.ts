@@ -16,6 +16,10 @@ export class ShoppingCartComponent implements OnInit {
   totalSumWithoutDelivery: number = 0;
   totalSumWithDelivery: number = 0;
   sumDelivery: number = 25;
+  recalculateTotals() {
+    this.totalSumWithoutDelivery = this.productsList.reduce((sum, item) => sum + item.sumSelectedQuantity, 0);
+    this.totalSumWithDelivery = this.totalSumWithoutDelivery + this.sumDelivery;
+  }
 
   constructor(
     private service:ProductService,
@@ -50,5 +54,30 @@ export class ShoppingCartComponent implements OnInit {
         }
       );
     }
+
+  }
+  updateQuantity(item: any) {
+    // Asigură-te că cantitatea este cel puțin 1
+    item.selectedQuantity = Math.max(1, +item.selectedQuantity);
+
+    // Recalculează subtotalul pentru produs
+    item.sumSelectedQuantity = item.price * item.selectedQuantity;
+
+    // Recalculează totalurile
+    this.recalculateTotals();
+  }
+  clearShoppingCart() {
+    this.shopingCartService.clearCart().subscribe(
+      (response) => {
+        // Golește lista locală de produse
+        this.productsList = [];
+        this.totalSumWithoutDelivery = 0;
+        this.totalSumWithDelivery = this.sumDelivery; // Doar costul transportului rămâne
+        console.log('Coșul de cumpărături a fost golit cu succes.');
+      },
+      (error) => {
+        console.error('Eroare la golirea coșului de cumpărături:', error);
+      }
+    );
   }
 }

@@ -1036,5 +1036,9 @@ Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/refint/Server.dll
 Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/Server.pdb
 Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/Server.genruntimeconfig.cache
 Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/ref/Server.dll
-/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/bin/Debug/net8.0/Npgsql.dll
-/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+Z:/Documents/Proiect_de_Licenta/Server/bin/Debug/net8.0/Server.staticwebassets.endpoints.json
+Z:/Documents/Proiect_de_Licenta/Server/bin/Debug/net8.0/Npgsql.dll
+Z:/Documents/Proiect_de_Licenta/Server/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/staticwebassets/msbuild.Server.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+Z:/Documents/Proiect_de_Licenta/Server/obj/Debug/net8.0/staticwebassets.upToDateCheck.txt
