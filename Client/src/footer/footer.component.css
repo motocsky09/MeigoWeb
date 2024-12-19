@@ -1,8 +1,8 @@
 .footer {
-    background-color: #2D3250;
-    color: #ffffff;
+    background-color: rgb(2,27,26);
+    color: rgb(241,247,246);
     padding: 10px; /* spatierea interioara a footer-ului */
-    border-top: 0.5px solid rgb(124, 157, 178);
+    border-top: 0.5px solid rgb(0,123,129);
 }
 
 .footer-content {
@@ -44,14 +44,14 @@
 .footer-right span {
   margin-right: 3px;
   font-size: 10px;
-  color: #EEEEEE;
+  color: rgb(241,247,246);
 }
 
 .flag {
   display: flex;
   width: 20px;
   height: 15px;
-  border: 1px solid #EEEEEE; /* bordură pentru drapel */
+  border: 1px solid rgb(241,247,246); /* bordură pentru drapel */
 }
 
 .stripe {

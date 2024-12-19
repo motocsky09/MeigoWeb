@@ -12,9 +12,9 @@
 }
 
 .buton_filter {
-    background-color: #2D3250;
-    color: white;
-    border: 1.5px solid #F9B17A;
+    background-color: black;
+    color: rgb(44,194,149);
+    border: 1.5px solid rgb(9,85,68);
     padding: 8px 16px;
     margin: 5px;
     cursor: pointer;
@@ -27,8 +27,8 @@
 }
 
 .buton_filter:hover {
-  background-color: rgb(230, 229, 222);
-  color: rgb(8, 24, 69);
+  background-color: rgb(241,247,246);
+  color: black;
 }
 #filtersContainer {
   display: none; /* Inițial, containerul de filtre este ascuns */
@@ -37,9 +37,9 @@
 }
 
 #toggleFiltersBtn {
-  background-color: #2D3250;
-  color: white;
-  border: 1.5px solid #F9B17A;
+  background-color: black;
+  color: rgb(44,194,149);
+  border: 1.5px solid rgb(9,85,68);
   padding: 8px 16px;
   margin: 5px;
   font-size: 16px;
@@ -49,8 +49,8 @@
 }
 
 #toggleFiltersBtn:hover {
-  background-color: rgb(230, 229, 222);
-  color: rgb(8, 24, 69);
+  background-color: rgb(241,247,246);
+  color: black;
 }
 .filter {
   max-height: 0;
@@ -72,7 +72,7 @@ img {
 }
 img:hover {
   box-shadow:  inset 0 -3em 3em rgba(0,0,0,0.2),
-  0 0  0 2px black,
+  0 0  0 4px #2CC295,
   0.3em 0.3em 1em rgba(0,0,0,0.4);
 }
 
@@ -90,18 +90,18 @@ img:hover {
   align-items: center;
   cursor: pointer;
   padding: 10px; /* ajustați pentru a obține spațierea dorită */
-  color: #000; /* culoarea butoanelor */
+  color: rgb(44,194,149); /* culoarea butoanelor */
 }
 
 .quantity-container {
-  background: #081845;
-  border: 4px solid #F9B17A;
+  background: black;
+  border: 0.5px solid rgb(9,85,68);
   width: 40px;
   text-align: center;
 }
 
 .quantity-input {
-  color: #F5F5F5;
+  color: rgb(44,194,149);
   background: transparent;
   border: none;
   width: 100%;
@@ -125,10 +125,10 @@ img:hover {
 }
 */
 .button_product {
-  background-color: #424769;
-  color: white;
+  background-color: transparent;
+  color: rgb(44,194,149);
     border-radius: 10px;
-     border: 1.5px solid #F9B17A;
+     border: 1.5px solid rgb(9,85,68);
     padding: 5px 15px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -136,13 +136,13 @@ img:hover {
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 15px;
+  font-size: 20px;
     transition: background-color 0.3s ease;
 }
 
 .button_product:hover {
-    background-color: rgb(230, 229, 222);
-    color: rgb(8, 24, 69);
+    background-color: black;
+    color: rgb(241,247,246);
 }
 
 .product-item {
@@ -157,9 +157,9 @@ img:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2D3250;
-    border: 1px solid #FFFFFF;
-    color: #EEEEEE;
+    background-color: black;
+    border: 1px solid rgb(9,85,68);
+    color: rgb(44,194,149);
     padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -170,10 +170,10 @@ img:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2D3250;
-  color: #EEEEEE;
+  background-color: black;
+  color: rgb(44,194,149);
   padding: 15px 15px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgb(9,85,68);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -184,7 +184,7 @@ img:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #EEEEEE;
+  color: rgb(44,194,149);
   text-decoration: none;
 }
 
@@ -192,21 +192,20 @@ img:hover {
   position: absolute;
   top: -4px;
   right: -4.5px;
-  background-color: #F9B17A;
-  color: white;
+  background-color: rgb(9,85,68);
+  color: rgb(241,247,246);
   font-size: 12px;
   padding: 3px 6px;
   border-radius: 50%;
 }
 
 #cartButton:hover {
-  background-color: #555;
+  background-color: rgb(58, 58, 58);
 }
 
 .Short_description {
     width: 70%;
     padding: 10px 15px;
-
     color: #0D1321;
     display: inline-block;
     font-size: 18px;
@@ -215,7 +214,7 @@ img:hover {
 
 .pret_produs {
     display: block;
-    color: #0D1321;
+    color: rgb(241,247,246);
     text-align: center;
     font-size: 25px;
     margin-top: 10px;
@@ -292,7 +291,7 @@ img:hover {
     display: inline-block;
   }
 
-  
+
 
   .pret_produs {
     font-size: 20px;

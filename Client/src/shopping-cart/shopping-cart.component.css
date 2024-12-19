@@ -8,13 +8,13 @@
     width: 100%;
     padding: 30px;
     align-items: stretch;
-    color: #FFFFFF;
-    
+    color: rgb(241,247,246);
+
 }
 
 .cos_cumparaturi, .total_amount {
-    border: 2px solid #F9B17A;
-    background: #2D3250;
+    border: 2px solid rgb(9,85,68);
+    background: rgb(2,27,26);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -28,8 +28,8 @@
     padding-top: 7px;
     margin-top: 5px;
     padding-bottom: 7px;
-    border-bottom: 2px solid #F9B17A;
-    border-top: 2px solid #F9B17A;
+    border-bottom: 2px solid rgb(9,85,68);
+    border-top: 2px solid rgb(9,85,68);
 }
 
 .cos_cumparaturi {
@@ -69,7 +69,7 @@ tbody td {
 .imagine_tabel img {
     width: 100px;
     border-radius: 10px;
-    border: 2px solid #F9B17A;
+    border: 2px solid rgb(9,85,68);
 }
 
 .cantitate_tabel input {
@@ -77,11 +77,15 @@ tbody td {
     height: 30px;
     font-size: 14px;
     text-align: center;
+    border: 2px solid rgb(9,85,68);
+    color: rgb(44,194,149);
+    background-color: black;
+    text-decoration: none;
 }
 
 .cos_cumparaturi_menu {
     background: transparent;
-    border-bottom: 2px solid #F9B17A;
+    border-bottom: 2px solid rgb(9,85,68);
 }
 
 .list {
@@ -92,24 +96,24 @@ tbody td {
 }
 
 .buton_final {
-    background-color: #F9B17A;
-    color: #FFFFFF;
+    border: 2px solid rgb(9,85,68);
+    background-color: black;
+    color: rgb(44,194,149);
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
     cursor: pointer;
     font-size: 25px;
     margin: 20px;
 }
 
 .buton_final:hover {
-    background-color: #555;
-    color: white;
+    background-color: rgb(58, 58, 58);
+    color: rgb(241,247,246);
 }
 
 a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: rgb(44,194,149);
 }
 .clear-shopping-cart{
     display: block;
@@ -119,16 +123,16 @@ a {
     margin-left:30px;
 }
 .clear-shopping-cart button{
-    background-color: #2D3250;
-    color:#FFFFFF;
+    background-color: rgb(2,27,26);
+    color:rgb(241,247,246);
     padding: 10px 20px;
-    border: 2px solid #F9B17A;
+    border: 2px solid rgb(9,85,68);
     cursor: pointer;
     font-size: 18px;
     transition: 0.3s;
 }
 .clear-shopping-cart button:hover{
-    background-color: white;
+    background-color: rgb(241,247,246);
     color: #2D3250;
 }
 /* Media Query pentru dispozitive mobile */
@@ -155,7 +159,7 @@ a {
     tr {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid #F9B17A;
+        border-bottom: 1px solid rgb(9,85,68);
         margin-bottom: 10px;
     }
 

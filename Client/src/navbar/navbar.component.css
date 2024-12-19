@@ -1,10 +1,10 @@
 .navbar {
-    background-color: #2D3250;
-    box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);
-    border-bottom: 0.5px solid rgb(45, 45, 45);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
+    background-color: rgb(2,27,26);
+  /*box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);*/
+  border-bottom: 0.5px solid rgb(0,123,129);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
 }
 
 .nav-links {
@@ -40,12 +40,12 @@
 .logout-link{
     padding: 4px 6px;
     margin-left: 10px; /* Adaugă spațiu între link-uri */
-    color: #fff; /* Culoarea textului */
+    color: rgb(241,247,246); /* Culoarea textului */
     text-decoration: none; /* Elimină sublinierea implicită */
     border: 1px solid transparent;
 }
 .logout-link:hover{
-    border-color: #F9B17A; /* Schimbă culoarea border-ului la hover */
+    border-color: rgb(0,123,129); /* Schimbă culoarea border-ului la hover */
 }
 .navbar img {
     display: block; /* Asigură-te că imaginea este un element de tip block */
@@ -57,9 +57,9 @@
     padding: 10px;
     margin: 10px;
     border-radius: 30px;
-    background-color: #2D3250;
-    color: #EEEEEE;
-    border: 3px solid #F9B17A;
+    background-color: rgb(2,27,26);
+    color: rgb(241,247,246);
+    border: 3px solid rgb(9,85,68);
 }
 
 .buton a:hover {
@@ -69,8 +69,8 @@
     position: absolute;
     right: 10px; /* Ajustează după preferințe */
     top: 110px; /* Ajustează în funcție de înălțimea navbar-ului */
-    background-color: #2D3250;
-    border: 3px solid #F9B17A;
+    background-color: rgb(2,27,26);
+    border: 3px solid rgb(9,85,68);
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     padding: 0; /* Asigură-te că padding-ul este zero */
@@ -86,7 +86,7 @@
 
   .sidebar ul li {
     padding: 10px 20px; /* Ajustează padding-ul intern */
-    border-bottom: 1px solid #F9B17A;
+    border-bottom: 1px solid rgb(9,85,68);
     text-align: center;
   }
 
@@ -95,7 +95,7 @@
   }
 
   .sidebar ul li a {
-    color: #EEEEEE;
+    color: rgb(241,247,246);
     text-decoration: none;
     display: block;
     width: 100%; /* Asigură-te că link-urile ocupă toată lățimea */
@@ -103,8 +103,8 @@
   }
 
   .sidebar ul li a:hover {
-    background-color: #F9B17A;
-    color: #FFFFFF;
+    background-color: rgb(9,85,68);
+    color: rgb(241,247,246);
   }
 
 @media screen and (max-width: 768px) {

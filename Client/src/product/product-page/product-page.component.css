@@ -49,22 +49,22 @@
 
 .pret_produs {
   font-size: 24px;
-  color: #333;
+  color: rgb(241,247,246);
   margin-bottom: 20px;
 }
 
 .button_product {
   padding: 10px 20px;
-  background-color: #2D3250;
-  border: 1px solid #F9B17A;
-  color: white;
+  background-color: transparent;
+  border: 1px solid rgb(9,85,68);
+  color: rgb(44,194,149);
   cursor: pointer;
   font-size: 16px;
 }
 
 .button_product:hover {
-  background-color: rgb(230, 229, 222);
-  color: rgb(8, 24, 69);
+  background-color:rgb(58, 58, 58);
+  color: rgb(241,247,246);
 }
 
 /* Container pentru minus, input și plus */
@@ -81,22 +81,22 @@
   align-items: center;
   cursor: pointer;
   padding: 10px;
-  background-color: #2D3250;
-  color: white;
+  background-color: black;
+  color: rgb(44,194,149);
   border-radius: 5px;
   font-size: 16px;
 }
 
 .quantity-container {
-  background-color: #2D3250;
-  border: 4px solid #F9B17A;
+  background-color: black;
+  border: 3.5px solid rgb(9,85,68);
   width: 50px;
   text-align: center;
 }
 
 .quantity-input {
   background-color: transparent;
-  color: white;
+  color: rgb(241,247,246);
   border: none;
   width: 100%;
   text-align: center;
@@ -117,18 +117,19 @@
   margin-top: 20px;
   margin-bottom: 20px;
   /*background-color: #2D3250;*/
-  color: #2D3250;
+  color: rgb(241,247,246);
   padding: 5px;
-  border-bottom: 1px solid #2D3250;
+  border-bottom: 1px solid rgb(9,85,68);
 }
 
 .description-product{
-  border-top: 1px solid #0D1321;
+  border-top: 1px solid rgb(9,85,68);
   margin-top: 30px;
+  color: rgb(241,247,246);
   padding-top: 10px ;
   padding-bottom: 10px ;
   margin-bottom: 30px;
-  border-bottom: 1px solid #0D1321;
+  border-bottom: 1px solid rgb(9,85,68);
 }
 .recenzie{
   margin-top: 20px;
@@ -138,10 +139,23 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2D3250;
-  color: #EEEEEE;
+  background-color: black;
+  border: 1px solid rgb(9,85,68);
+  color: rgb(44,194,149);
   padding: 15px 15px;
-  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+#cartButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: rgb(44,194,149);
+  padding: 15px 15px;
+  border: 1px solid rgb(9,85,68);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -152,7 +166,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #EEEEEE;
+  color: rgb(44,194,149);
   text-decoration: none;
 }
 
@@ -160,15 +174,15 @@
   position: absolute;
   top: -4px;
   right: -4.5px;
-  background-color: #F9B17A;
-  color: white;
+  background-color: rgb(9,85,68);
+  color: rgb(241,247,246);
   font-size: 12px;
   padding: 3px 6px;
   border-radius: 50%;
 }
 
 #cartButton:hover {
-  background-color: #555;
+  background-color: rgb(241,247,246);
 }
 @media screen and (max-width: 768px) {
   .product-page {

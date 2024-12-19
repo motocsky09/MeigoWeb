@@ -6,14 +6,13 @@
 }
 
 body {
-  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 30vh;
 }
 .alert-success {
-  color: green;
+  color: rgb(0,123,129);
 }
 
 .alert-danger {
@@ -34,13 +33,13 @@ body {
 }
 
 .register-form {
-  background-color: white;
+  background-color: rgb(3,34,33);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 350px;
   text-align: center;
-  border: 1px solid #F9B17A;
+  border: 1px solid rgb(44,194,149);
 }
 .title{
   text-align: center;
@@ -56,7 +55,7 @@ body {
 }
 
 .register-form p {
-  color: #888;
+  color: rgb(241,247,246);
   margin-bottom: 10px;
 }
 
@@ -69,33 +68,34 @@ body {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
-  color: #444;
+  color: rgb(241,247,246);
 }
 
 .form-control {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(44,194,149);
   border-radius: 5px;
   font-size: 14px;
-  color: #333;
+  color: rgb(44,194,149);
+  background-color: transparent;
   text-align: center;
 }
 .form-control2{
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(241,247,246);
   border-radius: 5px;
   font-size: 14px;
-  color: #333;
+  color: rgb(44,194,149);
   text-align: center;
   margin-bottom: 20px;
 }
 .hero-btn {
   width: 100%;
   padding: 10px;
-  background-color: #2D3250;
-  color: white;
+  background-color: rgb(9,85,68);
+  color: rgb(241,247,246);
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -103,7 +103,7 @@ body {
 }
 
 .hero-btn:hover {
-  background-color: #555;
+  background-color: rgb(3,98,76);
 }
 
 .password-field {
@@ -132,10 +132,10 @@ body {
 .eye-icon {
   width: 22px;
   height: 22px;
-  color: #666;
+  color: rgb(241,247,246);
 }
 .toggle-password:hover .eye-icon {
-  color: #333;
+  color: rgb(241,247,246);
 }
 .form-row{
   margin-top: 20px;
@@ -147,11 +147,11 @@ body {
 
 .login-link p {
   font-size: 14px;
-  color: #666;
+  color: rgb(241,247,246);
 }
 
 .login-link a {
-  color: #F9B17A; /* Albastru pentru link */
+  color: rgb(44,194,149); /* Albastru pentru link */
   text-decoration: none;
   font-weight: bold;
 }
@@ -162,7 +162,7 @@ body {
 
 @media (max-width: 600px) {
   /* Ajustări speciale pentru ecrane de mobil mai mici */
-  
+
   .register-loc {
     padding-left: 40px;
     padding-right: 40px;
@@ -184,7 +184,7 @@ body {
   .register-form img {
     width: 80px;
   }
-  
+
   .login-link {
     padding-top: 10px;
     font-size: 14px;
