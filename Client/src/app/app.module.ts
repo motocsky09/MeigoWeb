@@ -20,7 +20,7 @@ import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
 import { OrderModule } from 'src/order/order.module';
 import { ProfileModule } from 'src/profile/profile.module';
 import { CommonModule } from '@angular/common';
-import {PulseComponent} from "../loading/pulse/pulse.component";
+
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import {PulseComponent} from "../loading/pulse/pulse.component";
     ShoppingCartModule,
     OrderModule,
     ProfileModule,
-    PulseComponent
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

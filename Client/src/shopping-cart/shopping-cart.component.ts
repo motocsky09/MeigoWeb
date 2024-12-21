@@ -56,6 +56,21 @@ export class ShoppingCartComponent implements OnInit {
     }
 
   }
+  increaseQuantity(item: any): void {
+    if (!item.selectedQuantity) {
+      item.selectedQuantity = 1;
+    } else {
+      item.selectedQuantity++;
+    }
+    this.updateQuantity(item);
+  }
+
+  decreaseQuantity(item: any): void {
+    if (item.selectedQuantity > 1) {
+      item.selectedQuantity--;
+      this.updateQuantity(item);
+    }
+  }
   updateQuantity(item: any) {
     // Asigură-te că cantitatea este cel puțin 1
     item.selectedQuantity = Math.max(1, +item.selectedQuantity);
@@ -65,6 +80,26 @@ export class ShoppingCartComponent implements OnInit {
 
     // Recalculează totalurile
     this.recalculateTotals();
+  }
+  removeProduct(item: any): void {
+    // Elimină produsul din lista locală
+    const index = this.productsList.indexOf(item);
+    if (index > -1) {
+      this.productsList.splice(index, 1);
+    }
+
+    // Recalculează totalurile
+    this.recalculateTotals();
+
+    // Actualizează și coșul pe server
+    this.shopingCartService.clearCart().subscribe(
+      (response) => {
+        console.log(`Produsul ${item.name} a fost eliminat din coș.`);
+      },
+      (error) => {
+        console.error('Eroare la eliminarea produsului din coș:', error);
+      }
+    );
   }
   clearShoppingCart() {
     this.shopingCartService.clearCart().subscribe(

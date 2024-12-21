@@ -220,7 +220,7 @@ namespace Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PostalCode")
+                    b.Property<string>("Postal")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

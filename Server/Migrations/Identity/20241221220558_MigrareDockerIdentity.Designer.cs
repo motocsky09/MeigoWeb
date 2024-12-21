@@ -12,7 +12,7 @@ using Server;
 namespace Server.Migrations.Identity
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20241025211244_MigrareDockerIdentity")]
+    [Migration("20241221220558_MigrareDockerIdentity")]
     partial class MigrareDockerIdentity
     {
         /// <inheritdoc />

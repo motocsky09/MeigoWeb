@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Server.Migrations.Identity
 {
     /// <inheritdoc />
-    public partial class migraredockeruser : Migration
+    public partial class MigrareDockerIdentity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

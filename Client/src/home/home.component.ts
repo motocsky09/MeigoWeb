@@ -78,15 +78,5 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-  onLinkClick(event: Event) {
-    event.preventDefault(); // Previne comportamentul implicit al link-ului
 
-    this.loadingService.show(); // Afișează indicatorul de loading
-
-    // Simulează o încărcare, apoi navighează către link-ul dorit
-    setTimeout(() => {
-      this.loadingService.hide(); // Ascunde indicatorul de loading
-      this.router.navigate(['/products-list']); // Navighează manual către ruta dorită
-    }, 1000); // Schimbă 2000 cu timpul dorit pentru încărcare
-  }
 }
