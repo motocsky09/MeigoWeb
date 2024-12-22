@@ -125,6 +125,31 @@ namespace Server.Repositories
             return productShoppingCart;
          }
 
+         public ProductAddedShCart UpdateProductInShoppingCart(string shoppingCartId, int productId, int updatedQuantity)
+         {
+             // Găsește coșul de cumpărături
+             var cart = _serverDbContext.ShoppingCart.FirstOrDefault(c => c.Id == shoppingCartId);
+             if (cart == null)
+             {
+                 throw new Exception("Shopping cart not found");
+             }
+
+             // Găsește produsul în coș
+             var productInCart = _serverDbContext.ProductAddedShCart.FirstOrDefault(p => p.ShoppingCartId == shoppingCartId && p.ProductId == productId);
+             if (productInCart == null)
+             {
+                 throw new Exception("Product not found in shopping cart");
+             }
+
+             // Actualizează cantitatea
+             productInCart.SelectedQuantity = updatedQuantity;
+
+             // Salvează modificările în baza de date
+             _serverDbContext.SaveChanges();
+
+             return productInCart;
+         }
+         
         public string GetShoppingCartIdByUserName (string userName)
         {
             string shoppingCartId = "";

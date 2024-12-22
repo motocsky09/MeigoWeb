@@ -15,6 +15,7 @@ namespace Server.Repositories
 
         public ProductAddedShCart AddProductInShoppingCart(string shoppingCartId, int productId, int selectedQuantity);
 
+        public ProductAddedShCart UpdateProductInShoppingCart(string shoppingCartId, int productId, int updatedQuantity);
         public string GetShoppingCartIdByUserName(string userId);
 
         public List<ProductAddedShCart> GetShoppingCartListById(string shoppingCartId);

@@ -42,6 +42,14 @@ export class ShoppingCartService {
         + shoppingCartId + "&productId=" + productId + "&selectedQuantity=" + selectedQuantity, body);
     }
 
+  updateProductQuantity(shoppingCartId: string, productId: number, updatedQuantity: number) {
+    // Construim URL-ul în formatul specificat
+    const url = this.BaseURI + '/ShoppingCart/UpdateProductInShoppingCart?shoppingCartId='
+      + shoppingCartId + '&productId=' + productId + '&updatedQuantity=' + updatedQuantity;
+
+    // Returnăm cererea HTTP folosind metoda PUT
+    return this.http.put(url, null); // Nu este nevoie de corpul cererii (null)
+  }
    getShoppingCartListById(shoppingCartId:string)
    {
      return this.http.get(this.BaseURI+'/ShoppingCart/GetShoppingCartListById?shoppingCartId=' + shoppingCartId);
@@ -51,11 +59,10 @@ export class ShoppingCartService {
    {
      return this.http.get(this.BaseURI+'/ShoppingCart/GetProdutsFromShoppingById?shoppingCartId=' + shoppingCartId);
    }
-
-   getCountProductsFromCartShopping(shoppingCartId:string)
-   {
-     return this.http.get(this.BaseURI+'/ShoppingCart/GetCountProductsFromCartShopping?shoppingCartId=' + shoppingCartId);
-   }
+  // Metoda pentru a șterge toate produsele din coș
+  clearCart(): Observable<any> {
+    return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
+  }
 
    createOrder(shoppingCartId:string, sumDelivery:number, totalSumWithDelivery: number)
    {
@@ -70,8 +77,5 @@ export class ShoppingCartService {
       + "&sumDelivery=" + sumDelivery + "&totalSumWithDelivery=" + totalSumWithDelivery, body);
    }
 
-  // Metoda pentru a șterge toate produsele din coș
-  clearCart(): Observable<any> {
-    return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
-  }
+
 }

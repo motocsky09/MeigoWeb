@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
+import {HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-shopping-cart',
@@ -56,6 +57,7 @@ export class ShoppingCartComponent implements OnInit {
     }
 
   }
+
   increaseQuantity(item: any): void {
     if (!item.selectedQuantity) {
       item.selectedQuantity = 1;
@@ -71,7 +73,8 @@ export class ShoppingCartComponent implements OnInit {
       this.updateQuantity(item);
     }
   }
-  updateQuantity(item: any) {
+
+  updateQuantity(item: any): void {
     // Asigură-te că cantitatea este cel puțin 1
     item.selectedQuantity = Math.max(1, +item.selectedQuantity);
 
@@ -80,6 +83,17 @@ export class ShoppingCartComponent implements OnInit {
 
     // Recalculează totalurile
     this.recalculateTotals();
+
+    // Trimite actualizarea la server
+    this.shopingCartService.updateProductQuantity(this.shoppingCartId, item.id, item.selectedQuantity)
+      .subscribe(
+        response => {
+          console.log('Cantitatea a fost actualizată cu succes:', response);
+        },
+        error => {
+          console.error('Eroare la actualizarea cantității:', error);
+        }
+      );
   }
   removeProduct(item: any): void {
     // Elimină produsul din lista locală
