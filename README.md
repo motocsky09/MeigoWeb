@@ -104,7 +104,7 @@ Accordion 2 in home page mobile
 ![Product Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20mobile.png)
 
 ## Shopping Cart page mobile
-![Shopping Cart Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page%20mobile.png)
+![Shopping Cart Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page%20mobile1.png)
 
 ![Shopping Cart Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page%20mobile%202.png)
 
@@ -112,4 +112,4 @@ Accordion 2 in home page mobile
 ![Order Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20mobile.png)
 
 ## Order page Confirm order mobile
-![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order%20mobile.png)
+![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order%20mobile1.png)
