@@ -219,19 +219,58 @@ a {
     td {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding: 5px;
         font-size: 16px;
     }
 
     .imagine_tabel img {
         width: 80px; /* Ajustăm dimensiunea imaginii */
     }
+  /* Centrare preț pe mobil */
+  .cost_tabel,.total_tabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px; /* Ajustează dimensiunea fontului pentru o vizibilitate mai bună */
+  }
+  /* Stiluri pentru cantitate și buton de ștergere pe mobil */
+  .cantitate_tabel {
+    display: flex; /* Activează afișarea în modul mobil */
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
 
-    /* Ascundem câmpurile care nu sunt necesare pe mobil */
-    .cantitate_tabel,
-    .total_tabel {
-        display: none;
-    }
+  .quantity-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .btn-minus,
+  .btn-plus {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  .quantity-input {
+    width: 40px;
+    height: 25px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .btn-remove {
+    display: block; /* Afișează butonul pe linie separată */
+    margin: 10px auto;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
     .clear-shopping-cart{
         display: flex;
         justify-content: center;
