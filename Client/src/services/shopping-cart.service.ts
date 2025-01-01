@@ -63,19 +63,14 @@ export class ShoppingCartService {
   clearCart(): Observable<any> {
     return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
   }
-
-   createOrder(shoppingCartId:string, sumDelivery:number, totalSumWithDelivery: number)
-   {
-    let body = new HttpParams({
-      fromObject : {
-        'shoppingCartId' : shoppingCartId,
-        'sumDelivery' : sumDelivery,
-        'totalSumWithDelivery' : totalSumWithDelivery
-      }
-    })
-     return this.http.post(this.BaseURI+'/Order/CreateOrder?shoppingCartId=' + shoppingCartId
-      + "&sumDelivery=" + sumDelivery + "&totalSumWithDelivery=" + totalSumWithDelivery, body);
-   }
+  removeProductFromCart(shoppingCartId: string, productId: number) {
+    const url = `${this.BaseURI}/ShoppingCart/DeleteProductFromCart?shoppingCartId=${shoppingCartId}&productId=${productId}`;
+    return this.http.delete(url);
+  }
+  createOrder(shoppingCartId: string, sumDelivery: number, totalSumWithDelivery: number) {
+    const url = `${this.BaseURI}/Order/CreateOrder?shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}`;
+    return this.http.post(url, null); // Nu este nevoie de HttpParams
+}
 
 
 }

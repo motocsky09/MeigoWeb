@@ -68,7 +68,6 @@ export class OrderComponent implements OnInit {
     }
   }
   createOrder() {
-    this.loadingService.show(); // Afișează indicatorul de încărcare pentru 2 secunde
 
     this.shoppingCartService.createOrder(this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
       () => {

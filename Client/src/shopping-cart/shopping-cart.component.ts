@@ -96,25 +96,25 @@ export class ShoppingCartComponent implements OnInit {
       );
   }
   removeProduct(item: any): void {
-    // Elimină produsul din lista locală
-    const index = this.productsList.indexOf(item);
-    if (index > -1) {
-      this.productsList.splice(index, 1);
-    }
+  // Elimină produsul din baza de date
+  this.shopingCartService.removeProductFromCart(this.shoppingCartId, item.id).subscribe(
+    (response) => {
+      console.log(`Produsul ${item.name} a fost eliminat din coș.`);
 
-    // Recalculează totalurile
-    this.recalculateTotals();
-
-    // Actualizează și coșul pe server
-    this.shopingCartService.clearCart().subscribe(
-      (response) => {
-        console.log(`Produsul ${item.name} a fost eliminat din coș.`);
-      },
-      (error) => {
-        console.error('Eroare la eliminarea produsului din coș:', error);
+      // Elimină produsul din lista locală
+      const index = this.productsList.indexOf(item);
+      if (index > -1) {
+        this.productsList.splice(index, 1);
       }
-    );
-  }
+
+      // Recalculează totalurile
+      this.recalculateTotals();
+    },
+    (error) => {
+      console.error('Eroare la eliminarea produsului din coș:', error);
+    }
+  );
+}
   clearShoppingCart() {
     this.shopingCartService.clearCart().subscribe(
       (response) => {

@@ -12,5 +12,6 @@ namespace Server.Repositories
         public void UpdateOrder(Order model);
 
         public void DeleteOrder(int orderid);
+        
     }
 }

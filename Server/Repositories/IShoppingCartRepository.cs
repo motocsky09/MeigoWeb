@@ -21,5 +21,6 @@ namespace Server.Repositories
         public List<ProductAddedShCart> GetShoppingCartListById(string shoppingCartId);
         List<ProductResponse> GetProdutsFromShoppingById(string shoppingCartId);
         public int GetCountProductsFromCartShopping(string shoppingCartId);
+        public void DeleteProductFromCart(string shoppingCartId, int productId);
     }
 }

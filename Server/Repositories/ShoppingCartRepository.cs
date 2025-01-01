@@ -248,5 +248,16 @@ namespace Server.Repositories
 
             return 0;
         }
+        public void DeleteProductFromCart(string shoppingCartId, int productId)
+        {
+            var productToRemove = _serverDbContext.ProductAddedShCart
+                .FirstOrDefault(p => p.ShoppingCartId == shoppingCartId && p.ProductId == productId);
+
+            if (productToRemove != null)
+            {
+                _serverDbContext.ProductAddedShCart.Remove(productToRemove);
+                _serverDbContext.SaveChanges();
+            }
+        }
     }
 }

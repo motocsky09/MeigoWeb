@@ -129,5 +129,13 @@ namespace Server.Controllers
 
             return Ok(res);
         }
+
+        [HttpDelete]
+        [Route("DeleteProductFromCart")]
+        public ActionResult DeleteProductFromCart(string shoppingCartId, int productId)
+        {
+            _shoppingcartRepository.DeleteProductFromCart(shoppingCartId, productId);
+            return Ok();
+        }
     }
 }
