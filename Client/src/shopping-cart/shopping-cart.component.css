@@ -68,6 +68,7 @@ tbody td {
 
 .imagine_tabel img {
     width: 100px;
+    height: 100px;
     border-radius: 10px;
     border: 2px solid rgb(9,85,68);
 }
@@ -224,7 +225,8 @@ a {
     }
 
     .imagine_tabel img {
-        width: 80px; /* Ajustăm dimensiunea imaginii */
+        width: 200px; /* Ajustăm dimensiunea imaginii */
+        height: 200px;
     }
   /* Centrare preț pe mobil */
   .cost_tabel,.total_tabel {

@@ -1,4 +1,4 @@
-<div class="product">
+<div class="filter-box">
   <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
     <b>Filtrează</b>
     <i class="fa fa-filter" aria-hidden="true"></i>
@@ -11,24 +11,14 @@
     <button class="buton_filter" (click)="getProductsListByCategoryId(3)">Birou<i class="fa-solid fa-briefcase"></i></button>
   </div>
 </div>
-
-
-
-<ul *ngFor="let item of productsList">
-    <li class="product-item">
-    <div class="product-item">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <a [routerLink]="['/product-page', item.id]">
-                    <img src="./assets/images/{{item.imagePath1}}" alt="product_image" height="400" width="200">
-                  </a>
-                </div>
-            </div>
-        </div>
-    </div>
-        <div class="details">
-            <h3 class="pret_produs"><b>Preț:</b> {{item.price}} lei</h3>
+<div class="product">
+    <ul>
+        <li class="product-item" *ngFor="let item of productsList">
+            <a [routerLink]="['/product-page', item.id]">
+                <img src="./assets/images/{{item.imagePath1}}" alt="product_image">
+            </a>
+            <div class="details">
+            <h3 class="pret_produs">Preț: {{item.price}} lei</h3>
           <div class="quantity-wrapper">
             <div class="minus" (click)="decreaseQuantity(selectedQuantity)">
               <i class="fas fa-minus"></i>
@@ -40,14 +30,15 @@
               <i class="fas fa-plus"></i>
             </div>
           </div>
-
-        </div>
-        <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, item.id, selectedQuantity.valueAsNumber)">Adaugă în coș</button>
-    </li>
-
-    <div class="cart-button" id="cartButton">
-        <a href="cos-cumparaturi">
-            <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
-        <span id="cartItemCount">{{ cartCounter }}</span>
-    </div>
-</ul>
+            <button class="button_product"
+                (click)="addProductInShoppingCart(shoppingCartId, item.id, selectedQuantity.valueAsNumber)">Adaugă în coș
+            </button>
+            </div>
+        </li>
+        <div class="cart-button" id="cartButton">
+          <a href="cos-cumparaturi">
+              <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
+          <span id="cartItemCount">{{ cartCounter }}</span>
+      </div>
+    </ul>
+</div>
