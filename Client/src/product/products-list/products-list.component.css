@@ -32,7 +32,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .buton_filter i {
-  margin-left: 2px;
+  margin-left: 0px;
 }
 
 .buton_filter:hover {
@@ -228,8 +228,8 @@
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
   .product{
-    margin:0;
-    padding: 0;
+    margin:20px;
+    padding: 20px;
   }
     .product ul {
         grid-template-columns: repeat(2, 1fr); /* Afișează 2 produse pe rând */
@@ -240,18 +240,16 @@
         padding: 10px; /* Reduce spațierea cardurilor */
     }
     .product-item img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover; /* Asigură că imaginea acoperă containerul */
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 10px; /* Colțuri rotunjite */
       margin-bottom: 10px; /* Spațiere sub imagine */
   }
   .filter{
     margin-top: 10px;
   }
-  .buton_filter{
-    font-size: 11px;
-  }
+
 }
 
 @media only screen and (max-width: 480px) {

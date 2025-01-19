@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 .auth-form {
@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   margin: 10px;
-  padding: 30px;
+  padding: 40px;
   border: 2px solid rgb(9,85,68);
   background-color: rgb(2,27,26);
   color: rgb(241,247,246);
@@ -112,14 +112,16 @@ a:hover{
 @media screen and (max-width: 768px) {
   /* Form Centering */
   .center-align {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   /* Form width adjustment for mobile */
   .auth-form {
     width: 90%; /* Lățimea formularului să fie 90% din ecran */
-    padding: 20px; /* Reducem padding-ul pentru a economisi spațiu */
+    padding: 10px; /* Reducem padding-ul pentru a economisi spațiu */
     margin: 10px;
   }
 
