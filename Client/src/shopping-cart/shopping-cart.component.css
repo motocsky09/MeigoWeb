@@ -220,7 +220,6 @@ a {
     td {
         display: flex;
         justify-content: space-between;
-        padding: 5px;
         font-size: 16px;
     }
 
@@ -234,7 +233,6 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px 0;
     font-size: 18px; /* Ajustează dimensiunea fontului pentru o vizibilitate mai bună */
   }
   /* Stiluri pentru cantitate și buton de ștergere pe mobil */
@@ -242,7 +240,6 @@ a {
     display: flex; /* Activează afișarea în modul mobil */
     justify-content: center;
     align-items: center;
-    margin-top: 0;
   }
 
   .quantity-wrapper {
@@ -254,22 +251,22 @@ a {
 
   .btn-minus,
   .btn-plus {
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
     margin: 0 5px;
   }
 
   .quantity-input {
-    width: 40px;
-    height: 25px;
-    font-size: 14px;
+    width: 60px;
+    height: 35px;
+    font-size: 24px;
     text-align: center;
   }
 
   .btn-remove {
     display: block; /* Afișează butonul pe linie separată */
-    margin: 10px auto;
+    margin: 0px auto;
     font-size: 14px;
     padding: 8px 12px;
   }

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShoppingCartComponent } from './shopping-cart.component';
 
 const routes: Routes = [
-  {path:'cos-cumparaturi',component:ShoppingCartComponent}
+  {path:'shopping-cart',component:ShoppingCartComponent}
 ];
 
 @NgModule({
