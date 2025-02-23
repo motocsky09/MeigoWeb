@@ -1,0 +1,26 @@
+/* Asigură ca body și html să ocupe toată înălțimea */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+  }
+  
+  /* Container principal pentru layout */
+  .page-container {
+	display: flex;
+	flex-direction: column; /* Așează elementele vertical */
+	min-height: 100vh; /* Asigură înălțimea minimă a viewport-ului */
+  }
+  
+  /* Conținutul principal ocupă restul spațiului */
+  .content {
+	flex: 1; /* Împinge footer-ul în jos */
+  }
+  
+  /* Footer-ul rămâne mereu la final */
+  .footer {
+	background-color: rgb(2, 27, 26);
+	color: rgb(241, 247, 246);
+	padding: 10px;
+	border-top: 0.5px solid rgb(0, 123, 129);
+  }
