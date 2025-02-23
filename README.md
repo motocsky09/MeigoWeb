@@ -42,17 +42,21 @@ The application is divided into 5 sections:
 ```
 ## Home page
 ```
-The home page serves as the initial page of the application, where clients can access essential details about the application.
+The home page serves as the initial page of the application,
+where clients can access essential details about the application.
 It is accompanied by two accordion items that contribute to a minimalist aesthetic and provide ample spacing.
 ```
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page.png)
 ## Element 1 in home page
 ```
-The element "Cum funcționează?" translates to "How does it work?" provides information on how to use the platform.
+The element "Cum funcționează?" translates to "How does it work?"
+provides information on how to use the platform.
 To view the contents of the section, press the "+" symbol.
-Once pressed, the section will be open. To close the section, press the "-" symbol again.
+Once pressed, the section will be open.
+To close the section, press the "-" symbol again.
 This section provides contact information, including email and the app's Instagram page.
-Through these channels, customers can share their customizable ideas that are not available in the products section.
+Through these channels,
+customers can share their customizable ideas that are not available in the products section.
 ```
 ![Home Page With Accordion Item 1](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20with%20accordion%20item%201.png)
 ## Element 2 in home page
@@ -66,7 +70,7 @@ To view the contents of the section, is same mode of first section "Cum funcțio
 ```
 In this section, users can log in to the platform by entering their username and password.
 The password is automatically hidden, but users can verify its correctness by clicking the eye icon on the right,
- which will reveal the password. Additionally, users who do not have an account or wish to create a new one
+which will reveal the password. Additionally, users who do not have an account or wish to create a new one
 can access the "Înregistrați-va" / "Register" button to be redirected to the registration page.
 ```
 ![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login%20page.png)
@@ -76,23 +80,29 @@ can access the "Înregistrați-va" / "Register" button to be redirected to the r
 In this section, users can create a new account by providing the required information.
 They must enter a valid email address and choose a unique username.
 The password must be entered twice to confirm its accuracy and must include at least one special character,
-one digit, and one uppercase letter. The password is hidden by default, but users can reveal it by clicking
-the eye icon on the right. Once the form is completed correctly, users can proceed by pressing the ‘Register’ button to finalize the account creation.
+one digit, and one uppercase letter.
+The password is hidden by default, but users can reveal it by clicking
+the eye icon on the right. Once the form is completed correctly,
+users can proceed by pressing the ‘Register’ button to finalize the account creation.
 ```
 ![Register Page](https://github.com/motocsky09/project-shop/raw/main/_screens/register%20page.png)
 
 ## Profile Account page
 ```
 In this section, users can view and manage their account details.
-The displayed information includes the username, full name (last name and first name), address, city, postal code, email, and phone number.
-Users can update their personal information by pressing the ‘Edit’ button, which allows them to modify all information except the username and email,
-as these are unique identifiers and cannot be changed. The interface is user-friendly, with clear icons accompanying each detail for better navigation.
+The displayed information includes the username, full name (last name and first name),
+address, city, postal code, email, and phone number.
+Users can update their personal information by pressing the ‘Edit’ button,
+which allows them to modify all information except the username and email,
+as these are unique identifiers and cannot be changed.
+The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
 ![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile%20account%20page.png)
 
 ## All Products Filter page
 ```
-In this section, users can see all products. They can also use a filter to see only products from a specific category.
+In this section, users can see all products.
+They can also use a filter to see only products from a specific category.
 To add a product to their cart, simply click on the “Add to Cart” / “Add to Cart” button.
 The “+” and “-” symbols allow you to change how many products you want to add to the cart.
 To learn more about a product, simply click on its image and it will take you to the Product Page.
@@ -101,8 +111,10 @@ To learn more about a product, simply click on its image and it will take you to
 
 ## Product page
 ```
-In this section, users can access additional product details, including multiple perspective photographs and a concise product description.
-Additionally, they can conveniently add the product to their shopping cart by clicking the "Adaugă în coș" / "Add to Cart" button.
+In this section, users can access additional product details,
+including multiple perspective photographs and a concise product description.
+Additionally, they can conveniently add the product
+to their shopping cart by clicking the "Adaugă în coș" / "Add to Cart" button.
 Users can also specify the desired quantity by utilizing the "+" and "-" symbols.
 ```
 ![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page.png)
@@ -117,7 +129,8 @@ Additionally, they can view the total amount paid and the delivery charges.
 
 ## Order page
 ```
-In this section, users can verify the automatically populated delivery address (if entered in their profile) or manually input the delivery address.
+In this section, users can verify the automatically populated delivery address
+(if entered in their profile) or manually input the delivery address.
 Additionally, they can add notes for the order and select their preferred payment method.
 ```
 ![Order Page](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page.png)
@@ -125,7 +138,8 @@ Additionally, they can add notes for the order and select their preferred paymen
 ## Order page Confirm order
 ```
 This is the final section of the product purchase process.
-It presents a single order confirmation message, followed by an email address where additional information can be requested.
+It presents a single order confirmation message,
+followed by an email address where additional information can be requested.
 ```
 ![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order.png)
 
@@ -133,18 +147,22 @@ It presents a single order confirmation message, followed by an email address wh
 
 ## HOME page mobile resolution
 ```
-The home page serves as the initial page of the application, where clients can access essential details about the application.
+The home page serves as the initial page of the application,
+where clients can access essential details about the application.
 It is accompanied by two accordion items that contribute to a minimalist aesthetic and provide ample spacing.
 ```
 ![Home Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20mobile.png)
 
 ## Element 1 in home page mobile resolution
 ```
-The element "Cum funcționează?" translates to "How does it work?" provides information on how to use the platform.
+The element "Cum funcționează?" translates to "How does it work?"
+provides information on how to use the platform.
 To view the contents of the section, press the "+" symbol.
-Once pressed, the section will be open. To close the section, press the "-" symbol again.
+Once pressed, the section will be open.
+To close the section, press the "-" symbol again.
 This section provides contact information, including email and the app's Instagram page.
-Through these channels, customers can share their customizable ideas that are not available in the products section.
+Through these channels,
+customers can share their customizable ideas that are not available in the products section.
 ```
 ![Home Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20mobile%20with%20accordion%20item%201.png)
 
@@ -159,7 +177,7 @@ To view the contents of the section, is same mode of first section "Cum funcțio
 ```
 In this section, users can log in to the platform by entering their username and password.
 The password is automatically hidden, but users can verify its correctness by clicking the eye icon on the right,
- which will reveal the password. Additionally, users who do not have an account or wish to create a new one
+which will reveal the password. Additionally, users who do not have an account or wish to create a new one
 can access the "Înregistrați-va" / "Register" button to be redirected to the registration page.
 ```
 ![Login Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/login%20page%20mobile.png)
@@ -169,23 +187,29 @@ can access the "Înregistrați-va" / "Register" button to be redirected to the r
 In this section, users can create a new account by providing the required information.
 They must enter a valid email address and choose a unique username.
 The password must be entered twice to confirm its accuracy and must include at least one special character,
-one digit, and one uppercase letter. The password is hidden by default, but users can reveal it by clicking
-the eye icon on the right. Once the form is completed correctly, users can proceed by pressing the ‘Register’ button to finalize the account creation.
+one digit, and one uppercase letter.
+The password is hidden by default, but users can reveal it by clicking
+the eye icon on the right. Once the form is completed correctly,
+users can proceed by pressing the ‘Register’ button to finalize the account creation.
 ```
 ![Register Page Register](https://github.com/motocsky09/project-shop/raw/main/_screens/register%20page%20mobile.png)
 
 ## Profile Account Page mobile resolution
 ```
 In this section, users can view and manage their account details.
-The displayed information includes the username, full name (last name and first name), address, city, postal code, email, and phone number.
-Users can update their personal information by pressing the ‘Edit’ button, which allows them to modify all information except the username and email,
-as these are unique identifiers and cannot be changed. The interface is user-friendly, with clear icons accompanying each detail for better navigation.
+The displayed information includes the username, full name (last name and first name),
+address, city, postal code, email, and phone number.
+Users can update their personal information by pressing the ‘Edit’ button,
+which allows them to modify all information except the username and email,
+as these are unique identifiers and cannot be changed.
+The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
 ![Profile Account Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/profile%20account%20page%20mobile.png)
 
 ## All Products Filter page mobile resolution
 ```
-In this section, users can see all products. They can also use a filter to see only products from a specific category.
+In this section, users can see all products.
+They can also use a filter to see only products from a specific category.
 To add a product to their cart, simply click on the “Add to Cart” / “Add to Cart” button.
 The “+” and “-” symbols allow you to change how many products you want to add to the cart.
 To learn more about a product, simply click on its image and it will take you to the Product Page.
@@ -194,8 +218,10 @@ To learn more about a product, simply click on its image and it will take you to
 
 ## Product Page mobile resolution
 ```
-In this section, users can access additional product details, including multiple perspective photographs and a concise product description.
-Additionally, they can conveniently add the product to their shopping cart by clicking the "Adaugă în coș" / "Add to Cart" button.
+In this section, users can access additional product details,
+including multiple perspective photographs and a concise product description.
+Additionally, they can conveniently add the product
+to their shopping cart by clicking the "Adaugă în coș" / "Add to Cart" button.
 Users can also specify the desired quantity by utilizing the "+" and "-" symbols.
 ```
 ![Product Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20mobile.png)
@@ -212,7 +238,8 @@ Additionally, they can view the total amount paid and the delivery charges.
 
 ## Order Page mobile resolution
 ```
-In this section, users can verify the automatically populated delivery address (if entered in their profile) or manually input the delivery address.
+In this section, users can verify the automatically populated delivery address
+(if entered in their profile) or manually input the delivery address.
 Additionally, they can add notes for the order and select their preferred payment method.
 ```
 ![Order Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20mobile.png)
@@ -220,6 +247,7 @@ Additionally, they can add notes for the order and select their preferred paymen
 ## Confirm Order Page mobile resolution
 ```
 This is the final section of the product purchase process.
-It presents a single order confirmation message, followed by an email address where additional information can be requested.
+It presents a single order confirmation message,
+followed by an email address where additional information can be requested.
 ```
 ![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order%20mobile1.png)
