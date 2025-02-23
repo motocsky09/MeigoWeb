@@ -1,17 +1,17 @@
 # MeigoWEB (.NET Core & Angular)[Completely receptive]
 Technology and libraries used:
 ```
-   1. Server: .NET Core, IdentityServer 8 JWT Token, EntityFramework, C#, SqlServer
+1. Server: .NET Core, IdentityServer 8 JWT Token, EntityFramework, C#, SqlServer
 ```
 ```
-   2. Client: Angular, TypeScript, HTML & CSS, Flexbox
+2. Client: Angular, TypeScript, HTML & CSS, Flexbox
 ```
 Design patterns and principles used:            
 ```
-  REST and Dependecy injection
+REST and Dependecy injection
 ```
 ```
-  OOP and S.O.L.I.D Principles
+OOP and S.O.L.I.D Principles
 ```
 ### MeigoWEB is a web platform dedicated to the field of sales, specifically 3D print object.
 The application is divided into 5 sections:
