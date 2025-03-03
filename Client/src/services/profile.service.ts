@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProfileService {
 
-  private apiUrl = 'http://localhost:5098/api'; // URL-ul corect
+  private apiUrl = 'http://localhost:5098/api';
 
   constructor(
     private fb:FormBuilder,
