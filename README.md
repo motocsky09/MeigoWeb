@@ -46,7 +46,7 @@ The home page serves as the initial page of the application,
 where clients can access essential details about the application.
 It is accompanied by two accordion items that contribute to a minimalist aesthetic and provide ample spacing.
 ```
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page.png)
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20web.png)
 ## Element 1 in home page
 ```
 The element "Cum funcționează?" translates to "How does it work?"
@@ -73,7 +73,7 @@ The password is automatically hidden, but users can verify its correctness by cl
 which will reveal the password. Additionally, users who do not have an account or wish to create a new one
 can access the "Înregistrați-va" / "Register" button to be redirected to the registration page.
 ```
-![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login%20page.png)
+![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login%20page%20web.png)
 
 ## Register page
 ```
@@ -85,7 +85,7 @@ The password is hidden by default, but users can reveal it by clicking
 the eye icon on the right. Once the form is completed correctly,
 users can proceed by pressing the ‘Register’ button to finalize the account creation.
 ```
-![Register Page](https://github.com/motocsky09/project-shop/raw/main/_screens/register%20page.png)
+![Register Page](https://github.com/motocsky09/project-shop/raw/main/_screens/register%20page%20web.png)
 
 ## Profile Account page
 ```
@@ -97,7 +97,7 @@ which allows them to modify all information except the username and email,
 as these are unique identifiers and cannot be changed.
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile%20account%20page.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile%20account%20page%20web.png)
 
 ## All Products Filter page
 ```
@@ -107,7 +107,7 @@ To add a product to their cart, simply click on the “Add to Cart” / “Add t
 The “+” and “-” symbols allow you to change how many products you want to add to the cart.
 To learn more about a product, simply click on its image and it will take you to the Product Page.
 ```
-![Product Filter Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20filter.png)
+![Product Filter Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20filter%20web.png)
 
 ## Product page
 ```
@@ -117,7 +117,7 @@ Additionally, they can conveniently add the product
 to their shopping cart by clicking the "Adaugă în coș" / "Add to Cart" button.
 Users can also specify the desired quantity by utilizing the "+" and "-" symbols.
 ```
-![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page.png)
+![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product%20page%20web.png)
 
 ## Shopping Cart page
 ```
@@ -125,7 +125,7 @@ In this section, users can access a concise summary of the products added to the
 They can modify the quantity of products, delete a product from their cart, or delete all products.
 Additionally, they can view the total amount paid and the delivery charges.
 ```
-![Shopping Cart Page](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page.png)
+![Shopping Cart Page](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping%20cart%20page%20web.png)
 
 ## Order page
 ```
@@ -133,7 +133,7 @@ In this section, users can verify the automatically populated delivery address
 (if entered in their profile) or manually input the delivery address.
 Additionally, they can add notes for the order and select their preferred payment method.
 ```
-![Order Page](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page.png)
+![Order Page](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20web.png)
 
 ## Order page Confirm order
 ```
@@ -141,7 +141,7 @@ This is the final section of the product purchase process.
 It presents a single order confirmation message,
 followed by an email address where additional information can be requested.
 ```
-![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order.png)
+![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/Order%20page%20confirm%20order%20web.png)
 
 # MeigoWeb Resolution for Mobile Devices
 
