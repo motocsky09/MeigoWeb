@@ -2,7 +2,6 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
-import {LoadingService} from "../services/loading.service";
 
 @Component({
   selector: 'app-home',
@@ -18,7 +17,6 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private shoppingCartService: ShoppingCartService,
     private renderer: Renderer2,
-    private loadingService: LoadingService,
   ) { }
 
   ngOnInit() {

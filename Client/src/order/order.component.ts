@@ -4,7 +4,6 @@ import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 import { ProfileService } from 'src/services/profile.service';
-import {LoadingService} from "../services/loading.service";
 
 @Component({
   selector: 'app-order',
@@ -26,7 +25,6 @@ export class OrderComponent implements OnInit {
     private userService: UserService,
     private shoppingCartService: ShoppingCartService,
     private profileService: ProfileService, // Injectăm ProfileService
-    private loadingService: LoadingService
   ) {}
 
   ngOnInit() {
@@ -73,13 +71,13 @@ export class OrderComponent implements OnInit {
       () => {
 
         setTimeout(() => {
-          this.loadingService.hide(); // Ascunde indicatorul de încărcare
+          
           this.router.navigate(['/confirm-order']); // Redirecționează la confirmare
         }, 2000);
       },
       error => {
         console.error('Eroare la plasarea comenzii:', error);
-        this.loadingService.hide(); // Ascunde indicatorul dacă apare o eroare
+    
       }
     );
   }

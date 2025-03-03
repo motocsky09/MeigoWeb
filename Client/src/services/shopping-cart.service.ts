@@ -71,6 +71,4 @@ export class ShoppingCartService {
     const url = `${this.BaseURI}/Order/CreateOrder?shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}`;
     return this.http.post(url, null); // Nu este nevoie de HttpParams
 }
-
-
 }
