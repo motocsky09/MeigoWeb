@@ -36,9 +36,9 @@ namespace Server.Controllers
 
         [HttpPost]
         [Route("CreateOrder")]
-        public ActionResult CreateOrder([FromQuery]string shoppingCartId, [FromQuery]int sumDelivery, [FromQuery] int totalSumWithDelivery)
+        public ActionResult CreateOrder([FromQuery]string userId,[FromQuery]string shoppingCartId, [FromQuery]int sumDelivery, [FromQuery] int totalSumWithDelivery)
         {
-           _orderRepository.CreateOrder(shoppingCartId, sumDelivery, totalSumWithDelivery);
+           _orderRepository.CreateOrder(userId,shoppingCartId, sumDelivery, totalSumWithDelivery);
             return Ok();
         }
 

@@ -59,6 +59,10 @@ export class ShoppingCartService {
    {
      return this.http.get(this.BaseURI+'/ShoppingCart/GetProdutsFromShoppingById?shoppingCartId=' + shoppingCartId);
    }
+   createOrder(userId:string,shoppingCartId: string, sumDelivery: number, totalSumWithDelivery: number) {
+    const url = `${this.BaseURI}/Order/CreateOrder?userId=${userId}&shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}`;
+    return this.http.post(url, null); // Nu este nevoie de HttpParams
+  }
   // Metoda pentru a șterge toate produsele din coș
   clearCart(): Observable<any> {
     return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
@@ -67,8 +71,5 @@ export class ShoppingCartService {
     const url = `${this.BaseURI}/ShoppingCart/DeleteProductFromCart?shoppingCartId=${shoppingCartId}&productId=${productId}`;
     return this.http.delete(url);
   }
-  createOrder(shoppingCartId: string, sumDelivery: number, totalSumWithDelivery: number) {
-    const url = `${this.BaseURI}/Order/CreateOrder?shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}`;
-    return this.http.post(url, null); // Nu este nevoie de HttpParams
-}
+
 }

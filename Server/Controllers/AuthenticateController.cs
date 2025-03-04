@@ -117,6 +117,14 @@ namespace Server.Controllers
 
             return Ok(shoppingCartId);
         }
+        [HttpGet]
+        [Route("GetUserIdByUserName")]
+        public IActionResult GetUserIdByUserName([FromQuery] string userName)
+        {
+            var user = _userManager.Users.FirstOrDefault(u => u.UserName == userName);
+            if (user == null) return NotFound("User not found");
+            return Ok(user.Id);
+        }
 
         private JwtSecurityToken GetToken(List<Claim> authClaims)
         {

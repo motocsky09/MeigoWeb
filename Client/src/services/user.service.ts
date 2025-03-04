@@ -90,4 +90,7 @@ export class UserService {
   {
     return this.http.get(this.BaseURI+'/Authenticate/GetShoppingCartIdByUserName?userName=' + userName , {responseType: 'text'});
   }
+  getUserIdByUserName(userName: string) {
+    return this.http.get(this.BaseURI + '/Authenticate/GetUserIdByUserName?userName=' + userName, { responseType: 'text' });
+  }
 }
