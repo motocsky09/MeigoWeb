@@ -39,25 +39,25 @@ export class OrderComponent implements OnInit {
           this.userService.getUserIdByUserName(this.userName).subscribe(
             (userId: string) => {
               this.userId = userId;
-              console.log('✅ userId obținut:', this.userId);
+              console.log('userId obținut:', this.userId);
             },
-            error => console.error('❌ Eroare la obținerea userId:', error)
+            error => console.error('Eroare la obținerea userId:', error)
           );
 
           // Obține profilul (inclusiv adresa)
           this.profileService.getProfileByUserName(this.userName).subscribe(
             (profileRes: any) => {
               this.profile = profileRes; // Setează profilul
-              console.log('📦 Profilul utilizatorului:', this.profile);
+              console.log('Profilul utilizatorului:', this.profile);
             },
-            error => console.error('❌ Eroare la obținerea profilului:', error)
+            error => console.error('Eroare la obținerea profilului:', error)
           );
 
           // Obține ShoppingCartId și produsele din coș
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (cartId: string) => {
               this.shoppingCartId = cartId;
-              console.log('🛒 shoppingCartId:', this.shoppingCartId);
+              console.log('shoppingCartId:', this.shoppingCartId);
 
               this.shoppingCartService.getProdutsFromShoppingById(this.shoppingCartId).subscribe(
                 (cartProducts: any) => {
@@ -66,32 +66,58 @@ export class OrderComponent implements OnInit {
                     (sum, product) => sum + product.sumSelectedQuantity, 0
                   );
                   this.totalSumWithDelivery = this.totalSumWithoutDelivery + this.sumDelivery;
-                  console.log('💰 Total fără livrare:', this.totalSumWithoutDelivery);
-                  console.log('🚚 Total cu livrare:', this.totalSumWithDelivery);
+                  console.log('Total fără livrare:', this.totalSumWithoutDelivery);
+                  console.log('Total cu livrare:', this.totalSumWithDelivery);
                 },
-                error => console.error('❌ Eroare la obținerea produselor:', error)
+                error => console.error('Eroare la obținerea produselor:', error)
               );
             },
-            error => console.error('❌ Eroare la obținerea shoppingCartId:', error)
+            error => console.error('Eroare la obținerea shoppingCartId:', error)
           );
         },
-        error => console.error('❌ Eroare la obținerea userName:', error)
+        error => console.error('Eroare la obținerea userName:', error)
       );
     }
   }
 
   createOrder() {
-    if (!this.userId || !this.shoppingCartId || !this.totalSumWithDelivery) {
+    if (!this.userId || !this.shoppingCartId || !this.totalSumWithDelivery || !this.profile) {
       console.error('⚠️ Date incomplete pentru creare comandă!');
       return;
     }
 
+    // Asigurare că comments are o valoare implicită
+    this.profile.comments = this.profile.comments || '';
+
+    console.log('📤 Date trimise către backend:', {
+      userId: this.userId,
+      shoppingCartId: this.shoppingCartId,
+      sumDelivery: this.sumDelivery,
+      totalSumWithDelivery: this.totalSumWithDelivery,
+      address: this.profile.address,
+      phoneNumber: this.profile.phoneNumber,
+      email: this.profile.email,
+      comments: this.profile.comments,
+      postal: this.profile.postal
+    });
+
     console.log('📤 Trimitere comandă...');
-    this.shoppingCartService.createOrder(this.userId, this.shoppingCartId, this.sumDelivery, this.totalSumWithDelivery).subscribe(
+
+    this.shoppingCartService.createOrder(
+      this.userId,
+      this.shoppingCartId,
+      this.sumDelivery,
+      this.totalSumWithDelivery,
+      this.profile.address || '',         // Adresa din profil
+      this.profile.phoneNumber || '',     // Telefonul din profil
+      this.profile.email || '',           // Email-ul din profil
+      this.profile.comments,              // Comentarii (asigurate să nu fie undefined)
+      this.profile.postal || ''           // Codul poștal
+    ).subscribe(
       () => {
         console.log('✅ Comandă creată cu succes!');
 
-        // Delay de 10 secunde înainte de redirect și ștergere coș
+        // Delay de 10 secunde înainte de a goli coșul și a redirecționa
         setTimeout(() => {
           this.shoppingCartService.clearCart().subscribe(() => {
             console.log('🗑️ Coșul a fost golit!');

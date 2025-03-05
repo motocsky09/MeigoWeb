@@ -35,12 +35,21 @@ namespace Server.Controllers
         }
 
         [HttpPost]
-        [Route("CreateOrder")]
-        public ActionResult CreateOrder([FromQuery]string userId,[FromQuery]string shoppingCartId, [FromQuery]int sumDelivery, [FromQuery] int totalSumWithDelivery)
-        {
-           _orderRepository.CreateOrder(userId,shoppingCartId, sumDelivery, totalSumWithDelivery);
-            return Ok();
-        }
+[Route("CreateOrder")]
+public ActionResult CreateOrder(
+    [FromQuery] string userId,
+    [FromQuery] string shoppingCartId,
+    [FromQuery] int sumDelivery,
+    [FromQuery] int totalSumWithDelivery,
+    [FromQuery] string Address,
+    [FromQuery] string PhoneNumber,
+    [FromQuery] string Email,
+    [FromQuery] string Postal,
+    [FromQuery] string Comments = "") // Valoare implicită
+{
+    _orderRepository.CreateOrder(userId, shoppingCartId, sumDelivery, totalSumWithDelivery, Address, PhoneNumber, Email, Postal, Comments ?? "");
+    return Ok();
+}
 
         [HttpPut]
         [Route("UpdateOrder")]

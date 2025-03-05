@@ -18,7 +18,8 @@ namespace Server.Repositories
         {
             return _serverDbContext.Order.ToList();
         }
-        public void CreateOrder(string userId, string shoppingCartId, int sumDelivery, int totalSumWithDelivery)
+        public void CreateOrder(string userId, string shoppingCartId, int sumDelivery, int totalSumWithDelivery, 
+        string Address, string PhoneNumber, string Email, string Postal,string Comments)
         {
             var order = new Order
             {
@@ -28,12 +29,12 @@ namespace Server.Repositories
                 OrderStatus = 1,
                 DeliveryPrice = sumDelivery,
                 Totalamount = totalSumWithDelivery,
-                Adress = "",
+                Adress = Address,
                 Street_no = "",
-                Zip_code = "",
-                Phone_number = "",
-                Email = "",
-                Comments = "",
+                Zip_code = Postal,
+                Phone_number = PhoneNumber,
+                Email = Email,
+                Comments = Comments,
                 Payment_method = 1
             };
             _serverDbContext.Order.Add(order);
