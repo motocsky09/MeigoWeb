@@ -42,12 +42,13 @@ public ActionResult CreateOrder(
     [FromQuery] int sumDelivery,
     [FromQuery] int totalSumWithDelivery,
     [FromQuery] string Address,
+    [FromQuery] string City,
     [FromQuery] string PhoneNumber,
     [FromQuery] string Email,
     [FromQuery] string Postal,
     [FromQuery] string Comments = "") // Valoare implicită
 {
-    _orderRepository.CreateOrder(userId, shoppingCartId, sumDelivery, totalSumWithDelivery, Address, PhoneNumber, Email, Postal, Comments ?? "");
+    _orderRepository.CreateOrder(userId, shoppingCartId, sumDelivery, totalSumWithDelivery, Address,City, PhoneNumber, Email, Postal, Comments ?? "");
     return Ok();
 }
 
@@ -66,7 +67,5 @@ public ActionResult CreateOrder(
             _orderRepository.DeleteOrder(orderid);
             return Ok();
         }
-
-
     }
 }

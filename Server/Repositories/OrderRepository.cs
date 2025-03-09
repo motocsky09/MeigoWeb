@@ -19,7 +19,7 @@ namespace Server.Repositories
             return _serverDbContext.Order.ToList();
         }
         public void CreateOrder(string userId, string shoppingCartId, int sumDelivery, int totalSumWithDelivery, 
-        string Address, string PhoneNumber, string Email, string Postal,string Comments)
+        string Address,string City, string PhoneNumber, string Email, string Postal,string Comments)
         {
             var order = new Order
             {
@@ -30,7 +30,7 @@ namespace Server.Repositories
                 DeliveryPrice = sumDelivery,
                 Totalamount = totalSumWithDelivery,
                 Adress = Address,
-                Street_no = "",
+                City = City,
                 Zip_code = Postal,
                 Phone_number = PhoneNumber,
                 Email = Email,
@@ -54,7 +54,7 @@ namespace Server.Repositories
                 existingOrder.DeliveryPrice = model.DeliveryPrice; 
                 existingOrder.Totalamount = model.Totalamount;
                 existingOrder.Adress = model.Adress;
-                existingOrder.Street_no = model.Street_no;
+                existingOrder.City = model.City;
                 existingOrder.Zip_code = model.Zip_code;
                 existingOrder.Phone_number = model.Phone_number;
                 existingOrder.Email = model.Email;

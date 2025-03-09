@@ -1,170 +1,215 @@
-.center-align{
+/* Reset de bază pentru consistență */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asigură că pagina ocupă toată înălțimea ecranului */
+  font-family: Arial, sans-serif;
+  background-color: black; /* Fundal general */
+  color: rgb(241,247,246); /* Culoarea textului */
+}
+
+/* Centrarea conținutului */
+.center-align {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  flex: 1; /* Permite secțiunii să se extindă */
+  margin: 0; /* Eliminăm orice margine externă */
+  padding: 20px; /* Spațiere internă pentru a evita lipirea de margini */
 }
+
+/* Formularul principal */
 .auth-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
-  padding: 40px;
   border: 2px solid rgb(9,85,68);
   background-color: rgb(2,27,26);
   color: rgb(241,247,246);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  width: 700px; /* Fixează lățimea formularului */
+  width: 90%;
+  max-width: 700px; /* Limitează lățimea maximă */
+  height: auto;
+  padding: 30px;
+  font-size: 18px;
 }
-.i{
-  margin-left:5px;
-}
+
+/* Detaliile contului - Titlu */
 .details-account-title {
   display: flex;
-  justify-content: space-between; /* Spațiu între titlu și restul conținutului */
-  align-items: center; /* Aliniere verticală cu celelalte elemente */
-  margin-bottom: 15px;
+  justify-content: space-between; /* Spațiere între titlu și buton */
+  align-items: center;
+  margin-bottom: 20px;
   font-weight: bold;
   border-bottom: 2px solid rgb(9,85,68);
   padding-bottom: 10px;
-  color:rgb(44,194,149);
+  color: rgb(44,194,149);
 }
-.last-details{
-  border-bottom: 2px solid rgb(9,85,68);
-  padding-bottom: 10px;
-  color: rgb(241,247,246);
+
+.details-account-title span {
+  font-size: 22px; /* Text mai mare pentru titlu */
 }
+
+/* Stil pentru detalii */
 .auth-header ul {
   list-style-type: none;
-  padding-left: 0;
-  margin: 0;
+  padding: 0;
   width: 100%;
 }
-.details-account-title span{
-  font-size: 20px;
-}
+
+/* Elementele din listă */
 .auth-header li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Spațierea între etichetă și input */
   align-items: center;
   margin-bottom: 15px;
+  gap: 10px; /* Spațiu între elemente */
 }
 
+/* Etichete (ex: "User", "Nume") */
 .auth-header p {
   margin: 0;
-  width: 100px; /* Lățime fixă pentru aliniere */
   font-weight: bold;
+  flex: 1; /* Se adaptează dinamic */
 }
 
+/* Input-uri */
 .auth-header input {
   background-color: black;
   color: rgb(44,194,149);
   border: 1px solid rgb(9,85,68);
-  padding: 5px;
+  padding: 8px;
   border-radius: 4px;
-  flex: 1; /* Inputurile să ocupe restul spațiului */
+  flex: 2; /* Input-urile să ocupe mai mult spațiu */
   box-sizing: border-box;
+  font-size: 16px;
 }
 
+/* Buton profil */
 .buton-profile {
   background: transparent;
   color: rgb(44,194,149);
   border-radius: 10px;
   border: 2px solid rgb(9,85,68);
   padding: 10px 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 20px auto;
   display: block;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
+  width: 60%;
+  max-width: 300px; /* Limitează dimensiunea maximă */
+  font-size: 16px;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
+
 .buton-profile:hover {
-  background-color: #393e46; /* Schimbă culoarea la hover pentru feedback vizual */
+  background-color: #393e46; /* Feedback vizual la hover */
   color: white;
 }
-.button-align{
-  padding-top: 5px;
-}
-.details-account{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-a{
+
+/* Link-uri */
+a {
   text-decoration: none;
   border-radius: 10px;
   border: 2px solid rgb(9,85,68);
   padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
   color: black;
+  transition: background-color 0.3s;
 }
-a:hover{
+
+a:hover {
   background-color: #393e46;
   color: white;
 }
 
+/* ✅ Responsivitate pentru dispozitive mici (max-width: 768px) */
 @media screen and (max-width: 768px) {
-  /* Form Centering */
   .center-align {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 20px; /* Padding general pentru a nu fi lipit de margini */
   }
 
-  /* Form width adjustment for mobile */
   .auth-form {
-    width: 90%; /* Lățimea formularului să fie 90% din ecran */
-    padding: 10px; /* Reducem padding-ul pentru a economisi spațiu */
-    margin: 10px;
+    width: 90%; /* Ajustare lățime pentru a nu fi prea îngust */
+    padding: 25px; /* Padding mai generos pentru un aspect aerisit */
+    border-radius: 12px; /* Colțuri mai rotunjite */
   }
 
-  /* Title section */
   .details-account-title {
-    flex-direction: column; /* Așezare verticală pentru titlu și conținut */
+    flex-direction: column; /* Așezare pe verticală */
     text-align: center; /* Centrare text */
-    font-size: 18px; /* Dimensiune text mai mică pentru titlu */
+    font-size: 20px; /* Font mai mare pentru titlu */
+    margin-bottom: 20px; /* Mai mult spațiu sub titlu */
   }
 
-  /* Input adjustment */
+  .auth-header ul {
+    padding-left: 0; /* Eliminare indentare */
+    width: 100%; /* Ocupă întreaga lățime */
+  }
+
   .auth-header li {
-    flex-direction: column; /* Așezare verticală pentru input-uri */
-    align-items: flex-start; /* Aliniere la stânga a elementelor */
+    display: flex;
+    flex-direction: column; /* Elemente pe verticală */
+    gap: 5px; /* Spațiere uniformă între label și input */
+    margin-bottom: 15px; /* Spațiere mai mare între secțiuni */
+    margin-top: 15px;
   }
 
   .auth-header p {
-    width: auto; /* Eliminăm lățimea fixă pentru a se adapta mai bine */
-    margin-bottom: 5px; /* Spațiu între label și input */
+    font-weight: 600; /* Font mai gros pentru claritate */
+    color: rgb(44, 194, 149); /* Culoare de accent */
+    margin: 0; /* Eliminăm marginile */
   }
 
   .auth-header input {
-    width: 100%; /* Input-urile să ocupe întreaga lățime disponibilă */
-    margin-bottom: 10px; /* Spațiu între input-uri */
+    width: 100%; /* Inputurile ocupă toată lățimea */
+    padding: 10px; /* Padding mai mare pentru ușurința utilizării */
+    font-size: 16px; /* Dimensiune font mai lizibilă */
   }
 
-  /* Button size and alignment */
   .buton-profile {
-    width: 100%; /* Lățimea butonului să fie întreaga lățime a containerului */
-    font-size: 14px; /* Diminuăm dimensiunea fontului */
+    width: 100%; /* Butonul să fie lat */
+    font-size: 16px; /* Dimensiune font mai mare */
+    padding: 12px; /* Padding mai mare pentru buton */
+    margin-top: 20px; /* Mai mult spațiu deasupra butonului */
   }
 
-  /* Links */
+  /* Link-uri și alte butoane */
   a {
-    width: 100%; /* Lățimea link-urilor să ocupe întreaga lățime */
-    text-align: center; /* Centrarea textului */
-    padding: 10px 0; /* Ajustăm padding-ul pentru a arăta bine pe mobile */
+    width: 100%; /* Link-urile să ocupe întreaga lățime */
+    text-align: center; /* Centrare text */
+    padding: 12px 0; /* Padding vertical pentru un aspect uniform */
+  }
+}
+
+/* ✅ Responsivitate pentru dispozitive foarte mici (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .auth-form {
+    padding: 15px; /* Padding mai compact */
   }
 
-  /* Istoric alignment */
-  .istoric {
-    flex-direction: column; /* Elemente afișate vertical */
-    width: 100%;
-    padding: 10px 20px;
+  .details-account-title {
+    font-size: 18px; /* Dimensiune titlu redusă */
+  }
+
+  .auth-header input {
+    font-size: 14px; /* Font mai mic pentru input-uri */
+  }
+
+  .buton-profile {
+    font-size: 14px; /* Font mai mic */
+    padding: 10px; /* Ajustare padding */
+  }
+
+  a {
+    padding: 10px 0; /* Ajustare padding link-uri */
   }
 }

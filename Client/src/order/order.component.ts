@@ -95,6 +95,7 @@ export class OrderComponent implements OnInit {
       sumDelivery: this.sumDelivery,
       totalSumWithDelivery: this.totalSumWithDelivery,
       address: this.profile.address,
+      city: this.profile.city,
       phoneNumber: this.profile.phoneNumber,
       email: this.profile.email,
       comments: this.profile.comments,
@@ -109,6 +110,7 @@ export class OrderComponent implements OnInit {
       this.sumDelivery,
       this.totalSumWithDelivery,
       this.profile.address || '',         // Adresa din profil
+      this.profile.city || '',            // Orașul din profil
       this.profile.phoneNumber || '',     // Telefonul din profil
       this.profile.email || '',           // Email-ul din profil
       this.profile.comments,              // Comentarii (asigurate să nu fie undefined)

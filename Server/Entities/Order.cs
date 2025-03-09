@@ -10,7 +10,7 @@
         public int DeliveryPrice { get; set;}
         public int Totalamount { get; set; }
         public string Adress {  get; set; }
-        public string Street_no { get; set; }
+        public string City { get; set; }
         public string Zip_code { get; set; }
         public string Phone_number { get; set; }
         public string Email { get; set; }

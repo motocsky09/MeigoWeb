@@ -65,12 +65,13 @@ export class ShoppingCartService {
     sumDelivery: number,
     totalSumWithDelivery: number,
     address: string,
+    city: string,
     phoneNumber: string,
     email: string,
     comments: string,
     postal: string
   ) {
-    const url = `${this.BaseURI}/Order/CreateOrder?userId=${userId}&shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}&Address=${encodeURIComponent(address)}&PhoneNumber=${phoneNumber}&Email=${email}&Comments=${encodeURIComponent(comments)}&Postal=${postal}`;
+    const url = `${this.BaseURI}/Order/CreateOrder?userId=${userId}&shoppingCartId=${shoppingCartId}&sumDelivery=${sumDelivery}&totalSumWithDelivery=${totalSumWithDelivery}&Address=${encodeURIComponent(address)}&City=${city}&PhoneNumber=${phoneNumber}&Email=${email}&Comments=${encodeURIComponent(comments)}&Postal=${postal}`;
     
     console.log('🔗 URL generat:', url);
   
