@@ -4,6 +4,7 @@ import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 import { ProfileService } from 'src/services/profile.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-order',
@@ -24,6 +25,7 @@ export class OrderComponent implements OnInit {
     private service: ProductService,
     private router: Router,
     private userService: UserService,
+    private location: Location,
     private shoppingCartService: ShoppingCartService,
     private profileService: ProfileService,
   ) {}
@@ -79,7 +81,13 @@ export class OrderComponent implements OnInit {
       );
     }
   }
+  goBack() {
+    this.location.back(); // Navighează înapoi
+  }
 
+  showBackButton(): boolean {
+    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+  }
   createOrder() {
     if (!this.userId || !this.shoppingCartId || !this.totalSumWithDelivery || !this.profile) {
       console.error('⚠️ Date incomplete pentru creare comandă!');

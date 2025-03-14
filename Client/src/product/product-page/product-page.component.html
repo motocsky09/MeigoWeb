@@ -1,8 +1,15 @@
 <div class="product-page">
+
   <div class="product-container" *ngIf="product">
 
-    <!-- Partea stângă: Imagini produs -->
+    <!-- Partea stângă: Imagini produs + Buton Înapoi -->
     <div class="product-images">
+
+      <!-- Butonul Înapoi -->
+      <button class="back-button" (click)="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
       <!-- Imaginea principală -->
       <img [src]="'./assets/images/' + mainImage" alt="product_image" class="main-product-image">
 
@@ -35,14 +42,19 @@
 
       <p class="description-product">{{product.shortDescription}}</p>
 
-      <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, product.id, selectedQuantity.valueAsNumber)">Adaugă în coș</button>
-      <!--<h3 class="recenzie"><b>Recenzie <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></b></h3>-->
+      <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, product.id, selectedQuantity.valueAsNumber)">
+        Adaugă în coș
+      </button>
+
     </div>
 
   </div>
+
+  <!-- Buton Coș -->
   <div class="cart-button" id="cartButton">
     <a href="shopping-cart">
       <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
     <span id="cartItemCount">{{ cartCounter }}</span>
   </div>
+
 </div>

@@ -18,14 +18,23 @@ namespace Server.Repositories
         {
             return _serverDbContext.Order.ToList();
         }
-        public void CreateOrder(string userId, string shoppingCartId, int sumDelivery, int totalSumWithDelivery, 
-        string Address,string City, string PhoneNumber, string Email, string Postal,string Comments)
+        public void CreateOrder(
+            string userId, 
+            string shoppingCartId, 
+            int sumDelivery, 
+            int totalSumWithDelivery, 
+            string Address,
+            string City, 
+            string PhoneNumber, 
+            string Email, 
+            string Postal,
+            string Comments)
         {
             var order = new Order
             {
                 UserId = userId,
                 ShoppingCartId = shoppingCartId,
-                OrderDate = DateTime.UtcNow,
+                OrderDate = DateTime.Now,
                 OrderStatus = 1,
                 DeliveryPrice = sumDelivery,
                 Totalamount = totalSumWithDelivery,

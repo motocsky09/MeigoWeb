@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/services/profile.service';
 import {UserService} from "../services/user.service";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +15,9 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private service: ProfileService,
-    private userService: UserService
+    private userService: UserService,
+    private location: Location,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -32,6 +35,13 @@ export class ProfileComponent implements OnInit {
           )
         })
     }
+  }
+  goBack() {
+    this.location.back(); // Navighează înapoi
+  }
+
+  showBackButton(): boolean {
+    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
   }
 
   editItem(item: any) {

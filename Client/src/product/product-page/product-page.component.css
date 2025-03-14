@@ -1,3 +1,30 @@
+/* Poziționează butonul Înapoi mai aproape de marginea stângă */
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(44, 194, 149);
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: -35px; /* Mută butonul mai aproape de marginea stângă */
+  z-index: 10; /* Asigură-te că e deasupra imaginii */
+}
+
+.back-button:hover {
+  background-color: rgb(44, 194, 149);
+  color: white;
+}
+
+/* Ascunde butonul Înapoi pe ecrane mari */
+@media (min-width: 769px) {
+  .back-button {
+    display: none;
+  }
+}
+
 .product-page {
   display: flex;
   justify-content: center;
@@ -14,6 +41,7 @@
 
 .product-images {
   flex: 1;
+  position: relative; /* Permite poziționarea absolută a butonului */
 }
 
 .main-product-image {

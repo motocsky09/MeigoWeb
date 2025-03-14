@@ -4,6 +4,7 @@ import { ProductService } from 'src/services/product.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
 import {HttpParams} from "@angular/common/http";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -25,6 +26,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(
     private service:ProductService,
     private router:Router,
+    private location: Location,
     private userService:UserService,
     private shopingCartService:ShoppingCartService
   ) { }
@@ -56,6 +58,14 @@ export class ShoppingCartComponent implements OnInit {
       );
     }
 
+  }
+
+  goBack() {
+    this.location.back(); // Navighează înapoi
+  }
+
+  showBackButton(): boolean {
+    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
   }
 
   increaseQuantity(item: any): void {

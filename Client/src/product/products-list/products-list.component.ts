@@ -4,6 +4,7 @@ import { ProductService } from 'src/services/product.service';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { UserService } from 'src/services/user.service';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-products-list',
@@ -26,6 +27,7 @@ export class ProductsListComponent implements OnInit {
   constructor(
     private service: ProductService,
     private router: Router,
+    private location: Location, // Importă Location pentru a naviga înapoi
     private userService: UserService,
     private shopingCartService: ShoppingCartService
   ) { }
@@ -64,8 +66,15 @@ export class ProductsListComponent implements OnInit {
     if (savedCartCounter) {
       this.cartCounter = parseInt(savedCartCounter, 10);
     }
+    
+  }
+  goBack() {
+    this.location.back(); // Navighează înapoi
   }
 
+  showBackButton(): boolean {
+    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+  }
   // Metodă pentru a obține toate produsele
   getProductsList(){
     this.service.getProductsList().subscribe(

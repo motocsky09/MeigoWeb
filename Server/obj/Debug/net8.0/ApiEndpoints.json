@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "Server.Controllers.AuthenticateController",
+    "Method": "GetUserIdByUserName",
+    "RelativePath": "api/Authenticate/GetUserIdByUserName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.AuthenticateController",
     "Method": "GetUserName",
     "RelativePath": "api/Authenticate/GetUserName",
     "HttpMethod": "GET",
@@ -140,6 +156,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "shoppingCartId",
         "Type": "System.String",
         "IsRequired": false
@@ -152,6 +173,36 @@
       {
         "Name": "totalSumWithDelivery",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "City",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Postal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comments",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -613,6 +664,27 @@
   },
   {
     "ContainingType": "Server.Controllers.ShoppingCartController",
+    "Method": "DeleteProductFromCart",
+    "RelativePath": "api/ShoppingCart/DeleteProductFromCart",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shoppingCartId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ShoppingCartController",
     "Method": "DeleteShoppingCart",
     "RelativePath": "api/ShoppingCart/DeleteShoppingCart",
     "HttpMethod": "DELETE",
@@ -699,6 +771,32 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ShoppingCartController",
+    "Method": "UpdateProductInShoppingCart",
+    "RelativePath": "api/ShoppingCart/UpdateProductInShoppingCart",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shoppingCartId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "updatedQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

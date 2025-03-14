@@ -4,6 +4,7 @@ import {UserService} from "../../services/user.service";
 import {ShoppingCartService} from "../../services/shopping-cart.service";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import {Component, OnInit} from "@angular/core"; // Import pentru a accesa ruta activă
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-product-page',
@@ -23,6 +24,7 @@ export class ProductPageComponent implements OnInit {
     private service: ProductService,
     private router: Router,
     private route: ActivatedRoute, // Adaugă ActivatedRoute pentru a prelua productId din URL
+    private location: Location, // Importă Location pentru a naviga înapoi
     private userService: UserService,
     private shoopingCartService: ShoppingCartService
   ) { }
@@ -59,7 +61,13 @@ export class ProductPageComponent implements OnInit {
       this.cartCounter = parseInt(savedCartCounter, 10);
     }
   }
+  goBack() {
+    this.location.back(); // Navighează înapoi
+  }
 
+  showBackButton(): boolean {
+    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+  }
   // Modifică pentru a obține produsul pe baza productId
   getProductById(productId: any) {
     this.service.getProductById(productId).subscribe(

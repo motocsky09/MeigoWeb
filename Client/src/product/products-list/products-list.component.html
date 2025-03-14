@@ -1,16 +1,31 @@
-<div class="filter-box">
+<div class="header-container">
+  <button class="back-button" (click)="goBack()">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+
   <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
     <b>Filtrează</b>
     <i class="fa fa-filter" aria-hidden="true"></i>
   </button>
+</div>
 
+<div class="filter-box">
   <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
     <button class="buton_filter" (click)="getProductsList()">Toate</button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1)"><i class="fa-solid fa-gamepad"></i></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(2)"><i class="fa-solid fa-glasses"></i></button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(3)"><i class="fa-solid fa-briefcase"></i></button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(1)">
+      <i class="fa-solid fa-gamepad"></i>
+    </button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(2)">
+      <i class="fa-solid fa-glasses"></i>
+    </button>
+    <button class="buton_filter" (click)="getProductsListByCategoryId(3)">
+      <i class="fa-solid fa-briefcase"></i>
+    </button>
   </div>
 </div>
+
+
+
 <div class="product">
     <ul>
         <li class="product-item" *ngFor="let item of productsList">
