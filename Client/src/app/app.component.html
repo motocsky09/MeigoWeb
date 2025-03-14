@@ -3,6 +3,10 @@
   
 	<main class="content">
 	  <router-outlet></router-outlet> <!-- Aici se încarcă paginile -->
+	  <div class="header-container">
+		<button class="back-button" (click)="goBack()"><i class="fa-solid fa-arrow-left"></i></button>
+	  </div>
+<router-outlet></router-outlet>
 	</main>
   
 	<app-footer></app-footer> <!-- Footer-ul -->

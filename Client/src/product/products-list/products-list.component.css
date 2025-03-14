@@ -8,31 +8,6 @@
   position: relative;       /* Permite poziționare relativă pentru elemente copil */
 }
 
-/* Butonul Înapoi */
-.back-button {
-  background-color: transparent;
-  border: none;
-  color: rgb(44, 194, 149);
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  position: absolute; /* Poziționează absolut în interiorul header-container */
-  left: 20px;         /* Fixează butonul la stânga */
-}
-
-.back-button:hover {
-  background-color: rgb(44, 194, 149);
-  color: white;
-}
-
-/* Ascunde butonul Înapoi pe ecrane mari */
-@media (min-width: 769px) {
-  .back-button {
-    display: none;
-  }
-}
-
 /* Butonul Filtrează - Centrat */
 #toggleFiltersBtn {
   background-color: black;
@@ -213,8 +188,8 @@
 
 #cartButton {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     background-color: black;
     border: 1px solid rgb(9,85,68);
     color: rgb(44,194,149);
@@ -223,19 +198,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     z-index: 1000;
-}
-#cartButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: rgb(44,194,149);
-  padding: 15px 15px;
-  border: 1px solid rgb(9,85,68);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1000;
 }
 
 #cartButton a {
@@ -286,7 +248,9 @@
   .filter{
     margin-top: 10px;
   }
-
+  #cartButton{
+    margin-bottom: 15px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
