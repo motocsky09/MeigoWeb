@@ -46,8 +46,8 @@ The home page serves as the initial page of the application,
 where clients can access essential details about the application.
 It is accompanied by two accordion items that contribute to a minimalist aesthetic and provide ample spacing.
 ```
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home1%20.png)
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home2%20.png)
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home1.png)
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home2.png)
 ## Login page
 ```
 In this section, users can log in to the platform by entering their username and password.
