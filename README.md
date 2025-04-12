@@ -13,7 +13,7 @@ REST and Dependecy injection
 ```
 OOP and S.O.L.I.D Principles
 ```
-### MeigoWEB is a web platform dedicated to the field of sales, specifically 3D print object.
+### MeigoWEB is a web platform dedicated to the field of sales, exclusively specializing in apparel.
 The application is divided into 5 sections:
 ```
 1. Identity management section: it is responsible for the user authentication and registration 
