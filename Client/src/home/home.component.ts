@@ -8,22 +8,38 @@ import { UserService } from 'src/services/user.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+// home.component.ts
 export class HomeComponent implements OnInit {
+  userName: any;
 
-  userName:any;
+  testimonials = [
+    {
+      name: 'Alex Johnson',
+      text: `"This platform made shopping so easy! Great support and fast delivery. Highly recommend it!"`
+    },
+    {
+      name: 'Maria Lopez',
+      text: `"Fantastic experience. I love how intuitive everything is. Definitely using it again!"`
+    },
+    {
+      name: 'Daniel Smith',
+      text: `"The best shopping experience I’ve had in a long time. Amazing customer service!"`
+    }
+  ];
+
+  currentTestimonialIndex = 0;
 
   constructor(
     private userService: UserService,
     private router: Router,
     private shoppingCartService: ShoppingCartService,
-    private renderer: Renderer2,
-  ) { }
+  ) {}
 
   ngOnInit() {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
         (res: string) => {
-          this.userName = res; // Setează userName cu răspunsul primit
+          this.userName = res;
           this.shoppingCartService.createFirstShoppingCartByUsername(this.userName).subscribe();
         },
         error => {
@@ -32,49 +48,14 @@ export class HomeComponent implements OnInit {
       );
     }
   }
-  ngAfterViewInit() {
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-    accordionHeaders.forEach(header => {
-      this.renderer.listen(header, 'click', () => {
-        const accordionItem = header.parentElement as HTMLElement;
-        if (!accordionItem) return;
-
-        const description = accordionItem.querySelector(".description") as HTMLElement;
-        const icon = accordionItem.querySelector("i") as HTMLElement;
-
-        if (!description || !icon) return;
-
-        accordionItem.classList.toggle("open");
-
-        if (accordionItem.classList.contains("open")) {
-          description.style.maxHeight = description.scrollHeight + "px";
-          icon.classList.replace("fa-plus", "fa-minus");
-        } else {
-          description.style.maxHeight = "0";
-          icon.classList.replace("fa-minus", "fa-plus");
-        }
-
-        this.closeOtherAccordions(accordionItem);
-      });
-    });
+  prevTestimonial() {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex - 1 + this.testimonials.length) % this.testimonials.length;
   }
 
-  closeOtherAccordions(currentAccordion: HTMLElement) {
-    const accordionItems = document.querySelectorAll(".accordion-item");
-
-    accordionItems.forEach(item => {
-      if (item !== currentAccordion && item.classList.contains("open")) {
-        item.classList.remove("open");
-        const description = item.querySelector(".description") as HTMLElement;
-        const icon = item.querySelector("i") as HTMLElement;
-
-        if (!description || !icon) return;
-
-        description.style.maxHeight = "0";
-        icon.classList.replace("fa-minus", "fa-plus");
-      }
-    });
+  nextTestimonial() {
+    this.currentTestimonialIndex =
+      (this.currentTestimonialIndex + 1) % this.testimonials.length;
   }
-
 }

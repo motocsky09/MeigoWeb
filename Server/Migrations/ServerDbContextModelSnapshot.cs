@@ -51,6 +51,10 @@ namespace Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Comments")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -76,10 +80,6 @@ namespace Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShoppingCartId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street_no")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -209,6 +209,10 @@ namespace Server.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

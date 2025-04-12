@@ -1,320 +1,322 @@
-/*introduction*/
-.introduction {
-  text-align: center;
-  padding: 50px;
-  color: rgb(241,247,246);
-}
-.introduction-content{
-  padding: 6px;
-}
-
-.introduction h2 {
-  font-size: 24px;
+/* HERO SECTION */
+.home_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  padding: 20px;
 }
 
-.introduction h3 {
-  font-size: 20px;
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
 
+  display: flex;
+  justify-content: center;
 }
-h1{
-  color: rgb(241,247,246);
+
+.cover-image {
+  width: 70%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+  border: 1px solid #000;
 }
-.buton {
-  padding: 30px;
+
+.discount-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-text span {
+  color: #00bfa6;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+/* ABOUT SECTION */
+.about_section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Distanța dintre elemente */
+  padding: 60px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
 }
 
-.buton .buton1 {
-  background-color: transparent;
-  border-radius: 30px;
-  border: 2px solid rgb(9, 85, 68);
-  color: rgb(44, 194, 149);
-  padding: 15px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.buton a:hover {
-  background-color: black;
-  color: rgb(241, 247, 246);
+.about-image img {
+  width: 300px;
+  border-radius: 20px;
 }
 
-.show {
-  opacity: 1 !important;
+.about-content {
+  max-width: 500px;
 }
 
-/*accordion*/
-
-.accordion {
-  max-width: 530px;
-  width: 100%;
-  background: transparent;
-  margin: 0 auto; /* pentru a centra pe orizontală */
-  padding: 15px;
-  border-radius: 8px;
-  display: flex; /* pentru a centra pe verticală */
-  align-items: center; /* pentru a centra pe verticală */
-  flex-direction: column; /* aliniere verticală a elementelor */
-}
-.title{
-  color: rgb(241,247,246);
-  font-size: 30px;
-
-}
-.accordion-item {
-  width: 100%;
-  border-bottom: 4px solid rgb(9,85,68);
-  border-top: 4px solid rgb(9,85,68);
+.about-content h2 {
+  font-size: 32px;
   margin-bottom: 10px;
 }
-.accordion-header {
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about-content button {
+  background-color: #00bfa6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
+}
+
+/* SHOP SECTION */
+.shop_section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.shop_section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.product-cards {
   display: flex;
-  align-items: center; /* Aliniere pe verticală */
-  padding: 10px;
-  background-color: transparent;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center; /* pentru a centra pe orizontală */
-  margin: 0; /* eliminăm marginile */
-  justify-content: space-between; /* Așezarea elementelor la distanță maximă între ele */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.accordion-header .title {
-  flex: 1; /* Titlul va ocupa spațiul disponibil */
-  text-align: center; /* Aliniere centrată a textului */
+.product-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/* FEATURES SECTION */
+
+.features_section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #f4f3f3;
+  border-radius: 30px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.accordion-header i {
-  color: rgb(241,247,246); /* Schimbă culoarea plusului și minusului */
-  margin-left: 10px; /* Adăugăm un spațiu între simbol și text */
-}
-.description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  width: 100%;
-  font-size: 17px;
-  text-align: center; /* pentru a centra pe orizontală */
-  margin: 0; /* eliminăm marginile */
-  color: rgb(241,247,246);
-  background-color: rgb(9,85,68);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.description p {
-  margin-top: 15px;
-  padding-top: 10px;
-  margin: 10px 0; /* Adaugă spațiu între paragrafe */
-}
-.description a{
-  color: rgb(44,194,149);
-}
-
-.buton-container {
-  --uib-size: 80px;
-  --uib-color: #2CC295FF;
-  --uib-speed: 2.5s;
+.feature_card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: var(--uib-size);
-  width: var(--uib-size);
+  width: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  margin: 10px;
+  transition: transform 0.3s ease;
 }
 
-.slice {
+.feature_card:hover {
+  transform: translateY(-5px);
+}
+
+.feature_card p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+/* DARK HERO SECTION */
+.dark-hero {
   position: relative;
-  height: calc(var(--uib-size) / 6);
-  width: 100%;
+  height: 50vh;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-.slice::before,
-.slice::after {
-  --uib-a: calc(var(--uib-speed) / -2);
-  --uib-b: calc(var(--uib-speed) / -6);
-  content: '';
+.dark-hero .content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dark-hero .content button {
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.dark-hero .content button:hover {
+  transform: translateY(-2px);
+}
+
+.shapes .shape {
   position: absolute;
-  top: 0;
-  left: calc(50% - var(--uib-size) / 12);
-  height: 100%;
-  width: calc(100% / 6);
+  opacity: 0.3;
+  animation: float 4.5s infinite ease-in-out;
+  background: radial-gradient(circle at 30% 30%, #fff, #000);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+.shape.ring {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: var(--uib-color);
-  flex-shrink: 0;
-  animation: orbit var(--uib-speed) linear infinite;
+  top: 20%;
+  left: 10%;
+  background: radial-gradient(circle, #222, #000);
+}
+
+.shape.cube {
+  width: 80px;
+  height: 80px;
+  top: 70%;
+  left: 20%;
+  background: linear-gradient(145deg, #333, #000);
+  border-radius: 12px;
+}
+
+.shape.ball {
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  right: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #111, #000);
+}
+
+.shape.capsule {
+  width: 40px;
+  height: 100px;
+  bottom: 10%;
+  right: 5%;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #111, #000);
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* TESTIMONIAL SECTION */
+.testimonials {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+}
+
+.testimonial-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.testimonial-left h3 {
+  margin-top: 10px;
+}
+
+.testimonial-right {
+  text-align: left;
+  width: 70%;
+  font-size: 18px;
+}
+
+.testimonial-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-controls button {
+  background-color: rgb(0,0,0);
+  border: none;
+  color: rgb(256,256,256);
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.slice:nth-child(1)::after {
-  animation-delay: var(--uib-a);
-}
-
-.slice:nth-child(2)::before {
-  animation-delay: var(--uib-b);
-}
-
-.slice:nth-child(2)::after {
-  animation-delay: calc(var(--uib-a) + var(--uib-b));
-}
-
-.slice:nth-child(3)::before {
-  animation-delay: calc(var(--uib-b) * 2);
-}
-.slice:nth-child(3)::after {
-  animation-delay: calc(var(--uib-a) + var(--uib-b) * 2);
-}
-
-.slice:nth-child(4)::before {
-  animation-delay: calc(var(--uib-b) * 3);
-}
-.slice:nth-child(4)::after {
-  animation-delay: calc(var(--uib-a) + var(--uib-b) * 3);
-}
-
-.slice:nth-child(5)::before {
-  animation-delay: calc(var(--uib-b) * 4);
-}
-.slice:nth-child(5)::after {
-  animation-delay: calc(var(--uib-a) + var(--uib-b) * 4);
-}
-
-.slice:nth-child(6)::before {
-  animation-delay: calc(var(--uib-b) * 5);
-}
-.slice:nth-child(6)::after {
-  animation-delay: calc(var(--uib-a) + var(--uib-b) * 5);
-}
-
-@keyframes orbit {
-  0% {
-    transform: translateX(calc(var(--uib-size) * 0.25)) scale(0.73684);
-    opacity: 0.65;
-  }
-  5% {
-    transform: translateX(calc(var(--uib-size) * 0.235)) scale(0.684208);
-    opacity: 0.58;
-  }
-  10% {
-    transform: translateX(calc(var(--uib-size) * 0.182)) scale(0.631576);
-    opacity: 0.51;
-  }
-  15% {
-    transform: translateX(calc(var(--uib-size) * 0.129)) scale(0.578944);
-    opacity: 0.44;
-  }
-  20% {
-    transform: translateX(calc(var(--uib-size) * 0.076)) scale(0.526312);
-    opacity: 0.37;
-  }
-  25% {
-    transform: translateX(0%) scale(0.47368);
-    opacity: 0.3;
-  }
-  30% {
-    transform: translateX(calc(var(--uib-size) * -0.076)) scale(0.526312);
-    opacity: 0.37;
-  }
-  35% {
-    transform: translateX(calc(var(--uib-size) * -0.129)) scale(0.578944);
-    opacity: 0.44;
-  }
-  40% {
-    transform: translateX(calc(var(--uib-size) * -0.182)) scale(0.631576);
-    opacity: 0.51;
-  }
-  45% {
-    transform: translateX(calc(var(--uib-size) * -0.235)) scale(0.684208);
-    opacity: 0.58;
-  }
-  50% {
-    transform: translateX(calc(var(--uib-size) * -0.25)) scale(0.73684);
-    opacity: 0.65;
-  }
-  55% {
-    transform: translateX(calc(var(--uib-size) * -0.235)) scale(0.789472);
-    opacity: 0.72;
-  }
-  60% {
-    transform: translateX(calc(var(--uib-size) * -0.182)) scale(0.842104);
-    opacity: 0.79;
-  }
-  65% {
-    transform: translateX(calc(var(--uib-size) * -0.129)) scale(0.894736);
-    opacity: 0.86;
-  }
-  70% {
-    transform: translateX(calc(var(--uib-size) * -0.076)) scale(0.947368);
-    opacity: 0.93;
-  }
-  75% {
-    transform: translateX(0%) scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: translateX(calc(var(--uib-size) * 0.076)) scale(0.947368);
-    opacity: 0.93;
-  }
-  85% {
-    transform: translateX(calc(var(--uib-size) * 0.129)) scale(0.894736);
-    opacity: 0.86;
-  }
-  90% {
-    transform: translateX(calc(var(--uib-size) * 0.182)) scale(0.842104);
-    opacity: 0.79;
-  }
-  95% {
-    transform: translateX(calc(var(--uib-size) * 0.235)) scale(0.789472);
-    opacity: 0.72;
-  }
-  100% {
-    transform: translateX(calc(var(--uib-size) * 0.25)) scale(0.73684);
-    opacity: 0.65;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .introduction h1,.introduction h2, .introduction h3{
-    text-align: center;
-    font-size: 20px;
-  }
-  .buton {
-    text-align: center; /* Alinează butoanele pe centrul ecranului */
-    padding: 0; /* Elimină spațiul de la marginea exterioară a butoanelor */
-  }
-
-  .buton .buton1 {
-    width: 80%; /* Lățimea butoanelor în modul mobil */
-    display: inline-block; /* Facem butoanele să ocupe spațiu doar cât este necesar */
-    margin: 10px auto; /* Margin pe stânga și dreapta sunt setate automat, iar margin-top și margin-bottom sunt de 10px */
-  }
-
-  .accordion {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  .title{
-    font-size: 22px;
-  }
-  .accordion-header {
-    justify-content: center;
-  }
-  .description {
-    text-align: center;
-  }
-  .description a {
-    font-size: 17px; /* Redu dimensiunea fontului pentru adresa de e-mail */
-  }
-  .description p {
-    margin: 5px 0; /* Redu spațiul între paragrafe */
-    font-size: 17px;
-  }
-  .paragraf_desc p{
-    border-bottom: 1px solid #ccc;
-  }
-
+.testimonial-controls button:hover {
+  background-color: rgb(256,256,256);
+  color: rgb(0,0,0);
+  border:1px solid rgb(98,98,98);
 }

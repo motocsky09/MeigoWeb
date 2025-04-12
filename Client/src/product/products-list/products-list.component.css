@@ -1,78 +1,50 @@
-/* Container pentru butonul Înapoi și butonul Filtrează */
-.header-container {
-  display: flex;            /* Activează flexbox */
-  align-items: center;      /* Centrează vertical elementele */
-  justify-content: center;  /* Centrează pe orizontală */
-  margin-top: 20px;         /* Spațiere de sus */
-  padding: 0 20px;          /* Adaugă padding lateral */
-  position: relative;       /* Permite poziționare relativă pentru elemente copil */
-}
-
-/* Butonul Filtrează - Centrat */
-#toggleFiltersBtn {
-  background-color: black;
-  color: rgb(44, 194, 149);
-  border: 1.5px solid rgb(9, 85, 68);
-  padding: 8px 16px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#toggleFiltersBtn:hover {
-  background-color: rgb(241, 247, 246);
-  color: black;
-}
-
-/* Containerul pentru filtre */
-.filter-box {
+.main-layout {
   display: flex;
-  flex-direction: column; /* Aliniază filtrele vertical */
-  align-items: center;    /* Centrează pe orizontală */
-  width: 100%;
-  padding: 10px 0;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Ascunde filtrele inițial */
-.filter {
-  display: flex;
-  flex-direction: row; /* Afișează filtrele pe orizontală */
-  justify-content: center;
-  align-items: center;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  gap: 10px;
+.filters {
+  padding: 20px;
+  background-color: #f4f3f3;
+  border-radius: 12px;
+  width: 250px;
+}
+.filters h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.filter-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Afișează filtrele când clasa .show este activă */
-.filter.show {
-  max-height: 100px;
-  transition: max-height 0.3s ease-in;
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-/* Stilizare butoane filtru */
-.buton_filter {
-  background-color: black;
-  color: rgb(44, 194, 149);
-  border: 1.5px solid rgb(9, 85, 68);
-  padding: 8px 16px;
-  margin: 5px 0;
+.price-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+.reset-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.buton_filter i {
-  margin-left: 0;
-}
-
-/* Hover pe butoanele de filtru */
-.buton_filter:hover {
-  background-color: rgb(241, 247, 246);
-  color: black;
+.reset-button:hover {
+  background-color: #c9302c;
 }
 .product{
   padding: 20px;
@@ -94,18 +66,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
+    background-color: rgb(248 ,249 ,253);
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efect de umbră */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Efect de umbră */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px; /* Spațiere în interiorul cardului */
 }
 
 .product-item:hover {
     transform: scale(1.05);
-    box-shadow:  inset 0 -3em 3em rgba(0,0,0,0.2),
-      0 0  0 4px #2CC295,
-      0.3em 0.3em 1em rgba(0,0,0,0.4);}
+}
 
 /* Imaginea produsului */
 .product-item img {
@@ -129,18 +99,18 @@
   align-items: center;
   cursor: pointer;
   padding: 10px; /* ajustați pentru a obține spațierea dorită */
-  color: rgb(44,194,149); /* culoarea butoanelor */
+  color: rgb(0,0,0); /* culoarea butoanelor */
 }
 
 .quantity-container {
-  background: black;
-  border: 0.5px solid rgb(9,85,68);
+  background: rgb(98,98,98);
+  border: 0.5px solid rgb(0,0,0);
   width: 40px;
   text-align: center;
 }
 
 .quantity-input {
-  color: rgb(44,194,149);
+  color: rgb(256,256,256);
   background: transparent;
   border: none;
   width: 100%;
@@ -159,7 +129,7 @@
 /* Prețul produsului */
 .pret_produs {
     display: block;
-    color: rgb(241,247,246);
+    color: rgb(0,0,0);
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
@@ -170,8 +140,8 @@
 
 /* Butonul produsului */
 .button_product {
-    background-color: black;
-    color: rgb(44, 194, 149);
+    background-color: rgb(215,215,215);
+    color: rgb(0,0,0);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -181,8 +151,8 @@
 }
 
 .button_product:hover {
-    background-color: rgb(44, 194, 149);
-    color: white;
+    background-color: rgb(0,0,0);
+    color: rgb(256,256,256);
     transform: scale(1.1);
 }
 
@@ -190,9 +160,9 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: black;
-    border: 1px solid rgb(9,85,68);
-    color: rgb(44,194,149);
+    background-color: rgb(215,215,215);
+    border: 1px solid rgb(99,98,98);
+    color: rgb(0,0,0);
     padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -204,7 +174,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(44,194,149);
+  color: rgb(0,0,0);
   text-decoration: none;
 }
 
@@ -212,20 +182,31 @@
   position: absolute;
   top: -4px;
   right: -4.5px;
-  background-color: rgb(9,85,68);
-  color: rgb(241,247,246);
+  background-color: rgb(256,256,256);
+  border:1px solid rgb(98,98,98);
+  color: rgb(0,0,0);
   font-size: 12px;
   padding: 3px 6px;
   border-radius: 50%;
+  font-family: 'Nunito', sans-serif;
 }
 
 #cartButton:hover {
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(256,256,256);;
+  
 }
 
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .product{
     margin:20px;
     padding: 20px;

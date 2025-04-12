@@ -41,7 +41,41 @@ namespace Server.Controllers
             var result = _productRepository.GetProductsByCategoryId(categoryId);
             return Ok(result);
         }
-
+        [HttpGet]
+        [Route("GetProductBySize")]
+        public ActionResult GetProductBySize(string size)
+        {
+            var result = _productRepository.GetProductBySize(size);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetProductByColor")]
+        public ActionResult GetProductByColor(string color)
+        {
+            var result = _productRepository.GetProductByColor(color);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetProductBySeason")]
+        public ActionResult GetProductBySeason(string season)
+        {
+            var result = _productRepository.GetProductBySeason(season);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetProductByGender")]
+        public ActionResult GetProductByGender(string gender)
+        {
+            var result = _productRepository.GetProductByGender(gender);
+            return Ok(result);
+        }
+        [HttpGet]
+        [Route("GetProductByMaterial")]
+        public ActionResult GetProductByMaterial(string material)
+        {
+            var result = _productRepository.GetProductByMaterial(material);
+            return Ok(result);
+        }
         [HttpPost]
         [Route("CreateProduct")]
         public ActionResult CreateProduct(Product product)

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
 .footer {
-    background-color: rgb(2,27,26);
-    color: rgb(241,247,246);
+    background-color: rgb(215,215,215);
+    color: rgb(0,0,0);
     padding: 10px; /* spatierea interioara a footer-ului */
-    border-top: 0.5px solid rgb(0,123,129);
+    border-top: 0.5px solid rgb(0,0,0);
 }
 
 .footer-content {
@@ -44,14 +46,15 @@
 .footer-right span {
   margin-right: 3px;
   font-size: 10px;
-  color: rgb(241,247,246);
+  color: rgb(0,0,0);
+  font-family: 'Nunito', sans-serif;
 }
 
 .flag {
   display: flex;
   width: 20px;
   height: 15px;
-  border: 1px solid rgb(241,247,246); /* bordură pentru drapel */
+  border: 1px solid rgb(0,0,0); /* bordură pentru drapel */
 }
 
 .stripe {

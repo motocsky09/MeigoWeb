@@ -10,12 +10,31 @@
 h1 {
     padding: 10px;
     text-align: center;
-    font-size: 36px;
-    color:rgb(241,247,246);
+    font-size: 30px;
+    color:rgb(0,0,0);
 }
 
 h3 {
     padding: 20px;
     text-align: center;
-    color: rgb(241,247,246);
+    color: rgb(0,0,0);
+    font-size: 25px;
+}
+@media (max-width: 700px) {
+    .confirm-order-box {
+        margin: auto;
+        padding: 15px;
+    }
+
+    h1 {
+        margin-top: 30px;
+        font-size: 20px;
+        padding: 4px;
+    }
+
+    h3 {
+        margin-top: 50px;
+        font-size: 16px;
+        padding: 10px;
+    }
 }

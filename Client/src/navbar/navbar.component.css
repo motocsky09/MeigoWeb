@@ -1,7 +1,7 @@
 .navbar {
-    background-color: rgb(2,27,26);
+    background-color: rgb(215,215,215);
   /*box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);*/
-  border-bottom: 0.5px solid rgb(0,123,129);
+  border-bottom: 0.5px solid rgb(0,0,0);
   display: flex;
   justify-content: space-between;
   padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
@@ -13,7 +13,32 @@
     width: 100%;
     align-items: center; /* Centrare pe verticală */
 }
-
+.nav{
+    display: flex;
+    justify-content:end;
+    align-items:flex-end;
+    width: 100%;
+}
+.button-link{
+        background-color: transparent;
+        border-radius: 30px;
+        border: none;
+        color: rgb(0,0,0);
+        padding: 3px 13px;
+        text-decoration: none;
+        font-size: 17px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin:5px;
+}
+.button-link:hover {
+        background-color: rgb(256,256,256);
+        color: rgb(0,0,0);
+    }
+.button-link a{
+        text-decoration: none;
+        color: rgb(0,0,0);
+    }
 .logo {
     display: flex;
     align-items: center; /* Centrare pe verticală */
@@ -40,12 +65,12 @@
 .logout-link{
     padding: 4px 6px;
     margin-left: 10px; /* Adaugă spațiu între link-uri */
-    color: rgb(241,247,246); /* Culoarea textului */
+    color: rgb(0,0,0); /* Culoarea textului */
     text-decoration: none; /* Elimină sublinierea implicită */
     border: 1px solid transparent;
 }
 .logout-link:hover{
-    border-color: rgb(0,123,129); /* Schimbă culoarea border-ului la hover */
+    border-color: rgb(98,98,98); /* Schimbă culoarea border-ului la hover */
 }
 .navbar img {
     display: block; /* Asigură-te că imaginea este un element de tip block */
@@ -57,9 +82,9 @@
     padding: 10px;
     margin: 10px;
     border-radius: 30px;
-    background-color: rgb(2,27,26);
-    color: rgb(241,247,246);
-    border: 3px solid rgb(9,85,68);
+    background-color: rgb(215,215,215);
+    color: rgb(0,0,0);
+    border: 3px solid rgb(98,98,98);
 }
 
 .buton a:hover {
@@ -69,10 +94,10 @@
     position: absolute;
     right: 10px; /* Ajustează după preferințe */
     top: 110px; /* Ajustează în funcție de înălțimea navbar-ului */
-    background-color: rgb(2,27,26);
-    border: 3px solid rgb(9,85,68);
+    background-color: rgb(215,215,215);
+    border: 3px solid rgb(0,0,0);
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);
     padding: 0; /* Asigură-te că padding-ul este zero */
     z-index: 1000;
     width: 170px; /* Ajustează lățimea după preferințe */
@@ -86,7 +111,7 @@
 
   .sidebar ul li {
     padding: 10px 20px; /* Ajustează padding-ul intern */
-    border-bottom: 1px solid rgb(9,85,68);
+    border-bottom: 1px solid rgb(0,0,0);
     text-align: center;
   }
 
@@ -95,7 +120,7 @@
   }
 
   .sidebar ul li a {
-    color: rgb(241,247,246);
+    color: rgb(0,0,0);
     text-decoration: none;
     display: block;
     width: 100%; /* Asigură-te că link-urile ocupă toată lățimea */
@@ -103,8 +128,8 @@
   }
 
   .sidebar ul li a:hover {
-    background-color: rgb(9,85,68);
-    color: rgb(241,247,246);
+    background-color: rgb(256,256,256);
+    color: rgb(0,0,0);
   }
 
 @media screen and (max-width: 768px) {

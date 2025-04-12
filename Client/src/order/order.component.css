@@ -16,9 +16,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 65px;
-  border: 1px solid rgb(9,85,68);
-  background-color: rgb(2,27,26);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /*border: 1px solid rgb(99,98,98);
+  background-color: rgb(256,256,256);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
 }
 
 .elements {
@@ -26,23 +26,23 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 600px;
-  border: 2px solid rgb(9,85,68);
+  border: 2px solid rgb(0,0,0);
   padding: 30px;
-  background-color: rgb(2,27,26);
-  color: rgb(241,247,246);
+  background-color: rgb(215,215,215);
+  color: rgb(0,0,0);
   border-radius: 10px;
 }
 
 .title {
   text-align: center;
-  color: rgb(241,247,246);
+  color: rgb(0,0,0);
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .order_adress {
   font-size: 16px;
-  color: rgb(241,247,246);
+  color: rgb(0,0,0);
   margin-bottom: 10px;
 }
 
@@ -53,9 +53,9 @@ body {
 .adress input {
   width: 100%;
   padding: 10px;
-  border: 1px solid  rgb(9,85,68);
-  background-color: black;
-  color: rgb(44,194,149);
+  border: 1px solid  rgb(99,98,98);
+  background-color: rgb(256,256,256);
+  color: rgb(0,0,0);
   border-radius: 5px;
   font-size: 14px;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .payment legend {
-  color: rgb(241,247,246);
+  color: rgb(0,0,0);
   padding: 5px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -91,7 +91,7 @@ body {
 
 .option label {
   font-size: 16px;
-  color: rgb(241,247,246);
+  color: rgb(0,0,0);
   margin-bottom: 5px;
 }
 
@@ -107,8 +107,8 @@ body {
 }
 
 .order-final2 {
-  background-color: black;
-  border: 2px solid  rgb(9,85,68);
+  background-color: rgb(215,215,215);
+  border: 2px solid  rgb(99,98,98);
   padding: 6px 15px;
   border-radius: 5px;
   font-size: 15px;
@@ -116,10 +116,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: rgb(44,194,149);
+  color: rgb(0,0,0);
 }
 .order-final2:hover {
-  background-color: #555;
+  background-color: rgb(126,126,126);
   color: white;
 }
 

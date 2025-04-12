@@ -7,12 +7,12 @@
     width: 100%;
     padding: 30px;
     align-items: stretch;
-    color: rgb(241,247,246);
+    color: rgb(0,0,0);
 
 }
 .cos_cumparaturi, .total_amount {
-    border: 2px solid rgb(9,85,68);
-    background: rgb(2,27,26);
+    border: 2px solid rgb(99,98,98);
+    background: rgb(215,215,215);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -26,8 +26,8 @@
     padding-top: 7px;
     margin-top: 5px;
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(9,85,68);
-    border-top: 2px solid rgb(9,85,68);
+    border-bottom: 2px solid rgb(99,98,98);
+    border-top: 2px solid rgb(99,98,98);
 }
 
 .cos_cumparaturi {
@@ -68,7 +68,7 @@ tbody td {
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    border: 2px solid rgb(9,85,68);
+    border: 2px solid rgb(99,98,98);
 }
 
 .cantitate_tabel input {
@@ -76,9 +76,9 @@ tbody td {
     height: 30px;
     font-size: 14px;
     text-align: center;
-    border: 2px solid rgb(9,85,68);
-    color: rgb(44,194,149);
-    background-color: black;
+    border: 2px solid rgb(99,98,98);
+    color: rgb(0,0,0);
+    background-color: rgb(215,215,215);
     text-decoration: none;
 }
 .quantity-wrapper {
@@ -92,17 +92,17 @@ tbody td {
   height: 30px;
   font-size: 14px;
   text-align: center;
-  border: 2px solid rgb(9,85,68);
-  color: rgb(44,194,149);
-  background-color: black;
+  border: 2px solid rgb(99,98,98);
+  color: rgb(0,0,0);
+  background-color: rgb(215,215,215);
 }
 
 .btn-minus,
 .btn-plus {
   width: 30px;
   height: 30px;
-  background-color: rgb(9, 85, 68);
-  color: white;
+  background-color: rgb(99,98,98);
+  color: rgb(256,256,256);
   border: none;
   cursor: pointer;
   font-size: 18px;
@@ -113,7 +113,9 @@ tbody td {
 
 .btn-minus:hover,
 .btn-plus:hover {
-  background-color: rgb(44,194,149);
+  background-color: rgb(215,215,215);
+  color:rgb(0,0,0);
+  border:2px solid rgb(98,98,98);
 }
 
 .btn-minus {
@@ -125,7 +127,7 @@ tbody td {
 }
 .cos_cumparaturi_menu {
     background: transparent;
-    border-bottom: 2px solid rgb(9,85,68);
+    border-bottom: 2px solid rgb(99,98,98);
 }
 .btn-remove {
   background-color: red;
@@ -148,9 +150,8 @@ tbody td {
 }
 
 .buton_final {
-    border: 2px solid rgb(9,85,68);
-    background-color: black;
-    color: rgb(44,194,149);
+    border: 2px solid rgb(99,98,98);
+    background-color: rgb(215,215,215);
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -159,13 +160,12 @@ tbody td {
 }
 
 .buton_final:hover {
-    background-color: rgb(58, 58, 58);
-    color: rgb(241,247,246);
+    background-color: rgb(256,256,256);
 }
 
 a {
     text-decoration: none;
-    color: rgb(44,194,149);
+    color: rgb(0,0,0);
 }
 .clear-shopping-cart{
     display: flex;
@@ -175,17 +175,17 @@ a {
     margin-left:30px;
 }
 .clear-shopping-cart button{
-    background-color: rgb(2,27,26);
-    color:rgb(241,247,246);
+    background-color: rgb(215,215,215);
+    color:rgb(0,0,0);
     padding: 10px 20px;
-    border: 2px solid rgb(9,85,68);
+    border: 2px solid rgb(99,98,98);
     cursor: pointer;
     font-size: 18px;
     transition: 0.3s;
 }
 .clear-shopping-cart button:hover{
-    background-color: rgb(241,247,246);
-    color: #2D3250;
+    background-color: rgb(256,256,256);
+    color: rgb(0,0,0);
 }
 /* Media Query pentru dispozitive mobile */
 @media (max-width: 768px) {

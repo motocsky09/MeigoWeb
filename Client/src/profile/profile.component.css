@@ -10,8 +10,8 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Asigură că pagina ocupă toată înălțimea ecranului */
   font-family: Arial, sans-serif;
-  background-color: black; /* Fundal general */
-  color: rgb(241,247,246); /* Culoarea textului */
+  background-color: rgb(215,215,215); /* Fundal general */
+  color: rgb(0,0,0); /* Culoarea textului */
 }
 /* Centrarea conținutului */
 .center-align {
@@ -29,9 +29,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgb(9,85,68);
-  background-color: rgb(2,27,26);
-  color: rgb(241,247,246);
+  border: 2px solid rgb(98,98,98);
+  background-color: rgb(215,215,215);
+  color: rgb(0,0,0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 90%;
@@ -48,9 +48,9 @@ body {
   align-items: center;
   margin-bottom: 20px;
   font-weight: bold;
-  border-bottom: 2px solid rgb(9,85,68);
+  border-bottom: 2px solid rgb(98,98,98);
   padding-bottom: 10px;
-  color: rgb(44,194,149);
+  color: rgb(0,0,0);
 }
 
 .details-account-title span {
@@ -60,8 +60,8 @@ body {
 /* Stil pentru detalii */
 .auth-header ul {
   list-style-type: none;
-  padding: 0;
-  width: 100%;
+  padding: 0px;
+  width: 300px;
 }
 
 /* Elementele din listă */
@@ -70,7 +70,7 @@ body {
   justify-content: space-between; /* Spațierea între etichetă și input */
   align-items: center;
   margin-bottom: 15px;
-  gap: 10px; /* Spațiu între elemente */
+  gap: 20px; /* Spațiu între elemente */
 }
 
 /* Etichete (ex: "User", "Nume") */
@@ -82,9 +82,9 @@ body {
 
 /* Input-uri */
 .auth-header input {
-  background-color: black;
-  color: rgb(44,194,149);
-  border: 1px solid rgb(9,85,68);
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+  border: 1px solid rgb(0,0,0);
   padding: 8px;
   border-radius: 4px;
   flex: 2; /* Input-urile să ocupe mai mult spațiu */
@@ -95,9 +95,9 @@ body {
 /* Buton profil */
 .buton-profile {
   background: transparent;
-  color: rgb(44,194,149);
+  color: rgb(0,0,0);
   border-radius: 10px;
-  border: 2px solid rgb(9,85,68);
+  border: 2px solid rgb(98,98,98);
   padding: 10px 20px;
   margin: 20px auto;
   display: block;
@@ -117,7 +117,7 @@ body {
 a {
   text-decoration: none;
   border-radius: 10px;
-  border: 2px solid rgb(9,85,68);
+  border: 2px solid rgb(98,98,98);
   padding: 10px 20px;
   display: inline-block;
   text-align: center;
@@ -164,7 +164,7 @@ a:hover {
 
   .auth-header p {
     font-weight: 600; /* Font mai gros pentru claritate */
-    color: rgb(44, 194, 149); /* Culoare de accent */
+    color: rgb(98,98,98); /* Culoare de accent */
     margin: 0; /* Eliminăm marginile */
   }
 

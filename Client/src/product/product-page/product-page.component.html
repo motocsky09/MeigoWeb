@@ -6,13 +6,13 @@
     <div class="product-images">
 
       <!-- Imaginea principală -->
-      <img [src]="'./assets/images/' + mainImage" alt="product_image" class="main-product-image">
+      <img [src]="'./assets/images/products/' + mainImage" alt="product_image" class="main-product-image">
 
       <!-- Galeria de imagini secundare -->
       <div class="image-gallery">
-        <img [src]="'./assets/images/' + product.imagePath1" alt="product_image_small" (click)="changeMainImage(product.imagePath1)">
-        <img [src]="'./assets/images/' + product.imagePath2" alt="product_image_small" (click)="changeMainImage(product.imagePath2)">
-        <img [src]="'./assets/images/' + product.imagePath3" alt="product_image_small" (click)="changeMainImage(product.imagePath3)">
+        <img [src]="'./assets/images/products/' + product.imagePath1" alt="product_image_small" (click)="changeMainImage(product.imagePath1)">
+        <img [src]="'./assets/images/products/' + product.imagePath2" alt="product_image_small" (click)="changeMainImage(product.imagePath2)">
+        <img [src]="'./assets/images/products/' + product.imagePath3" alt="product_image_small" (click)="changeMainImage(product.imagePath3)">
       </div>
     </div>
 
@@ -20,7 +20,7 @@
     <div class="details-product">
       <h2 class="titlu-produs">{{product.name}}</h2>
 
-      <h3 class="pret_produs"><b>Preț:</b> {{product.price}} lei</h3>
+      <h3 class="pret_produs"><b>Price:</b> {{product.price}} RON</h3>
 
       <!-- Container pentru input de cantitate și butoanele minus și plus -->
       <div class="quantity-wrapper">
@@ -32,6 +32,17 @@
         </div>
         <div class="plus" (click)="increaseQuantity(selectedQuantity)">
           <i class="fas fa-plus"></i>
+        </div>
+      </div>
+
+      <h2> Choose the color</h2>
+      <div class="color-wrapper">
+        <div class="color-title">
+          <button>Black</button>
+          <button>White</button>
+          <button>Blue</button>
+          <button>Red</button>
+          <button>Green</button>
         </div>
       </div>
 

@@ -1,67 +1,56 @@
-<div class="introduction">
-    <h2 class="introduction-content">Dacă ești un designer</h2>
-    <h3 class="introduction-content">un inventator</h3>
-    <h3 class="introduction-content">sau doar cineva care vrea să-și personalizeze produsele</h3>
-    <h3 class="introduction-content">noi îți suntem alături și îti oferim soluții personalizate</h3>
-
-
-    <div class="accordion">
-        <div class="accordion-item">
-            <header class="accordion-header">
-                <span class="title"><b>Cum funcționează?</b></span>
-                <i class="fas fa-plus"></i>
-            </header>
-            <div class="description">
-                <p>Alege unul din produsele noastre sau spune-ne ideea ta </p>
-                <p><a href="mailto:meigo-studioprint@gmail.com" >meigo-studioprint&#64;gmail.com</a></p>
-                <p>Sau ne găsiți pe</p>
-                <p><a href="https://www.instagram.com/motocsky/" target="_blank"><img src="./assets/images/instagram2.png" alt="Instagram" width="40" height="40"></a></p>
-            </div>
-        </div>
-    </div>
-
-    <h3 class="introduction-content">Îți putem oferi un sprijin în ceea ce dorești să creezi </h3>
-
-    <div class="accordion">
-        <div class="accordion-item">
-            <header class="accordion-header">
-                <span class="title"><b>Cine suntem noi?</b></span>
-                <i class="fas fa-plus"></i>
-            </header>
-            <div class="description">
-                    <div class="paragraf_desc">
-                <p>Totul a pornit din pasiunea noastră pentru tehnologie</p>
-                <p>Iar când tehnologia s-a contopit cu imaginația am apărut noi</p>
-                <p>Ne dorim ca fiecare idee să nu fie uitată</p>
-                <p>Alegând serviciile noastre , poți fi sigur că ideea ta se va materializa</p>
-            </div>
-                <p>Te așteptăm să descoperi produsele noastre <i class="fa-regular fa-heart" style="color: #ff0000;"></i></p>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="introduction-content">Descoperă creația noastră</h2>
-
-  <div class="buton">
-    <div class="buton-container">
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-    </div>
-    <a href="products-list" class="buton1">
-      <b>Shop</b>
-    </a>
-    <div class="buton-container">
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-      <div class="slice"></div>
-    </div>
+<!-- home.html -->
+<!-- New Dark Hero Section -->
+<section class="dark-hero">
+  <div class="shapes">
+    <div class="shape ring"></div>
+    <div class="shape cube"></div>
+    <div class="shape ball"></div>
+    <div class="shape capsule"></div>
   </div>
 
+  <div class="content">
+    <h1>The Key is simplity</h1>
+    <!--<img src="assets/images/logo5.png" alt="Hero Image" class="hero-image" 
+    style="height: 110px; width: auto; margin-right: 25px;">-->
+  </div>
+</section>
+
+<!-- Feature Cards Section -->
+<div class="features_section">
+  <div class="feature_card">
+    <i class="fa-solid fa-laptop" style="height: 50px; font-size: 40px;"></i>
+    <p>Easy Shopping</p>
+  </div>
+  <div class="feature_card">
+    <i class="fa-solid fa-cart-shopping" style="height: 50px; font-size: 40px;"></i>
+    <p>Fast & Free Shipping</p>
+  </div>
+  <div class="feature_card">
+    <i class="fa-solid fa-info" style="height: 50px; font-size:40px;"></i>
+    <p>24/7 Support</p>
+  </div>
+  <div class="feature_card">
+    <i class="fa-solid fa-leaf" style="height: 50px; font-size:40px;"></i>
+    <p>Eco Friendly</p>
+  </div>
 </div>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="testimonial-container" *ngIf="testimonials.length">
+    <div class="testimonial">
+      <div class="testimonial-left">
+        <i class="fa-solid fa-user-circle fa-2x"></i>
+        <h3>{{ testimonials[currentTestimonialIndex].name }}</h3>
+      </div>
+      <div class="testimonial-right">
+        <p>{{ testimonials[currentTestimonialIndex].text }}</p>
+      </div>
+    </div>
+
+    <div class="testimonial-controls">
+      <button (click)="prevTestimonial()"><i class="fa-solid fa-chevron-left"></i></button>
+      <button (click)="nextTestimonial()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>

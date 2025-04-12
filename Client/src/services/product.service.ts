@@ -29,12 +29,36 @@ export class ProductService {
         .set('categoryId', categoryId)
        return this.http.get(this.BaseURI+'/Product/GetProductsByCategoryId',{params});
      }
+     getProductBySize(size: string) {
+      const params = new HttpParams()
+        .set('size', size);
+      return this.http.get(this.BaseURI + '/Product/GetProductBySize', { params });
+    }
+      getProductByColor(color: string) {
+        const params = new HttpParams()
+          .set('color', color);
+        return this.http.get(this.BaseURI + '/Product/GetProductByColor', { params });
+      }
+      getProductBySeason(season: string) {
+        const params = new HttpParams()
+          .set('season', season);
+        return this.http.get(this.BaseURI + '/Product/GetProductBySeason', { params });
+      }
+      getProductByGender(gender: string){
+        const params = new HttpParams()
+        .set('gender',gender);
+        return this.http.get(this.BaseURI + '/Product/GetProductByGender', { params });
+      }
+      getProductByMaterial(material: string){
+        const params = new HttpParams()
+        .set('material',material);
+        return this.http.get(this.BaseURI + '/Product/GetProductByMaterial', { params });
+      }
 
   getProductById(productId: number) {
     return this.http.get<any>(`${this.BaseURI}/Product/GetProductById`, {
       params: new HttpParams().set('productId', productId.toString())
     });
   }
-
 
 }

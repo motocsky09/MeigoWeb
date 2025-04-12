@@ -24,6 +24,9 @@ export class ProductsListComponent implements OnInit {
   // Variabilă pentru controlul vizibilității filtrelor
   areFiltersVisible: boolean = false;
 
+  selectedCategoryId: number | null = null;
+  products: any;
+
   constructor(
     private service: ProductService,
     private router: Router,
@@ -105,11 +108,6 @@ export class ProductsListComponent implements OnInit {
     );
   }
 
-  // Metodă pentru a comuta vizibilitatea filtrelor
-  toggleFilters() {
-    this.areFiltersVisible = !this.areFiltersVisible;
-  }
-
   increaseQuantity(quantityInput: HTMLInputElement) {
     const currentValue = quantityInput.valueAsNumber || 1;
     quantityInput.value = (currentValue + 1).toString();
@@ -121,4 +119,56 @@ export class ProductsListComponent implements OnInit {
       quantityInput.value = (currentValue - 1).toString();
     }
   }
+
+  selectedCategories: string[] = [];
+minPrice: number | null = null;
+maxPrice: number | null = null;
+onlyInStock: boolean = false;
+selectedRatings: number[] = [];
+
+toggleCategory(categoryId: number) {
+  if (this.selectedCategoryId === categoryId) {
+    this.selectedCategoryId = null;
+    this.getProductsList(); // sau this.productsList = []; dacă vrei doar să golești
+  } else {
+    this.selectedCategoryId = categoryId;
+    this.service.getProductsListByCategoryId(categoryId).subscribe(products => {
+      this.productsList = products;
+    });
+  }
+}
+
+toggleColor(color: string) {
+  this.service.getProductByColor(color).subscribe(products => {
+    this.productsList = products;
+  });
+}
+
+toggleSize(size: string) {
+  this.service.getProductBySize(size).subscribe(products => {
+    this.productsList = products;
+  });
+}
+toggleRating(stars: number) {
+  const index = this.selectedRatings.indexOf(stars);
+  if (index > -1) {
+    this.selectedRatings.splice(index, 1);
+  } else {
+    this.selectedRatings.push(stars);
+  }
+  this.filterProducts();
+}
+
+resetFilters() {
+  this.selectedCategories = [];
+  this.minPrice = null;
+  this.maxPrice = null;
+  this.onlyInStock = false;
+  this.selectedRatings = [];
+  this.filterProducts();
+}
+
+filterProducts() {
+  // Logica de filtrare a produselor în funcție de cele selectate
+}
 }

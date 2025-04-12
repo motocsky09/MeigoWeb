@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
 * {
     margin: 0;
     padding: 0;
 }
 body{
-  font-family: 'Lekton', monospace;
-  background-color: rgb(3,34,33) !important;
-
+  font-family: 'Nunito', sans-serif;
+  background-color: rgb(255, 255, 255) !important;
 
   /*
     background: rgb(255,255,255);
@@ -14,35 +16,8 @@ body{
     */
 }
 h1, h2, h3 {
-  font-family: 'Lekton', monospace;
+  font-family: 'Bebas Neue', sans-serif;
 }
 p , button , span,input {
-  font-family: 'Lekton', monospace;
+  font-family: 'Bebas Neue', sans-serif;
 }
-.header-container {
-  display: flex;          /* Activează flexbox */
-  align-items: center;    /* Aliniază vertical elementele */
-  gap: 20px;              /* Distanță între butoane */
-  margin-top: 20px;       /* Spațiere față de partea de sus */
-  margin-left:15px;
-}
-.back-button{
-  background-color: transparent;
-  border: none;
-  color: rgb(44, 194, 149);
-  border-radius: 30px;
-  padding: 8px 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-.back-button:hover{
-  background-color: rgb(44, 194, 149);
-  color: white;
-}
-/* Ascunde butonul Înapoi pe ecrane mari */
-@media (min-width: 769px) {
-  .back-button {
-    display: none;
-  }
-}
-

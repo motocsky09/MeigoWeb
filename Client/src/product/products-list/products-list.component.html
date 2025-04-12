@@ -1,35 +1,64 @@
-<div class="header-container">
-  <button id="toggleFiltersBtn" class="buton_filter" (click)="toggleFilters()">
-    <b>Filtrează</b>
-    <i class="fa fa-filter" aria-hidden="true"></i>
-  </button>
-</div>
+<div class="main-layout">
+  <!-- Filtre în partea stângă -->
+  <div class="filters">
+    <h3>🔍 Filters 🔍</h3>
+  
+    <div class="filter-group">
+      <p class="filter-title">Category</p>
+      <label><input type="checkbox" (change)="toggleCategory(1002)"> Summer</label><br>
+      <label><input type="checkbox" (change)="toggleCategory(1003)"> Winter</label><br>
+      <label><input type="checkbox" (change)="toggleCategory(1004)"> Autunum</label><br>
+      <label><input type="checkbox" (change)="toggleCategory(1005)"> Spring</label><br>
+    </div>
+  
+    <div class="filter-group">
+      <p class="filter-title">Price</p>
+      <input type="number" [(ngModel)]="minPrice" placeholder="Min" class="price-input">
+      -
+      <input type="number" [(ngModel)]="maxPrice" placeholder="Max" class="price-input">
+    </div>
 
-<div class="filter-box">
-  <div class="filter" [ngClass]="{ 'show': areFiltersVisible }">
-    <button class="buton_filter" (click)="getProductsList()">Toate</button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(1)">
-      <i class="fa-solid fa-gamepad"></i>
-    </button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(2)">
-      <i class="fa-solid fa-glasses"></i>
-    </button>
-    <button class="buton_filter" (click)="getProductsListByCategoryId(3)">
-      <i class="fa-solid fa-briefcase"></i>
-    </button>
+    <div class="filter-group">
+      <p class="filter-title">Color</p>
+      <label><input type="checkbox" (change)="toggleColor('Black')"> Black</label><br>
+      <label><input type="checkbox" (change)="toggleColor('White')"> White</label><br>
+      <label><input type="checkbox" (change)="toggleColor('Red')"> Red</label><br>
+      <label><input type="checkbox" (change)="toggleColor('Blue')"> Blue</label><br>
+      <label><input type="checkbox" (change)="toggleColor('Green')"> Green</label><br>
+    </div>
+  
+    <div class="filter-group">
+      <p class="filter-title">Size</p>
+      <label><input type="checkbox" (change)="toggleSize('S')"> S</label><br>
+      <label><input type="checkbox" (change)="toggleSize('M')"> M</label><br>
+      <label><input type="checkbox" (change)="toggleSize('L')"> L</label><br>
+      <label><input type="checkbox" (change)="toggleSize('XL')"> XL</label><br>
+      <label><input type="checkbox" (change)="toggleSize('XXL')"> XXL</label><br>
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-title">Available</p>
+      <label><input type="checkbox" [(ngModel)]="onlyInStock"> Doar produse în stoc</label>
+    </div>
+  
+    <div class="filter-group">
+      <p class="filter-title">Rating</p>
+      <label><input type="checkbox" (change)="toggleRating(4)"> ⭐ 4 stele+</label><br>
+      <label><input type="checkbox" (change)="toggleRating(3)"> ⭐ 3 stele+</label>
+    </div>
+  
+    <button class="reset-button" (click)="resetFilters()">Reset filters</button>
   </div>
-</div>
 
-
-
-<div class="product">
+  <!-- Produse în partea dreaptă -->
+  <div class="product">
     <ul>
-        <li class="product-item" *ngFor="let item of productsList">
-            <a [routerLink]="['/product-page', item.id]">
-                <img src="./assets/images/{{item.imagePath1}}" alt="product_image">
-            </a>
-            <div class="details">
-            <h3 class="pret_produs">Preț: {{item.price}} lei</h3>
+      <li class="product-item" *ngFor="let item of productsList">
+        <a [routerLink]="['/product-page', item.id]">
+          <img src="./assets/images/products/{{item.imagePath1}}" alt="product_image">
+        </a>
+        <div class="details">
+          <h3 class="pret_produs">Price: {{item.price}} RON</h3>
           <div class="quantity-wrapper">
             <div class="minus" (click)="decreaseQuantity(selectedQuantity)">
               <i class="fas fa-minus"></i>
@@ -41,15 +70,18 @@
               <i class="fas fa-plus"></i>
             </div>
           </div>
-            <button class="button_product"
-                (click)="addProductInShoppingCart(shoppingCartId, item.id, selectedQuantity.valueAsNumber)">Adaugă în coș
-            </button>
-            </div>
-        </li>
-        <div class="cart-button" id="cartButton">
-          <a href="shopping-cart">
-              <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
-          <span id="cartItemCount">{{ cartCounter }}</span>
+          <button class="button_product"
+            (click)="addProductInShoppingCart(shoppingCartId, item.id, selectedQuantity.valueAsNumber)">
+            Add to cart
+          </button>
+        </div>
+      </li>
+      <div class="cart-button" id="cartButton">
+        <a href="shopping-cart">
+          <fa-icon [icon]="faCartShopping"></fa-icon>Cart
+        </a>
+        <span id="cartItemCount">{{ cartCounter }}</span>
       </div>
     </ul>
+  </div>
 </div>
