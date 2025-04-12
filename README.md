@@ -80,7 +80,7 @@ as these are unique identifiers and cannot be changed.
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
 ![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile-no-edit.png)
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile-edit-mobile.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile-edit.png)
 
 ## All Products Filter page
 ```
