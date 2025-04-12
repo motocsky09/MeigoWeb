@@ -46,26 +46,8 @@ The home page serves as the initial page of the application,
 where clients can access essential details about the application.
 It is accompanied by two accordion items that contribute to a minimalist aesthetic and provide ample spacing.
 ```
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20web.png)
-## Element 1 in home page
-```
-The element "Cum funcționează?" translates to "How does it work?"
-provides information on how to use the platform.
-To view the contents of the section, press the "+" symbol.
-Once pressed, the section will be open.
-To close the section, press the "-" symbol again.
-This section provides contact information, including email and the app's Instagram page.
-Through these channels,
-customers can share their customizable ideas that are not available in the products section.
-```
-![Home Page With Accordion Item 1](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20with%20accordion%20item%201.png)
-## Element 2 in home page
-```
-The element "Cine suntem noi?" translates to "Who we are?" provides a brief description of our website.
-To view the contents of the section, is same mode of first section "Cum funcționează?" press the "+" and "-" symbol.
-```
-![Home Page With Accordion Item 2](https://github.com/motocsky09/project-shop/raw/main/_screens/home%20page%20with%20accordion%20item%202.png)
-
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home1%20.png)
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home2%20.png)
 ## Login page
 ```
 In this section, users can log in to the platform by entering their username and password.
