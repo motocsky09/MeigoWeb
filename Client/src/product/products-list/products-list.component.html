@@ -36,16 +36,7 @@
       <label><input type="checkbox" (change)="toggleSize('XXL')"> XXL</label><br>
     </div>
 
-    <div class="filter-group">
-      <p class="filter-title">Available</p>
-      <label><input type="checkbox" [(ngModel)]="onlyInStock"> Doar produse în stoc</label>
-    </div>
-  
-    <div class="filter-group">
-      <p class="filter-title">Rating</p>
-      <label><input type="checkbox" (change)="toggleRating(4)"> ⭐ 4 stele+</label><br>
-      <label><input type="checkbox" (change)="toggleRating(3)"> ⭐ 3 stele+</label>
-    </div>
+
   
     <button class="reset-button" (click)="resetFilters()">Reset filters</button>
   </div>

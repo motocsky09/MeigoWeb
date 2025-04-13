@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('loggedIn', 'true');
         this.service.isLoggedIn$.next(true);
   
-        this.successMessage = 'Conectare cu succes!';
+        this.successMessage = 'Login successful!';
         this.errorMessage = '';
         
         setTimeout(() => {
@@ -48,11 +48,11 @@ export class LoginComponent implements OnInit {
       },
       err => {
         if (err.status === 400) {
-          this.errorMessage = 'Nume sau parolă incorectă';
+          this.errorMessage = 'Incorrect name or password';
         } else if (err.status === 401) {
-          this.errorMessage = 'Nume sau parolă incorectă';
+          this.errorMessage = 'Incorrect name or password';
         } else {
-          this.errorMessage = 'A apărut o eroare. Încercați din nou.';
+          this.errorMessage = 'An error occurred. Please try again.';
         }
         this.successMessage = '';
       }

@@ -35,23 +35,34 @@
         </div>
       </div>
 
-      <h2> Choose the color</h2>
+      <h2>size</h2>
       <div class="color-wrapper">
         <div class="color-title">
-          <button>Black</button>
-          <button>White</button>
-          <button>Blue</button>
-          <button>Red</button>
-          <button>Green</button>
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+          <button>XXL</button>
         </div>
       </div>
 
       <p class="description-product">{{product.shortDescription}}</p>
 
-      <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, product.id, selectedQuantity.valueAsNumber)">
-        Adaugă în coș
-      </button>
+      <h2>Details</h2>
+      <div class="details-wrapper">
+        <ul>
+          <li><b>Season </b>: {{product.season}}</li>
+          <li><b>Color </b>: {{product.color}}</li>
+          <li><b>Material </b>: {{product.material}}</li>
+          <li><b>Care Instructions </b>: <img src="assets/images/symbol.png" alt="Care Symbols" class="care-symbols"></li>
+          <li><b>Product Code </b>: {{product.id}}</li>
+        </ul>
+      </div>
 
+
+      <button class="button_product" (click)="addProductInShoppingCart(shoppingCartId, product.id, selectedQuantity.valueAsNumber)">
+        ADD TO CART
+      </button>
     </div>
 
   </div>
@@ -59,7 +70,7 @@
   <!-- Buton Coș -->
   <div class="cart-button" id="cartButton">
     <a href="shopping-cart">
-      <fa-icon [icon]="faCartShopping"></fa-icon>Coș</a>
+      <fa-icon [icon]="faCartShopping"></fa-icon>Cart</a>
     <span id="cartItemCount">{{ cartCounter }}</span>
   </div>
 

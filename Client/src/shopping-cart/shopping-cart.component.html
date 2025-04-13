@@ -1,69 +1,63 @@
 <div class="container">
-    <div class="cos_cumparaturi">
-        <ul class="cos_cumparaturi_menu">
-            <h3 class="list"><b>Lista dumneavoastră</b></h3>
-        </ul>
-        <table>
-            <thead class="tabel_menu">
-                <tr>
-                    <th class="articol">Articol</th>
-                    <th>Pret</th>
-                    <th>Produse</th>
-                    <th></th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-          <tbody *ngFor="let item of productsList">
-          <tr>
-            <!-- Coloana cu imaginea produsului -->
-            <td class="imagine_tabel" data-label="Articol">
-              <img src="./assets/images/products/{{item.imagePath}}" alt="">
-            </td>
+  <div class="cos_cumparaturi">
+      <ul class="cos_cumparaturi_menu">
+          <h3 class="list"><b>Your List</b></h3>
+      </ul>
+      <table>
+          <thead class="tabel_menu">
+              <tr>
+                  <th class="articol">Item</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th></th>
+                  <th>Subtotal</th>
+              </tr>
+          </thead>
+        <tbody *ngFor="let item of productsList">
+        <tr>
+          <td class="imagine_tabel" data-label="Item">
+            <img src="./assets/images/products/{{item.imagePath}}" alt="">
+          </td>
 
-            <!-- Coloana cu prețul produsului -->
-            <td class="cost_tabel" data-label="Pret">
-              <b>{{item.price}} lei</b>
-            </td>
+          <td class="cost_tabel" data-label="Price">
+            <b>{{item.price}} RON</b>
+          </td>
 
-            <!-- Coloana cu cantitatea produsului -->
-            <td class="cantitate_tabel" data-label="Produse">
-              <div class="quantity-wrapper">
-                <button class="btn-minus" (click)="decreaseQuantity(item)">-</button>
-                <input
-                  type="text"
-                  class="quantity-input"
-                  [(ngModel)]="item.selectedQuantity"
-                  (ngModelChange)="updateQuantity(item)"
-                  readonly>
-                <button class="btn-plus" (click)="increaseQuantity(item)">+</button>
-              </div>
-            </td>
+          <td class="cantitate_tabel" data-label="Quantity">
+            <div class="quantity-wrapper">
+              <button class="btn-minus" (click)="decreaseQuantity(item)">-</button>
+              <input
+                type="text"
+                class="quantity-input"
+                [(ngModel)]="item.selectedQuantity"
+                (ngModelChange)="updateQuantity(item)"
+                readonly>
+              <button class="btn-plus" (click)="increaseQuantity(item)">+</button>
+            </div>
+          </td>
 
-            <!-- Coloana pentru butonul de eliminare a produsului -->
-            <td>
-              <button class="btn-remove" data-label="" (click)="removeProduct(item)">
-                <i class="fa-solid fa-x"></i>
-              </button>
-            </td>
+          <td>
+            <button class="btn-remove" data-label="" (click)="removeProduct(item)">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </td>
 
-            <!-- Coloana cu subtotalul produsului -->
-            <td class="total_tabel" data-label="Subtotal">
-              <b>{{item.sumSelectedQuantity}} lei</b>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-    </div>
-    <div class="total_amount">
-        <h3 class="amount">Total de plata</h3>
-        <h4 class="amount">Cost produse: {{totalSumWithoutDelivery}} lei</h4>
-        <h4 class="amount_bottom">Cost Transport: {{sumDelivery}} lei</h4>
-        <h3 class="amount"><b>Total:</b> {{totalSumWithDelivery}} lei</h3>
-        <button class="buton_final"><a href="order">Finalizare comanda</a></button>
-    </div>
+          <td class="total_tabel" data-label="Subtotal">
+            <b>{{item.sumSelectedQuantity}} RON</b>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="total_amount">
+      <h3 class="amount">Total Amount</h3>
+      <h4 class="amount">Products Cost: {{totalSumWithoutDelivery}} RON</h4>
+      <h4 class="amount_bottom">Shipping Cost: {{sumDelivery}} RON</h4>
+      <h3 class="amount"><b>Total:</b> {{totalSumWithDelivery}} RON</h3>
+      <button class="buton_final"><a href="order">Checkout</a></button>
+  </div>
 </div>
 
 <div class="clear-shopping-cart">
-  <button (click)="clearShoppingCart()">Golește coșul</button>
+<button (click)="clearShoppingCart()">Clear Shopping Cart</button>
 </div>
-

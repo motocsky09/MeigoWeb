@@ -1,31 +1,29 @@
 <div>
-	<nav class="navbar">
-	  <div class="nav-links">
-		<ul class="logo">
-		  <li class="logo"><a href="home"><img src="./assets/images/logo6.png" alt="logo" width="130"></a></li>
-		</ul>
-  
-		<div class="nav">
-			<!--<button class="button-link"><a href="/home"><i class="fa-solid fa-house"></i></a></button>-->
-			<button class="button-link"><a href="/about">About</a></button>
-			<button class="button-link"><a href="products-list">Shop</a></button>
-			<!--<button class="button-link"><a href="/contact">Contact</a></button>-->
-		</div>
-		<div class="nav-right">
-		  <button class="buton" (click)="toggleSidebar()">
-			<i class="fa-solid fa-user" style="font-size: large;"></i>
-		  </button>
-		</div>
-  
-	  </div>
-	</nav>
-  
-	<div class="sidebar" *ngIf="isSidebarOpen">
-	  <ul>
-		<li *ngIf="!isLog()"><a href="/user/register">Înregistrare</a></li>
-		<li *ngIf="!isLog()"><a href="/user/login">Autentificare</a></li>
-		<li *ngIf="isLog()"><a href="/user/profile">Profil</a></li>
-		<li *ngIf="isLog()"><a (click)="onLogout()">Deconectare</a></li>
-	  </ul>
-	</div>
+    <nav class="navbar">
+      <div class="nav-links">
+        <ul class="logo">
+          <li class="logo"><a href="home"><img src="./assets/images/logo6.png" alt="logo" width="130"></a></li>
+        </ul>
+
+        <div class="nav">
+            <button class="button-link"><a routerLink="/about">About</a></button>
+            <button class="button-link"><a href="products-list">Shop</a></button>
+            </div>
+        <div class="nav-right">
+          <button class="buton" (click)="toggleSidebar()">
+            <i class="fa-solid fa-user" style="font-size: large;"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="sidebar" *ngIf="isSidebarOpen">
+      <ul>
+        <li *ngIf="!isLog()"><a href="/user/register">Sign Up</a></li>
+        <li *ngIf="!isLog()"><a href="/user/login">Log In</a></li>
+        <li *ngIf="isLog()"><a href="/user/profile">Profile</a></li>
+        <li *ngIf="isLog()"><a (click)="onLogout()">Log Out</a></li>
+      </ul>
+    </div>
   </div>

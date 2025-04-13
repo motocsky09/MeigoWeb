@@ -91,6 +91,10 @@
   border-radius: 5px;
   font-size: 16px;
 }
+.minus:hover, .plus:hover {
+  background-color: rgb(58, 58, 58);
+  color: rgb(241,247,246);
+}
 
 .quantity-container {
   background-color: rgb(215,215,215);
@@ -130,7 +134,7 @@
   align-items: center;
   cursor: pointer;
   padding: 0px;
-  background-color: rgb(215,215,215);
+  background-color: transparent;
   color: rgb(0,0,0);
   border-radius: 5px;
   font-size: 16px;
@@ -164,12 +168,40 @@
   padding-top: 15px ;
   padding-bottom: 15px ;
   margin-bottom: 10px;
-  border-bottom: 1px solid rgb(99,98,98);
+  font-family: 'Nunito', sans-serif;
 }
-.recenzie{
-  margin-top: 20px;
+.details-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details-wrapper ul {
+  list-style-type: none;
+  padding-left: 0px;
+  border-top: 1px solid rgb(98,98,98);
+  border-bottom: 1px solid rgb(98,98,98);
   margin-bottom: 20px;
+  margin-top: 10px;
 }
+
+.details-wrapper ul li {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.details-wrapper b{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+}
+.details-wrapper img {
+  width: auto;
+  max-width: 120px; /* Setează o lățime maximă pentru imagine */
+  height: auto; /* Păstrează proporțiile imaginii */
+  object-fit: contain; /* Asigură-te că imaginea este încadrată corect */
+  margin-right: 20px; /* Adaugă un mic spațiu între imagine și text */
+  display: inline-block; /* Asigură afișarea în linie */
+  margin-top: 5px; /* Adaugă un mic spațiu deasupra imaginii */
+}
+
 #cartButton {
   position: fixed;
   bottom: 60px;

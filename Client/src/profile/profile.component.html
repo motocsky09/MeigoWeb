@@ -4,14 +4,14 @@
     <div class="auth-header">
       <ul>
         <li class="details-account-title">
-          <span><b>Detaliile contului:</b></span>
+          <span><b>Account Details:</b></span>
         </li>
         <li>
           <p>User <i class="fa-solid fa-user"></i></p>
           <span>{{profile.userName}}</span>
         </li>
         <li>
-          <p>Nume |</p>
+          <p>First Name |</p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.firstName}}</span>
           </ng-container>
@@ -20,7 +20,7 @@
           </ng-container>
         </li>
         <li>
-          <p>Prenume |</p>
+          <p>Last Name |</p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.lastName}}</span>
           </ng-container>
@@ -29,7 +29,7 @@
           </ng-container>
         </li>
         <li>
-          <p>Adresă <i class="fa-solid fa-location-dot"></i></p>
+          <p>Address <i class="fa-solid fa-location-dot"></i></p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.address}}</span>
           </ng-container>
@@ -38,7 +38,7 @@
           </ng-container>
         </li>
         <li>
-          <p>Oraș <i class="fa-solid fa-city"></i></p>
+          <p>City <i class="fa-solid fa-city"></i></p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.city}}</span>
           </ng-container>
@@ -47,7 +47,7 @@
           </ng-container>
         </li>
         <li>
-          <p>Cod poștal <i class="fa-solid fa-map-pin"></i></p>
+          <p>Postal Code <i class="fa-solid fa-map-pin"></i></p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.postal}}</span>
           </ng-container>
@@ -60,7 +60,7 @@
           <span>{{profile.email}}</span>
         </li>
         <li class="last-details">
-          <p>Telefon <i class="fa-duotone fa-solid fa-phone"></i></p>
+          <p>Phone <i class="fa-duotone fa-solid fa-phone"></i></p>
           <ng-container *ngIf="!profile.editing">
             <span>{{profile.phoneNumber}}</span>
           </ng-container>
@@ -69,29 +69,13 @@
           </ng-container>
         </li>
         <div *ngIf="!profile.editing" class="button-align">
-          <button (click)="editItem(profile)" class="buton-profile">Editează <i class="fa-solid fa-pen"></i></button>
+          <button (click)="editItem(profile)" class="buton-profile">Edit <i class="fa-solid fa-pen"></i></button>
         </div>
         <div *ngIf="profile.editing" class="button-align">
-          <button (click)="saveItem(profile)" class="buton-profile">Salvează <i class="fa-solid fa-check"></i></button>
-          <button (click)="cancelEdit(profile)" class="buton-profile">Anulează <i class="fa-solid fa-x"></i></button>
+          <button (click)="saveItem(profile)" class="buton-profile">Save <i class="fa-solid fa-check"></i></button>
+          <button (click)="cancelEdit(profile)" class="buton-profile">Cancel <i class="fa-solid fa-x"></i></button>
         </div>
       </ul>
     </div>
   </div>
 </div>
-<!--
-<div class="istoric" *ngIf="profile">
-  <div class="auth-header">
-    <ul>
-      <li>
-        <span><a href="">Istoric comenzi <i class="fa-solid fa-cart-shopping"></i></a></span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="delete_account">
-  <button>Șterge contul<i class="fa-solid fa-trash"></i></button>
-  <button (click)="DeleteAccount(profile)""
-</div>
--->

@@ -1,31 +1,30 @@
-
 <div class="container" *ngIf="profile">
   <div class="elements">
     <div class="adress">
-      <h2 class="title">Date de livrare</h2>
+      <h2 class="title">Shipping Details</h2>
       <div class="form-group">
-        <h3 class="order_adress">Adresa (Strada,număr)</h3>
-        <input type="text" placeholder="Introduceți adresa dvs." [(ngModel)]="profile.address" required />
+        <h3 class="order_adress">Address (Street, Number)</h3>
+        <input type="text" placeholder="Enter your address" [(ngModel)]="profile.address" required />
       </div>
       <div class="form-group">
-        <h3 class="order_adress">Oraș</h3>
-        <input type="text" placeholder="Introduceți orașul dvs." [(ngModel)]="profile.city" required />
+        <h3 class="order_adress">City</h3>
+        <input type="text" placeholder="Enter your city" [(ngModel)]="profile.city" required />
       </div>
       <div class="form-group">
-        <h3 class="order_adress">Cod poștal</h3>
-        <input type="text" placeholder="Introduceți codul poștal" [(ngModel)]="profile.postal" required />
+        <h3 class="order_adress">Postal Code</h3>
+        <input type="text" placeholder="Enter postal code" [(ngModel)]="profile.postal" required />
       </div>
       <div class="form-group">
-        <h3 class="order_adress">Mențiuni</h3>
-        <input type="text" placeholder="Orice mențiuni adiționale" />
+        <h3 class="order_adress">Notes</h3>
+        <input type="text" placeholder="Any additional notes" />
       </div>
     </div>
     <div class="payment">
       <fieldset>
-        <legend><h2>Alege metoda de plata:</h2></legend>
+        <legend><h2>Choose payment method:</h2></legend>
         <div class="payment-options">
           <div class="option">
-            <label for="numerar">Numerar</label>
+            <label for="numerar">Cash</label>
             <input type="radio" id="numerar" name="payment-method" value="numerar" checked />
           </div>
           <div class="option">
@@ -38,7 +37,7 @@
     <div class="order-final">
       <button class="order-final2" (click)="createOrder()">
         <a style="text-decoration: none;" href="confirm-order">
-          <h2>Trimite comanda</h2>
+          <h2>Send Order</h2>
         </a>
       </button>
     </div>

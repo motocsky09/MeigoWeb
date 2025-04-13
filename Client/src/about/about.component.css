@@ -1,0 +1,275 @@
+.about-section {
+	background-color: transparent; /* Un fundal gri deschis */
+	padding: 60px 0; /* Mai mult spațiu sus și jos */
+  }
+  
+  .about-container {
+	max-width: 1060px; /* Limitează lățimea containerului pentru o lizibilitate mai bună */
+	margin: 0 auto; /* Centrează containerul pe orizontală */
+	text-align: center;
+	padding: 40px;
+	background-color: #fff; /* Un fundal alb pentru container */
+	border-radius: 8px; /* Margini rotunjite */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* O umbră subtilă */
+  }
+  
+  .about-container h1 {
+	font-size: 42px; /* Un titlu puțin mai mare */
+	margin-bottom: 30px;
+	color: #333; /* O culoare mai închisă pentru titlu */
+  }
+  
+  .about-container p.about-text {
+	font-size: 20px; /* O dimensiune mai potrivită pentru text */
+	line-height: 1.7; /* Un interliniaj mai mare pentru o citire ușoară */
+	color: #555; /* O culoare mai deschisă pentru text */
+	margin-bottom: 25px; /* Spațiu sub paragraf */
+  }
+  
+  /* Poți adăuga un element vizual subtil, cum ar fi o linie decorativă */
+  .about-container h1::after {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 3px;
+	background-color: rgb(117,251,97); /* O culoare accent */
+	margin: 20px auto 0;
+  }
+  
+  /* Dacă vrei să adaugi un efect la hover pe container 
+  .about-container:hover {
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  /* ... stilurile existente pentru .about-section și .about-container ... */
+
+.values-section {
+	display: flex; /* Le aranjăm pe orizontală */
+	justify-content: space-around; /* Spațiu egal între elemente */
+	margin-top: 40px; /* Spațiu deasupra secțiunii de valori */
+	padding: 30px;
+	background-color: #f9f9f9; /* Un fundal ușor diferit */
+	border-radius: 6px;
+  }
+  
+  .value-item {
+	text-align: center;
+	padding: 20px;
+  }
+  
+  .value-item i {
+	font-size: 48px; /* Mărimea iconițelor */
+	color: rgb(117,251,97); /* Culoarea accent a iconițelor */
+	margin-bottom: 15px;
+  }
+  
+  .value-item h3 {
+	font-size: 22px;
+	color: #333;
+	margin-bottom: 10px;
+  }
+  
+  .value-item p {
+	font-size: 16px;
+	color: #666;
+	line-height: 1.5;
+  }
+  
+  /* Dacă vrei un efect la hover pe fiecare valoare */
+  .value-item:hover {
+	transform: translateY(-5px);
+	transition: transform 0.3s ease-in-out;
+  }
+
+  .donation-highlight {
+	text-align: center;
+	padding: 25px;
+	background-color: #d4edda;
+	color: #155724;
+	border-radius: 6px;
+	margin-top: 30px;
+	font-size: 18px;
+	line-height: 1.6;
+  }
+  
+  .donation-highlight strong {
+	font-weight: bold;
+	color: #28a745;
+  }
+  
+  .donation-highlight span {
+	display: inline; /* Implicit, stă pe același rând */
+  }
+  
+  .mobile-break {
+	display: none; /* Ascundem br-ul pe desktop */
+  }
+
+  .social-links {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px;
+  }
+  
+  .social-links h3 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+  }
+  
+  .social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 20px; /* Spațiu între iconițe */
+  }
+  
+  .social-icon {
+	display: inline-flex; /* Schimbăm în inline-flex pentru a folosi proprietățile flexbox */
+	justify-content: center; /* Centrează conținutul (SVG-ul) pe orizontală */
+	align-items: center; /* Centrează conținutul (SVG-ul) pe verticală */
+	width: 60px;
+	height: 60px;
+	background-color: #eee;
+	border-radius: 50%;
+	opacity: 0.7;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+	opacity: 1;
+	transform: scale(1.1);
+  }
+  .social-icon svg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+}
+/* Stiluri pentru dispozitive mobile (ecrane cu lățimea de până la 768px) */
+@media (max-width: 768px) {
+	.about-section {
+	  padding: 40px 0; /* Reducem puțin padding-ul sus și jos */
+	}
+  
+	.about-container {
+	  max-width: 90%; /* Lățime mai mare pe mobil */
+	  padding: 30px;
+	  margin: 20px auto; /* Mai mult spațiu sus și jos */
+	}
+  
+	.about-container h1 {
+	  font-size: 32px; /* Titlu mai mic pe mobil */
+	  margin-bottom: 20px;
+	}
+  
+	.about-container p.about-text {
+	  font-size: 18px; /* Text mai mic pe mobil */
+	  line-height: 1.6;
+	  margin-bottom: 20px;
+	}
+  
+	.about-container h1::after {
+	  width: 60px; /* Linie decorativă mai mică */
+	}
+  
+	.values-section {
+	  flex-direction: column; /* Aranjăm valorile pe verticală */
+	  align-items: center; /* Le centrăm pe orizontală */
+	  margin-top: 30px;
+	  padding: 20px;
+	  background-color: transparent;
+	}
+  
+	.value-item {
+	  width: 80%; /* Lățime mai mare pentru fiecare valoare */
+	  margin-bottom: 30px; /* Spațiu între valorile pe verticală */
+	  padding: 20px;
+	  border-radius: 6px;
+	  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* O umbră subtilă pentru fiecare item */
+	}
+  
+	.value-item i {
+	  font-size: 40px; /* Iconițe puțin mai mici */
+	  margin-bottom: 10px;
+	}
+  
+	.value-item h3 {
+	  font-size: 20px;
+	  margin-bottom: 8px;
+	}
+  
+	.value-item p {
+	  font-size: 15px;
+	}
+  
+	.donation-highlight span {
+		display: block; /* Afișăm pe un rând nou pe mobil */
+	  }
+	
+	  .mobile-break {
+		display: block; /* Afișăm br-ul pe mobil */
+	  }
+  
+	.social-links {
+	  margin-top: 30px;
+	  padding: 15px;
+	}
+  
+	.social-links h3 {
+	  font-size: 20px;
+	  margin-bottom: 15px;
+	}
+  
+	.social-icons {
+	  gap: 15px; /* Spațiu mai mic între iconițe */
+	}
+  
+	.social-icon {
+	  width: 36px;
+	  height: 36px;
+	}
+  
+	.social-icon svg {
+	  width: 20px;
+	  height: 20px;
+	}
+  }
+  
+  /* Stiluri pentru ecrane și mai mici (telefoane mai înguste) */
+  @media (max-width: 480px) {
+	.about-container h1 {
+	  font-size: 28px;
+	}
+  
+	.about-container p.about-text {
+	  font-size: 16px;
+	}
+  
+	.value-item {
+	  width: 95%;
+	}
+  
+	.value-item i {
+	  font-size: 36px;
+	}
+  
+	.value-item h3 {
+	  font-size: 18px;
+	}
+  
+	.social-icons {
+	  gap: 10px;
+	}
+  
+	.social-icon {
+	  width: 42px;
+	  height: 42px;
+	}
+  
+	.social-icon svg {
+	  width: 28px;
+	  height: 28px;
+	}
+  }

@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
     this.service.register().subscribe(
       (res: any) => {
         // Înregistrare cu succes
-        this.successMessage = 'Înregistrare cu succes!';
+        this.successMessage = 'Successful registration!';
         this.errorMessage = ''; // Curăță mesajul de eroare dacă există
         
         // Creează profilul implicit și redirecționează către login
@@ -46,9 +46,9 @@ export class RegisterComponent implements OnInit {
       err => {
         // Afișează un mesaj de eroare corespunzător
         if (err.status === 400) {
-          this.errorMessage = 'Nume de utilizator sau email deja existent!';
+          this.errorMessage = 'Username or email already exists!';
         } else {
-          this.errorMessage = 'Parola nu îndeplinește condițiile!';
+          this.errorMessage = 'The password does not meet the conditions.!';
         }
         this.successMessage = ''; // Curăță mesajul de succes dacă există
         console.log(err); // Debugging suplimentar

@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from 'src/home/home.component';
-import { ProfileComponent } from 'src/profile/profile.component';
-import { LoginComponent } from 'src/user/login/login.component';
-import { RegisterComponent } from 'src/user/register/register.component';
-import { UserComponent } from 'src/user/user.component';
+import { AboutComponent } from 'src/about/about.component'; // Importă componenta About
 
 const routes: Routes = [
-  { path:'', redirectTo:'/home', pathMatch:'full' },
-  { path:'home', component: HomeComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent }, // Adaugă ruta pentru About
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
