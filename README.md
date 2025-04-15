@@ -42,8 +42,7 @@ The application is divided into 5 sections:
 ```
 ## Home page
 ```
-The home page serves as the initial page of the application,
-where clients can access essential details about the application.
+The home page serves as the initial page of the application,where clients can access essential details about the application.
 ```
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home1.png)
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home2.png)
@@ -51,20 +50,19 @@ where clients can access essential details about the application.
 ## About page
 ```
 In this section, users can learn more about the brand and its core values.
-The “About us” area provides a short introduction,
-highlighting the platform’s mission to offer stylish and eco-friendly clothing made
-from high-quality recycled materials.
-It emphasizes the minimalist and timeless design of the clothes,
-encouraging users to express themselves while contributing to environmental sustainability.
+
+The “About us” area provides a short introduction, highlighting the platform’s mission to offer stylish and eco-friendly clothing made from high-quality recycled materials.
+
+It emphasizes the minimalist and timeless design of the clothes,encouraging users to express themselves while contributing to environmental sustainability.
 
 Below, the “Values” section showcases the brand’s principles: sustainability, minimalist design, and quality.
+
 Each value is presented with a clear icon and a short description to reinforce the brand’s message and make it more visually engaging.
 
-A highlighted message draws attention to the brand’s commitment to the environment
-by informing users that 50% of the proceeds go to NGOs focused on protecting nature.
+A highlighted message draws attention to the brand’s commitment to the environment by informing users that 50% of the proceeds go to NGOs focused on protecting nature.
 
-At the bottom of the section, social media icons are displayed,
-allowing users to easily follow the brand on Instagram, Facebook, and TikTok.
+At the bottom of the section, social media icons are displayed, allowing users to easily follow the brand on Instagram, Facebook, and TikTok.
+
 These links open in a new tab, making it convenient for users to stay connected without leaving the site.
 ```
 ![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about-page1.png)
@@ -74,11 +72,10 @@ These links open in a new tab, making it convenient for users to stay connected 
 ## Login page
 ```
 In this section, users can log in to the platform by entering their username and password.
-The password is automatically hidden, but users can verify its correctness
-by clicking the eye icon on the right,which will reveal the password.
 
-Additionally, users who do not have an account or wish to create a new one
-can access the "Register" button to be redirected to the registration page.
+The password is automatically hidden, but users can verify its correctness by clicking the eye icon on the right,which will reveal the password.
+
+Additionally, users who do not have an account or wish to create a new one can access the "Register" button to be redirected to the registration page.
 ```
 ![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login-page.png)
 
@@ -88,11 +85,9 @@ In this section, users can create a new account by providing the required inform
 
 They must enter a valid email address and choose a unique username.
 
-The password must be entered twice to confirm its accuracy
-and must include at least one special character,one digit, and one uppercase letter.
+The password must be entered twice to confirm its accuracy and must include at least one special character,one digit, and one uppercase letter.
 
-The password is hidden by default, but users can reveal it
-by clicking the eye icon on the right.
+The password is hidden by default, but users can reveal it by clicking the eye icon on the right.
 
 Once the form is completed correctly, users can proceed by pressing the ‘Register’ button to finalize the account creation.
 ```
@@ -102,12 +97,9 @@ Once the form is completed correctly, users can proceed by pressing the ‘Regis
 ```
 In this section, users can view and manage their account details.
 
-The displayed information includes the username, full name (last name and first name),
-address, city, postal code, email, and phone number.
+The displayed information includes the username, full name (last name and first name), address, city, postal code, email, and phone number.
 
-Users can update their personal information by pressing the ‘Edit’ button,
-which allows them to modify all information except the username and email,
-as these are unique identifiers and cannot be changed.
+Users can update their personal information by pressing the ‘Edit’ button, which allows them to modify all information except the username and email, as these are unique identifiers and cannot be changed.
 
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
@@ -117,9 +109,11 @@ The interface is user-friendly, with clear icons accompanying each detail for be
 ## All Products Filter page
 ```
 In this section, users can see all products.
+
 They can also use a filter to see only products from a specific category.
 
 To add a product to their cart, simply click on the “Add to Cart” button.
+
 The “+” and “-” symbols allow you to change how many products you want to add to the cart.
 
 To learn more about a product, simply click on its image and it will take you to the Product Page.
@@ -130,8 +124,7 @@ To learn more about a product, simply click on its image and it will take you to
 ```
 In this section, users can view detailed product information and interact with various features.
 
-On the left side, they can browse multiple product images, including a main image and a gallery of alternate views,
-which can be selected to update the main display.
+On the left side, they can browse multiple product images, including a main image and a gallery of alternate views, which can be selected to update the main display.
 
 On the right side, users can see the product name, price, and a brief description.
 
@@ -139,13 +132,11 @@ They can select the desired quantity using “+” and “-” buttons or manual
 
 Available sizes are clearly displayed as selectable buttons (S, M, L, XL, XXL).
 
-Further details are provided, including the product’s season, color, material,
-and care instructions (represented by icons). The product code is also shown.
+Further details are provided, including the product’s season, color, material, and care instructions (represented by icons). The product code is also shown.
 
 To finalize the selection, users can click the “Add to Cart” button.
 
-A persistent cart button is available at the bottom of the page,
-showing the number of items currently in the cart and providing a quick link to the shopping cart.
+A persistent cart button is available at the bottom of the page, showing the number of items currently in the cart and providing a quick link to the shopping cart.
 ```
 ![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-page.png)
 
@@ -161,8 +152,7 @@ Additionally, they can view the total amount paid and the delivery charges.
 
 ## Order page
 ```
-In this section, users can verify the automatically populated delivery address
-(if entered in their profile) or manually input the delivery address.
+In this section, users can verify the automatically populated delivery address(if entered in their profile) or manually input the delivery address.
 
 Additionally, they can add notes for the order and select their preferred payment method.
 ```
@@ -172,8 +162,7 @@ Additionally, they can add notes for the order and select their preferred paymen
 ```
 This is the final section of the product purchase process.
 
-It presents a single order confirmation message,
-followed by an email address where additional information can be requested.
+It presents a single order confirmation message, followed by an email address where additional information can be requested.
 ```
 ![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/confirm-order-page.png)
 
