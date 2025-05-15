@@ -10,7 +10,6 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Asigură că pagina ocupă toată înălțimea ecranului */
   font-family: Arial, sans-serif;
-  background-color: rgb(215,215,215); /* Fundal general */
   color: rgb(0,0,0); /* Culoarea textului */
 }
 /* Centrarea conținutului */
@@ -29,8 +28,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgb(98,98,98);
-  background-color: rgb(215,215,215);
+  border: 4px solid rgb(98,98,98);
+  background-color: transparent;
   color: rgb(0,0,0);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;

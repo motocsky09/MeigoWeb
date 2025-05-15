@@ -37,7 +37,7 @@ namespace Server.Migrations
                     DeliveryPrice = table.Column<int>(type: "int", nullable: false),
                     Totalamount = table.Column<int>(type: "int", nullable: false),
                     Adress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Street_no = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Zip_code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone_number = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -76,7 +76,12 @@ namespace Server.Migrations
                     CategoryId = table.Column<int>(type: "int", nullable: false),
                     ImagePath1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImagePath2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImagePath3 = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImagePath3 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Size = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Season = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Material = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

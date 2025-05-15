@@ -60,16 +60,16 @@
 
 .button_product {
   padding: 10px 20px;
-  background-color: rgb(215,215,215);
-  border: 1px solid rgb(98,98,98);
-  color: rgb(0,0,0);
+  background-color: black;
+  border: 1px solid black;
+  color: white;
   cursor: pointer;
   font-size: 16px;
 }
 
 .button_product:hover {
-  background-color:rgb(58, 58, 58);
-  color: rgb(241,247,246);
+  background-color:white;
+  color: black;
 }
 
 /* Container pentru minus, input și plus */
@@ -206,8 +206,8 @@
   position: fixed;
   bottom: 60px;
   right: 30px;
-  background-color: rgb(215,215,215);
-  border: 1px solid rgb(99,98,98);
+  background-color: white;
+  border: 1px solid black;
   color: rgb(0,0,0);
   padding: 15px 15px;
   border-radius: 5px;
@@ -228,8 +228,8 @@
   position: absolute;
   top: -4px;
   right: -4.5px;
-  background-color: rgb(256,256,256);
-  border:1px solid rgb(98,98,98);
+  background-color: white;
+  border:1px solid black;
   color: rgb(0,0,0);
   font-size: 12px;
   padding: 3px 6px;
@@ -237,8 +237,10 @@
 }
 
 #cartButton:hover {
-  background-color: rgb(256,256,256);;
-  
+  background-color: black;
+}
+#cartButton:hover a {
+  color: white;
 }
 @media screen and (max-width: 768px) {
   .product-page {

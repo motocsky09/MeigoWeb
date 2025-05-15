@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj": {}
+    "/Users/andreimotoc/Documents/MeigoWeb/Server/Server.csproj": {}
   },
   "projects": {
-    "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj": {
+    "/Users/andreimotoc/Documents/MeigoWeb/Server/Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
+        "projectUniqueName": "/Users/andreimotoc/Documents/MeigoWeb/Server/Server.csproj",
         "projectName": "Server",
-        "projectPath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
+        "projectPath": "/Users/andreimotoc/Documents/MeigoWeb/Server/Server.csproj",
         "packagesPath": "/Users/andreimotoc/.nuget/packages/",
-        "outputPath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/obj/",
+        "outputPath": "/Users/andreimotoc/Documents/MeigoWeb/Server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/andreimotoc/.nuget/NuGet/NuGet.Config"

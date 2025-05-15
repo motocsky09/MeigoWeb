@@ -1,7 +1,7 @@
 .navbar {
-    background-color: rgb(215,215,215);
-  /*box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);*/
-  border-bottom: 0.5px solid rgb(0,0,0);
+    background-color: black; /*rgb(215,215,215)*/
+  box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgb(0,0,0);
   display: flex;
   justify-content: space-between;
   padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
@@ -20,24 +20,25 @@
     width: 100%;
 }
 .button-link{
-        background-color: transparent;
+        background-color: white;
         border-radius: 30px;
         border: none;
-        color: rgb(0,0,0);
         padding: 3px 13px;
         text-decoration: none;
         font-size: 17px;
         cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
         margin:5px;
 }
 .button-link:hover {
-        background-color: rgb(256,256,256);
-        color: rgb(0,0,0);
+        background-color: black;
+        color: white;
     }
 .button-link a{
         text-decoration: none;
         color: rgb(0,0,0);
+    }
+.button-link:hover a{
+        color: white;
     }
 .logo {
     display: flex;
@@ -65,7 +66,7 @@
 .logout-link{
     padding: 4px 6px;
     margin-left: 10px; /* Adaugă spațiu între link-uri */
-    color: rgb(0,0,0); /* Culoarea textului */
+    color: white; /* Culoarea textului */
     text-decoration: none; /* Elimină sublinierea implicită */
     border: 1px solid transparent;
 }
@@ -82,9 +83,9 @@
     padding: 10px;
     margin: 10px;
     border-radius: 30px;
-    background-color: rgb(215,215,215);
-    color: rgb(0,0,0);
-    border: 3px solid rgb(98,98,98);
+    background-color: black;
+    color: white;
+    border: 3px solid white;
 }
 
 .buton a:hover {
@@ -94,7 +95,7 @@
     position: absolute;
     right: 10px; /* Ajustează după preferințe */
     top: 110px; /* Ajustează în funcție de înălțimea navbar-ului */
-    background-color: rgb(215,215,215);
+    background-color: white;
     border: 3px solid rgb(0,0,0);
     border-radius: 8px;
     box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);

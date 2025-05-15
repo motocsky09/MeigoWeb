@@ -11,8 +11,8 @@
 
 }
 .cos_cumparaturi, .total_amount {
-    border: 2px solid rgb(99,98,98);
-    background: rgb(215,215,215);
+    border: 2px solid black;
+    background: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -26,8 +26,8 @@
     padding-top: 7px;
     margin-top: 5px;
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(99,98,98);
-    border-top: 2px solid rgb(99,98,98);
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 
 .cos_cumparaturi {
@@ -68,7 +68,7 @@ tbody td {
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    border: 2px solid rgb(99,98,98);
+    border: 2px solid black;
 }
 
 .cantitate_tabel input {
@@ -76,9 +76,9 @@ tbody td {
     height: 30px;
     font-size: 14px;
     text-align: center;
-    border: 2px solid rgb(99,98,98);
+    border: 2px solid black;
     color: rgb(0,0,0);
-    background-color: rgb(215,215,215);
+    background-color: white;
     text-decoration: none;
 }
 .quantity-wrapper {
@@ -92,17 +92,17 @@ tbody td {
   height: 30px;
   font-size: 14px;
   text-align: center;
-  border: 2px solid rgb(99,98,98);
+  border: 2px solid black;
   color: rgb(0,0,0);
-  background-color: rgb(215,215,215);
+  background-color: white;
 }
 
 .btn-minus,
 .btn-plus {
   width: 30px;
   height: 30px;
-  background-color: rgb(99,98,98);
-  color: rgb(256,256,256);
+  background-color: black;
+  color: white;
   border: none;
   cursor: pointer;
   font-size: 18px;
@@ -113,9 +113,9 @@ tbody td {
 
 .btn-minus:hover,
 .btn-plus:hover {
-  background-color: rgb(215,215,215);
+  background-color: white;
   color:rgb(0,0,0);
-  border:2px solid rgb(98,98,98);
+  border:2px solid black;
 }
 
 .btn-minus {
@@ -127,7 +127,7 @@ tbody td {
 }
 .cos_cumparaturi_menu {
     background: transparent;
-    border-bottom: 2px solid rgb(99,98,98);
+    border-bottom: 2px solid black;
 }
 .btn-remove {
   background-color: red;
@@ -150,8 +150,8 @@ tbody td {
 }
 
 .buton_final {
-    border: 2px solid rgb(99,98,98);
-    background-color: rgb(215,215,215);
+    border: 2px solid black;
+    background-color: white;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -160,7 +160,7 @@ tbody td {
 }
 
 .buton_final:hover {
-    background-color: rgb(256,256,256);
+    background-color: white;
 }
 
 a {
@@ -175,16 +175,16 @@ a {
     margin-left:30px;
 }
 .clear-shopping-cart button{
-    background-color: rgb(215,215,215);
+    background-color: white;
     color:rgb(0,0,0);
     padding: 10px 20px;
-    border: 2px solid rgb(99,98,98);
+    border: 2px solid black;
     cursor: pointer;
     font-size: 18px;
     transition: 0.3s;
 }
 .clear-shopping-cart button:hover{
-    background-color: rgb(256,256,256);
+    background-color: white;
     color: rgb(0,0,0);
 }
 /* Media Query pentru dispozitive mobile */

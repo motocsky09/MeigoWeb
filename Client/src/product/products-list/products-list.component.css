@@ -7,9 +7,10 @@
 
 .filters {
   padding: 20px;
-  background-color: #f4f3f3;
+  background-color: white;
   border-radius: 12px;
   width: 250px;
+  border: 1px solid rgb(0,0,0);
 }
 .filters h3{
   text-align: center;
@@ -140,19 +141,18 @@
 
 /* Butonul produsului */
 .button_product {
-    background-color: rgb(215,215,215);
-    color: rgb(0,0,0);
-    border: none;
+    background-color: black;
+    border: 1px solid rgb(0,0,0);
+    color: white;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button_product:hover {
-    background-color: rgb(0,0,0);
-    color: rgb(256,256,256);
+    background-color: white;
+    color: black;
     transform: scale(1.1);
 }
 
@@ -160,13 +160,12 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: rgb(215,215,215);
-    border: 1px solid rgb(99,98,98);
+    background-color: white;
+    border: 1px solid black;
     color: rgb(0,0,0);
     padding: 15px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     z-index: 1000;
 }
 
@@ -192,8 +191,10 @@
 }
 
 #cartButton:hover {
-  background-color: rgb(256,256,256);;
-  
+  background-color: black;
+}
+#cartButton:hover a {
+  color: white;
 }
 
 

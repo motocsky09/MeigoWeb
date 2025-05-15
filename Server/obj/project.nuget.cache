@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RfOfbTm8izRJPslLJWnsNwingu0/loxqr0rshWdDjObQevmvMsZEEQxDIneKm4claslHTVQmmrVaWrh1jzhneA==",
+  "dgSpecHash": "7g5c1qwlnZDEkyxp1AVRhEFp+r2RmgjDDM6JDzu54O3m4cr4BLOPPRxu1htbXhf3A00jGjfYrqWdcYIA4KWUxg==",
   "success": true,
-  "projectFilePath": "/Users/andreimotoc/Documents/Proiect_de_Licenta/Server/Server.csproj",
+  "projectFilePath": "/Users/andreimotoc/Documents/MeigoWeb/Server/Server.csproj",
   "expectedPackageFiles": [
     "/Users/andreimotoc/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/andreimotoc/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
