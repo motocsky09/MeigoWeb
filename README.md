@@ -4,7 +4,7 @@ Technology and libraries used:
 1. Server: .NET Core, IdentityServer 8 JWT Token, EntityFramework, C#, SqlServer
 ```
 ```
-2. Client: Angular, TypeScript, HTML & CSS, Flexbox
+2. Client: Angular, TypeScript, HTML & CSS
 ```
 Design patterns and principles used:            
 ```
