@@ -20,7 +20,7 @@
     width: 100%;
 }
 .button-link{
-        background-color: white;
+        background-color: transparent;
         border-radius: 30px;
         border: none;
         padding: 3px 13px;
@@ -30,15 +30,17 @@
         margin:5px;
 }
 .button-link:hover {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
     }
 .button-link a{
         text-decoration: none;
-        color: rgb(0,0,0);
+        color: white;
+        background-color: black;
     }
 .button-link:hover a{
-        color: white;
+        color: black;
+        background-color: white;
     }
 .logo {
     display: flex;
@@ -129,7 +131,7 @@
   }
 
   .sidebar ul li a:hover {
-    background-color: rgb(256,256,256);
+    background-color: white;
     color: rgb(0,0,0);
   }
 

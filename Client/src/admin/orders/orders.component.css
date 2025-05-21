@@ -1,0 +1,88 @@
+.orders-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #393e46;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background-color: #e0e7ff;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fbff;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.shipped {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.action {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.view {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.view:hover {
+  background-color: #138496;
+}
+
+.process {
+  background-color: #28a745;
+  color: white;
+}
+
+.process:hover {
+  background-color: #218838;
+}
+
+.process:disabled {
+  background-color: #c3e6cb;
+  color: #6c757d;
+  cursor: not-allowed;
+}

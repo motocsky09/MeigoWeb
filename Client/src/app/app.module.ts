@@ -20,6 +20,7 @@ import { ShoppingCartModule } from 'src/shopping-cart/shopping-cart.module';
 import { OrderModule } from 'src/order/order.module';
 import { ProfileModule } from 'src/profile/profile.module';
 import { CommonModule } from '@angular/common';
+import { AdminModule } from 'src/admin/admin.module';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CommonModule } from '@angular/common';
     ShoppingCartModule,
     OrderModule,
     ProfileModule,
+    AdminModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

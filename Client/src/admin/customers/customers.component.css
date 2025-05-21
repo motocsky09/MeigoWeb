@@ -1,0 +1,91 @@
+.customers-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #2f3542;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background-color: #e3f2fd;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f6fb;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.action {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.view {
+  background-color: #007bff;
+  color: white;
+}
+
+.view:hover {
+  background-color: #0069d9;
+}
+
+.disable {
+  background-color: #dc3545;
+  color: white;
+}
+
+.disable:hover {
+  background-color: #c82333;
+}
+
+.enable {
+  background-color: #28a745;
+  color: white;
+}
+
+.enable:hover {
+  background-color: #218838;
+}

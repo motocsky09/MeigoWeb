@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
+/* Container general: sidebar + conținut pe linie */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Sidebar fix, centrat vertical */
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 5px;
+  border-right: 1px solid rgb(98, 98, 98);
+  background-color: black;
+  min-width: 240px;
+  max-width: 280px;
+  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Lista de butoane */
+.menu-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fiecare buton */
+.menu-box li {
+  margin-bottom: 20px;
+}
+
+.menu-box a {
+  display: block;
+  margin:20px;
+  padding: 12px;
+  text-align: center;
+  background-color: rgb(225,231,253);
+  border: 2px solid rgb(98, 98, 98);
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.menu-box a:hover {
+  background-color: #393e46;
+  color: white;
+}
+
+/* Conținutul afișat în dreapta */
+.content-box {
+  flex-grow: 1;
+  padding: 40px;
+}

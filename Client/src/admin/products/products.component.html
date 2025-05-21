@@ -1,0 +1,60 @@
+<div class="products-container">
+  <div class="header">
+    <h1>Products</h1>
+    <button class="add-button" (click)="startAdding()" [disabled]="adding">+ Add Product</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linia formularului pentru produs nou -->
+        <tr *ngIf="adding" class="new-product-row">
+          <td>New</td>
+          <td><input type="text"  placeholder="Product Name" /></td>
+          <td><input type="text"  placeholder="Category" /></td>
+          <td><input type="number"  placeholder="Price" /></td>
+          <td><input type="number"  placeholder="Stock" /></td>
+          <td>
+            <select >
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </td>
+          <td>
+            <button class="action save" (click)="saveNewProduct()">Save</button>
+            <button class="action cancel" (click)="cancelAdding()">Cancel</button>
+          </td>
+        </tr>
+
+        <!-- Lista de produse existente -->
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.category}}</td>
+          <td>${{product.price}}</td>
+          <td>{{product.stock}}</td>
+          <td>
+            <span [ngClass]="{'status active': product.status === 'active', 'status inactive': product.status === 'inactive'}">
+              {{product.status | titlecase}}
+            </span>
+          </td>
+          <td>
+            <button class="action edit">Edit</button>
+            <button class="action delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
