@@ -89,6 +89,7 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProductUploadDtoRepository, ProductUploadDtoRepository>();
 
 // Add CORS
 builder.Services.AddCors(options =>

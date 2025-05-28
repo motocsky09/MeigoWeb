@@ -11,16 +11,21 @@ import {ProductsListComponent} from "../product/products-list/products-list.comp
 import {OrdersComponent} from "./orders/orders.component";
 import {CustomersComponent} from "./customers/customers.component";
 import {ProductsComponent} from "./products/products.component";
+import { ProductEditPageComponent } from './products/product-edit-page/product-edit-page.component';
+import { AdminAuthGuard } from './admin-auth.guard';
 
 const routes: Routes = [
   {
-    path: 'admin', component: AdminComponent,
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AdminAuthGuard], // 👈 protejează întreaga secțiune
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'inventory', component: InventoryComponent },
       { path: 'orders', component: OrdersComponent },
       { path: 'customer', component: CustomersComponent },
-      { path: 'products', component: ProductsComponent }
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/edit/:id', component: ProductEditPageComponent }
     ]
   }
 ];

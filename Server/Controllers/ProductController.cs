@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Server.Entities;
+using Server.Models;
 using Server.Repositories;
 
 namespace Server.Controllers
@@ -11,11 +12,13 @@ namespace Server.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IProductRepository _productRepository;
+        private readonly IProductUploadDtoRepository _productUploadDtoRepository;
 
-        public ProductController(IConfiguration configuration, IProductRepository productRepository)
+        public ProductController(IConfiguration configuration, IProductRepository productRepository, IProductUploadDtoRepository productUploadDtoRepository)
         {
             _configuration = configuration;
             _productRepository = productRepository;
+            _productUploadDtoRepository = productUploadDtoRepository;
         }
 
         [HttpGet]
@@ -41,41 +44,7 @@ namespace Server.Controllers
             var result = _productRepository.GetProductsByCategoryId(categoryId);
             return Ok(result);
         }
-        [HttpGet]
-        [Route("GetProductBySize")]
-        public ActionResult GetProductBySize(string size)
-        {
-            var result = _productRepository.GetProductBySize(size);
-            return Ok(result);
-        }
-        [HttpGet]
-        [Route("GetProductByColor")]
-        public ActionResult GetProductByColor(string color)
-        {
-            var result = _productRepository.GetProductByColor(color);
-            return Ok(result);
-        }
-        [HttpGet]
-        [Route("GetProductBySeason")]
-        public ActionResult GetProductBySeason(string season)
-        {
-            var result = _productRepository.GetProductBySeason(season);
-            return Ok(result);
-        }
-        [HttpGet]
-        [Route("GetProductByGender")]
-        public ActionResult GetProductByGender(string gender)
-        {
-            var result = _productRepository.GetProductByGender(gender);
-            return Ok(result);
-        }
-        [HttpGet]
-        [Route("GetProductByMaterial")]
-        public ActionResult GetProductByMaterial(string material)
-        {
-            var result = _productRepository.GetProductByMaterial(material);
-            return Ok(result);
-        }
+
         [HttpPost]
         [Route("CreateProduct")]
         public ActionResult CreateProduct(Product product)
@@ -98,6 +67,47 @@ namespace Server.Controllers
         {
             _productRepository.DeleteProduct(productid);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("UploadProductWithImages")]
+        public async Task<IActionResult> UploadProductWithImages([FromForm] ProductUploadDto dto)
+        {
+            // Calea absolută către folderul din proiectul Angular
+            string SaveImage(IFormFile file)
+            {
+                if (file == null || file.Length == 0)
+                    return null!;
+
+                var uploadsFolder = "/Users/andreimotoc/Documents/MeigoWeb/Client/src/assets/new_products";
+
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                var fullPath = Path.Combine(uploadsFolder, fileName);
+
+                using var stream = new FileStream(fullPath, FileMode.Create);
+                file.CopyTo(stream);
+
+                // Returnăm calea relativă pentru a fi folosită în Angular
+                return "assets/images/" + fileName;
+            }
+
+            var product = new Product
+            {
+                Name = dto.Name,
+                Price = dto.Price,
+                ShortDescription = dto.ShortDescription,
+                TotalQuantity = dto.TotalQuantity,
+                CategoryId = dto.CategoryId,
+                ImagePath1 = dto.ImagePath1 != null ? SaveImage(dto.ImagePath1) : null,
+                ImagePath2 = dto.ImagePath2 != null ? SaveImage(dto.ImagePath2) : null,
+                ImagePath3 = dto.ImagePath3 != null ? SaveImage(dto.ImagePath3) : null
+            };
+
+            _productRepository.CreateProduct(product);
+            return Ok(product);
         }
     }
 }

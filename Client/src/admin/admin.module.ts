@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import {AdminComponent} from "./admin.component";
@@ -9,6 +10,8 @@ import {CustomersComponent} from "./customers/customers.component";
 import {ProductsComponent} from "./products/products.component";
 import {OrdersComponent} from "./orders/orders.component";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { FormsModule } from '@angular/forms';
+import { ProductEditPageComponent } from './products/product-edit-page/product-edit-page.component';
 
 
 @NgModule({
@@ -18,12 +21,15 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     InventoryComponent,
     OrdersComponent,
     CustomersComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductEditPageComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }

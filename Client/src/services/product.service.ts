@@ -61,4 +61,44 @@ export class ProductService {
     });
   }
 
+  getProducts() {
+    return this.http.get(`${this.BaseURI}/Product/GetProducts`);
+  }
+
+createProduct(productData: FormData) {
+  return this.http.post(`${this.BaseURI}/Product/CreateProduct`, productData);
+}
+
+updateProduct(productData: any) {
+  return this.http.put(`${this.BaseURI}/Product/UpdateProduct`, productData, {
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
+
+uploadProductWithImages(formData: FormData) {
+  return this.http.post(`${this.BaseURI}/Product/UploadProductWithImages`, formData);
+}
+
+  deleteProduct(productId: number) {
+    const params = new HttpParams().set('productId', productId.toString());
+    return this.http.delete(`${this.BaseURI}/Product/DeleteProduct`, { params });
+  }
+
+  createCategory(category: any) {
+  return this.http.post(`${this.BaseURI}/Category/CreateCategory`, category);
+}
+
+getCategories() {
+  return this.http.get(`${this.BaseURI}/Category/GetCategories`);
+}
+
+updateCategory(category: any) {
+  return this.http.put(`${this.BaseURI}/Category/UpdateCategory`, category);
+}
+
+deleteCategory(categoryId: number) {
+  const params = new HttpParams().set('categoryId', categoryId.toString());
+  return this.http.delete(`${this.BaseURI}/Category/DeleteCategory`, { params });
+}
+
 }

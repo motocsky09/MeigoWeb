@@ -1,7 +1,8 @@
+<!-- Secțiunea PRODUSE -->
 <div class="products-container">
   <div class="header">
     <h1>Products</h1>
-    <button class="add-button" (click)="startAdding()" [disabled]="adding">+ Add Product</button>
+    <button class="add-button" (click)="startAddingProduct()" [disabled]="addingProduct">+ Add Product</button>
   </div>
 
   <div class="table-wrapper">
@@ -11,47 +12,75 @@
           <th>#</th>
           <th>Product</th>
           <th>Category</th>
-          <th>Price</th>
-          <th>Stock</th>
-          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Linia formularului pentru produs nou -->
-        <tr *ngIf="adding" class="new-product-row">
+        <!-- Formular pentru adăugare/actualizare produs -->
+        <tr *ngIf="addingProduct" class="new-product-row">
           <td>New</td>
-          <td><input type="text"  placeholder="Product Name" /></td>
-          <td><input type="text"  placeholder="Category" /></td>
-          <td><input type="number"  placeholder="Price" /></td>
-          <td><input type="number"  placeholder="Stock" /></td>
+          <td><input type="text" [(ngModel)]="newProduct.name" placeholder="Product Name" /></td>
           <td>
-            <select >
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
+            <select [(ngModel)]="newProduct.categoryId">
+              <option value="">-- Select category --</option>
+              <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
             </select>
           </td>
           <td>
-            <button class="action save" (click)="saveNewProduct()">Save</button>
-            <button class="action cancel" (click)="cancelAdding()">Cancel</button>
+            <button (click)="saveNewProduct()">Save</button>
+            <button (click)="cancelAddingProduct()">Cancel</button>
           </td>
         </tr>
 
-        <!-- Lista de produse existente -->
+        <!-- Listă produse existente -->
         <tr *ngFor="let product of products; let i = index">
-          <td>{{i + 1}}</td>
-          <td>{{product.name}}</td>
-          <td>{{product.category}}</td>
-          <td>${{product.price}}</td>
-          <td>{{product.stock}}</td>
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ getCategoryName(product.categoryId) }}</td>
           <td>
-            <span [ngClass]="{'status active': product.status === 'active', 'status inactive': product.status === 'inactive'}">
-              {{product.status | titlecase}}
-            </span>
+            <button class="action edit" (click)="startEditingProduct(product)">Edit</button>
+            <button class="action delete" (click)="deleteProduct(product.id)">Delete</button>
           </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Secțiunea CATEGORII -->
+<div class="products-container">
+  <div class="header">
+    <h1>Categories</h1>
+    <button class="add-button" (click)="startAddingCategory()" [disabled]="addingCategory">+ Add Category</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Formular pentru adăugare categorie -->
+        <tr *ngIf="addingCategory" class="new-category-row">
+          <td>New</td>
+          <td><input type="text" [(ngModel)]="newCategory.name" placeholder="Category" /></td>
           <td>
-            <button class="action edit">Edit</button>
-            <button class="action delete">Delete</button>
+            <button (click)="saveNewCategory()">Save</button>
+            <button (click)="cancelAddingCategory()">Cancel</button>
+          </td>
+        </tr>
+
+        <!-- Listă categorii existente -->
+        <tr *ngFor="let category of categories; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ category.name }}</td>
+          <td>
+            <button class="action edit" (click)="startEditingCategory(category)">Edit</button>
+            <button class="action delete" (click)="deleteCategory(category.id)">Delete</button>
           </td>
         </tr>
       </tbody>

@@ -19,32 +19,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Elena Marinescu</td>
-          <td>elena.m&#64;example.com</td>
-          <td>+40 721 123 456</td>
-          <td>Str. Libertății 45</td>
-          <td>București</td>
-          <td>010203</td>
-          <td><span class="status active">Active</span></td>
-          <td>
+        <tr *ngFor="let customer of customers; let i = index">
+          <td data-label="#">{{ i + 1 }}</td>
+          <td data-label="Full Name">{{ customer.firstName || '' }} {{ customer.lastName || '' }}</td>
+          <td data-label="Email">{{ customer.email || '-' }}</td>
+          <td data-label="Phone">{{ customer.phoneNumber || '-' }}</td>
+          <td data-label="Address">{{ customer.address || '-' }}</td>
+          <td data-label="City">{{ customer.city || '-' }}</td>
+          <td data-label="Postal Code">{{ customer.postal || '-' }}</td>
+          <td data-label="Status"><span class="status active">Active</span></td>
+          <td data-label="Actions">
             <button class="action view">View</button>
             <button class="action disable">Disable</button>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>George Iancu</td>
-          <td>george.i&#64;example.com</td>
-          <td>+40 755 987 654</td>
-          <td>Calea Victoriei 110</td>
-          <td>Cluj-Napoca</td>
-          <td>400084</td>
-          <td><span class="status inactive">Inactive</span></td>
-          <td>
-            <button class="action view">View</button>
-            <button class="action enable">Enable</button>
           </td>
         </tr>
       </tbody>

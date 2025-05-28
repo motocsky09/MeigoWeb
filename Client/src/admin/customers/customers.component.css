@@ -89,3 +89,67 @@ tbody tr:nth-child(even) {
 .enable:hover {
   background-color: #218838;
 }
+
+@media (max-width: 900px) {
+  .customers-container {
+    padding: 12px;
+  }
+  table {
+    min-width: 500px;
+  }
+  th, td {
+    padding: 8px 4px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .customers-container {
+    padding: 2px;
+  }
+  .header h1 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .table-wrapper {
+    border-radius: 6px;
+    box-shadow: none;
+    overflow-x: auto;
+  }
+  table {
+    min-width: 350px;
+    font-size: 0.92rem;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    display: block;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-radius: 8px;
+    padding: 8px 0;
+  }
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 8px;
+    font-size: 0.95rem;
+    border: none;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #888;
+    flex: 0 0 110px;
+    margin-right: 8px;
+    font-size: 0.93rem;
+  }
+}

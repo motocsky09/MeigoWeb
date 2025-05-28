@@ -11,10 +11,12 @@
         public string ImagePath1 { get; set; }
         public string ImagePath2 { get; set; }
         public string ImagePath3 { get; set; }
+        
         public string Size { get; set; }
         public string Color { get; set; }
         public string Season { get; set; }
         public string Gender { get; set; }
         public string Material { get; set; }
+
     }
 }

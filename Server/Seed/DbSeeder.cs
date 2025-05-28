@@ -15,25 +15,5 @@ public static class DbSeeder
                 await roleManager.CreateAsync(new IdentityRole(roleName));
             }
         }
-
-        // Creare utilizator admin
-        var adminEmail = "admin@meigo.com";
-        var adminUser = await userManager.FindByEmailAsync(adminEmail);
-
-        if (adminUser == null)
-        {
-            var admin = new IdentityUser
-            {
-                UserName = "admin",
-                Email = adminEmail,
-                EmailConfirmed = true
-            };
-            var result = await userManager.CreateAsync(admin, "Admin123!"); // parolă sigură
-
-            if (result.Succeeded)
-            {
-                await userManager.AddToRoleAsync(admin, "Admin");
-            }
-        }
     }
 }

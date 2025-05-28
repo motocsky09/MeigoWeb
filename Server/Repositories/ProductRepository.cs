@@ -21,26 +21,7 @@ namespace Server.Repositories
         {
             return _serverDbContext.Product.Where(x => x.CategoryId == categoryId).ToList();
         }
-        public List<Product> GetProductBySize(string size)
-        {
-            return _serverDbContext.Product.Where(x => x.Size == size).ToList();
-        }
-        public List<Product> GetProductByColor(string color)
-        {
-            return _serverDbContext.Product.Where(x => x.Color == color).ToList();
-        }
-        public List<Product> GetProductBySeason(string season)
-        {
-            return _serverDbContext.Product.Where(x => x.Season == season).ToList();
-        }
-        public List<Product> GetProductByGender(string gender)
-        {
-            return _serverDbContext.Product.Where(x => x.Gender == gender).ToList();
-        }
-        public List<Product> GetProductByMaterial(string material)
-        {
-            return _serverDbContext.Product.Where(x => x.Material == material).ToList();
-        }
+        
         public void CreateProduct(Product model)
         {
             var product = new Product

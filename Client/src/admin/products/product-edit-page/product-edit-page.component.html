@@ -1,0 +1,54 @@
+<!-- Product Edit Page (stil product-page, dar editabil) -->
+<div class="product-page">
+  <div class="product-container" *ngIf="product">
+    <!-- Partea stângă: Imagini produs -->
+    <div class="product-images">
+      <!-- Imaginea principală -->
+      <img [src]="getImageSrc(mainImage || product.imagePath1)" alt="product_image" class="main-product-image"
+           (error)="onImgError($event)" />
+      <!-- Galeria de imagini secundare -->
+      <div class="image-gallery">
+        <img [src]="getImageSrc(product.imagePath1)" alt="product_image_small" (click)="mainImage = product.imagePath1" (error)="onImgError($event)" />
+        <img [src]="getImageSrc(product.imagePath2)" alt="product_image_small" (click)="mainImage = product.imagePath2" (error)="onImgError($event)" />
+        <img [src]="getImageSrc(product.imagePath3)" alt="product_image_small" (click)="mainImage = product.imagePath3" (error)="onImgError($event)" />
+      </div>
+      <div class="image-inputs">
+        <label>Image 1: <input type="text" [(ngModel)]="product.imagePath1" name="imagePath1" /></label>
+        <label>Image 2: <input type="text" [(ngModel)]="product.imagePath2" name="imagePath2" /></label>
+        <label>Image 3: <input type="text" [(ngModel)]="product.imagePath3" name="imagePath3" /></label>
+      </div>
+    </div>
+    <!-- Partea dreaptă: Detalii produs -->
+    <div class="details-product">
+      <input class="titlu-produs" [(ngModel)]="product.name" name="name" required />
+      <div class="pret_produs"><b>Price:</b> <input type="number" [(ngModel)]="product.price" name="price" required /> RON</div>
+      <label>Short Description:
+        <textarea [(ngModel)]="product.shortDescription" name="shortDescription"></textarea>
+      </label>
+      <label>Total Quantity:
+        <input type="number" [(ngModel)]="product.totalQuantity" name="totalQuantity" required />
+      </label>
+      <label>Category:
+        <select [(ngModel)]="product.categoryId" name="categoryId">
+          <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
+        </select>
+      </label>
+      <h2>Details</h2>
+      <div class="details-wrapper">
+        <ul>
+          <li><b>Season</b>: <input type="text" [(ngModel)]="product.season" name="season" /></li>
+          <li><b>Color</b>: <input type="text" [(ngModel)]="product.color" name="color" /></li>
+          <li><b>Material</b>: <input type="text" [(ngModel)]="product.material" name="material" /></li>
+          <li><b>Gender</b>: <input type="text" [(ngModel)]="product.gender" name="gender" /></li>
+          <li><b>Size</b>: <input type="text" [(ngModel)]="product.size" name="size" /></li>
+          <li><b>Product Code</b>: {{product.id}}</li>
+        </ul>
+      </div>
+      <button class="button_product" (click)="saveProduct()">Save</button>
+      <button class="button_product" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+  <div *ngIf="!product">
+    <p>Loading product...</p>
+  </div>
+</div>

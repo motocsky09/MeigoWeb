@@ -45,7 +45,7 @@ table {
 }
 
 thead {
-  background-color: #e0e7ff;
+  background-color: #f8f9fa;
 }
 
 th, td {
@@ -100,4 +100,42 @@ tbody tr:nth-child(even) {
 
 .delete:hover {
   background-color: #c9302c;
+}
+
+@media (max-width: 900px) {
+  .inventory-container {
+    padding: 16px;
+  }
+  table {
+    min-width: 500px;
+  }
+  th, td {
+    padding: 10px 8px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .inventory-container {
+    padding: 6px;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .table-wrapper {
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  table {
+    min-width: 350px;
+    font-size: 0.92rem;
+  }
+  th, td {
+    padding: 7px 4px;
+    font-size: 0.92rem;
+  }
+  img {
+    width: 36px !important;
+    height: 36px !important;
+  }
 }

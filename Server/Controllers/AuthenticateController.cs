@@ -79,18 +79,43 @@ namespace Server.Controllers
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "Parola nu îndeplinește condițiile.", Profile = new Entities.Profile() });
 
-            return Ok(new ResponseModel { Status = "Success", Message = "User created successfully!", Profile = new Entities.Profile { 
-                UserName = model.Username,
-                FirstName = "",
-                LastName = "",
-                Address = "",
-                Email = model.Email,
-                PhoneNumber = "",
-                City = "",
-                Postal = ""
-            }
-            });
+            // Verificare dacă username-ul se termină cu ".admin"
+            if (model.Username.EndsWith(".admin"))
+            {
+                // Asigură-te că rolul "Admin" există
+                if (!await _roleManager.RoleExistsAsync("Admin"))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                }
 
+                await _userManager.AddToRoleAsync(user, "Admin");
+            }
+            else
+            {
+                if (!await _roleManager.RoleExistsAsync("User"))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole("User"));
+                }
+
+                await _userManager.AddToRoleAsync(user, "User");
+            }
+
+            return Ok(new ResponseModel
+            {
+                Status = "Success",
+                Message = "User created successfully!",
+                Profile = new Entities.Profile
+                {
+                    UserName = model.Username,
+                    FirstName = "",
+                    LastName = "",
+                    Address = "",
+                    Email = model.Email,
+                    PhoneNumber = "",
+                    City = "",
+                    Postal = ""
+                }
+            });
         }
 
         [HttpGet]
