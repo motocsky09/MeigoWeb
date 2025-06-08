@@ -40,12 +40,13 @@ The application is divided into 5 sections:
                              The system automatically populates the address from the profile section, ensuring seamless integration and a smooth user experience.
 
 ```
+# End-User Functionality
+
 ## Home page
 ```
 The home page serves as the initial page of the application,where clients can access essential details about the application.
 ```
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home1.png)
-![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home2.png)
+![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home.png)
 
 ## About page
 ```
@@ -65,8 +66,7 @@ At the bottom of the section, social media icons are displayed, allowing users t
 
 These links open in a new tab, making it convenient for users to stay connected without leaving the site.
 ```
-![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about-page1.png)
-![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about-page2.png)
+![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about.png)
 
 
 ## Login page
@@ -77,7 +77,7 @@ The password is automatically hidden, but users can verify its correctness by cl
 
 Additionally, users who do not have an account or wish to create a new one can access the "Register" button to be redirected to the registration page.
 ```
-![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login-page.png)
+![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login.png)
 
 ## Register page
 ```
@@ -91,7 +91,7 @@ The password is hidden by default, but users can reveal it by clicking the eye i
 
 Once the form is completed correctly, users can proceed by pressing the ‘Register’ button to finalize the account creation.
 ```
-![Register Page](https://github.com/motocsky09/project-shop/raw/main/_screens/register-page.png)
+![Register Page](https://github.com/motocsky09/project-shop/raw/main/_screens/register.png)
 
 ## Profile Account page
 ```
@@ -103,8 +103,8 @@ Users can update their personal information by pressing the ‘Edit’ button, w
 
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile-no-edit-page.png)
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile-edit-page.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/edit-profile.png)
 
 ## All Products Filter page
 ```
@@ -118,7 +118,7 @@ The “+” and “-” symbols allow you to change how many products you want t
 
 To learn more about a product, simply click on its image and it will take you to the Product Page.
 ```
-![Product Filter Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-list-page.png)
+![Product Filter Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-list.png)
 
 ## Product page
 ```
@@ -138,7 +138,7 @@ To finalize the selection, users can click the “Add to Cart” button.
 
 A persistent cart button is available at the bottom of the page, showing the number of items currently in the cart and providing a quick link to the shopping cart.
 ```
-![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-page.png)
+![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-view.png)
 
 ## Shopping Cart page
 ```
@@ -148,7 +148,7 @@ They can modify the quantity of products, delete a product from their cart, or d
 
 Additionally, they can view the total amount paid and the delivery charges.
 ```
-![Shopping Cart Page](https://github.com/motocsky09/project-shop/raw/main/_screens/shoppingcart-page.png)
+![Shopping Cart Page](https://github.com/motocsky09/project-shop/raw/main/_screens/shopping-cart.png)
 
 ## Order page
 ```
@@ -156,7 +156,7 @@ In this section, users can verify the automatically populated delivery address(i
 
 Additionally, they can add notes for the order and select their preferred payment method.
 ```
-![Order Page](https://github.com/motocsky09/project-shop/raw/main/_screens/order-page.png)
+![Order Page](https://github.com/motocsky09/project-shop/raw/main/_screens/order.png)
 
 ## Order page Confirm order
 ```
@@ -164,7 +164,57 @@ This is the final section of the product purchase process.
 
 It presents a single order confirmation message, followed by an email address where additional information can be requested.
 ```
-![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/confirm-order-page.png)
+![Order Page Confirm Order](https://github.com/motocsky09/project-shop/raw/main/_screens/confirm-order.png)
+
+#  Administrative Features and Management Tools
+
+## Login for the admin account
+```
+
+```
+![Login Page](https://github.com/motocsky09/project-shop/raw/main/_screens/login-admin.png)
+
+## Dashboard
+```
+
+```
+![Admin Dashboard](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-dashboard.png)
+
+## Inventory
+```
+
+```
+![Admin Inventory](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-inventory.png)
+
+## Orders
+```
+
+```
+![Admin Orders](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-orders.png)
+
+## Customers
+```
+
+```
+![Admin Customers](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-customers.png)
+
+## Products & Categories
+```
+
+```
+![Admin Products & Categories](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-product.png)
+
+## Add new product 
+```
+
+```
+![Admin Add New Product](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-add-product.png)
+
+## Edit Product
+```
+
+```
+![Admin Edit Product](https://github.com/motocsky09/project-shop/raw/main/_screens/admin-edit-product.png)
 
 # MeigoWeb Resolution for Mobile Devices
 
