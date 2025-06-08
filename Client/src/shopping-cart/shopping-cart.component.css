@@ -187,6 +187,17 @@ a {
     background-color: white;
     color: rgb(0,0,0);
 }
+.delivery {
+  border-radius: 20px;
+  padding: 10px;
+}
+.title-delivery{
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.working-day{
+  padding-top: 5px;
+}
 /* Media Query pentru dispozitive mobile */
 @media (max-width: 768px) {
     .container {

@@ -129,6 +129,49 @@ a:hover {
   color: white;
 }
 
+/* Grup de input pentru telefon cu steag */
+.phone-input-group {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 8px;
+}
+
+.phone-input-group select {
+  height: 40px;
+  min-width: 56px;
+  border: 1px solid #bbb;
+  border-radius: 8px 0 0 8px;
+  background: #fafafa;
+  font-size: 16px;
+  padding: 0 8px;
+  outline: none;
+  transition: border-color 0.2s;
+  border-right: none;
+}
+
+.phone-input-group select:focus {
+  border-color: #1976d2;
+}
+
+.phone-input-group input[type="tel"] {
+  height: 40px;
+  border: 1px solid #bbb;
+  border-radius: 0 8px 8px 0;
+  background: #fafafa;
+  font-size: 1.1rem;
+  padding: 0 12px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 160px;
+  margin-left: -1px;
+}
+
+.phone-input-group input[type="tel"]:focus {
+  border-color: #1976d2;
+  background: #fff;
+}
+
 /* ✅ Responsivitate pentru dispozitive mici (max-width: 768px) */
 @media screen and (max-width: 768px) {
   .center-align {
@@ -186,6 +229,14 @@ a:hover {
     text-align: center; /* Centrare text */
     padding: 12px 0; /* Padding vertical pentru un aspect uniform */
   }
+
+  .phone-input-group select, .phone-input-group input[type="tel"] {
+    height: 34px;
+    font-size: 1rem;
+    padding: 0 6px;
+    min-width: 40px;
+    width: 110px;
+  }
 }
 
 /* ✅ Responsivitate pentru dispozitive foarte mici (max-width: 480px) */
@@ -209,5 +260,13 @@ a:hover {
 
   a {
     padding: 10px 0; /* Ajustare padding link-uri */
+  }
+
+  .phone-input-group select, .phone-input-group input[type="tel"] {
+    height: 30px;
+    font-size: 0.9rem;
+    padding: 0 4px;
+    min-width: 32px;
+    width: 80px;
   }
 }

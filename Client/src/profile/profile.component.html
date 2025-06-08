@@ -65,7 +65,17 @@
             <span>{{profile.phoneNumber}}</span>
           </ng-container>
           <ng-container *ngIf="profile.editing">
-            <input [(ngModel)]="profile.phoneNumber" />
+            <div class="phone-input-group">
+              <select [(ngModel)]="profile.phoneCountry">
+                <option value="ro">🇷🇴</option>
+                <option value="us">🇺🇸</option>
+                <option value="gb">🇬🇧</option>
+                <option value="fr">🇫🇷</option>
+                <option value="de">🇩🇪</option>
+                <!-- Adaugă alte țări după nevoie -->
+              </select>
+              <input type="tel" [(ngModel)]="profile.phoneNumber" pattern="[0-9\-\+\s]*" inputmode="tel" placeholder="Număr de telefon" />
+            </div>
           </ng-container>
         </li>
         <div *ngIf="!profile.editing" class="button-align">
