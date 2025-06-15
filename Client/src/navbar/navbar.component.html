@@ -18,12 +18,26 @@
       </div>
     </nav>
 
-    <div class="sidebar" *ngIf="isSidebarOpen">
-      <ul>
-        <li *ngIf="!isLog()"><a href="/user/register">Sign Up</a></li>
-        <li *ngIf="!isLog()"><a href="/user/login">Log In</a></li>
-        <li *ngIf="isLog()"><a href="/user/profile">Profile</a></li>
-        <li *ngIf="isLog()"><a (click)="onLogout()">Log Out</a></li>
+    <div class="sidebar-menu" *ngIf="isSidebarOpen">
+      <div class="sidebar-profile">
+        <div class="sidebar-avatar sidebar-avatar-icon" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: #f5f5f5; border: 2px solid #eee;">
+          <i class="fa-solid fa-user" style="font-size: 2.2rem; color: #888; margin: 0 auto;"></i>
+        </div>
+        <div class="sidebar-profile-info">
+          <div class="sidebar-profile-name">{{ getUserDisplayName(user) }}</div>
+          <div class="sidebar-profile-email">{{ user?.email || '' }}</div>
+        </div>
+      </div>
+      <ul class="sidebar-list">
+        <li *ngIf="isLog()"><i class="fa-solid fa-user"></i> <a href="/user/profile">Profile</a></li>
+        <!--<li *ngIf="isLog()"><i class="fa-solid fa-gear"></i> <a href="/user/settings">Settings</a></li>-->
+        <li *ngIf="isLog()"><i class="fa-solid fa-right-from-bracket"></i> <a (click)="onLogout()">Sign Out</a></li>
+        <li *ngIf="!isLog()"><i class="fa-solid fa-user-plus"></i> <a href="/user/register">Sign Up</a></li>
+        <li *ngIf="!isLog()"><i class="fa-solid fa-right-to-bracket"></i> <a href="/user/login">Log In</a></li>
       </ul>
+      <!--<div class="sidebar-plan" *ngIf="isLog()">
+        <div class="sidebar-plan-title">Free Plan</div>
+        <div class="sidebar-plan-credits">1500 credits <button class="sidebar-upgrade">Upgrade</button></div
+      </div>>-->
     </div>
   </div>
