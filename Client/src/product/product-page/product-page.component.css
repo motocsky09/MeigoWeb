@@ -23,7 +23,7 @@
   height: auto;
   object-fit: cover;
   border-radius: 20px;
-  border:1px solid rgb(98,98,98);
+  border:1px solid rgb(88,185,157);
 }
 .image-gallery {
   display: flex;
@@ -39,7 +39,7 @@
   width: 80px; /* Mărește dimensiunea implicită a imaginilor */
   height: 80px;
   border-radius: 5px;
-  border: 1px solid rgb(98, 98, 98);
+  border: 1px solid rgb(88,185,157);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adaugă tranziții pentru zoom și umbră */
 }
 
@@ -54,22 +54,22 @@
 
 .pret_produs {
   font-size: 24px;
-  color: rgb(0,0,0);
+  color: white;
 
 }
 
 .button_product {
   padding: 10px 20px;
-  background-color: black;
-  border: 1px solid black;
+  background-color: rgb(56,72,92);
+  border: 1px solid rgb(88,185,157);
   color: white;
   cursor: pointer;
   font-size: 16px;
 }
 
 .button_product:hover {
-  background-color:white;
-  color: black;
+  background-color:rgb(48,61,78);
+  color: rgb(88,185,157);
 }
 
 /* Container pentru minus, input și plus */
@@ -86,8 +86,8 @@
   align-items: center;
   cursor: pointer;
   padding: 10px;
-  background-color: rgb(215,215,215);
-  color: rgb(0,0,0);
+  background-color: rgb(56,72,92);
+  color: rgb(88,185,157);
   border-radius: 5px;
   font-size: 16px;
 }
@@ -97,15 +97,15 @@
 }
 
 .quantity-container {
-  background-color: rgb(215,215,215);
-  border: 2px solid rgb(99,98,98);
+  background-color: rgb(56,72,92);
+  border: 2px solid rgb(88,185,157);
   width: 50px;
   text-align: center;
 }
 
 .quantity-input {
   background-color: transparent;
-  color: rgb(0,0,0);
+  color: rgb(88,185,157);
   border: none;
   width: 100%;
   text-align: center;
@@ -134,8 +134,7 @@
   align-items: center;
   cursor: pointer;
   padding: 0px;
-  background-color: transparent;
-  color: rgb(0,0,0);
+  color: white;
   border-radius: 5px;
   font-size: 16px;
   margin-right: 50px;
@@ -143,12 +142,13 @@
 .color-title button{
   padding: 8px;
   margin: 5px;
-  border:1px solid rgb(98,98,98);
+  border:1px solid rgb(88,185,157);
   border-radius: 5px;
-  background-color: rgb(256,256,256);
+  background-color: rgb(56,72,92);
+  color: white;
 }
 .color-title button:hover{
-  background-color: rgb(58, 58, 58);
+  background-color: rgb(48,61,78);
   color: rgb(241,247,246);
 }
 
@@ -156,15 +156,15 @@
   margin-top: 20px;
   margin-bottom: 20px;
   /*background-color: #2D3250;*/
-  color: rgb(0,0,0);
+  color: white;
   padding: 5px;
-  border-bottom: 1px solid rgb(99,98,98);
+  border-bottom: 1px solid rgb(88,185,157);
 }
 
 .description-product{
-  border-top: 1px solid rgb(98,98,98);
+  border-top: 1px solid rgb(88,185,157);
   margin-top: 10px;
-  color: rgb(0,0,0);
+  color: white;
   padding-top: 15px ;
   padding-bottom: 15px ;
   margin-bottom: 10px;
@@ -178,8 +178,8 @@
 .details-wrapper ul {
   list-style-type: none;
   padding-left: 0px;
-  border-top: 1px solid rgb(98,98,98);
-  border-bottom: 1px solid rgb(98,98,98);
+  border-top: 1px solid rgb(88,185,157);
+  border-bottom: 1px solid rgb(88,185,157);
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -187,6 +187,10 @@
 .details-wrapper ul li {
   margin-bottom: 5px;
   margin-top: 5px;
+  color:rgb(88,185,157);
+}
+.details-wrapper ul li b{
+  color: white;
 }
 .details-wrapper b{
   font-family: 'Bebas Neue', sans-serif;

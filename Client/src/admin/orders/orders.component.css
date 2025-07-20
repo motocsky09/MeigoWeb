@@ -1,20 +1,22 @@
 .orders-container {
   padding: 40px;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
+  background-color: rgb(48,61,78);
 }
 
 .header h1 {
   font-size: 2rem;
-  color: #393e46;
+  color: white;
   margin-bottom: 30px;
 }
 
 .table-wrapper {
   overflow-x: auto;
-  background-color: white;
+  background-color: rgb(48,61,78);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: white;
+  border: 1px solid rgb(88,185,157);
 }
 
 table {
@@ -24,7 +26,9 @@ table {
 }
 
 thead {
-  background-color: #f8f9fa;
+  background-color: rgb(56,72,92);
+  border: 0.5px solid rgb(88,185,157);
+  color: white;
 }
 
 th, td {
@@ -33,7 +37,7 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9fbff;
+  background-color: rgb(48,61,78);
 }
 
 .status {

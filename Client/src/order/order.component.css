@@ -26,23 +26,23 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 600px;
-  border: 2px solid rgb(0,0,0);
+  border: 2px solid rgb(88,185,157);
   padding: 30px;
-  background-color: white;
-  color: rgb(0,0,0);
+  background-color: rgb(56,72,92);
+  color: white;
   border-radius: 10px;
 }
 
 .title {
   text-align: center;
-  color: rgb(0,0,0);
+  color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .order_adress {
   font-size: 16px;
-  color: rgb(0,0,0);
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -53,9 +53,9 @@ body {
 .adress input {
   width: 100%;
   padding: 10px;
-  border: 1px solid  black;
-  background-color: white;
-  color: rgb(0,0,0);
+  border: 1px solid  rgb(88,185,157);
+  background-color: rgb(48,61,78);
+  color: white;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .payment legend {
-  color: rgb(0,0,0);
+  color: white;
   padding: 5px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -91,7 +91,7 @@ body {
 
 .option label {
   font-size: 16px;
-  color: rgb(0,0,0);
+  color: white;
   margin-bottom: 5px;
 }
 
@@ -107,8 +107,8 @@ body {
 }
 
 .order-final2 {
-  background-color: white;
-  border: 2px solid  black;
+  background-color: rgb(56,72,92);
+  border: 2px solid  rgb(88,185,157);
   padding: 6px 15px;
   border-radius: 5px;
   font-size: 15px;
@@ -116,10 +116,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: rgb(0,0,0);
+  color: white;
 }
 .order-final2:hover {
-  background-color: black;
+  background-color: rgb(48,61,78);
   color: white;
 }
 

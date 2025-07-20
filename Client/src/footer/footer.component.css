@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
 .footer {
-    background-color: black;
+    background-color: rgb(56,72,92);;
     color: white;
     padding: 10px; /* spatierea interioara a footer-ului */
-    border-top: 0.5px solid rgb(0,0,0);
+    border-top: 0.5px solid rgb(88,185,157);
 }
 
 .footer-content {

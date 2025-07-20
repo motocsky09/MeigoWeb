@@ -21,7 +21,7 @@
   height: auto;
   border-radius: 30px;
   object-fit: cover;
-  border: 1px solid #000;
+  border: 1px solid rgb(88,185,157);
 }
 
 .discount-logo {
@@ -65,7 +65,7 @@
   padding: 60px 20px;
   gap: 40px;
   flex-wrap: wrap;
-  background-color: #f9f9f9;
+  background-color: rgb(73,89,99);
 }
 
 .about-image img {
@@ -116,7 +116,7 @@
 }
 
 .product-card {
-  background-color: #f0f0f0;
+  background-color: rgb(73,89,99);
   padding: 20px;
   border-radius: 20px;
   width: 150px;
@@ -134,7 +134,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 40px 20px;
-  background-color: #f4f3f3;
+  background-color: rgb(56,72,92);
   border-radius: 30px;
   margin: 20px auto;
   max-width: 1200px;
@@ -148,7 +148,9 @@
   width: 200px;
   padding: 20px;
   border-radius: 20px;
-  background-color: white;
+  color: white;
+  background-color: rgb(56,72,92);
+  border: 1px solid rgb(88,185,157);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   margin: 10px;
   transition: transform 0.3s ease;
@@ -161,33 +163,33 @@
 .feature_card p {
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: white;
 }
 
 
-/* DARK HERO SECTION */
+/* DARK HERO SECTION - COLOR UPDATED */
 .dark-hero {
   position: relative;
   height: 50vh;
-  background-color: #000;
+  background-color: rgb(48, 61, 78); /* fundal principal */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
-  border-top: 0.5px solid white;
+  color: rgb(255, 255, 255); /* text alb */
 }
 
 .dark-hero .content h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  color: rgb(255, 255, 255); /* text clar */
 }
 
 .dark-hero .content button {
-  background-color: white;
-  color: black;
+  background-color: rgb(88, 185, 157); /* accent verde */
+  color: rgb(48, 61, 78); /* text pe buton */
   padding: 12px 24px;
   border-radius: 12px;
   border: none;
@@ -197,29 +199,28 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(88, 185, 157, 0.3);
   transition: transform 0.2s ease;
 }
 
 .dark-hero .content button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(88, 185, 157, 0.5);
 }
-
 .shapes .shape {
   position: absolute;
-  opacity: 0.3;
-  animation: float 4.5s infinite ease-in-out;
-  background: radial-gradient(circle at 30% 30%, #fff, #000);
+  opacity: 0.8;
+  animation: float 4.5s ease-in-out infinite;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+  mix-blend-mode: screen;
 }
-
 .shape.ring {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   top: 20%;
   left: 10%;
-  background: radial-gradient(circle, #222, #000);
+  background: radial-gradient(circle, rgba(88, 185, 157, 0.4), rgba(48, 61, 78, 0.1));
 }
 
 .shape.cube {
@@ -227,8 +228,8 @@
   height: 80px;
   top: 70%;
   left: 20%;
-  background: linear-gradient(145deg, #333, #000);
   border-radius: 12px;
+  background: linear-gradient(145deg, rgba(88, 185, 157, 0.5), rgba(48, 61, 78, 0.1));
 }
 
 .shape.ball {
@@ -237,7 +238,7 @@
   top: 40%;
   right: 15%;
   border-radius: 50%;
-  background: radial-gradient(circle, #111, #000);
+  background: radial-gradient(circle, rgba(88, 185, 157, 0.5), rgba(48, 61, 78, 0.1));
 }
 
 .shape.capsule {
@@ -246,7 +247,7 @@
   bottom: 10%;
   right: 5%;
   border-radius: 50px;
-  background: linear-gradient(180deg, #111, #000);
+  background: linear-gradient(180deg, rgba(88, 185, 157, 0.5), rgba(48, 61, 78, 0.1));
 }
 
 @keyframes float {
@@ -274,7 +275,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  background-color: #1c1c1c;
+  background-color: rgb(48,61,78);
+  border:1px solid rgb(88,185,157);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
@@ -306,8 +308,8 @@
 }
 
 .testimonial-controls button {
-  background-color: rgb(0,0,0);
-  border: none;
+  background-color: transparent;
+  border: 1px solid rgb(48,61,78);
   color: rgb(256,256,256);
   font-size: 20px;
   padding: 10px 14px;
@@ -317,7 +319,5 @@
 }
 
 .testimonial-controls button:hover {
-  background-color: rgb(256,256,256);
-  color: rgb(0,0,0);
-  border:1px solid rgb(98,98,98);
+  border:1px solid rgb(88,185,157);
 }

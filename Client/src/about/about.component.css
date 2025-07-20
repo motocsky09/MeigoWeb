@@ -8,7 +8,7 @@
 	margin: 0 auto; /* Centrează containerul pe orizontală */
 	text-align: center;
 	padding: 40px;
-	background-color: #fff; /* Un fundal alb pentru container */
+	background-color: rgb(56,72,92); /* Un fundal alb pentru container */
 	border-radius: 8px; /* Margini rotunjite */
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* O umbră subtilă */
   }
@@ -16,13 +16,13 @@
   .about-container h1 {
 	font-size: 42px; /* Un titlu puțin mai mare */
 	margin-bottom: 30px;
-	color: #333; /* O culoare mai închisă pentru titlu */
+	color: white; /* O culoare mai închisă pentru titlu */
   }
   
   .about-container p.about-text {
 	font-size: 20px; /* O dimensiune mai potrivită pentru text */
 	line-height: 1.7; /* Un interliniaj mai mare pentru o citire ușoară */
-	color: #555; /* O culoare mai deschisă pentru text */
+	color: white; /* O culoare mai deschisă pentru text */
 	margin-bottom: 25px; /* Spațiu sub paragraf */
   }
   
@@ -49,7 +49,7 @@
 	justify-content: space-around; /* Spațiu egal între elemente */
 	margin-top: 40px; /* Spațiu deasupra secțiunii de valori */
 	padding: 30px;
-	background-color: #f9f9f9; /* Un fundal ușor diferit */
+	background-color: rgb(56,72,92); /* Un fundal ușor diferit */
 	border-radius: 6px;
   }
   
@@ -60,27 +60,22 @@
   
   .value-item i {
 	font-size: 48px; /* Mărimea iconițelor */
-	color: rgb(83,165,81); /* Culoarea accent a iconițelor */
+	color: rgb(117,251,97); /* Culoarea accent a iconițelor */
 	margin-bottom: 15px;
   }
   
   .value-item h3 {
 	font-size: 22px;
-	color: #333;
+	color: white;
 	margin-bottom: 10px;
   }
   
   .value-item p {
 	font-size: 16px;
-	color: #666;
+	color: white;
 	line-height: 1.5;
   }
   
-  /* Dacă vrei un efect la hover pe fiecare valoare */
-  .value-item:hover {
-	transform: translateY(-5px);
-	transition: transform 0.3s ease-in-out;
-  }
 
   .donation-highlight {
 	text-align: center;
@@ -114,7 +109,7 @@
   
   .social-links h3 {
 	font-size: 24px;
-	color: #333;
+	color: white;
 	margin-bottom: 20px;
   }
   
@@ -130,7 +125,8 @@
 	align-items: center; /* Centrează conținutul (SVG-ul) pe verticală */
 	width: 60px;
 	height: 60px;
-	background-color: #eee;
+	background-color: rgb(48,61,78);
+	border: 1px solid rgb(88,185,157);
 	border-radius: 50%;
 	opacity: 0.7;
 	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;

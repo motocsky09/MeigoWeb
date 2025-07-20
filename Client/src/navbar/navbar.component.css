@@ -1,7 +1,6 @@
 .navbar {
-    background-color: black; /*rgb(215,215,215)*/
-  box-shadow: 0 -10px 80px rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgb(0,0,0);
+    background-color: rgb(56,72,92);
+  border-bottom: 1px solid rgb(88,185,157);
   display: flex;
   justify-content: space-between;
   padding: 10px; /* Adaugă padding pentru a asigura spațiu în jurul elementelor */
@@ -36,7 +35,7 @@
 .button-link a{
         text-decoration: none;
         color: white;
-        background-color: black;
+        background-color: transparent;
     }
 .button-link:hover a{
         color: black;
@@ -85,7 +84,7 @@
     padding: 10px;
     margin: 10px;
     border-radius: 30px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     border: 3px solid white;
 }

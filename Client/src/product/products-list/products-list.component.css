@@ -35,7 +35,7 @@
 }
 
 .reset-button {
-  background-color: #d9534f;
+  background-color: red;
   color: white;
   border: none;
   padding: 8px 10px;
@@ -104,8 +104,8 @@
 }
 
 .quantity-container {
-  background: rgb(98,98,98);
-  border: 0.5px solid rgb(0,0,0);
+  background: rgb(48,61,78);
+  border: 0.5px solid rgb(88,185,157);
   width: 40px;
   text-align: center;
 }
@@ -141,8 +141,8 @@
 
 /* Butonul produsului */
 .button_product {
-    background-color: black;
-    border: 1px solid rgb(0,0,0);
+    background-color: rgb(46,61,78);
+    border: 1px solid rgb(88,185,157);
     color: white;
     border-radius: 5px;
     padding: 10px 20px;
