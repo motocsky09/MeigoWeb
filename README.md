@@ -68,7 +68,6 @@ These links open in a new tab, making it convenient for users to stay connected 
 ```
 ![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about.png)
 
-
 ## Login page
 ```
 In this section, users can log in to the platform by entering their username and password.
@@ -103,6 +102,7 @@ Users can update their personal information by pressing the ‘Edit’ button, w
 
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 ```
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/menu-page.png)
 ![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile.png)
 ![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/edit-profile.png)
 
@@ -292,6 +292,7 @@ The interface is user-friendly, with clear icons accompanying each detail for be
 ```
 ![Profile Account Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/profile-no-edit-page-mobile.png)
 ![Profile Account Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/profile-edit-page-mobile.png)
+![Profile Account Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/profile-mobile-edit2.png)
 
 ## All Products Filter page mobile resolution
 ```
@@ -303,7 +304,7 @@ The “+” and “-” symbols allow you to change how many products you want t
 
 To learn more about a product, simply click on its image and it will take you to the Product Page.
 ```
-![Product Filter Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/filter-mobile.png)
+
 ![Product Filter Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/product-list-mobile.png)
 
 ## Product Page mobile resolution
@@ -328,7 +329,7 @@ A persistent cart button is available at the bottom of the page,
 showing the number of items currently in the cart and providing a quick link to the shopping cart.
 ```
 ![Product Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/product-page-mobile1.png)
-![Product Page Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/product-page-mobile2.png)
+
 
 ## Shopping Cart Page mobile resolution
 ```
