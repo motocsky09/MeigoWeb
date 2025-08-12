@@ -30,7 +30,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        [Route("GetProducts")]
+        [Route("GetProducts")] //endpoint 
         public ActionResult GetProducts()
         {
             var result = _productRepository.GetProducts();
