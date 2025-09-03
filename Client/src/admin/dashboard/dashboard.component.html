@@ -4,24 +4,65 @@
   <div class="summary-cards">
     <div class="card">
       <h2>Users</h2>
-      <p>12</p>
+      <p>{{ usersCount }}</p>
     </div>
     <div class="card">
       <h2>Orders</h2>
-      <p>33</p>
+      <p>{{ ordersCount }}</p>
     </div>
     <div class="card">
       <h2>Products</h2>
-      <p>16</p>
+      <p>{{ productsCount }}</p>
     </div>
     <div class="card">
       <h2>Revenue</h2>
-      <p>3200 RON</p>
+      <p>{{ totalRevenue | number:'1.0-2' }} RON</p>
     </div>
   </div>
 
   <div class="charts-section">
     <h2>Monthly Overview</h2>
-    <div class="chart-placeholder">[ chart goes here ]</div>
+    <div class="charts-flex">
+      <div class="chart-block">
+        <div class="title">Orders per Month</div>
+        <div class="bar-chart">
+          <ng-container *ngFor="let month of months">
+            <div class="bar-group">
+              <div class="bar orders" [style.height.px]="ordersPerMonth[month] ? ordersPerMonth[month] * 18 : 0"></div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="bar-labels">
+          <ng-container *ngFor="let month of months">
+            <span class="bar-label">{{ month }}</span>
+          </ng-container>
+        </div>
+        <div class="bar-values">
+          <ng-container *ngFor="let month of months">
+            <span class="bar-value">{{ ordersPerMonth[month] || 0 }}</span>
+          </ng-container>
+        </div>
+      </div>
+      <div class="chart-block">
+        <div class="title">Revenue per Month</div>
+        <div class="bar-chart">
+          <ng-container *ngFor="let month of months">
+            <div class="bar-group">
+              <div class="bar revenue" [style.height.px]="revenuePerMonth[month] ? revenuePerMonth[month] / revenueBarDivisor : 0"></div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="bar-labels">
+          <ng-container *ngFor="let month of months">
+            <span class="bar-label">{{ month }}</span>
+          </ng-container>
+        </div>
+        <div class="bar-values">
+          <ng-container *ngFor="let month of months">
+            <span class="bar-value">{{ revenuePerMonth[month] ? (revenuePerMonth[month] | number:'1.0-0') : 0 }}</span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

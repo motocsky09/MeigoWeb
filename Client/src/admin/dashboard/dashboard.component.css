@@ -1,3 +1,17 @@
+.bar-labels, .bar-values {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 2px;
+}
+.bar-labels {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.bar-values {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
 .admin-dashboard {
   padding: 40px;
   background-color: rgb(48,61,78);
@@ -8,6 +22,10 @@
   font-size: 2rem;
   margin-bottom: 30px;
   color: white;
+}
+.admin-dashboard h2 {
+  color: white;
+  margin-bottom: 20px;
 }
 
 /* Cards */
@@ -44,52 +62,97 @@
   color: white;
 }
 
-/* Chart section */
-.charts-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.chart-placeholder {
-  background-color: rgb(56,72,92);
-  height: 300px;
-  border-radius: 12px;
+.charts-flex {
   display: flex;
-  align-items: center;
+  gap: 32px;
   justify-content: center;
-  color: white;
-  font-style: italic;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgb(88,185,157);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.chart-block {
+  background: rgba(56,72,92,0.85);
+  border-radius: 16px;
+  padding: 24px 18px 18px 18px;
+  flex: 1 1 600px; /* se extinde dar are minim 600px */
+  max-width: 900px;
+  min-width: 600px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (max-width: 900px) {
-  .admin-dashboard {
-    padding: 16px;
-  }
-  .summary-cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
-@media (max-width: 600px) {
-  .admin-dashboard {
-    padding: 6px;
+
+/* Bar chart cu 12 coloane fixe */
+.bar-chart,
+.bar-labels,
+.bar-values {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 coloane egale */
+  width: 100%;
+  gap: 12px; /* spațiere egală */
+}
+
+.bar-chart {
+  min-height: 160px;
+  align-items: flex-end;
+  margin-bottom: 12px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  width: 28px;
+  min-height: 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: height 0.2s, background 0.2s;
+  background: #2e3a4a;
+}
+
+.bar.orders {
+  background: linear-gradient(180deg, rgb(88,185,157) 60%, rgb(88,185,157) 100%);
+}
+
+.bar.revenue {
+  background: linear-gradient(180deg, rgb(88,185,157) 60%, rgb(88,185,157) 100%);
+}
+
+.bar-label {
+  font-size: 0.8rem;
+  color: #b2dfdb;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bar-value {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .charts-flex {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
   }
-  .summary-cards {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .card {
-    padding: 10px;
-    font-size: 0.95rem;
-  }
-  .charts-section h2 {
-    font-size: 1.1rem;
-  }
-  .chart-placeholder {
-    height: 180px;
-    font-size: 0.9rem;
+  .chart-block {
+    width: 100%;
+    min-width: unset;
   }
 }

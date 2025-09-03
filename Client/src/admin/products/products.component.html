@@ -65,12 +65,12 @@
       </thead>
       <tbody>
         <!-- Formular pentru adăugare categorie -->
-        <tr *ngIf="addingCategory" class="new-category-row">
+        <tr *ngIf="addingCategory" class="new-product-row">
           <td>New</td>
           <td><input type="text" [(ngModel)]="newCategory.name" placeholder="Category" /></td>
           <td>
-            <button (click)="saveNewCategory()">Save</button>
-            <button (click)="cancelAddingCategory()">Cancel</button>
+            <button class="save-cancel" (click)="saveNewCategory()">Save</button>
+            <button class="save-cancel" (click)="cancelAddingCategory()">Cancel</button>
           </td>
         </tr>
 
