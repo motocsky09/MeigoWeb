@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,13 +22,15 @@ import { OrderModule } from 'src/order/order.module';
 import { ProfileModule } from 'src/profile/profile.module';
 import { CommonModule } from '@angular/common';
 import { AdminModule } from 'src/admin/admin.module';
+import { ChatbotButtonComponent } from './chatbot-button.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ChatbotButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { AdminModule } from 'src/admin/admin.module';
     ShoppingCartModule,
     OrderModule,
     ProfileModule,
-    AdminModule
+    AdminModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

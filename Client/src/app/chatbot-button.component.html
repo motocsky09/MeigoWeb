@@ -1,0 +1,23 @@
+<div class="chatbot-fab" (click)="toggleChat()" [class.open]="isOpen">
+  <img src="assets/images/logo.png" alt="Chatbot" class="fab-logo" />
+</div>
+<div class="chatbot-window" *ngIf="isOpen">
+  <div class="chatbot-header">
+    <span>Meigo</span>
+    <button class="close-btn" (click)="toggleChat()">&times;</button>
+  </div>
+  <div class="chatbot-messages">
+    <div *ngFor="let msg of messages; let i = index" [ngClass]="msg.from">
+      {{ msg.text }}
+      <ng-container *ngIf="i === 0">
+        <div class="chatbot-examples">
+          <button *ngFor="let ex of exampleQuestions" (click)="sendMessage(ex)">{{ ex }}</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <form class="chatbot-input" (submit)="$event.preventDefault(); sendMessage();">
+    <input type="text" [(ngModel)]="userInput" name="chatInput" placeholder="Scrie un mesaj..." autocomplete="off" />
+    <button type="submit">&gt;</button>
+  </form>
+</div>
