@@ -7,4 +7,6 @@
   
 	<app-footer></app-footer> <!-- Footer-ul -->
 </div>
-<app-chatbot-button></app-chatbot-button>
+<div *ngIf="showChatbot">
+  <app-chatbot-button></app-chatbot-button>
+</div>

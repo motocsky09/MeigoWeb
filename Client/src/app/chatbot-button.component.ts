@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ChatbotService } from 'src/services/chatbot.service' // <-- Adaugă acest import
 
@@ -7,7 +7,7 @@ import { ChatbotService } from 'src/services/chatbot.service' // <-- Adaugă ace
   templateUrl: './chatbot-button.component.html',
   styleUrls: ['./chatbot-button.component.css']
 })
-export class ChatbotButtonComponent {
+export class ChatbotButtonComponent implements AfterViewChecked {
   isOpen = false;
   userInput = '';
   messages: {from: 'user'|'bot', text: string}[] = [
@@ -18,6 +18,8 @@ export class ChatbotButtonComponent {
     'În câte zile îmi va ajunge comanda?',
     'Care este politica de retunare?'
   ];
+
+  @ViewChild('messagesContainer') messagesContainer!: ElementRef;
 
   // Injectează ChatbotService în constructor
   constructor(private chatbotService: ChatbotService) { }
@@ -44,6 +46,17 @@ export class ChatbotButtonComponent {
           this.messages.push({from: 'bot', text: 'Ne pare rău, a apărut o eroare. Încearcă din nou mai târziu.' });
         }
       );
+    }
+  }
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+  scrollToBottom() {
+    if (this.messagesContainer) {
+      try {
+        this.messagesContainer.nativeElement.scrollTop = this.messagesContainer.nativeElement.scrollHeight;
+      } catch {}
     }
   }
 }

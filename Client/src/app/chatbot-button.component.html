@@ -6,7 +6,7 @@
     <span>Meigo</span>
     <button class="close-btn" (click)="toggleChat()">&times;</button>
   </div>
-  <div class="chatbot-messages">
+  <div class="chatbot-messages" #messagesContainer>
     <div *ngFor="let msg of messages; let i = index" [ngClass]="msg.from">
       {{ msg.text }}
       <ng-container *ngIf="i === 0">

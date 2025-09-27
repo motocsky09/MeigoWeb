@@ -8,5 +8,13 @@ import { Location } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  showChatbot = true;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showChatbot = !event.urlAfterRedirects.startsWith('/admin');
+      }
+    });
+  }
 }

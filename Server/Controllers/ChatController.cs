@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NumeleProiectuluiTau.Controllers // Asigură-te că ești în același namespace
+namespace Server.Controllers // Asigură-te că ești în același namespace
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -19,8 +19,8 @@ namespace NumeleProiectuluiTau.Controllers // Asigură-te că ești în același
         [HttpPost]
         public async Task<IActionResult> SendMessageToAI([FromBody] ChatMessageRequest request)
         {
-            var apiKey = "AIza...."; // <-- Înlocuiește cu cheia ta de API Gemini
-            var llmApiUrl = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={apiKey}";
+            var apiKey = "AIzaSyBhYbLpuKaLQNTZGeHlblQsZ9ybHbV5NFo"; // <-- Înlocuiește cu cheia ta de API Gemini
+            var llmApiUrl = $"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro:generateContent?key={apiKey}";
 
             var requestBody = new
             {
@@ -30,7 +30,7 @@ namespace NumeleProiectuluiTau.Controllers // Asigură-te că ești în același
                     {
                         parts = new[]
                         {
-                            new { text = request.Message }
+                            new { text = $"Răspunde la această întrebare în maxim 5-6 rânduri concise,iar dacă nu poți oferii un răspuns exact poți oferii un raspuns de bază, apoi urmat de mesajul(Pentru mai multe detalii vă rog să ne contactați : meigo@gmail.com):\n{request.Message}" }
                         }
                     }
                 }
@@ -46,7 +46,8 @@ namespace NumeleProiectuluiTau.Controllers // Asigură-te că ești în același
 
             if (!response.IsSuccessStatusCode)
             {
-                return BadRequest("Eroare la comunicarea cu serviciul AI.");
+                var error = await response.Content.ReadAsStringAsync();
+                return BadRequest($"Eroare la comunicarea cu serviciul AI: {error}");
             }
 
             var responseString = await response.Content.ReadAsStringAsync();
