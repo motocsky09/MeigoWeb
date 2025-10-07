@@ -135,7 +135,7 @@
   flex-wrap: wrap;
   padding: 40px 20px;
   background-color: rgb(56,72,92);
-  border-radius: 30px;
+  border-radius: 20px;
   margin: 20px auto;
   max-width: 1200px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -147,18 +147,15 @@
   align-items: center;
   width: 200px;
   padding: 20px;
-  border-radius: 20px;
   color: white;
   background-color: rgb(56,72,92);
-  border: 1px solid rgb(88,185,157);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-left: 1px solid rgb(88,185,157);
+  border-right: 1px solid rgb(88,185,157);
   margin: 10px;
   transition: transform 0.3s ease;
 }
 
-.feature_card:hover {
-  transform: translateY(-5px);
-}
+
 
 .feature_card p {
   font-size: 16px;
