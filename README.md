@@ -49,23 +49,23 @@ The home page serves as the initial page of the application,where clients can ac
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home.png)
 
 ## About page
-```
+
 In this section, users can learn more about the brand and its core values.
 
 The “About us” area provides a short introduction, highlighting the platform’s mission to offer stylish and eco-friendly clothing made from high-quality recycled materials.
 
-It emphasizes the minimalist and timeless design of the clothes,encouraging users to express themselves while contributing to environmental sustainability.
+It emphasizes the minimalist and timeless design of the clothes, encouraging users to express themselves while contributing to environmental sustainability.
 
-Below, the “Values” section showcases the brand’s principles: sustainability, minimalist design, and quality.
+Below, the “Values” section showcases the brand’s principles: **sustainability**, **minimalist design**, and **quality**.
 
 Each value is presented with a clear icon and a short description to reinforce the brand’s message and make it more visually engaging.
 
-A highlighted message draws attention to the brand’s commitment to the environment by informing users that 50% of the proceeds go to NGOs focused on protecting nature.
+A highlighted message draws attention to the brand’s commitment to the environment by informing users that **50% of the proceeds go to NGOs focused on protecting nature**.
 
 At the bottom of the section, social media icons are displayed, allowing users to easily follow the brand on Instagram, Facebook, and TikTok.
 
 These links open in a new tab, making it convenient for users to stay connected without leaving the site.
-```
+
 ![About Page](https://github.com/motocsky09/project-shop/raw/main/_screens/about.png)
 
 ## Login page
@@ -360,3 +360,4 @@ It presents a single order confirmation message,
 followed by an email address where additional information can be requested.
 ```
 ![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/confirm-order-page-mobile.png)
+
