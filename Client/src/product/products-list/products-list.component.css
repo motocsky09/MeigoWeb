@@ -7,10 +7,11 @@
 
 .filters {
   padding: 20px;
-  background-color: white;
+  background-color: rgb(56,72,92);
+  color: white;
   border-radius: 12px;
   width: 250px;
-  border: 1px solid rgb(0,0,0);
+  border: 1px solid rgb(88,185,157);
 }
 .filters h3{
   text-align: center;
