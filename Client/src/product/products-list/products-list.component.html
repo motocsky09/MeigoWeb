@@ -1,8 +1,11 @@
 <div class="main-layout">
-  <!-- Filtre în partea stângă -->
-  <div class="filters">
-    <h3>FILTER</h3>
-  
+  <div class="filters" [class.open]="areFiltersVisible">
+    
+    <div class="filters-header">
+      <h3>FILTER</h3>
+      <button class="close-filters-btn" (click)="toggleFilters()">&times;</button>
+    </div>
+
     <div class="filter-group">
       <p class="filter-title">Category</p>
       <label><input type="checkbox" (change)="toggleCategory(1)"> Summer</label><br>
@@ -37,13 +40,15 @@
       <label><input type="checkbox" (change)="toggleSize('XXL')"> XXL</label><br>
     </div>
 
-
-  
     <button class="reset-button" (click)="resetFilters()">Reset filters</button>
   </div>
 
-  <!-- Produse în partea dreaptă -->
   <div class="product">
+    
+    <button class="filter-toggle-button" (click)="toggleFilters()">
+      Filter
+    </button>
+
     <ul>
       <li class="product-item" *ngFor="let item of productsList">
         <a [routerLink]="['/product-page', item.id]">

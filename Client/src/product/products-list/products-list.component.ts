@@ -21,7 +21,6 @@ export class ProductsListComponent implements OnInit {
   cartCounter: number = 0;
   selectedQuantity: any;
 
-  // Variabilă pentru controlul vizibilității filtrelor
   areFiltersVisible: boolean = false;
 
   selectedCategoryId: number | null = null;
@@ -30,7 +29,7 @@ export class ProductsListComponent implements OnInit {
   constructor(
     private service: ProductService,
     private router: Router,
-    private location: Location, // Importă Location pentru a naviga înapoi
+    private location: Location,
     private userService: UserService,
     private shopingCartService: ShoppingCartService
   ) { }
@@ -46,7 +45,7 @@ export class ProductsListComponent implements OnInit {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
         (res: string) => {
-          this.userName = res; // Setează userName cu răspunsul primit
+          this.userName = res;
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (res:string) => {
               this.shoppingCartId = res;
@@ -71,14 +70,19 @@ export class ProductsListComponent implements OnInit {
     }
     
   }
+
+  toggleFilters() {
+    this.areFiltersVisible = !this.areFiltersVisible;
+  }
+
   goBack() {
-    this.location.back(); // Navighează înapoi
+    this.location.back();
   }
 
   showBackButton(): boolean {
-    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+    return this.router.url !== '/home' && window.innerWidth <= 768;
   }
-  // Metodă pentru a obține toate produsele
+
   getProductsList(){
     this.service.getProductsList().subscribe(
       (res:any) => {
@@ -87,7 +91,6 @@ export class ProductsListComponent implements OnInit {
     );
   }
 
-  // Metodă pentru a obține produsele pe baza categoriei
   getProductsListByCategoryId(categoryId: any){
     this.service.getProductsListByCategoryId(categoryId).subscribe(
       (res:any) => {
@@ -96,7 +99,6 @@ export class ProductsListComponent implements OnInit {
     );
   }
 
-  // Metodă pentru a adăuga produse în coșul de cumpărături
   addProductInShoppingCart(shoppingCartId: string, productId: number, selectedQuantity: number) {
     this.shopingCartService.addProductInShoppingCart(shoppingCartId, productId, selectedQuantity).subscribe(
       () => {
@@ -121,54 +123,59 @@ export class ProductsListComponent implements OnInit {
   }
 
   selectedCategories: string[] = [];
-minPrice: number | null = null;
-maxPrice: number | null = null;
-onlyInStock: boolean = false;
-selectedRatings: number[] = [];
+  minPrice: number | null = null;
+  maxPrice: number | null = null;
+  onlyInStock: boolean = false;
+  selectedRatings: number[] = [];
 
-toggleCategory(categoryId: number) {
-  if (this.selectedCategoryId === categoryId) {
-    this.selectedCategoryId = null;
-    this.getProductsList(); // sau this.productsList = []; dacă vrei doar să golești
-  } else {
-    this.selectedCategoryId = categoryId;
-    this.service.getProductsListByCategoryId(categoryId).subscribe(products => {
+  toggleCategory(categoryId: number) {
+    if (this.selectedCategoryId === categoryId) {
+      this.selectedCategoryId = null;
+      this.getProductsList();
+    } else {
+      this.selectedCategoryId = categoryId;
+      this.service.getProductsListByCategoryId(categoryId).subscribe(products => {
+        this.productsList = products;
+        this.areFiltersVisible = false;
+      });
+    }
+  }
+
+  toggleColor(color: string) {
+    this.service.getProductByColor(color).subscribe(products => {
       this.productsList = products;
+      this.areFiltersVisible = false;
     });
   }
-}
 
-toggleColor(color: string) {
-  this.service.getProductByColor(color).subscribe(products => {
-    this.productsList = products;
-  });
-}
-
-toggleSize(size: string) {
-  this.service.getProductBySize(size).subscribe(products => {
-    this.productsList = products;
-  });
-}
-toggleRating(stars: number) {
-  const index = this.selectedRatings.indexOf(stars);
-  if (index > -1) {
-    this.selectedRatings.splice(index, 1);
-  } else {
-    this.selectedRatings.push(stars);
+  toggleSize(size: string) {
+    this.service.getProductBySize(size).subscribe(products => {
+      this.productsList = products;
+      this.areFiltersVisible = false;
+    });
   }
-  this.filterProducts();
-}
 
-resetFilters() {
-  this.selectedCategories = [];
-  this.minPrice = null;
-  this.maxPrice = null;
-  this.onlyInStock = false;
-  this.selectedRatings = [];
-  this.filterProducts();
-}
+  toggleRating(stars: number) {
+    const index = this.selectedRatings.indexOf(stars);
+    if (index > -1) {
+      this.selectedRatings.splice(index, 1);
+    } else {
+      this.selectedRatings.push(stars);
+    }
+    this.filterProducts();
+  }
 
-filterProducts() {
-  // Logica de filtrare a produselor în funcție de cele selectate
-}
+  resetFilters() {
+    this.selectedCategories = [];
+    this.minPrice = null;
+    this.maxPrice = null;
+    this.onlyInStock = false;
+    this.selectedRatings = [];
+    this.filterProducts();
+    this.areFiltersVisible = false;
+  }
+
+  filterProducts() {
+    // Logica de filtrare a produselor în funcție de cele selectate
+  }
 }
