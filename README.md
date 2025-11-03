@@ -46,6 +46,18 @@ The home page serves as the initial page of the application,where clients can ac
 
 ![Home Page](https://github.com/motocsky09/project-shop/raw/main/_screens/home.png)
 
+## ChatBot AI
+
+The button for the AI chatbot is found on all pages, its role being to help the user navigate the page if something isn't working correctly or to allow them to ask questions related to products or the website's functionalities.
+
+![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/ai.png)
+
+![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/ai-button.png)
+
+Three suggested questions are presented, or any type of question related to the website can be entered.
+
+![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/?.png)
+
 ## About page
 
 In this section, users can learn more about the brand and its core values.
@@ -101,8 +113,8 @@ Users can update their personal information by pressing the ‘Edit’ button, w
 The interface is user-friendly, with clear icons accompanying each detail for better navigation.
 
 ![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/menu-page.png)
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile.png)
-![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/edit-profile.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile2.png)
+![Profile Account Page](https://github.com/motocsky09/project-shop/raw/main/_screens/profile1.png)
 
 ## All Products Filter page
 
@@ -136,7 +148,7 @@ To finalize the selection, users can click the “Add to Cart” button.
 
 A persistent cart button is available at the bottom of the page, showing the number of items currently in the cart and providing a quick link to the shopping cart.
 
-![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-view.png)
+![Product Page](https://github.com/motocsky09/project-shop/raw/main/_screens/product-page.png)
 
 ## Shopping Cart page
 
@@ -328,5 +340,6 @@ This is the final section of the product purchase process.
 It presents a single order confirmation message, followed by an email address where additional information can be requested.
 
 ![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/confirm-order-page-mobile.png)
+
 
 
