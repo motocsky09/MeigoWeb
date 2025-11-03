@@ -79,10 +79,10 @@ namespace Server.Controllers
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel { Status = "Error", Message = "Parola nu îndeplinește condițiile.", Profile = new Entities.Profile() });
 
-            // Verificare dacă username-ul se termină cu ".admin"
+            
             if (model.Username.EndsWith(".admin"))
             {
-                // Asigură-te că rolul "Admin" există
+                
                 if (!await _roleManager.RoleExistsAsync("Admin"))
                 {
                     await _roleManager.CreateAsync(new IdentityRole("Admin"));
