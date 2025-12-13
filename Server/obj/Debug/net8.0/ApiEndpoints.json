@@ -168,6 +168,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Server.Controllers.ChatController",
+    "Method": "SendMessageToAI",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Server.Controllers.ChatMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.OrderController",
     "Method": "CreateOrder",
     "RelativePath": "api/Order/CreateOrder",

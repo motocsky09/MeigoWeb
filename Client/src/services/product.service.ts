@@ -69,10 +69,8 @@ createProduct(productData: FormData) {
   return this.http.post(`${this.BaseURI}/Product/CreateProduct`, productData);
 }
 
-updateProduct(productData: any) {
-  return this.http.put(`${this.BaseURI}/Product/UpdateProduct`, productData, {
-    headers: { 'Content-Type': 'application/json' }
-  });
+updateProduct(productData: FormData) {
+  return this.http.put(`${this.BaseURI}/Product/UpdateProduct`, productData);
 }
 
 uploadProductWithImages(formData: FormData) {

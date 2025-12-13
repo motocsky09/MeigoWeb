@@ -68,17 +68,14 @@
   z-index: 10000;
   display: flex;
   flex-direction: column;
-  /* Am redenumit animatia default pentru desktop */
   animation: chatbotOpenDesktop 0.3s cubic-bezier(.4,1.4,.6,1) both;
 }
 
-/* Animatia pentru Desktop */
 @keyframes chatbotOpenDesktop {
   0% { opacity: 0; transform: translateY(40px) scale(0.8); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Animatia NOUA pentru Mobil (include centrarea) */
 @keyframes chatbotOpenMobile {
   0% { 
     opacity: 0; 
@@ -216,9 +213,7 @@
     width: calc(100% - 40px);
     left: 50%;
     bottom: 90px;
-    /* Anulam transform-ul static */
     transform: none; 
-    /* Folosim noua animatie pentru mobil */
     animation: chatbotOpenMobile 0.3s cubic-bezier(.4,1.4,.6,1) both;
   }
 }

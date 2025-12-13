@@ -40,7 +40,6 @@ export class UserService {
     const passwordCtrl = fb.get('Password');
   
     if (confirmPswrdCtrl && passwordCtrl) {
-      // Verifică dacă există deja alte erori în afară de 'passwordMismatch'
       const errors = confirmPswrdCtrl.errors;
   
       if (!errors || errors['passwordMismatch']) {

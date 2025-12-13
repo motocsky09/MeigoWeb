@@ -1,4 +1,3 @@
-/* HERO SECTION */
 .home_section {
   display: flex;
   justify-content: center;
@@ -57,7 +56,6 @@
   font-size: 18px;
 }
 
-/* ABOUT SECTION */
 .about_section {
   display: flex;
   align-items: center;
@@ -96,7 +94,6 @@
   cursor: pointer;
 }
 
-/* SHOP SECTION */
 .shop_section {
   text-align: center;
   padding: 60px 20px;
@@ -126,8 +123,6 @@
   justify-content: center;
   font-weight: bold;
 }
-/* FEATURES SECTION */
-
 .features_section {
   display: flex;
   justify-content: space-around;
@@ -164,29 +159,28 @@
 }
 
 
-/* DARK HERO SECTION - COLOR UPDATED */
 .dark-hero {
   position: relative;
   height: 50vh;
-  background-color: rgb(48, 61, 78); /* fundal principal */
+  background-color: rgb(48, 61, 78);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(255, 255, 255); /* text alb */
+  color: rgb(255, 255, 255);
 }
 
 .dark-hero .content h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: rgb(255, 255, 255); /* text clar */
+  color: rgb(255, 255, 255);
 }
 
 .dark-hero .content button {
-  background-color: rgb(88, 185, 157); /* accent verde */
-  color: rgb(48, 61, 78); /* text pe buton */
+  background-color: rgb(88, 185, 157);
+  color: rgb(48, 61, 78);
   padding: 12px 24px;
   border-radius: 12px;
   border: none;
@@ -253,7 +247,6 @@
   100% { transform: translateY(0); }
 }
 
-/* TESTIMONIAL SECTION */
 .testimonials {
   background-color: transparent;
   color: #fff;

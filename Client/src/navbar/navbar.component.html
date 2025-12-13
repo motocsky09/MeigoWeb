@@ -30,14 +30,9 @@
       </div>
       <ul class="sidebar-list">
         <li *ngIf="isLog()"><i class="fa-solid fa-user"></i> <a href="/user/profile">Profile</a></li>
-        <!--<li *ngIf="isLog()"><i class="fa-solid fa-gear"></i> <a href="/user/settings">Settings</a></li>-->
         <li *ngIf="isLog()"><i class="fa-solid fa-right-from-bracket"></i> <a (click)="onLogout()">Sign Out</a></li>
         <li *ngIf="!isLog()"><i class="fa-solid fa-user-plus"></i> <a href="/user/register">Sign Up</a></li>
         <li *ngIf="!isLog()"><i class="fa-solid fa-right-to-bracket"></i> <a href="/user/login">Log In</a></li>
       </ul>
-      <!--<div class="sidebar-plan" *ngIf="isLog()">
-        <div class="sidebar-plan-title">Free Plan</div>
-        <div class="sidebar-plan-credits">1500 credits <button class="sidebar-upgrade">Upgrade</button></div
-      </div>>-->
     </div>
   </div>
