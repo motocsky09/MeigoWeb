@@ -50,13 +50,13 @@ The home page serves as the initial page of the application,where clients can ac
 
 The button for the AI chatbot is found on all pages, its role being to help the user navigate the page if something isn't working correctly or to allow them to ask questions related to products or the website's functionalities.
 
-![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/ai.png)
+<img src="https://github.com/motocsky09/project-shop/raw/main/_screens/ai.png" alt="ChatBot AI" width="500">
 
-![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/ai-button.png)
+<img src="https://github.com/motocsky09/project-shop/raw/main/_screens/ai-button.png" alt="ChatBot AI Button" width="500">
 
 Three suggested questions are presented, or any type of question related to the website can be entered.
 
-![ChatBot AI](https://github.com/motocsky09/project-shop/raw/main/_screens/?.png)
+<img src="https://github.com/motocsky09/project-shop/raw/main/_screens/ai-response.png" alt="ChatBot AI Response" width="500">
 
 ## About page
 
@@ -340,6 +340,7 @@ This is the final section of the product purchase process.
 It presents a single order confirmation message, followed by an email address where additional information can be requested.
 
 ![Order Page Confirm Order Mobile](https://github.com/motocsky09/project-shop/raw/main/_screens/mobile/confirm-order-page-mobile.png)
+
 
 
 
