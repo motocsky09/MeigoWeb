@@ -8,7 +8,7 @@ import { UserService } from 'src/services/user.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-// home.component.ts
+
 export class HomeComponent implements OnInit {
   userName: any;
 

@@ -30,7 +30,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
-        [Route("GetProducts")] //endpoint 
+        [Route("GetProducts")]
         public ActionResult GetProducts()
         {
             var result = _productRepository.GetProducts();
@@ -73,7 +73,6 @@ namespace Server.Controllers
         [Route("UploadProductWithImages")]
         public async Task<IActionResult> UploadProductWithImages([FromForm] ProductUploadDto dto)
         {
-            // Calea absolută către folderul din proiectul Angular
             string SaveImage(IFormFile file)
             {
                 if (file == null || file.Length == 0)
@@ -90,7 +89,6 @@ namespace Server.Controllers
                 using var stream = new FileStream(fullPath, FileMode.Create);
                 file.CopyTo(stream);
 
-                // Returnăm calea relativă pentru a fi folosită în Angular
                 return "assets/images/" + fileName;
             }
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
-/* Container general: sidebar + conținut pe linie */
+
 .layout-container {
   display: flex;
   min-height: 80vh;
@@ -8,7 +8,7 @@
   font-family: 'Nunito', sans-serif;
 }
 
-/* Sidebar fix, centrat vertical */
+
 .menu-box {
   display: flex;
   flex-direction: column;
@@ -22,14 +22,14 @@
   font-family: 'Nunito', sans-serif;
 }
 
-/* Lista de butoane */
+
 .menu-box ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Fiecare buton */
+
 .menu-box li {
   margin-bottom: 20px;
 }
@@ -52,7 +52,7 @@
   border-radius: 8px;
 }
 
-/* Conținutul afișat în dreapta */
+
 .content-box {
   flex-grow: 1;
   padding: 40px;

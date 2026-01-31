@@ -43,12 +43,12 @@ export class ShoppingCartService {
     }
 
   updateProductQuantity(shoppingCartId: string, productId: number, updatedQuantity: number) {
-    // Construim URL-ul în formatul specificat
+    
     const url = this.BaseURI + '/ShoppingCart/UpdateProductInShoppingCart?shoppingCartId='
       + shoppingCartId + '&productId=' + productId + '&updatedQuantity=' + updatedQuantity;
 
-    // Returnăm cererea HTTP folosind metoda PUT
-    return this.http.put(url, null); // Nu este nevoie de corpul cererii (null)
+    
+    return this.http.put(url, null); 
   }
    getShoppingCartListById(shoppingCartId:string)
    {
@@ -77,7 +77,7 @@ export class ShoppingCartService {
   
     return this.http.post(url, null);
   }
-  // Metoda pentru a șterge toate produsele din coș
+  
   clearCart(): Observable<any> {
     return this.http.delete(this.BaseURI + '/ProductAddedShCart/DeleteProductAddedShCart');
   }

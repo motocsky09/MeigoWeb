@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate: [AdminAuthGuard], // 👈 protejează întreaga secțiune
+    canActivate: [AdminAuthGuard], 
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'inventory', component: InventoryComponent },

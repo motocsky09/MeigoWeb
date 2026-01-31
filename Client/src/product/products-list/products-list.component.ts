@@ -176,6 +176,6 @@ export class ProductsListComponent implements OnInit {
   }
 
   filterProducts() {
-    // Logica de filtrare a produselor în funcție de cele selectate
+    
   }
 }

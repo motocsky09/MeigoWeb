@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ShoppingCartService } from 'src/services/shopping-cart.service';
 import { UserService } from 'src/services/user.service';
-import { jwtDecode } from 'jwt-decode'; // Asigură-te că ai instalat jwt-decode
+import { jwtDecode } from 'jwt-decode'; 
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import { jwtDecode } from 'jwt-decode'; // Asigură-te că ai instalat jwt-decod
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  passwordFieldType: string = 'password'; // Inițial setat pe "password"
+  passwordFieldType: string = 'password'; 
   successMessage: string = '';
   errorMessage: string = '';
 
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       this.successMessage = 'Login successful!';
       this.errorMessage = '';
 
-      // ✅ Decode token și verifică rolul
+      
       const decodedToken: any = jwtDecode(res.token);
       const roles = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
 

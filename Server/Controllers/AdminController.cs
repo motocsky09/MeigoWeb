@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers
 {
-    [Authorize(Roles = "Admin")] // 🔒 Acces permis doar adminilor
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class AdminController : ControllerBase
@@ -11,13 +11,13 @@ namespace Server.Controllers
         [HttpGet("dashboard")]
         public IActionResult GetDashboard()
         {
-            return Ok("✅ Acces permis: Ești administrator!");
+            return Ok("Acces permis: Ești administrator!");
         }
 
         [HttpGet("test")]
         public IActionResult Test()
         {
-            return Ok("✅ Doar Adminii pot vedea acest mesaj.");
+            return Ok("Doar Adminii pot vedea acest mesaj.");
         }
     }
 }

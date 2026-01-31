@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ChatbotService } from 'src/services/chatbot.service' // <-- Adaugă acest import
+import { ChatbotService } from 'src/services/chatbot.service' 
 
 @Component({
   selector: 'app-chatbot-button',
@@ -21,7 +21,7 @@ export class ChatbotButtonComponent implements AfterViewChecked {
 
   @ViewChild('messagesContainer') messagesContainer!: ElementRef;
 
-  // Injectează ChatbotService în constructor
+  
   constructor(private chatbotService: ChatbotService) { }
 
   toggleChat() {
@@ -34,14 +34,14 @@ export class ChatbotButtonComponent implements AfterViewChecked {
       this.messages.push({from: 'user', text: msg});
       this.userInput = '';
 
-      // Aici faci apelul real către backend
+      
       this.chatbotService.sendMessage(msg).subscribe(
         response => {
-          // Aici primești răspunsul de la backend
+          
           this.messages.push({from: 'bot', text: response.response });
         },
         error => {
-          // Tratează cazurile de eroare
+          
           console.error('Eroare la primirea răspunsului de la AI:', error);
           this.messages.push({from: 'bot', text: 'Ne pare rău, a apărut o eroare. Încearcă din nou mai târziu.' });
         }

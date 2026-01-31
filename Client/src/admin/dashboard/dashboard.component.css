@@ -28,7 +28,7 @@
   margin-bottom: 20px;
 }
 
-/* Cards */
+
 .summary-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -74,7 +74,7 @@
   background: rgba(56,72,92,0.85);
   border-radius: 16px;
   padding: 24px 18px 18px 18px;
-  flex: 1 1 600px; /* se extinde dar are minim 600px */
+  flex: 1 1 600px; 
   max-width: 900px;
   min-width: 600px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
@@ -91,14 +91,14 @@
   letter-spacing: 0.5px;
 }
 
-/* Bar chart cu 12 coloane fixe */
+
 .bar-chart,
 .bar-labels,
 .bar-values {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 coloane egale */
+  grid-template-columns: repeat(12, 1fr); 
   width: 100%;
-  gap: 12px; /* spațiere egală */
+  gap: 12px; 
 }
 
 .bar-chart {
@@ -144,7 +144,7 @@
   text-align: center;
 }
 
-/* === Responsive === */
+
 @media (max-width: 900px) {
   .charts-flex {
     flex-direction: column;

@@ -35,7 +35,7 @@ export class ShoppingCartComponent implements OnInit {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
         (res: string) => {
-          this.userName = res; // Setează userName cu răspunsul primit
+          this.userName = res; 
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (res:string) =>{
                 this.shoppingCartId = res;
@@ -61,11 +61,11 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   goBack() {
-    this.location.back(); // Navighează înapoi
+    this.location.back(); 
   }
 
   showBackButton(): boolean {
-    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+    return this.router.url !== '/home' && window.innerWidth <= 768; 
   }
 
   increaseQuantity(item: any): void {
@@ -85,16 +85,16 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   updateQuantity(item: any): void {
-    // Asigură-te că cantitatea este cel puțin 1
+    
     item.selectedQuantity = Math.max(1, +item.selectedQuantity);
 
-    // Recalculează subtotalul pentru produs
+    
     item.sumSelectedQuantity = item.price * item.selectedQuantity;
 
-    // Recalculează totalurile
+    
     this.recalculateTotals();
 
-    // Trimite actualizarea la server
+    
     this.shopingCartService.updateProductQuantity(this.shoppingCartId, item.id, item.selectedQuantity)
       .subscribe(
         response => {
@@ -106,18 +106,18 @@ export class ShoppingCartComponent implements OnInit {
       );
   }
   removeProduct(item: any): void {
-  // Elimină produsul din baza de date
+  
   this.shopingCartService.removeProductFromCart(this.shoppingCartId, item.id).subscribe(
     (response) => {
       console.log(`Produsul ${item.name} a fost eliminat din coș.`);
 
-      // Elimină produsul din lista locală
+      
       const index = this.productsList.indexOf(item);
       if (index > -1) {
         this.productsList.splice(index, 1);
       }
 
-      // Recalculează totalurile
+      
       this.recalculateTotals();
     },
     (error) => {
@@ -128,10 +128,10 @@ export class ShoppingCartComponent implements OnInit {
   clearShoppingCart() {
     this.shopingCartService.clearCart().subscribe(
       (response) => {
-        // Golește lista locală de produse
+        
         this.productsList = [];
         this.totalSumWithoutDelivery = 0;
-        this.totalSumWithDelivery = this.sumDelivery; // Doar costul transportului rămâne
+        this.totalSumWithDelivery = this.sumDelivery; 
         console.log('Coșul de cumpărături a fost golit cu succes.');
       },
       (error) => {

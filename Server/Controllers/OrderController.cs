@@ -46,7 +46,7 @@ public ActionResult CreateOrder(
     [FromQuery] string PhoneNumber,
     [FromQuery] string Email,
     [FromQuery] string Postal,
-    [FromQuery] string Comments = "") // Valoare implicită
+    [FromQuery] string Comments = "")
 {
     _orderRepository.CreateOrder(userId, shoppingCartId, sumDelivery, totalSumWithDelivery, Address,City, PhoneNumber, Email, Postal, Comments ?? "");
     return Ok();

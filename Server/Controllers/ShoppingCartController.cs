@@ -84,21 +84,17 @@ namespace Server.Controllers
         {
             try
             {
-                // Apelăm metoda din repository pentru a actualiza produsul
                 var updatedProduct = _shoppingcartRepository.UpdateProductInShoppingCart(shoppingCartId, productId, updatedQuantity);
 
-                // Dacă nu a fost găsit produsul, returnăm NotFound
                 if (updatedProduct == null)
                 {
                     return NotFound(new { message = "Product not found in shopping cart" });
                 }
 
-                // Returnăm produsul actualizat
                 return Ok(updatedProduct);
             }
             catch (Exception ex)
             {
-                // Returnăm o eroare în caz de excepție
                 return BadRequest(new { message = ex.Message });
             }
         }

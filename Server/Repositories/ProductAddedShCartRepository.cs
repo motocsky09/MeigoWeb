@@ -45,7 +45,6 @@ namespace Server.Repositories
             }
         }
 
-        
         public void DeleteAllProductsFromCart()
         {
             var products = _serverDbContext.ProductAddedShCart.ToList();

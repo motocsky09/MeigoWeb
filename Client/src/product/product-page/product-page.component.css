@@ -14,7 +14,7 @@
 
 .product-images {
   flex: 1;
-  position: relative; /* Permite poziționarea absolută a butonului */
+  position: relative; 
 }
 
 .main-product-image {
@@ -36,11 +36,11 @@
   opacity: 50%;
 }
 .image-gallery img {
-  width: 80px; /* Mărește dimensiunea implicită a imaginilor */
+  width: 80px; 
   height: 80px;
   border-radius: 5px;
   border: 1px solid rgb(88,185,157);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adaugă tranziții pentru zoom și umbră */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 
@@ -72,7 +72,7 @@
   color: rgb(88,185,157);
 }
 
-/* Container pentru minus, input și plus */
+
 .quantity-wrapper {
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
   outline: none;
 }
 
-/* Ascunde săgețile pentru input de tip number în browsere WebKit */
+
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -155,7 +155,7 @@
 .titlu-produs{
   margin-top: 20px;
   margin-bottom: 20px;
-  /*background-color: #2D3250;*/
+  
   color: white;
   padding: 5px;
   border-bottom: 1px solid rgb(88,185,157);
@@ -198,12 +198,12 @@
 }
 .details-wrapper img {
   width: auto;
-  max-width: 120px; /* Setează o lățime maximă pentru imagine */
-  height: auto; /* Păstrează proporțiile imaginii */
-  object-fit: contain; /* Asigură-te că imaginea este încadrată corect */
-  margin-right: 20px; /* Adaugă un mic spațiu între imagine și text */
-  display: inline-block; /* Asigură afișarea în linie */
-  margin-top: 5px; /* Adaugă un mic spațiu deasupra imaginii */
+  max-width: 120px; 
+  height: auto; 
+  object-fit: contain; 
+  margin-right: 20px; 
+  display: inline-block; 
+  margin-top: 5px; 
 }
 
 #cartButton {
@@ -254,14 +254,14 @@
 
   .product-container {
     display: flex;
-    flex-direction: column; /* Stivuiește imaginile și detaliile produsului pe verticală */
+    flex-direction: column; 
     align-items: center;
-    gap: 20px; /* Mai puțin spațiu între imagini și detalii */
+    gap: 20px; 
   }
 
   .product-images {
-    width: 100%; /* Lărgește imaginea la 100% din container */
-    max-width: 300px; /* Redimensionează imaginea pentru mobile */
+    width: 100%; 
+    max-width: 300px; 
   }
 
   .product-images img:hover{
@@ -273,7 +273,7 @@
   }
 
   .pret_produs {
-    font-size: 20px; /* Redu dimensiunea textului pentru preț */
+    font-size: 20px; 
     text-align: center;
   }
 
@@ -283,7 +283,7 @@
   }
 
   .button_product {
-    width: 100%; /* Butonul să ocupe întreaga lățime pe mobil */
+    width: 100%; 
     font-size: 14px;
     padding: 10px;
   }

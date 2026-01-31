@@ -97,7 +97,7 @@ export class ProductsComponent implements OnInit {
       alert('Product name is required!');
       return;
     }
-    // Trimite toate câmpurile, inclusiv id (0)
+    
     const productData: any = {
       id: 0,
       name: this.newProduct.name,
@@ -125,10 +125,10 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  // Fallback pentru POST JSON direct din componentă
+  
   createProductAsJson(productData: any) {
-    // Importă HttpClient din @angular/common/http în componentă dacă nu există deja
-    // și injectează-l în constructor ca 'private http: HttpClient'
+    
+    
     return this.http.post(
       `${this.productService.BaseURI}/Product/CreateProduct`,
       productData,

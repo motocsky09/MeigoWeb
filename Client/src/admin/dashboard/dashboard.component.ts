@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   productsCount = 0;
   totalRevenue = 0;
 
-  // Statistici pentru grafice
+  
   ordersPerMonth: { [month: string]: number } = {};
   revenuePerMonth: { [month: string]: number } = {};
 
@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ];
-  revenueBarDivisor: number = 20; // default, recalculat după date
+  revenueBarDivisor: number = 20; 
 
   constructor(
     private customersService: CustomersService,
@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
     this.ordersService.getOrders().subscribe((orders: any[]) => {
       this.ordersCount = orders.length;
       this.totalRevenue = orders.reduce((sum, o) => sum + (o.totalamount || o.total || o.totalPrice || o.amount || 0), 0);
-      // Statistici pe luni (cheie: 'Jan', 'Feb', ...)
+      
       this.ordersPerMonth = {};
       this.revenuePerMonth = {};
       orders.forEach(order => {
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
           this.revenuePerMonth[month] = (this.revenuePerMonth[month] || 0) + (order.totalamount || order.total || order.totalPrice || order.amount || 0);
         }
       });
-      // Normalizez înălțimea barelor pentru revenue
+      
       const maxRevenue = Math.max(...Object.values(this.revenuePerMonth), 1);
       const maxOrders = Math.max(...Object.values(this.ordersPerMonth), 1);
       this.revenueBarDivisor = maxRevenue / (maxOrders * 18);

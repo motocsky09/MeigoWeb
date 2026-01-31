@@ -56,7 +56,6 @@ namespace Server.Controllers
         [Route("DeleteProductAddedShCart")]
         public ActionResult DeleteAllProductsFromCart()
         {
-            // Apelează metoda din repository pentru a șterge toate produsele din coș
             _productaddedshcartRepository.DeleteAllProductsFromCart();
             return Ok();
         }

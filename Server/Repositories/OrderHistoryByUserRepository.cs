@@ -21,7 +21,6 @@ namespace Server.Repositories
             return _serverDbContext.OrderHistoryByUser.FirstOrDefault(x => x.UserId == UserId);
         }
 
-        
         public List<OrderHistoryByUser> GetOrderHistoryByUser()
         {
             return _serverDbContext.OrderHistoryByUser.ToList();

@@ -135,7 +135,7 @@ body {
 }
 
 .register-link a {
-  color: rgb(88,185,157); /* Albastru pentru link */
+  color: rgb(88,185,157); 
   text-decoration: none;
   font-weight: bold;
 }
@@ -178,7 +178,7 @@ body {
 
 @media (max-width: 700px) {
   .login-form {
-    width: 100%; /* Asigurăm că se ajustează la ecranul mai mic */
+    width: 100%; 
   }
 
   .form-group label {

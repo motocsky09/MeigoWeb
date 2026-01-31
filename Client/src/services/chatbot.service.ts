@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatbotService {
-  private apiUrl = 'http://localhost:5098/api/Chat'; // <-- Atenție: Aici trebuie să pui URL-ul backend-ului tău. Poate fi diferit.
+  private apiUrl = 'http://localhost:5098/api/Chat'; 
 
   constructor(private http: HttpClient) { }
 

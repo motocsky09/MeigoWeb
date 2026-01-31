@@ -1,6 +1,3 @@
-
-
-
 .footer, .footer * {
   font-family: 'Montserrat', 'Manrope', 'Segoe UI', Arial, sans-serif !important;
   font-weight: 600;
@@ -10,7 +7,7 @@
 .footer {
     background-color: rgb(56,72,92);;
     color: white;
-    padding: 10px; /* spatierea interioara a footer-ului */
+    padding: 10px; 
     border-top: 0.5px solid rgb(88,185,157);
     font-size: 1.25rem;
     text-align: center;
@@ -18,29 +15,29 @@
 }
 
 .footer-content {
-    display: flex; /* flexbox pentru a alinia orizontal sectiunile din footer */
-    justify-content: space-between; /* spatiere egala intre sectiunile din footer */
+    display: flex; 
+    justify-content: space-between; 
 }
 
 .footer-section {
-    width: 50%; /* fiecare sectiune de footer ocupa jumatate din latimea containerului footer */
+    width: 50%; 
 }
 
 .footer-links, .footer-info {
-    list-style: none; /* eliminare stilizare default pentru listele din footer */
-    padding: 0; /* eliminare spatiere interioara a listelor */
+    list-style: none; 
+    padding: 0; 
 }
 
 .footer-links img {
-    margin-right: 10px; /* spatiere intre imaginile din lista de link-uri */
-    display: block; /* asigură alinierea corectă a imaginilor */
-    margin: 0 auto; /* centrează imaginile */
+    margin-right: 10px; 
+    display: block; 
+    margin: 0 auto; 
     padding: 7px;
 }
 
 .footer-info li {
-    margin-bottom: 10px; /* spatiere intre elementele din lista de informatii */
-    font-size: 15px; /* dimensiunea textului mai mic */
+    margin-bottom: 10px; 
+    font-size: 15px; 
     margin-top: 15px;
   display: flex;
   justify-content: center;
@@ -50,7 +47,7 @@
 .footer-right {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end; /* aliniază la dreapta */
+  justify-content: flex-end; 
 }
 
 .footer-right span {
@@ -64,46 +61,46 @@
   display: flex;
   width: 20px;
   height: 15px;
-  border: 1px solid rgb(0,0,0); /* bordură pentru drapel */
+  border: 1px solid rgb(0,0,0); 
 }
 
 .stripe {
-  width: 8px; /* lățimea fiecărei dungi este o treime din total */
+  width: 8px; 
   height: 100%;
 }
 
 .stripe1 {
-  background-color: #002B7F; /* albastru */
+  background-color: #002B7F; 
 }
 
 .stripe2 {
-  background-color: #FCD116; /* galben */
+  background-color: #FCD116; 
 }
 
 .stripe3 {
-  background-color: #CE1126; /* roșu */
+  background-color: #CE1126; 
 }
-/* Stilizare pentru modul mobil */
-/* Stilizare pentru modul mobil */
+
+
 @media screen and (max-width: 768px) {
   .footer-content {
-    flex-direction: column; /* Așezare verticală în modul mobil */
+    flex-direction: column; 
     align-items: center;
   }
 
   .footer-section {
-    width: 100%; /* Lățimea maximă în modul mobil */
-    margin-bottom: 10px; /* Spațiere între secțiuni în modul mobil */
+    width: 100%; 
+    margin-bottom: 10px; 
     text-align: center;
   }
 
   .footer-right {
-    width: 100%; /* Asigură-te că ocupă întreaga lățime */
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centrează textul și conținutul */
-    margin-top: 10px; /* Spațiu suplimentar între secțiuni */
+    text-align: center; 
+    margin-top: 10px; 
   }
 }
 

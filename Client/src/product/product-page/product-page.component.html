@@ -1,13 +1,13 @@
 <div class="product-page">
 
   <div class="product-container" *ngIf="product">
-    <!-- Partea stângă: Imagini produs -->
+    
     <div class="product-images">
 
-      <!-- Imaginea principală -->
+      
       <img [src]="'./assets/images/products/' + mainImage" alt="product_image" class="main-product-image">
 
-      <!-- Galeria de imagini secundare -->
+      
       <div class="image-gallery">
         <img [src]="'./assets/images/products/' + product.imagePath1" alt="product_image_small" (click)="changeMainImage(product.imagePath1)">
         <img [src]="'./assets/images/products/' + product.imagePath2" alt="product_image_small" (click)="changeMainImage(product.imagePath2)">
@@ -15,13 +15,13 @@
       </div>
     </div>
 
-    <!-- Partea dreaptă: Detalii produs -->
+    
     <div class="details-product">
       <h2 class="titlu-produs">{{product.name}}</h2>
 
       <h3 class="pret_produs"><b>Price:</b> {{product.price}} RON</h3>
 
-      <!-- Container pentru input de cantitate și butoanele minus și plus -->
+      
       <div class="quantity-wrapper">
         <div class="minus" (click)="decreaseQuantity(selectedQuantity)">
           <i class="fas fa-minus"></i>
@@ -66,7 +66,7 @@
 
   </div>
 
-  <!-- Buton Coș -->
+  
   <div class="cart-button" id="cartButton">
     <a href="shopping-cart">
       <fa-icon [icon]="faCartShopping"></fa-icon>Cart</a>

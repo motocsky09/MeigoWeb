@@ -1,12 +1,12 @@
-<!-- Product Edit Page (stil product-page, dar editabil) -->
+
 <div class="product-page">
   <div class="product-container" *ngIf="product">
-    <!-- Partea stângă: Imagini produs -->
+    
     <div class="product-images">
-      <!-- Imaginea principală -->
+      
       <img [src]="getImageSrc(mainImage || product.imagePath1)" alt="product_image" class="main-product-image"
            (error)="onImgError($event)" />
-      <!-- Galeria de imagini secundare -->
+      
       <div class="image-gallery">
         <img [src]="getImageSrc(product.imagePath1)" alt="product_image_small" (click)="mainImage = product.imagePath1" (error)="onImgError($event)" />
         <img [src]="getImageSrc(product.imagePath2)" alt="product_image_small" (click)="mainImage = product.imagePath2" (error)="onImgError($event)" />
@@ -18,7 +18,7 @@
         <label>Image 3: <input type="text" [(ngModel)]="product.imagePath3" name="imagePath3" /></label>
       </div>
     </div>
-    <!-- Partea dreaptă: Detalii produs -->
+    
     <div class="details-product">
       <input class="titlu-produs" [(ngModel)]="product.name" name="name" required />
       <div class="pret_produs"><b>Price:</b> <input type="number" [(ngModel)]="product.price" name="price" required /> RON</div>

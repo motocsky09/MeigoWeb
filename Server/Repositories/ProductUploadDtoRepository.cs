@@ -25,7 +25,7 @@ namespace Server.Repositories
     {
         Name = model.Name,
         Price = model.Price,
-        ShortDescription = model.ShortDescription,  // corect din DTO
+        ShortDescription = model.ShortDescription,
         TotalQuantity = model.TotalQuantity,
         CategoryId = model.CategoryId,
         ImagePath1 = model.ImagePath1 != null ? SaveImage(model.ImagePath1) : null,
@@ -77,7 +77,6 @@ namespace Server.Repositories
                 imageFile.CopyTo(fileStream);
             }
 
-            // Returnează calea relativă spre imagine, pe care o poți salva în baza de date
             return "/images/" + uniqueFileName;
         }
     }

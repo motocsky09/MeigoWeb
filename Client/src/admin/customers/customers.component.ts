@@ -13,7 +13,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit() {
     this.customersService.getCustomers().subscribe((data: any) => {
-      // Filtrează clienții care nu au username cu .admin
+      
       this.customers = data.filter((c: any) => !((c.userName || c.username || '').endsWith('.admin')));
     });
   }

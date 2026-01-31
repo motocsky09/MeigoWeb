@@ -30,28 +30,28 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.service.register().subscribe(
       (res: any) => {
-        // Înregistrare cu succes
-        this.successMessage = 'Successful registration!';
-        this.errorMessage = ''; // Curăță mesajul de eroare dacă există
         
-        // Creează profilul implicit și redirecționează către login
+        this.successMessage = 'Successful registration!';
+        this.errorMessage = ''; 
+        
+        
         this.profileService.createDefaultProfile(res.profile).subscribe();
-        this.service.formModel.reset(); // Resetează formularul
+        this.service.formModel.reset(); 
   
-        // Redirecționează după 2 secunde
+        
         setTimeout(() => {
           this.router.navigateByUrl('/user/login');
-        }, 2000); // 2 secunde pentru a afișa mesajul
+        }, 2000); 
       },
       err => {
-        // Afișează un mesaj de eroare corespunzător
+        
         if (err.status === 400) {
           this.errorMessage = 'Username or email already exists!';
         } else {
           this.errorMessage = 'The password does not meet the conditions.!';
         }
-        this.successMessage = ''; // Curăță mesajul de succes dacă există
-        console.log(err); // Debugging suplimentar
+        this.successMessage = ''; 
+        console.log(err); 
       }
     );
   }

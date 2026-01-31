@@ -19,7 +19,7 @@ export class OrderComponent implements OnInit {
   totalSumWithoutDelivery: number = 0;
   totalSumWithDelivery: number = 0;
   sumDelivery: number = 25;
-  profile: any; // Pentru adresa utilizatorului
+  profile: any; 
 
   constructor(
     private service: ProductService,
@@ -32,12 +32,12 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('token')) {
-      // Obține userName
+      
       this.userService.getUserName().subscribe(
         (res: string) => {
           this.userName = res;
 
-          // Obține userId
+          
           this.userService.getUserIdByUserName(this.userName).subscribe(
             (userId: string) => {
               this.userId = userId;
@@ -46,16 +46,16 @@ export class OrderComponent implements OnInit {
             error => console.error('Eroare la obținerea userId:', error)
           );
 
-          // Obține profilul (inclusiv adresa)
+          
           this.profileService.getProfileByUserName(this.userName).subscribe(
             (profileRes: any) => {
-              this.profile = profileRes; // Setează profilul
+              this.profile = profileRes; 
               console.log('Profilul utilizatorului:', this.profile);
             },
             error => console.error('Eroare la obținerea profilului:', error)
           );
 
-          // Obține ShoppingCartId și produsele din coș
+          
           this.userService.getShoppingCartIdByUserName(this.userName).subscribe(
             (cartId: string) => {
               this.shoppingCartId = cartId;
@@ -82,11 +82,11 @@ export class OrderComponent implements OnInit {
     }
   }
   goBack() {
-    this.location.back(); // Navighează înapoi
+    this.location.back(); 
   }
 
   showBackButton(): boolean {
-    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+    return this.router.url !== '/home' && window.innerWidth <= 768; 
   }
   createOrder() {
     if (!this.userId || !this.shoppingCartId || !this.totalSumWithDelivery || !this.profile) {
@@ -94,7 +94,7 @@ export class OrderComponent implements OnInit {
       return;
     }
 
-    // Asigurare că comments are o valoare implicită
+    
     this.profile.comments = this.profile.comments || '';
 
     console.log('📤 Date trimise către backend:', {
@@ -117,23 +117,23 @@ export class OrderComponent implements OnInit {
       this.shoppingCartId,
       this.sumDelivery,
       this.totalSumWithDelivery,
-      this.profile.address || '',         // Adresa din profil
-      this.profile.city || '',            // Orașul din profil
-      this.profile.phoneNumber || '',     // Telefonul din profil
-      this.profile.email || '',           // Email-ul din profil
-      this.profile.comments,              // Comentarii (asigurate să nu fie undefined)
-      this.profile.postal || ''           // Codul poștal
+      this.profile.address || '',         
+      this.profile.city || '',            
+      this.profile.phoneNumber || '',     
+      this.profile.email || '',           
+      this.profile.comments,              
+      this.profile.postal || ''           
     ).subscribe(
       () => {
         console.log('✅ Comandă creată cu succes!');
 
-        // Delay de 10 secunde înainte de a goli coșul și a redirecționa
+        
         setTimeout(() => {
           this.shoppingCartService.clearCart().subscribe(() => {
             console.log('🗑️ Coșul a fost golit!');
             this.router.navigate(['/confirm-order']);
           });
-        }, 10000); // 10 secunde delay
+        }, 10000); 
       },
       error => console.error('❌ Eroare la plasarea comenzii:', error)
     );

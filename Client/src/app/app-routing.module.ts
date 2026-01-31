@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from 'src/home/home.component';
-import { AboutComponent } from 'src/about/about.component'; // Importă componenta About
+import { AboutComponent } from 'src/about/about.component'; 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent }, // Adaugă ruta pentru About
+  { path: 'about', component: AboutComponent }, 
 ];
 
 @NgModule({

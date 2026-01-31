@@ -1,55 +1,49 @@
 .about-section {
-	background-color: transparent; /* Un fundal gri deschis */
-	padding: 60px 0; /* Mai mult spațiu sus și jos */
+	background-color: transparent; 
+	padding: 60px 0;
   }
   
   .about-container {
-	max-width: 1060px; /* Limitează lățimea containerului pentru o lizibilitate mai bună */
-	margin: 0 auto; /* Centrează containerul pe orizontală */
+	max-width: 1060px;
+	margin: 0 auto;
 	text-align: center;
 	padding: 40px;
-	background-color: rgb(56,72,92); /* Un fundal alb pentru container */
-	border-radius: 8px; /* Margini rotunjite */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* O umbră subtilă */
+	background-color: rgb(56,72,92);
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .about-container h1 {
-	font-size: 42px; /* Un titlu puțin mai mare */
+	font-size: 42px; 
 	margin-bottom: 30px;
-	color: white; /* O culoare mai închisă pentru titlu */
+	color: white; 
   }
   
   .about-container p.about-text {
-	font-size: 20px; /* O dimensiune mai potrivită pentru text */
-	line-height: 1.7; /* Un interliniaj mai mare pentru o citire ușoară */
-	color: white; /* O culoare mai deschisă pentru text */
-	margin-bottom: 25px; /* Spațiu sub paragraf */
+	font-size: 20px; 
+	line-height: 1.7; 
+	color: white; 
+	margin-bottom: 25px; 
   }
   
-  /* Poți adăuga un element vizual subtil, cum ar fi o linie decorativă */
+  
   .about-container h1::after {
 	content: "";
 	display: block;
 	width: 80px;
 	height: 3px;
-	background-color: rgb(117,251,97); /* O culoare accent */
+	background-color: rgb(117,251,97); 
 	margin: 20px auto 0;
   }
   
-  /* Dacă vrei să adaugi un efect la hover pe container 
-  .about-container:hover {
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-	transform: translateY(-2px);
-	transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  /* ... stilurile existente pentru .about-section și .about-container ... */
+  
 
 .values-section {
-	display: flex; /* Le aranjăm pe orizontală */
-	justify-content: space-around; /* Spațiu egal între elemente */
-	margin-top: 40px; /* Spațiu deasupra secțiunii de valori */
+	display: flex; 
+	justify-content: space-around; 
+	margin-top: 40px; 
 	padding: 30px;
-	background-color: rgb(56,72,92); /* Un fundal ușor diferit */
+	background-color: rgb(56,72,92); 
 	border-radius: 6px;
   }
   
@@ -59,8 +53,8 @@
   }
   
   .value-item i {
-	font-size: 48px; /* Mărimea iconițelor */
-	color: rgb(117,251,97); /* Culoarea accent a iconițelor */
+	font-size: 48px; 
+	color: rgb(117,251,97); 
 	margin-bottom: 15px;
   }
   
@@ -94,11 +88,11 @@
   }
   
   .donation-highlight span {
-	display: inline; /* Implicit, stă pe același rând */
+	display: inline; 
   }
   
   .mobile-break {
-	display: none; /* Ascundem br-ul pe desktop */
+	display: none; 
   }
 
   .social-links {
@@ -116,13 +110,13 @@
   .social-icons {
 	display: flex;
 	justify-content: center;
-	gap: 20px; /* Spațiu între iconițe */
+	gap: 20px; 
   }
   
   .social-icon {
-	display: inline-flex; /* Schimbăm în inline-flex pentru a folosi proprietățile flexbox */
-	justify-content: center; /* Centrează conținutul (SVG-ul) pe orizontală */
-	align-items: center; /* Centrează conținutul (SVG-ul) pe verticală */
+	display: inline-flex; 
+	justify-content: center; 
+	align-items: center; 
 	width: 60px;
 	height: 60px;
 	background-color: rgb(48,61,78);
@@ -143,51 +137,51 @@
 	width: 40px;
 	height: 40px;
 }
-/* Stiluri pentru dispozitive mobile (ecrane cu lățimea de până la 768px) */
+
 @media (max-width: 768px) {
 	.about-section {
-	  padding: 40px 0; /* Reducem puțin padding-ul sus și jos */
+	  padding: 40px 0; 
 	}
   
 	.about-container {
-	  max-width: 90%; /* Lățime mai mare pe mobil */
+	  max-width: 90%; 
 	  padding: 30px;
-	  margin: 20px auto; /* Mai mult spațiu sus și jos */
+	  margin: 20px auto; 
 	}
   
 	.about-container h1 {
-	  font-size: 32px; /* Titlu mai mic pe mobil */
+	  font-size: 32px; 
 	  margin-bottom: 20px;
 	}
   
 	.about-container p.about-text {
-	  font-size: 18px; /* Text mai mic pe mobil */
+	  font-size: 18px; 
 	  line-height: 1.6;
 	  margin-bottom: 20px;
 	}
   
 	.about-container h1::after {
-	  width: 60px; /* Linie decorativă mai mică */
+	  width: 60px; 
 	}
   
 	.values-section {
-	  flex-direction: column; /* Aranjăm valorile pe verticală */
-	  align-items: center; /* Le centrăm pe orizontală */
+	  flex-direction: column; 
+	  align-items: center; 
 	  margin-top: 30px;
 	  padding: 20px;
 	  background-color: transparent;
 	}
   
 	.value-item {
-	  width: 80%; /* Lățime mai mare pentru fiecare valoare */
-	  margin-bottom: 30px; /* Spațiu între valorile pe verticală */
+	  width: 80%; 
+	  margin-bottom: 30px; 
 	  padding: 20px;
 	  border-radius: 6px;
-	  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* O umbră subtilă pentru fiecare item */
+	  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
 	}
   
 	.value-item i {
-	  font-size: 40px; /* Iconițe puțin mai mici */
+	  font-size: 40px; 
 	  margin-bottom: 10px;
 	}
   
@@ -201,11 +195,11 @@
 	}
   
 	.donation-highlight span {
-		display: block; /* Afișăm pe un rând nou pe mobil */
+		display: block; 
 	  }
 	
 	  .mobile-break {
-		display: block; /* Afișăm br-ul pe mobil */
+		display: block; 
 	  }
   
 	.social-links {
@@ -219,7 +213,7 @@
 	}
   
 	.social-icons {
-	  gap: 15px; /* Spațiu mai mic între iconițe */
+	  gap: 15px; 
 	}
   
 	.social-icon {
@@ -233,7 +227,7 @@
 	}
   }
   
-  /* Stiluri pentru ecrane și mai mici (telefoane mai înguste) */
+  
   @media (max-width: 480px) {
 	.about-container h1 {
 	  font-size: 28px;

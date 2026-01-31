@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.Controllers // Asigură-te că ești în același namespace
+namespace Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -58,7 +58,6 @@ namespace Server.Controllers // Asigură-te că ești în același namespace
         }
     }
 
-    // Aici adaugi definiția clasei care lipsea
     public class ChatMessageRequest
     {
         public string Message { get; set; }

@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
     if (localStorage.getItem('token') != null) {
       this.userService.getUserName().subscribe(
         (res: any) => {
-          this.userName = res; // Setează userName cu răspunsul primit
+          this.userName = res; 
           this.service.getProfileByUserName(this.userName).subscribe(
             (res: any) => {
               this.profile = res;
@@ -37,11 +37,11 @@ export class ProfileComponent implements OnInit {
     }
   }
   goBack() {
-    this.location.back(); // Navighează înapoi
+    this.location.back(); 
   }
 
   showBackButton(): boolean {
-    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+    return this.router.url !== '/home' && window.innerWidth <= 768; 
   }
 
   editItem(item: any) {
@@ -63,6 +63,6 @@ export class ProfileComponent implements OnInit {
 
   cancelEdit(item: any) {
     item.editing = false;
-    this.service.getProfileByUserName(this.userName); // Reîncarcă datele pentru a anula modificările
+    this.service.getProfileByUserName(this.userName); 
   }
 }

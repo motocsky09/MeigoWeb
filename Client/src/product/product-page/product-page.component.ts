@@ -3,7 +3,7 @@ import {ProductService} from "../../services/product.service";
 import {UserService} from "../../services/user.service";
 import {ShoppingCartService} from "../../services/shopping-cart.service";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import {Component, OnInit} from "@angular/core"; // Import pentru a accesa ruta activă
+import {Component, OnInit} from "@angular/core"; 
 import { Location } from '@angular/common';
 
 @Component({
@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class ProductPageComponent implements OnInit {
   faCartShopping = faCartShopping;
-  product: any; // Schimbă productsList cu un singur produs
+  product: any; 
   userName: string = "";
   shoppingCartId: string = "";
   cartCounter: number = 0;
@@ -23,8 +23,8 @@ export class ProductPageComponent implements OnInit {
   constructor(
     private service: ProductService,
     private router: Router,
-    private route: ActivatedRoute, // Adaugă ActivatedRoute pentru a prelua productId din URL
-    private location: Location, // Importă Location pentru a naviga înapoi
+    private route: ActivatedRoute, 
+    private location: Location, 
     private userService: UserService,
     private shoopingCartService: ShoppingCartService
   ) { }
@@ -62,17 +62,17 @@ export class ProductPageComponent implements OnInit {
     }
   }
   goBack() {
-    this.location.back(); // Navighează înapoi
+    this.location.back(); 
   }
 
   showBackButton(): boolean {
-    return this.router.url !== '/home' && window.innerWidth <= 768; // Afișează doar pe mobile și în afara paginii home
+    return this.router.url !== '/home' && window.innerWidth <= 768; 
   }
-  // Modifică pentru a obține produsul pe baza productId
+  
   getProductById(productId: any) {
     this.service.getProductById(productId).subscribe(
       (res: any) => {
-        this.product = res; // Stochează doar produsul
+        this.product = res; 
         this.mainImage = this.product.imagePath1;
       },
       (error) => {
@@ -81,12 +81,12 @@ export class ProductPageComponent implements OnInit {
     );
   }
 
-  // Metodă pentru a schimba imaginea principală
+  
   changeMainImage(newImagePath: string) {
-    this.mainImage = newImagePath; // Actualizează imaginea principală
+    this.mainImage = newImagePath; 
   }
 
-  // Metodă pentru a adăuga produse în coșul de cumpărături
+  
   addProductInShoppingCart(shoppingCartId: string, productId: number, selectedQuantity: number) {
     this.shoopingCartService.addProductInShoppingCart(shoppingCartId, productId, selectedQuantity).subscribe(
       () => {

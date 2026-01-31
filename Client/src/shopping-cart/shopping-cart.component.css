@@ -198,7 +198,7 @@ a {
 .working-day{
   padding-top: 5px;
 }
-/* Media Query pentru dispozitive mobile */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -216,7 +216,7 @@ a {
     }
 
     thead {
-        display: none; /* Ascundem header-ul tabelului pe mobil */
+        display: none; 
     }
 
     tr {
@@ -233,20 +233,20 @@ a {
     }
 
     .imagine_tabel img {
-        width: 200px; /* Ajustăm dimensiunea imaginii */
+        width: 200px; 
         height: 200px;
     }
-  /* Centrare preț pe mobil */
+  
   .cost_tabel,.total_tabel {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 18px; /* Ajustează dimensiunea fontului pentru o vizibilitate mai bună */
+    font-size: 18px; 
   }
-  /* Stiluri pentru cantitate și buton de ștergere pe mobil */
+  
   .cantitate_tabel {
-    display: flex; /* Activează afișarea în modul mobil */
+    display: flex; 
     justify-content: center;
     align-items: center;
   }
@@ -274,7 +274,7 @@ a {
   }
 
   .btn-remove {
-    display: block; /* Afișează butonul pe linie separată */
+    display: block; 
     margin: 0px auto;
     font-size: 14px;
     padding: 8px 12px;

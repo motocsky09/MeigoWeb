@@ -15,8 +15,7 @@
           <th>Zip Code</th>
           <th>Total</th>
           <th>Date</th>
-          <!--<th>Status</th>
-          <th>Actions</th>-->
+          
         </tr>
       </thead>
       <tbody>
@@ -29,23 +28,7 @@
           <td>{{ order.zip_code || '-' }}</td>
           <td>{{ order.totalamount ? (order.totalamount | currency:'RON ') : '-' }}</td>
           <td>{{ order.orderDate ? (order.orderDate | date:'yyyy-MM-dd') : '-' }}</td>
-          <!--<td>
-            <span class="status" [ngClass]="{
-              'pending': order.orderStatus === 1,
-              'shipped': order.orderStatus === 2,
-              'delivered': order.orderStatus === 3,
-              'cancelled': order.orderStatus === 4
-            }">
-              {{ order.orderStatus === 1 ? 'Pending' :
-                 order.orderStatus === 2 ? 'Shipped' :
-                 order.orderStatus === 3 ? 'Delivered' :
-                 order.orderStatus === 4 ? 'Cancelled' : '-' }}
-            </span>
-          </td>
-          <td>
-            <button class="action view">View</button>
-            <button class="action process" [disabled]="order.orderStatus !== 1">Process</button>
-          </td>-->
+          
         </tr>
       </tbody>
     </table>

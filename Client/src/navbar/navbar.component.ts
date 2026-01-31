@@ -8,14 +8,14 @@ import { UserService } from 'src/services/user.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isSidebarOpen = false; // Variabila pentru a controla afișarea sidebar-ului
+  isSidebarOpen = false; 
   user: any = null;
 
   constructor(private service: UserService, private router: Router) { }
 
   ngOnInit(): void {
     if (this.isLog()) {
-      // Forțează reîncărcarea userProfile dacă tokenul s-a schimbat
+      
       const token = localStorage.getItem('token');
       const userStr = localStorage.getItem('userProfile');
       let userProfile: any = null;
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
           userProfile = null;
         }
       }
-      // Dacă nu există userProfile sau nu există userName, cere din nou username-ul
+      
       if (!userProfile || !userProfile.userName) {
         this.user = { userName: '' };
         this.service.getUserName().subscribe({
@@ -47,25 +47,25 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  // Verifică dacă utilizatorul este logat
+  
   isLog(): boolean {
     return this.service.isLogged();
   }
 
-  // Funcția de logout
+  
   onLogout(): void {
     this.service.logout();
-    localStorage.removeItem('userProfile'); // Șterge profilul la logout
+    localStorage.removeItem('userProfile'); 
     this.router.navigate(['/user/login']);
-    this.isSidebarOpen = false; // Închide sidebar-ul după deconectare
+    this.isSidebarOpen = false; 
   }
 
-  // Comută starea sidebar-ului
+  
   toggleSidebar(): void {
-    this.isSidebarOpen = !this.isSidebarOpen; // Comută starea sidebar-ului
+    this.isSidebarOpen = !this.isSidebarOpen; 
   }
 
-  // Ascultă evenimentele de click pe document pentru a închide sidebar-ul
+  
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent): void {
     const sidebar = document.querySelector('.sidebar');
@@ -82,7 +82,7 @@ export class NavbarComponent implements OnInit {
     if (user.username && typeof user.username === 'string') return user.username;
     if (user.fullName && typeof user.fullName === 'string') return user.fullName;
     if (user.name && typeof user.name === 'string') return user.name;
-    // fallback: dacă e obiect, extrage prima proprietate string
+    
     for (const key of ['userName','username','fullName','name']) {
       if (user[key] && typeof user[key] === 'object') {
         const val = Object.values(user[key]).find(v => typeof v === 'string');

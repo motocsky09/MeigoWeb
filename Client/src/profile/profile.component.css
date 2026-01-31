@@ -1,4 +1,4 @@
-/* Reset de bază pentru consistență */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,21 +8,21 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asigură că pagina ocupă toată înălțimea ecranului */
+  min-height: 100vh; 
   font-family: Arial, sans-serif;
-  color: white; /* Culoarea textului */
+  color: white; 
 }
-/* Centrarea conținutului */
+
 .center-align {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1; /* Permite secțiunii să se extindă */
-  margin: 0; /* Eliminăm orice margine externă */
-  padding: 20px; /* Spațiere internă pentru a evita lipirea de margini */
+  flex: 1; 
+  margin: 0; 
+  padding: 20px; 
 }
 
-/* Formularul principal */
+
 .auth-form {
   display: flex;
   flex-direction: column;
@@ -34,16 +34,16 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 90%;
-  max-width: 700px; /* Limitează lățimea maximă */
+  max-width: 700px; 
   height: auto;
   padding: 30px;
   font-size: 18px;
 }
 
-/* Detaliile contului - Titlu */
+
 .details-account-title {
   display: flex;
-  justify-content: space-between; /* Spațiere între titlu și buton */
+  justify-content: space-between; 
   align-items: center;
   margin-bottom: 20px;
   font-weight: bold;
@@ -53,45 +53,45 @@ body {
 }
 
 .details-account-title span {
-  font-size: 22px; /* Text mai mare pentru titlu */
+  font-size: 22px; 
 }
 
-/* Stil pentru detalii */
+
 .auth-header ul {
   list-style-type: none;
   padding: 0px;
   width: 300px;
 }
 
-/* Elementele din listă */
+
 .auth-header li {
   display: flex;
-  justify-content: space-between; /* Spațierea între etichetă și input */
+  justify-content: space-between; 
   align-items: center;
   margin-bottom: 15px;
-  gap: 20px; /* Spațiu între elemente */
+  gap: 20px; 
 }
 
-/* Etichete (ex: "User", "Nume") */
+
 .auth-header p {
   margin: 0;
   font-weight: bold;
-  flex: 1; /* Se adaptează dinamic */
+  flex: 1; 
 }
 
-/* Input-uri */
+
 .auth-header input {
   background-color: rgb(56,72,92);
   color: white;
   border: 1px solid rgb(88,185,157);
   padding: 8px;
   border-radius: 4px;
-  flex: 2; /* Input-urile să ocupe mai mult spațiu */
+  flex: 2; 
   box-sizing: border-box;
   font-size: 16px;
 }
 
-/* Buton profil */
+
 .buton-profile {
   background: rgb(56,72,92);
   color: white;
@@ -101,17 +101,17 @@ body {
   margin: 20px auto;
   display: block;
   width: 60%;
-  max-width: 300px; /* Limitează dimensiunea maximă */
+  max-width: 300px; 
   font-size: 16px;
   text-align: center;
 }
 
 .buton-profile:hover {
-  background-color: rgb(48,61,78); /* Feedback vizual la hover */
+  background-color: rgb(48,61,78); 
   color: white;
 }
 
-/* Link-uri */
+
 a {
   text-decoration: none;
   border-radius: 10px;
@@ -128,7 +128,7 @@ a:hover {
   color: white;
 }
 
-/* Grup de input pentru telefon cu steag */
+
 .phone-input-group {
   display: flex;
   align-items: stretch;
@@ -169,62 +169,62 @@ a:hover {
   background: white;
 }
 
-/* ✅ Responsivitate pentru dispozitive mici (max-width: 768px) */
+
 @media screen and (max-width: 768px) {
   .center-align {
-    padding: 20px; /* Padding general pentru a nu fi lipit de margini */
+    padding: 20px; 
   }
 
   .auth-form {
-    width: 90%; /* Ajustare lățime pentru a nu fi prea îngust */
-    padding: 25px; /* Padding mai generos pentru un aspect aerisit */
-    border-radius: 12px; /* Colțuri mai rotunjite */
+    width: 90%; 
+    padding: 25px; 
+    border-radius: 12px; 
   }
 
   .details-account-title {
-    flex-direction: column; /* Așezare pe verticală */
-    text-align: center; /* Centrare text */
-    font-size: 20px; /* Font mai mare pentru titlu */
-    margin-bottom: 20px; /* Mai mult spațiu sub titlu */
+    flex-direction: column; 
+    text-align: center; 
+    font-size: 20px; 
+    margin-bottom: 20px; 
   }
 
   .auth-header ul {
-    padding-left: 0; /* Eliminare indentare */
-    width: 100%; /* Ocupă întreaga lățime */
+    padding-left: 0; 
+    width: 100%; 
   }
 
   .auth-header li {
     display: flex;
-    flex-direction: column; /* Elemente pe verticală */
-    gap: 5px; /* Spațiere uniformă între label și input */
-    margin-bottom: 15px; /* Spațiere mai mare între secțiuni */
+    flex-direction: column; 
+    gap: 5px; 
+    margin-bottom: 15px; 
     margin-top: 15px;
   }
 
   .auth-header p {
-    font-weight: 600; /* Font mai gros pentru claritate */
-    color: rgb(88,185,157); /* Culoare de accent */
-    margin: 0; /* Eliminăm marginile */
+    font-weight: 600; 
+    color: rgb(88,185,157); 
+    margin: 0; 
   }
 
   .auth-header input {
-    width: 100%; /* Inputurile ocupă toată lățimea */
-    padding: 10px; /* Padding mai mare pentru ușurința utilizării */
-    font-size: 16px; /* Dimensiune font mai lizibilă */
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px; 
   }
 
   .buton-profile {
-    width: 100%; /* Butonul să fie lat */
-    font-size: 16px; /* Dimensiune font mai mare */
-    padding: 12px; /* Padding mai mare pentru buton */
-    margin-top: 20px; /* Mai mult spațiu deasupra butonului */
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px; 
+    margin-top: 20px; 
   }
 
-  /* Link-uri și alte butoane */
+  
   a {
-    width: 100%; /* Link-urile să ocupe întreaga lățime */
-    text-align: center; /* Centrare text */
-    padding: 12px 0; /* Padding vertical pentru un aspect uniform */
+    width: 100%; 
+    text-align: center; 
+    padding: 12px 0; 
   }
 
   .phone-input-group select, .phone-input-group input[type="tel"] {
@@ -236,27 +236,27 @@ a:hover {
   }
 }
 
-/* ✅ Responsivitate pentru dispozitive foarte mici (max-width: 480px) */
+
 @media screen and (max-width: 480px) {
   .auth-form {
-    padding: 15px; /* Padding mai compact */
+    padding: 15px; 
   }
 
   .details-account-title {
-    font-size: 18px; /* Dimensiune titlu redusă */
+    font-size: 18px; 
   }
 
   .auth-header input {
-    font-size: 14px; /* Font mai mic pentru input-uri */
+    font-size: 14px; 
   }
 
   .buton-profile {
-    font-size: 14px; /* Font mai mic */
-    padding: 10px; /* Ajustare padding */
+    font-size: 14px; 
+    padding: 10px; 
   }
 
   a {
-    padding: 10px 0; /* Ajustare padding link-uri */
+    padding: 10px 0; 
   }
 
   .phone-input-group select, .phone-input-group input[type="tel"] {

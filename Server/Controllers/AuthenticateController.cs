@@ -133,7 +133,6 @@ namespace Server.Controllers
         public async Task<IActionResult> GetShoppingCartIdByUserName([FromQuery] string userName)
         {
             string shoppingCartId = "";
-            /*var userName = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.Name).ToString();*/
 
             if (userName != null)
             {
