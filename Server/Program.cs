@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API cu autentificare JWT și roluri"
     });
 
-    // 🔐 Configurare pentru JWT
+    
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
