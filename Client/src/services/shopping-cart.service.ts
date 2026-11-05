@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
@@ -17,7 +18,7 @@ export class ShoppingCartService {
 
    }
 
-   readonly BaseURI = 'http://localhost:5098/api';
+   readonly BaseURI = environment.apiUrl;
 
    createFirstShoppingCartByUsername(userName:string)
    {

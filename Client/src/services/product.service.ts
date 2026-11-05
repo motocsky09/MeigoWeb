@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
@@ -16,7 +17,7 @@ export class ProductService {
 
      }
 
-     readonly BaseURI = 'http://localhost:5098/api';
+     readonly BaseURI = environment.apiUrl;
 
      getProductsList()
      {

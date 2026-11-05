@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ProfileService {
 
-  private apiUrl = 'http://localhost:5098/api';
+  private apiUrl = environment.apiUrl;
 
   constructor(
     private fb:FormBuilder,
@@ -17,7 +18,7 @@ export class ProfileService {
     private router:Router
   ) {
   }
-  readonly BaseURI = 'http://localhost:5098/api';
+  readonly BaseURI = environment.apiUrl;
 
   getProfileByUserName(userName: any): Observable<any> {
 

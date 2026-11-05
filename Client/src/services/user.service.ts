@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -24,7 +25,7 @@ export class UserService {
     this.isLoggedIn$ = new BehaviorSubject(isLoggedIn);
    }
 
-   readonly BaseURI = 'http://localhost:5098/api';
+   readonly BaseURI = environment.apiUrl;
 
    formModel = this.fb.group({
     UserName :['',Validators.required],
