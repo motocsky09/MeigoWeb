@@ -123,8 +123,19 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
+// Origini permise: localhost (dezvoltare) + adresa frontend-ului din configurare
+var allowedOrigins = new[]
+    {
+        "http://localhost:4200",
+        configuration["ApplicationSettings:Client_URL"]
+    }
+    .Where(o => !string.IsNullOrWhiteSpace(o))
+    .Select(o => o!.TrimEnd('/'))
+    .Distinct()
+    .ToArray();
+
 app.UseCors(options =>
-        options.WithOrigins("http://localhost:4200")
+        options.WithOrigins(allowedOrigins)
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials()
